@@ -1,88 +1,161 @@
 # Open Problems
 
-Ordered by falsifiability and proximity to the proved theorem.
+Updated after the three-track push on 28 October 2026.
 
-## A. Boundary of positive exact rounding
+## What was resolved in this session
 
-The 2026 negative result shows that general entanglement-breaking channels can be almost idempotent while remaining far from every exact idempotent.
+The following are no longer open in their original form:
 
-The RC theorem gives a positive subclass.
+1. **Can projective readout be relaxed?**  
+   Yes, for finite POVMs with exact eigenvalue-\(1\) repeatable sectors. The stability cost is controlled by a spectral gap \(\gamma\).
 
-### A1. Maximal positive subclass
+2. **What is the exact binary pure-record redundancy rate?**  
+   \[
+   \kappa_R=\sqrt{1-s^{2R}}.
+   \]
 
-Characterise the largest measure-and-prepare subclass for which a dimension-independent exact-rounding bound exists.
+3. **Can nominal redundancy fail to improve margin?**  
+   Yes. Perfectly correlated record noise gives \(\kappa_R\) constant in \(R\).
 
-Questions:
+4. **Can bounded phase count be avoided in a metastable subclass?**  
+   Yes, conditionally: if the channel is close to an RC record channel with controlled \(\kappa,\gamma\), the rounding constant has no explicit phase-count dependence.
 
-- Is sharp projective readout necessary?
-- Can a sufficiently well-conditioned POVM replace \(\{P_j\}\)?
-- Can the output records live in a different Hilbert space?
-- What is the optimal conditioning parameter replacing \(\kappa\)?
+Those statements are documented in the theory directory.
 
-A counterexample is as valuable as a proof.
+# A. Moving-POVM classification
 
-## B. Redundancy \(\rightarrow\) margin \(\rightarrow\) stability
+This is now the strongest mathematical target.
 
-For record families \(\rho_j^{(R)}\) built from \(R\) environmental fragments, define
+The current POVM theorem assumes each nonzero effect already has an exact eigenvalue-\(1\) repeatable sector.
+
+But a general almost-repeatable measurement may have no exact unit eigenvalue.
+
+## A1. Main question
+
+Suppose
+
+\[
+\|\Phi^2-\Phi\|_\diamond\le\eta
+\]
+
+for a separated measure-and-prepare channel whose POVM is not repeatability-admissible.
+
+When does there exist a **nearby POVM** \(\{\widetilde E_j\}\) and nearby exact idempotent channel \(\Pi\)?
+
+Find a necessary-and-sufficient conditioning quantity.
+
+Candidate ingredients:
+
+- distance of \(E_j\) to having eigenvalue \(1\),
+- separation between near-unit eigenspaces,
+- record margin \(\kappa\),
+- outcome accessibility.
+
+A classification theorem here would draw the positive boundary against the 2026 entanglement-breaking counterexamples.
+
+# B. Multi-record redundancy geometry
+
+The binary independent case is solved exactly.
+
+## B1. Many records
+
+For \(m>2\),
 
 \[
 \kappa_R
 =
 \min_j
 \frac12
-\inf_{\omega\in\operatorname{conv}\{\rho_i^{(R)}:i\neq j\}}
-\|\rho_j^{(R)}-\omega\|_1.
+\operatorname{dist}_1
+\left(
+\rho_j^{(R)},
+\operatorname{conv}\{\rho_i^{(R)}:i\neq j\}
+\right).
 \]
 
-### B1
+Obtain sharp rates for independent mixed records.
 
-Determine conditions under which \(\kappa_R\) increases with \(R\).
-
-If \(\kappa_R\to1\), the theorem gives
+The discriminator lemma gives
 
 \[
-\|\Phi_R-\Pi_R\|_\diamond
-\le
-\sqrt{\frac{2\eta_R}{\kappa_R}}.
+\kappa_R\ge1-2\epsilon_R,
 \]
 
-### B2
+but this need not be sharp.
 
-For independent record fragments, derive the exact rate.
+## B2. Correlation structure
 
-For two pure single-fragment records with overlap \(s\), tensor-product overlap is \(s^R\). Work out the induced \(\kappa_R\) and stability rate.
+Classify when adding environmental fragments produces genuine margin gain.
 
-### B3
+A useful target is a condition in terms of conditional or Chernoff information that distinguishes:
 
-Construct correlated-record families where nominal redundancy does **not** improve \(\kappa_R\). This prevents the false claim that more copies always imply stronger objectivity.
+- fresh independent evidence,
+- partially correlated evidence,
+- perfectly common-mode noise.
 
-## C. Metastable quantum dynamics
+## B3. Coupled defect
 
-Can record-margin separation replace bounded slow dimension for a useful class of metastable channels?
+Redundancy only improves the certificate through \(\kappa_R\) if the repeatability defect \(\eta_R\) remains controlled.
 
-A target theorem would have constants controlled by long-lived record geometry rather than the number of slow degrees of freedom.
+Derive models where \(\eta_R\) and \(\kappa_R\) evolve together.
 
-## D. Experimental certification
+# C. Microscopic metastability application
 
-Find experimentally estimable lower bounds on \(\kappa\) and upper bounds on \(\eta\) that avoid full process tomography.
+The structural transfer theorem is proved.
 
-A successful protocol would turn the theorem into:
+The next step is physical rather than algebraic.
+
+Take an explicit open-system metastability model and derive, from its microscopic channel:
 
 \[
-\text{measured repeatability}
+\delta,\qquad
+\kappa,\qquad
+\gamma,\qquad
+\eta.
+\]
+
+Then compare
+
+\[
+\Delta_{\rm RC}
+=
+\delta
 +
-\text{measured record separation}
-\Rightarrow
-\text{distance to ideal repeatable readout}.
+\sqrt{
+\frac{2(\eta+3\delta)}
+{\kappa\gamma}
+}
 \]
 
-## E. Formal verification
+against existing QMSM bounds.
 
-Encode the theorem in a proof assistant or obtain an independent mathematical reconstruction.
+Good targets:
 
-Priority checks:
+- a many-phase classical metastability model,
+- a dissipative spin-chain classical sector,
+- a hierarchy such as the open quantum East model.
 
-- post-selection trace-distance inequality,
-- ancilla/diamond-norm step,
-- zero-support edge cases,
-- sharpness family.
+Success would mean obtaining a dimension/phase-count-independent physical certificate from microscopic parameters, not merely assuming record structure.
+
+# D. Experimental certification
+
+Find observable protocols that lower-bound \(\kappa\) and \(\gamma\) and upper-bound \(\eta\) without full process tomography.
+
+The multi-record discriminator lemma is a starting point:
+
+\[
+\epsilon_{\rm discrim}
+\Rightarrow
+\kappa\ge1-2\epsilon_{\rm discrim}.
+\]
+
+# E. Formal verification and independent audit
+
+Priority:
+
+1. original sharp theorem,
+2. POVM spectral-gap extension,
+3. qutrit equality example,
+4. metastability transfer bound.
+
+A proof assistant or independent quantum-information researcher should reconstruct these without relying on the session narrative.
