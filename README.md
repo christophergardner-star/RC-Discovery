@@ -8,178 +8,147 @@ The repository is deliberately conservative: every claim is labelled as known, d
 
 ### POVM Spectral-Gap Record-Margin Stability
 
-For a finite discrete POVM \(\{E_j\}\) whose nonzero effects have eigenvalue \(1\), let \(P_j\) be the eigenvalue-\(1\) spectral projection and define
+For a finite discrete POVM whose nonzero effects possess eigenvalue-1 repeatable sectors, the current bound is
 
-\[
-\gamma
-=
-\min_j
-\left[
-1-
-\|(I-P_j)E_j(I-P_j)\|_\infty
-\right].
-\]
-
-For the measure-and-prepare channel
-
-\[
-\Phi(\rho)
-=
-\sum_j
-\operatorname{Tr}(E_j\rho)\sigma_j,
-\]
-
-define the record margin
-
-\[
-\kappa
-=
-\min_j
-\frac12
-\inf_{\omega\in\operatorname{conv}\{\sigma_i:i\neq j\}}
-\|\sigma_j-\omega\|_1
-\]
-
-and idempotence defect
-
-\[
-\eta
-=
-\|\Phi^2-\Phi\|_\diamond.
-\]
-
-If \(\kappa>0\), there exists an exactly idempotent channel \(\Pi\), using the same POVM, such that
-
-\[
-\boxed{
-\|\Phi-\Pi\|_\diamond
+[
+|Phi-Pi|_\diamond
 \le
+\sqrt{\frac{2\eta}{\kappa\gamma}}.
+]
+
+Here \(\eta\) is the idempotence defect, \(\kappa\) is the record margin and \(\gamma\) is the spectral gap below the repeatable sector.
+
+A non-projective qutrit family attains equality exactly.
+
+## Moving-POVM boundary
+
+The next question was whether a POVM with no exact unit eigenvalue could itself be moved slightly and then rounded.
+
+That is **false in general**.
+
+The missing variable is global packing.
+
+For any \(m\)-outcome POVM on a \(d\)-dimensional Hilbert space with record states \(\sigma_j\),
+
+[
+a_j=\operatorname{Tr}(E_j\sigma_j)
+]
+
+obeys
+
+[
+\sum_j a_j\le d.
+]
+
+Thus if every record is self-read with probability at least \(1-\epsilon\),
+
+[
+m(1-\epsilon)\le d.
+]
+
+A regular-simplex family with \(m=d+1\) simultaneously has:
+
+- idempotence defect tending to zero,
+- record margin tending to one,
+- effect norms tending to one,
+- record reachability error tending to zero,
+
+yet any same-label repeatable POVM stays order-one far away.
+
+So local near-repeatability is not enough.
+
+### Binary positive result
+
+For two outcomes the packing obstruction disappears.
+
+If the two records remain separated, their reachability errors are small, and the moved POVM retains a nonzero edge spectral gap, then an exact idempotent channel exists with
+
+[
+|Phi-\Pi|_\diamond
+\le
+2r+
 \sqrt{
-\frac{2\eta}{\kappa\gamma}
+\frac{2(\eta+6r)}
+{\kappa\widetilde\gamma}
 }.
-}
-\]
+]
 
-The bound is independent of Hilbert-space dimension and outcome count.
+This is the first positive moving-POVM theorem in the repository.
 
-A two-outcome qutrit family attains equality exactly, so the spectral-gap factor is not merely proof slack.
+## Other results
 
-For projective measurements, \(\gamma=1\), recovering the original Record-Margin Stability Theorem.
+### Redundancy
 
-**Status:** internally proved and stress-tested. No exact prior statement has yet been located. Novelty is not claimed pending independent proof and specialist prior-art review.
+For two independent pure records with overlap \(s\),
 
-## Three-track results from 28 October 2026
+[
+\kappa_R=\sqrt{1-s^{2R}}.
+]
 
-### 1. POVM extension
+Correlated common-mode errors can completely remove the redundancy gain.
 
-The sharp-projective theorem extends to every finite POVM with exact repeatable sectors. The extra conditioning parameter is the spectral gap \(\gamma\) below eigenvalue \(1\).
+### Record-structured metastability
 
-See:
+If a metastable channel \(\mathcal C\) lies within \(\delta\) of the record-producing class, an exact idempotent \(\mathcal Q\) exists with
 
-- theory/povm_spectral_gap_stability.md
-
-### 2. Redundancy to stability
-
-For two independent pure records with single-fragment overlap \(s\),
-
-\[
-\boxed{
-\kappa_R
-=
-\sqrt{1-s^{2R}}.
-}
-\]
-
-This produces an explicit redundancy-to-stability certificate when inserted into the RC rounding theorem.
-
-A correlated common-noise construction shows that simply increasing the number of fragments need not improve \(\kappa\) at all.
-
-See:
-
-- theory/redundancy_stability.md
-
-### 3. Record-structured metastability
-
-If a metastable channel \(\mathcal C\) is \(\delta\)-close to a record channel in the POVM theorem class, with
-
-\[
-\eta
-=
-\|\mathcal C^2-\mathcal C\|_\diamond,
-\]
-
-then an exact idempotent \(\mathcal Q\) exists with
-
-\[
-\boxed{
-\|\mathcal C-\mathcal Q\|_\diamond
+[
+|\mathcal C-\mathcal Q|_\diamond
 \le
-\delta
-+
+\delta+
 \sqrt{
 \frac{2(\eta+3\delta)}
 {\kappa\gamma}
 }.
-}
-\]
+]
 
-This has no explicit dependence on the number of classical phases.
+No explicit phase-count term appears, but this applies only to the stronger classical-record subclass.
 
-It does **not** replace the 2026 QMSM theorem in general; it gives an alternative sufficient condition for a stronger classical-record subclass.
+## Current main open problem
 
-See:
+The moving-POVM problem has now narrowed to the packing-feasible many-outcome regime
 
-- theory/metastable_record_rounding.md
+[
+\boxed{3\le m\le d}.
+]
 
-## Why this matters
+The target is to identify the global conditioning parameter that guarantees simultaneous rounding of near-unit outcome sectors to mutually orthogonal repeatable sectors.
 
-General dimension-independent exact rounding of almost-idempotent quantum channels is false, even for explicit entanglement-breaking channels.
+Candidate structures include:
 
-The RC branch is therefore asking a classification question:
-
-> Which physical record structures restore stable exact rounding?
-
-The current results identify a positive family controlled by two geometric quantities:
-
-- record separation \(\kappa\),
-- repeatable-readout gap \(\gamma\).
+- Gram-matrix conditioning,
+- principal-angle separation,
+- total packing defect,
+- subspace matching / Hall-type conditions.
 
 ## Repository map
 
-- theory/record_margin_stability.md — original sharp theorem and proof.
-- theory/povm_spectral_gap_stability.md — non-projective POVM extension and sharp qutrit family.
-- theory/redundancy_stability.md — independent-record formulas and correlated failure mode.
-- theory/metastable_record_rounding.md — metastability transfer theorem.
-- theory/sharpness_example.md — original qubit saturation example.
-- theory/rc_language.md — minimal RC vocabulary.
-- experiments/test_record_margin.py — original 10,000-case stress test.
-- experiments/test_three_extensions.py — 20,000-case POVM stress test plus redundancy/metastability checks.
-- literature/NOVELTY_LEDGER.md — prior-art veto ledger.
-- research/OPEN_PROBLEMS.md — remaining falsifiable targets.
-- research/SESSION_2026-10-28.md — compact session log.
-- STATUS.md — claim-status ledger.
+- theory/record_margin_stability.md
+- theory/povm_spectral_gap_stability.md
+- theory/moving_povm_boundary.md
+- theory/redundancy_stability.md
+- theory/metastable_record_rounding.md
+- experiments/test_record_margin.py
+- experiments/test_three_extensions.py
+- experiments/test_moving_povm.py
+- literature/NOVELTY_LEDGER.md
+- research/OPEN_PROBLEMS.md
+- STATUS.md
 
 ## Reproduce
 
-Install NumPy:
-
     pip install -r experiments/requirements.txt
-
-Run:
-
     python experiments/test_record_margin.py
     python experiments/test_three_extensions.py
+    python experiments/test_moving_povm.py
 
 ## Research discipline
 
-No result is called a discovery merely because it is interesting, numerically successful, or absent from a quick search.
-
 Before a novelty claim:
 
-1. full proof audit,
+1. proof audit,
 2. adversarial counterexample search,
 3. reproducibility,
-4. literature veto in neighbouring mathematical languages,
+4. literature veto,
 5. independent reconstruction or formal verification.
 
 Author: **Christopher Gardner**
