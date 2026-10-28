@@ -11,9 +11,9 @@ This is a veto ledger, not a bibliography assembled to make RC look novel.
 **First submitted:** 3 May 2024  
 **URL:** https://arxiv.org/abs/2405.02434
 
-Kitaev studies UCP maps with small completely bounded idempotence defect and constructs associated approximate \(C^*\)-algebra structure with universal dimension-independent approximation statements.
+Kitaev studies UCP maps with small completely bounded idempotence defect and associated approximate \(C^*\)-algebra structure.
 
-**Relation to RC:** essential prior art. From the material checked so far, it does not state the record-margin exact-rounding theorem for sharp measure-and-prepare channels.
+**Relation to RC:** essential prior art. The exact RC record-margin statements have not been located there.
 
 ---
 
@@ -25,13 +25,13 @@ Kitaev studies UCP maps with small completely bounded idempotence defect and con
 **DOI:** 10.5281/zenodo.22906336  
 **URL:** https://zenodo.org/records/22906336
 
-The preprint constructs explicit bistochastic entanglement-breaking maps on \(M_n\) whose cb-norm idempotence defects tend to zero while their distance from all UCP idempotents has a lower bound tending to one.
+The preprint constructs explicit bistochastic entanglement-breaking maps whose cb-norm idempotence defects tend to zero while their distance from all UCP idempotents remains bounded below.
 
-**Relation to RC:** this rules out dimension-independent exact rounding for general quantum channels, even inside a broad entanglement-breaking class. A positive theorem therefore needs genuinely stronger structure.
+**Relation to RC:** proves that general dimension-independent exact rounding is false, even in a broad measure-and-prepare-like region. Any positive result must use stronger structure.
 
 ---
 
-## 3. Quantum Markov State Models for metastable dynamics
+## 3. Quantum Markov State Models
 
 **Title:** Quantum Markov State Models for Metastable Dynamics  
 **Authors:** Hao-En Li, Lin Lin, Michael Ragone  
@@ -39,17 +39,79 @@ The preprint constructs explicit bistochastic entanglement-breaking maps on \(M_
 **Submitted:** 30 September 2026  
 **URL:** https://arxiv.org/abs/2609.40214
 
-The authors obtain exact idempotent approximation for channels with small diamond-norm idempotence defect when the number of slow degrees of freedom is bounded independently of microscopic system size. Their abstract reports \(O(\eta^{1/3})\) on all inputs and \(O(\eta^{1/2})\) on metastable states, with constants depending only on slow dimension.
+The paper constructs exact idempotent approximations for almost-idempotent metastable channels under bounded slow rank.
 
-**Relation to RC:** different positive regime.
+The paper reports:
 
-- QMSM assumption: bounded slow dimension.
-- RC assumption: sharp projective readout plus record separation \(\kappa>0\).
-- RC target: constants controlled by record geometry rather than state-space size.
+- global diamond/cb approximation \(O_r(\eta^{1/3})\),
+- metastable-state approximation \(O_r(\sqrt{\eta})\),
+- constants independent of ambient dimension but dependent on slow rank \(r\),
+- no general dimension-independent modulus without bounded slow rank.
+
+**Relation to RC:** the RC metastability transfer theorem is complementary, not a replacement. It removes phase-count dependence only for channels close to a strongly classical record structure.
 
 ---
 
-## 4. Objective records versus decoherence
+## 4. Repeatable POVMs
+
+**Reference:** Paul Busch, Marian Grabowski, Pekka J. Lahti,  
+*Repeatable measurements in quantum theory: Their role and feasibility*,  
+Foundations of Physics 25, 1239–1266 (1995).  
+DOI: 10.1007/BF02055331.
+
+Standard repeatability theory establishes that a discrete POVM admits a repeatable implementation only when each nonzero effect has eigenvalue \(1\), with converse constructions available.
+
+**Relation to RC:** this supplies the exact structural boundary used by the new POVM spectral-gap theorem. RC adds a quantitative stability estimate around that repeatable sector.
+
+No source located so far states the bound
+
+\[
+\|\Phi-\Pi\|_\diamond
+\le
+\sqrt{
+\frac{2\eta}{\kappa\gamma}
+}.
+\]
+
+---
+
+## 5. Quantum Darwinism and Chernoff redundancy
+
+**Reference:** Michael Zwolak, C. Jess Riedel, Wojciech H. Zurek,  
+*Amplification, Redundancy, and Quantum Chernoff Information*,  
+Phys. Rev. Lett. 112, 140406 (2014).  
+DOI: 10.1103/PhysRevLett.112.140406.
+
+Quantum Chernoff information controls the asymptotic distinguishability and redundancy of environmental records.
+
+**Relation to RC:** the exponential distinguishability gain is known. The RC contribution is to feed record distinguishability into a quantitative exact-rounding certificate.
+
+The identity
+
+\[
+\kappa_R=\sqrt{1-s^{2R}}
+\]
+
+for two pure product records is standard state-discrimination mathematics, not claimed as new.
+
+---
+
+## 6. Classical metastability in open quantum systems
+
+**Reference:** Katarzyna Macieszczak, Dominic C. Rose, Igor Lesanovsky, Juan P. Garrahan,  
+*Theory of classical metastability in open quantum systems*,  
+Phys. Rev. Research 3, 033047 (2021).  
+DOI: 10.1103/PhysRevResearch.3.033047.
+
+This work shows that approximately simplex-like metastable manifolds yield approximately disjoint phases and effective classical stochastic dynamics.
+
+**Relation to RC:** highly relevant neighbouring work. The RC transfer theorem starts from a different hypothesis—diamond-norm proximity to a record channel—and produces an exact idempotent with an explicit record-geometry bound.
+
+A careful theorem-by-theorem comparison is still required before any novelty claim in metastability.
+
+---
+
+## 7. Objective records versus decoherence
 
 **Title:** Hamiltonian thresholds for objective records  
 **Author:** Jie Gu  
@@ -58,13 +120,13 @@ The authors obtain exact idempotent approximation for channels with small diamon
 **DOI:** 10.1103/fm9j-m9lh  
 **URL:** https://journals.aps.org/pra/abstract/10.1103/fm9j-m9lh
 
-This work explicitly separates decoherence from the creation of readable environmental witnesses. Objective records require sufficient record distinguishability, not merely suppression of coherence.
+This work separates decoherence from readable environmental witnesses.
 
-**Relation to RC:** supports treating record distinguishability as physically meaningful. The RC theorem adds a different statement: under its hypotheses, record separation controls stability of approximate repeatability.
+**Relation to RC:** supports treating record distinguishability as a physically meaningful resource.
 
 ---
 
-## 5. State objectivity and information scrambling
+## 8. State objectivity and information scrambling
 
 **Title:** State objectivity and information scrambling in realistic qubit-bosonic systems  
 **Authors:** Feng Tian, Wenting Lu, Jinzhu Jiang, Junxiao Wang, Haiqing Xie, Jian Zou  
@@ -73,32 +135,46 @@ This work explicitly separates decoherence from the creation of readable environ
 **DOI:** 10.1103/ry8r-1ts9  
 **URL:** https://journals.aps.org/pra/abstract/10.1103/ry8r-1ts9
 
-The paper reports a dynamical association between genuine objective records and absence of scrambling in the studied models, while explicitly stopping short of a universal causal relation.
-
-**Relation to RC:** potential future test bed for comparing \(\kappa\) with accessible-information and scrambling diagnostics.
+Potential future test bed for comparing record margin with scrambling and accessible-information diagnostics.
 
 # Current novelty judgement
 
-The exact statement
+Two exact statements now require serious external novelty checking:
+
+### Sharp record-margin theorem
 
 \[
 \|\Phi-\Pi\|_\diamond
 \le
-\sqrt{\frac{2\eta}{\kappa}}
+\sqrt{\frac{2\eta}{\kappa}}.
 \]
 
-for sharp measure-and-prepare channels, with \(\kappa\) defined as distance from each record to the convex hull of all competitors, has **not yet been located** in the literature search performed on 28 October 2026.
+### Repeatability-admissible POVM extension
+
+\[
+\|\Phi-\Pi\|_\diamond
+\le
+\sqrt{
+\frac{2\eta}{\kappa\gamma}
+}.
+\]
+
+Both have short internal proofs and explicit equality families.
+
+Neither exact statement has been located in the searches performed on 28 October 2026.
 
 That is not proof of novelty.
 
-## Before a publication claim
+The redundancy and metastability results in this repository are currently treated primarily as corollaries/applications of those theorem candidates, not as independent discovery claims.
+
+## Before publication
 
 Required:
 
 1. independent proof reconstruction,
-2. specialist search in operator algebras, perturbation of CP maps, quantum instruments, repeatable measurements, conditional expectations, and stability of entanglement-breaking channels,
-3. search for equivalent theorems expressed without RC vocabulary,
-4. proof-assistant or second-researcher verification if practical,
-5. precise comparison of diamond/cb norm conventions under Schrödinger-Heisenberg duality.
+2. specialist search in operator algebras, quantum instruments, POVM repeatability, perturbation of CP maps, exact/approximate conditional expectations, and entanglement-breaking channel stability,
+3. explicit comparison against classical metastability theorems,
+4. proof-assistant or second-researcher verification,
+5. precise norm-convention audit between Schrödinger and Heisenberg pictures.
 
-Until those steps are complete, status remains **provisionally novel**.
+Until then, status remains **provisionally novel**.
