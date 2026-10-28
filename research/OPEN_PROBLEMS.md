@@ -1,161 +1,68 @@
 # Open Problems
 
-Updated after the three-track push on 28 October 2026.
+Updated after the moving-POVM push on 28 October 2026.
 
-## What was resolved in this session
+## Resolved
 
-The following are no longer open in their original form:
+The original moving-POVM question is now partially resolved.
 
-1. **Can projective readout be relaxed?**  
-   Yes, for finite POVMs with exact eigenvalue-\(1\) repeatable sectors. The stability cost is controlled by a spectral gap \(\gamma\).
+### No-go side
 
-2. **What is the exact binary pure-record redundancy rate?**  
-   \[
-   \kappa_R=\sqrt{1-s^{2R}}.
-   \]
+A theorem based only on
 
-3. **Can nominal redundancy fail to improve margin?**  
-   Yes. Perfectly correlated record noise gives \(\kappa_R\) constant in \(R\).
+- small idempotence defect,
+- large record margin,
+- almost reachable records,
+- almost norm-1 POVM effects
 
-4. **Can bounded phase count be avoided in a metastable subclass?**  
-   Yes, conditionally: if the channel is close to an RC record channel with controlled \(\kappa,\gamma\), the rounding constant has no explicit phase-count dependence.
+is impossible.
 
-Those statements are documented in the theory directory.
+The regular-simplex family defeats all of those local diagnostics simultaneously.
 
-# A. Moving-POVM classification
+### Binary side
 
-This is now the strongest mathematical target.
+For two outcomes, moving the POVM is possible under explicit reachability and edge-gap control. See:
 
-The current POVM theorem assumes each nonzero effect already has an exact eigenvalue-\(1\) repeatable sector.
+- theory/moving_povm_boundary.md
 
-But a general almost-repeatable measurement may have no exact unit eigenvalue.
+# A. Main target: packing-feasible many-outcome classification
 
-## A1. Main question
+The unresolved regime is
 
-Suppose
+[
+3\le m\le d.
+]
 
-\[
-\|\Phi^2-\Phi\|_\diamond\le\eta
-\]
+Find a sufficient, and ideally necessary-and-sufficient, global condition ensuring that near-unit outcome sectors can be simultaneously rounded to orthogonal repeatable sectors.
 
-for a separated measure-and-prepare channel whose POVM is not repeatability-admissible.
+## Candidate conditioning parameters
 
-When does there exist a **nearby POVM** \(\{\widetilde E_j\}\) and nearby exact idempotent channel \(\Pi\)?
+1. Gram matrix of near-unit eigenvectors.
+2. Smallest singular value of the synthesis map.
+3. Principal angles between near-unit subspaces.
+4. Total packing defect rather than worst-case local error.
+5. Hall-type dimension conditions for families of near-unit subspaces.
 
-Find a necessary-and-sufficient conditioning quantity.
-
-Candidate ingredients:
-
-- distance of \(E_j\) to having eigenvalue \(1\),
-- separation between near-unit eigenspaces,
-- record margin \(\kappa\),
-- outcome accessibility.
-
-A classification theorem here would draw the positive boundary against the 2026 entanglement-breaking counterexamples.
+The regular simplex shows that any successful condition must detect rank/packing even when pairwise/local quantities look excellent.
 
 # B. Multi-record redundancy geometry
 
-The binary independent case is solved exactly.
+Obtain sharp \(\kappa_R\) rates for many mixed records and correlated fragments.
 
-## B1. Many records
+# C. Microscopic metastability
 
-For \(m>2\),
-
-\[
-\kappa_R
-=
-\min_j
-\frac12
-\operatorname{dist}_1
-\left(
-\rho_j^{(R)},
-\operatorname{conv}\{\rho_i^{(R)}:i\neq j\}
-\right).
-\]
-
-Obtain sharp rates for independent mixed records.
-
-The discriminator lemma gives
-
-\[
-\kappa_R\ge1-2\epsilon_R,
-\]
-
-but this need not be sharp.
-
-## B2. Correlation structure
-
-Classify when adding environmental fragments produces genuine margin gain.
-
-A useful target is a condition in terms of conditional or Chernoff information that distinguishes:
-
-- fresh independent evidence,
-- partially correlated evidence,
-- perfectly common-mode noise.
-
-## B3. Coupled defect
-
-Redundancy only improves the certificate through \(\kappa_R\) if the repeatability defect \(\eta_R\) remains controlled.
-
-Derive models where \(\eta_R\) and \(\kappa_R\) evolve together.
-
-# C. Microscopic metastability application
-
-The structural transfer theorem is proved.
-
-The next step is physical rather than algebraic.
-
-Take an explicit open-system metastability model and derive, from its microscopic channel:
-
-\[
-\delta,\qquad
-\kappa,\qquad
-\gamma,\qquad
-\eta.
-\]
-
-Then compare
-
-\[
-\Delta_{\rm RC}
-=
-\delta
-+
-\sqrt{
-\frac{2(\eta+3\delta)}
-{\kappa\gamma}
-}
-\]
-
-against existing QMSM bounds.
-
-Good targets:
-
-- a many-phase classical metastability model,
-- a dissipative spin-chain classical sector,
-- a hierarchy such as the open quantum East model.
-
-Success would mean obtaining a dimension/phase-count-independent physical certificate from microscopic parameters, not merely assuming record structure.
+Apply the record-structured transfer theorem to an explicit open-system model and derive \(\eta,\delta,\kappa,\gamma\) from microscopic parameters.
 
 # D. Experimental certification
 
-Find observable protocols that lower-bound \(\kappa\) and \(\gamma\) and upper-bound \(\eta\) without full process tomography.
+Find protocols that estimate enough of \(\eta,\kappa,\gamma\), and the new packing conditioner, without full process tomography.
 
-The multi-record discriminator lemma is a starting point:
+# E. Independent audit
 
-\[
-\epsilon_{\rm discrim}
-\Rightarrow
-\kappa\ge1-2\epsilon_{\rm discrim}.
-\]
+Priority order:
 
-# E. Formal verification and independent audit
-
-Priority:
-
-1. original sharp theorem,
-2. POVM spectral-gap extension,
-3. qutrit equality example,
-4. metastability transfer bound.
-
-A proof assistant or independent quantum-information researcher should reconstruct these without relying on the session narrative.
+1. sharp Record-Margin theorem,
+2. POVM spectral-gap theorem,
+3. moving-POVM binary theorem,
+4. regular-simplex packing derivation,
+5. metastability transfer theorem.
