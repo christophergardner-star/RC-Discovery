@@ -2,179 +2,75 @@
 
 Updated: 28 October 2026.
 
-This is a veto ledger, not a bibliography assembled to make RC look novel.
+## Confirmed neighbouring results
 
-## 1. Alexei Kitaev — almost-idempotent quantum channels
+### Kitaev (2024)
 
-**Title:** Almost-idempotent quantum channels and approximate \(C^*\)-algebras  
-**arXiv:** 2405.02434  
-**First submitted:** 3 May 2024  
-**URL:** https://arxiv.org/abs/2405.02434
+*Almost-idempotent quantum channels and approximate C*-algebras*, arXiv:2405.02434.
 
-Kitaev studies UCP maps with small completely bounded idempotence defect and associated approximate \(C^*\)-algebra structure.
+### Chenxiao (2026)
 
-**Relation to RC:** essential prior art. The exact RC record-margin statements have not been located there.
+*Almost-Idempotent Quantum Channels Need Not Be Close to Idempotent Channels*, Zenodo 22906336, 23 September 2026.
 
----
+The paper constructs regular-simplex bistochastic entanglement-breaking maps whose idempotence defects vanish while their distance from all UCP idempotents remains bounded below.
 
-## 2. 2026 negative exact-rounding result
+This is the decisive veto against any general dimension-independent exact-rounding theorem.
 
-**Title:** Almost-Idempotent Quantum Channels Need Not Be Close to Idempotent Channels  
-**Author listed by Zenodo:** Chenxiao  
-**Date:** 23 September 2026  
-**DOI:** 10.5281/zenodo.22906336  
-**URL:** https://zenodo.org/records/22906336
+### Repeatable POVMs
 
-The preprint constructs explicit bistochastic entanglement-breaking maps whose cb-norm idempotence defects tend to zero while their distance from all UCP idempotents remains bounded below.
+Busch, Grabowski and Lahti, *Repeatable measurements in quantum theory: Their role and feasibility*, Foundations of Physics 25 (1995), DOI 10.1007/BF02055331.
 
-**Relation to RC:** proves that general dimension-independent exact rounding is false, even in a broad measure-and-prepare-like region. Any positive result must use stronger structure.
+For finite discrete POVMs, repeatable implementation is possible exactly when every nonzero effect has eigenvalue 1.
 
----
+### QMSM metastability
 
-## 3. Quantum Markov State Models
+Li, Lin and Ragone, *Quantum Markov State Models for Metastable Dynamics*, arXiv:2609.40214 (2026).
 
-**Title:** Quantum Markov State Models for Metastable Dynamics  
-**Authors:** Hao-En Li, Lin Lin, Michael Ragone  
-**arXiv:** 2609.40214  
-**Submitted:** 30 September 2026  
-**URL:** https://arxiv.org/abs/2609.40214
+### Quantum Chernoff redundancy
 
-The paper constructs exact idempotent approximations for almost-idempotent metastable channels under bounded slow rank.
+Zwolak, Riedel and Zurek, *Amplification, Redundancy, and Quantum Chernoff Information*, PRL 112, 140406 (2014).
 
-The paper reports:
+## Current RC theorem candidates
 
-- global diamond/cb approximation \(O_r(\eta^{1/3})\),
-- metastable-state approximation \(O_r(\sqrt{\eta})\),
-- constants independent of ambient dimension but dependent on slow rank \(r\),
-- no general dimension-independent modulus without bounded slow rank.
+### 1. Sharp Record-Margin theorem
 
-**Relation to RC:** the RC metastability transfer theorem is complementary, not a replacement. It removes phase-count dependence only for channels close to a strongly classical record structure.
+[
+|\Phi-\Pi|_\diamond\le\sqrt{2\eta/\kappa}.
+]
 
----
+### 2. Repeatability-admissible POVM extension
 
-## 4. Repeatable POVMs
-
-**Reference:** Paul Busch, Marian Grabowski, Pekka J. Lahti,  
-*Repeatable measurements in quantum theory: Their role and feasibility*,  
-Foundations of Physics 25, 1239–1266 (1995).  
-DOI: 10.1007/BF02055331.
-
-Standard repeatability theory establishes that a discrete POVM admits a repeatable implementation only when each nonzero effect has eigenvalue \(1\), with converse constructions available.
-
-**Relation to RC:** this supplies the exact structural boundary used by the new POVM spectral-gap theorem. RC adds a quantitative stability estimate around that repeatable sector.
-
-No source located so far states the bound
-
-\[
-\|\Phi-\Pi\|_\diamond
+[
+|\Phi-\Pi|_\diamond
 \le
-\sqrt{
-\frac{2\eta}{\kappa\gamma}
-}.
-\]
+\sqrt{2\eta/(\kappa\gamma)}.
+]
 
----
+Neither exact inequality has yet been located in prior work.
 
-## 5. Quantum Darwinism and Chernoff redundancy
+## Moving-POVM result status
 
-**Reference:** Michael Zwolak, C. Jess Riedel, Wojciech H. Zurek,  
-*Amplification, Redundancy, and Quantum Chernoff Information*,  
-Phys. Rev. Lett. 112, 140406 (2014).  
-DOI: 10.1103/PhysRevLett.112.140406.
+The broad moving-POVM conjecture is **not novel because it is false**.
 
-Quantum Chernoff information controls the asymptotic distinguishability and redundancy of environmental records.
+The session instead produced:
 
-**Relation to RC:** the exponential distinguishability gain is known. The RC contribution is to feed record distinguishability into a quantitative exact-rounding certificate.
+- an elementary packing inequality,
+- a direct same-label packing no-go,
+- a binary positive transfer theorem,
+- a clear reduction of the open problem to the many-outcome packing-feasible regime.
 
-The identity
+The regular-simplex obstruction must be viewed in light of Chenxiao's 2026 negative result, which already uses the same geometric mechanism at the full channel level.
 
-\[
-\kappa_R=\sqrt{1-s^{2R}}
-\]
+No novelty claim should be attached to the existence of the simplex obstruction itself.
 
-for two pure product records is standard state-discrimination mathematics, not claimed as new.
-
----
-
-## 6. Classical metastability in open quantum systems
-
-**Reference:** Katarzyna Macieszczak, Dominic C. Rose, Igor Lesanovsky, Juan P. Garrahan,  
-*Theory of classical metastability in open quantum systems*,  
-Phys. Rev. Research 3, 033047 (2021).  
-DOI: 10.1103/PhysRevResearch.3.033047.
-
-This work shows that approximately simplex-like metastable manifolds yield approximately disjoint phases and effective classical stochastic dynamics.
-
-**Relation to RC:** highly relevant neighbouring work. The RC transfer theorem starts from a different hypothesis—diamond-norm proximity to a record channel—and produces an exact idempotent with an explicit record-geometry bound.
-
-A careful theorem-by-theorem comparison is still required before any novelty claim in metastability.
-
----
-
-## 7. Objective records versus decoherence
-
-**Title:** Hamiltonian thresholds for objective records  
-**Author:** Jie Gu  
-**Phys. Rev. A 114, L020201 (2026)**  
-**Published:** 13 August 2026  
-**DOI:** 10.1103/fm9j-m9lh  
-**URL:** https://journals.aps.org/pra/abstract/10.1103/fm9j-m9lh
-
-This work separates decoherence from readable environmental witnesses.
-
-**Relation to RC:** supports treating record distinguishability as a physically meaningful resource.
-
----
-
-## 8. State objectivity and information scrambling
-
-**Title:** State objectivity and information scrambling in realistic qubit-bosonic systems  
-**Authors:** Feng Tian, Wenting Lu, Jinzhu Jiang, Junxiao Wang, Haiqing Xie, Jian Zou  
-**Phys. Rev. A 114, 042424 (2026)**  
-**Published:** 13 October 2026  
-**DOI:** 10.1103/ry8r-1ts9  
-**URL:** https://journals.aps.org/pra/abstract/10.1103/ry8r-1ts9
-
-Potential future test bed for comparing record margin with scrambling and accessible-information diagnostics.
-
-# Current novelty judgement
-
-Two exact statements now require serious external novelty checking:
-
-### Sharp record-margin theorem
-
-\[
-\|\Phi-\Pi\|_\diamond
-\le
-\sqrt{\frac{2\eta}{\kappa}}.
-\]
-
-### Repeatability-admissible POVM extension
-
-\[
-\|\Phi-\Pi\|_\diamond
-\le
-\sqrt{
-\frac{2\eta}{\kappa\gamma}
-}.
-\]
-
-Both have short internal proofs and explicit equality families.
-
-Neither exact statement has been located in the searches performed on 28 October 2026.
-
-That is not proof of novelty.
-
-The redundancy and metastability results in this repository are currently treated primarily as corollaries/applications of those theorem candidates, not as independent discovery claims.
+The potentially useful contribution is the RC parameter-level diagnosis: why local record margin, local reachability and near-unit effect norms all fail to detect the obstruction.
 
 ## Before publication
 
 Required:
 
 1. independent proof reconstruction,
-2. specialist search in operator algebras, quantum instruments, POVM repeatability, perturbation of CP maps, exact/approximate conditional expectations, and entanglement-breaking channel stability,
-3. explicit comparison against classical metastability theorems,
+2. expert search in POVM perturbation and frame theory,
+3. comparison with stability results for nearly orthogonal frames/subspaces,
 4. proof-assistant or second-researcher verification,
-5. precise norm-convention audit between Schrödinger and Heisenberg pictures.
-
-Until then, status remains **provisionally novel**.
+5. norm-convention audit.
