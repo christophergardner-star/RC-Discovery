@@ -1,6 +1,6 @@
 # Novelty and Prior-Art Ledger
 
-Updated: 28 October 2026.
+Updated: 29 October 2026.
 
 ## Confirmed neighbouring results
 
@@ -74,3 +74,27 @@ Required:
 3. comparison with stability results for nearly orthogonal frames/subspaces,
 4. proof-assistant or second-researcher verification,
 5. norm-convention audit.
+
+## Continual-learning bridge
+
+### IDER (ICLR 2026)
+
+Liu et al., *IDER: IDempotent Experience Replay for Reliable Continual Learning*, ICLR 2026 / arXiv:2603.00624.
+
+IDER already uses idempotence directly in continual learning, including an idempotence loss and an idempotence-distillation objective. Therefore:
+
+- "idempotence for continual learning" is **not** an RC novelty claim,
+- projection-style stability is **not** an RC novelty claim,
+- quadratic parameter anchoring is **not** an RC novelty claim.
+
+### RC-TCL pilot
+
+The 29 October 2026 pilot derives an exact affine task-horizon diagnostic for the frozen canonical TCL memory penalty and introduces an **anchor-conflict variance** for stored task checkpoints.
+
+Current status:
+
+- exact diagonal/horizon rounding identity: **derived elementary math; no novelty claim**,
+- anchor-barycentre decomposition: **standard quadratic algebra; no novelty claim**,
+- using horizon rounding + locked-anchor conflict as a predictor of TCL forgetting: **potentially distinct application/diagnostic; novelty unverified**.
+
+A literature veto is required across EWC/Laplace consolidation, parameter-conflict diagnostics, projection-based continual learning, and idempotent neural-network training before stronger wording is allowed.
