@@ -29,3 +29,15 @@ Updated: 29 October 2026
 | TCL anchor-conflict variance | **Derived diagnostic** | Detects strongly stable compromise anchors that may represent no stored task. |
 | Locked-conflict mass predicts forgetting | **Open empirical hypothesis** | Requires exporting canonical TCL checkpoints/importance maps across runs. |
 | "Idempotence in continual learning" as novelty | **Vetoed** | IDER, ICLR 2026, already uses idempotence as a CL principle. |
+
+## RC-TCL smoke-test update — 29 October 2026
+
+| Item | Status | Notes |
+|---|---|---|
+| Synthetic anchor-conflict smoke test | **Completed** | 80 sequences / 240 scored transitions. |
+| "Locked conflict predicts more next-step forgetting" | **Refuted in smoke test** | Immediate forgetting moved in the opposite direction. |
+| Locked conflict vs joint accuracy | **Supported in smoke test** | Pearson r = -0.312, p = 7.97e-7; Spearman rho = -0.346, p = 3.73e-8. |
+| Shuffled-anchor control | **Signal removed** | Joint-accuracy Pearson r = -0.045, p = 0.49. |
+| Shuffled-importance control | **Signal largely remains** | Joint-accuracy Pearson r = -0.286, p = 6.60e-6. |
+| Current interpretation | **Revised** | Anchor geometry looks more important than exact ThermalImportance alignment in this toy regime; full canonical TCL/CIFAR test still required. |
+
