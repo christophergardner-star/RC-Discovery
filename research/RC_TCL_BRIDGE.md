@@ -312,23 +312,27 @@ A practical RC-TCL report should therefore include:
 - anchor-conflict variance \(C_i\),
 - conflict mass restricted to strongly locked coordinates.
 
-## 6. Immediate experimental prediction
+## 6. Smoke-test correction
 
-The diagnostic makes a falsifiable prediction:
+The first falsifiable prediction was that forgetting would be worst when a parameter direction was simultaneously strongly locked (small \(r_i\)) and high-conflict (large \(C_i\)).
 
-> Forgetting should be worst when a parameter direction is simultaneously strongly locked (small \(r_i\)) and high-conflict (large \(C_i\)).
+A 29 October 2026 synthetic sequential-classification smoke test did **not** support that prediction. Immediate forgetting moved in the opposite direction.
 
-Conversely, high-conflict directions should ideally remain plastic, be routed to separate subspaces, or have their memory weight reduced.
+What did survive was a relation to retained/joint accuracy: larger locked-conflict score was associated with lower post-old-task accuracy and lower joint old+new accuracy. Independently shuffling anchor coordinates removed the joint-accuracy signal, whereas shuffling importance coordinates left much of it intact.
 
-This can be tested on existing TCL runs by serialising the per-task ThermalCheckpoint importance maps and anchors, then correlating
+So the revised hypothesis is:
+
+> anchor conflict is a marker of a structurally incompatible retained state, not necessarily a predictor of the next incremental forgetting step.
+
+The main real-data test should correlate
 
 \[
 (1-r_i)C_i
 \]
 
-or a layer-aggregated version with subsequent per-task forgetting.
+and unweighted anchor-conflict baselines with post-old-task accuracy, joint/JAF-style performance and only secondarily with incremental forgetting.
 
-If that correlation survives across seeds and datasets, RC has contributed a new **diagnostic variable** to TCL rather than merely relabelling an existing penalty.
+See research/RC_TCL_SMOKE_RESULTS.md for the completed smoke test.
 
 ## 7. Relationship to prior work
 
