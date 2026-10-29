@@ -103,6 +103,21 @@ If a metastable channel \(\mathcal C\) lies within \(\delta\) of the record-prod
 
 No explicit phase-count term appears, but this applies only to the stronger classical-record subclass.
 
+### RC-TCL continual-learning bridge
+
+The classical TCL memory penalty admits an exact task-horizon affine analysis when its stored anchors and importance maps are frozen.
+
+The first pilot shows why a one-step idempotence defect is insufficient: tiny optimizer steps can look almost idempotent simply because they are almost identity. Over a full task horizon, the useful question is whether parameter modes separate into locked and plastic sectors.
+
+The pilot also introduces an anchor-conflict diagnostic: a mode may be extremely stable while being locked to the weighted compromise of mutually inconsistent task checkpoints.
+
+See:
+
+- research/RC_TCL_BRIDGE.md
+- experiments/rc_tcl_certificate.py
+
+Novelty is not claimed. IDER (ICLR 2026) already uses idempotence in continual learning; the RC-TCL contribution is currently an application/diagnostic hypothesis.
+
 ## Current main open problem
 
 The moving-POVM problem has now narrowed to the packing-feasible many-outcome regime
@@ -130,8 +145,10 @@ Candidate structures include:
 - experiments/test_record_margin.py
 - experiments/test_three_extensions.py
 - experiments/test_moving_povm.py
+- experiments/rc_tcl_certificate.py
 - literature/NOVELTY_LEDGER.md
 - research/OPEN_PROBLEMS.md
+- research/RC_TCL_BRIDGE.md
 - STATUS.md
 
 ## Reproduce
