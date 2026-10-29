@@ -1,6 +1,6 @@
 # Research Status Ledger
 
-Updated: 28 October 2026
+Updated: 29 October 2026
 
 | Item | Status | Notes |
 |---|---|---|
@@ -19,3 +19,13 @@ Updated: 28 October 2026
 | Record-structured metastability transfer | **Internally proved corollary** | No explicit phase-count dependence inside the classical-record subclass. |
 | General moving-POVM classification for \(3\le m\le d\) | **Open** | Current top target. |
 | RC is a fundamental theory | **Not established** | No such claim is made. |
+
+## Application bridge status
+
+| Item | Status | Notes |
+|---|---|---|
+| RC-TCL task-horizon affine rounding identity | **Derived elementary result** | Exact for frozen quadratic memory under isolated plain-SGD probe; not claimed novel. |
+| Momentum-aware TCL horizon probe | **Computed** | Canonical Split-CIFAR-10 settings give a 50% contraction boundary near total importance (A=0.05521) in the isolated (m=0.9) probe. |
+| TCL anchor-conflict variance | **Derived diagnostic** | Detects strongly stable compromise anchors that may represent no stored task. |
+| Locked-conflict mass predicts forgetting | **Open empirical hypothesis** | Requires exporting canonical TCL checkpoints/importance maps across runs. |
+| "Idempotence in continual learning" as novelty | **Vetoed** | IDER, ICLR 2026, already uses idempotence as a CL principle. |
