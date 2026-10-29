@@ -114,6 +114,7 @@ The pilot also introduces an anchor-conflict diagnostic: a mode may be extremely
 See:
 
 - research/RC_TCL_BRIDGE.md
+- research/RC_TCL_SMOKE_RESULTS.md
 - experiments/rc_tcl_certificate.py
 
 Novelty is not claimed. IDER (ICLR 2026) already uses idempotence in continual learning; the RC-TCL contribution is currently an application/diagnostic hypothesis.
