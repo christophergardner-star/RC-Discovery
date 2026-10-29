@@ -1,6 +1,6 @@
 # Application Targets
 
-Updated: 28 October 2026
+Updated: 29 October 2026
 
 This file records concrete systems where the RC record-stability results could be used.
 
@@ -134,3 +134,37 @@ and tracks observed repeated-readout error across device settings.
 If successful, the output would be a dimension-independent certificate of stable classical readout derived from experimentally accessible measurement data.
 
 This is the most direct path from the current RC mathematics to a concrete use.
+
+## 4. Continual learning / TCL memory certification
+
+### Why it fits
+
+The canonical TCL memory penalty is a weighted quadratic over stored task checkpoints. When the anchors and importance maps are frozen, its penalty-only dynamics are an exactly solvable affine map.
+
+RC can therefore be used as a classical diagnostic without importing the quantum theorem:
+
+1. compute the task-horizon contraction spectrum,
+2. round each parameter mode to an ideal locked/free projection,
+3. measure distance to that projection,
+4. separately measure disagreement among the stored task anchors.
+
+The pilot in `research/RC_TCL_BRIDGE.md` identified an important failure mode:
+
+> small idempotence defect can be vacuous if each update is merely close to identity, and even a strongly stable mode can be wrong if it is locked to a compromise between conflicting task anchors.
+
+The proposed RC-TCL variables are:
+
+- horizon contraction factor (r_i),
+- horizon idempotence defect (\eta_K),
+- nearest-projector distance (\delta_K),
+- locked/free/ambiguous mode fractions,
+- anchor-conflict variance (C_i),
+- locked-conflict mass such as ((1-r_i)C_i).
+
+Primary empirical question:
+
+> Does locked-conflict mass predict subsequent catastrophic forgetting across TCL tasks and seeds?
+
+Companion calculator: `experiments/rc_tcl_certificate.py`.
+
+Novelty status: **application/diagnostic only; unverified**. IDER (ICLR 2026) already establishes idempotence as a continual-learning principle at the prediction/output level.
