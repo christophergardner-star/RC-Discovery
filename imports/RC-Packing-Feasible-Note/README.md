@@ -10,18 +10,21 @@
 
 ## Papers
 
-- **[`paper/FINAL.md`](paper/FINAL.md)** — Clean final version aligned with the validated coefficient-two bound.
+- **[`paper/FINAL.md`](paper/FINAL.md)** — Clean final version (coefficient-two bound).
 - **[`paper/long_paper.md`](paper/long_paper.md)** — Extended development.
 - **[`paper/short_paper.md`](paper/short_paper.md)** — Concise version.
 - **[`theory/full_proof.md`](theory/full_proof.md)** — Full proof write-up.
 
-## Supporting materials
+## Detailed notes
 
 | File | Content |
 |------|---------|
-| `STATUS.md` | Current status |
+| `STATUS.md` | Current precise status |
+| `theory/HARDER_PUSH_2.md` | Careful sharpness search (ratios 0.18–0.47) |
+| `theory/HARDER_PUSH.md` | Explicit probes and robustness constants |
+| `theory/CLOSING_PROOFS.md` | Analytic arguments for tractable problems |
 | `lean/RCProof/Hybrid.lean` | Formalised algebraic core (builds) |
-| `theory/RECHECK_2026-10-31.md` | Fresh machine-precision recheck |
+| `lean/RCProof/HybridExtended.lean` | Residual orthogonality (builds) |
 | `REVIEW_PACKAGE.md` | Package for external specialists |
 | `NOVELTY_STATEMENT.md` | Novelty claim and search scope |
 
@@ -33,4 +36,4 @@ Under packing condition \(\alpha = \sigma_{\min}(T) > 0\), the same-label comple
 \qquad
 \gamma_F \ge \delta.
 \]
-The result is internally reconstructed, computationally audited, and partially formalised. Novelty is unverified. Independent external reconstruction of the hybrid distance bound remains the credibility gate.
+The result is internally reconstructed, computationally audited, and partially formalised. Coefficient 2 is a safe majorant with observed slack. Novelty is unverified. Independent external reconstruction of the hybrid distance bound remains the credibility gate.
