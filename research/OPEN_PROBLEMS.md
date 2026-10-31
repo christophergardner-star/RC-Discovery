@@ -194,3 +194,35 @@ Current priority order:
 5. formalization of the elementary core after theorem statements stabilize.
 
 The sharp Record-Margin and POVM spectral-gap proofs have now survived independent reconstruction.
+
+
+## A2. Residual spectral geometry
+
+The proposed shortcut
+
+[
+F_j=Q_j,quad jle m,qquad
+F_{m+1}=I-sum_{j=1}^mQ_j
+]
+
+does give (gamma_F=1), but it does **not** preserve the dimension-free Naimark closeness in general.
+
+An exact counterexample with
+
+[
+E_1=operatorname{diag}(1,0,1/2),qquad
+E_2=operatorname{diag}(0,1,1/2)
+]
+
+has perfectly packed near-unit sectors ((alpha=1)), yet routing the residual basis state to a new projective outcome gives measurement-channel diamond distance (2).
+
+See:
+
+- research/DEFINITIVE_CONCLUSION_AUDIT_2026-10-31.md
+- experiments/test_extra_outcome_gap_closure.py
+
+The live question is therefore:
+
+> What additional residual-geometry condition allows one to retain the outcome-independent Naimark closeness while obtaining a quantitative repeatability spectral gap?
+
+Equivalent alternatives are to remove the gap from the Record-Margin rounding theorem, or identify a new residual invariant controlling it.
