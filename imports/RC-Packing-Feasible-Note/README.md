@@ -2,17 +2,24 @@
 
 **Share this link:** https://github.com/Cruxy234/RC-Packing-Feasible-Note
 
+**Current status:** [`STATUS.md`](STATUS.md)
+
 Related upstream: [christophergardner-star/RC-Discovery](https://github.com/christophergardner-star/RC-Discovery)
 
 ## Papers
 
 - **[`paper/long_paper.md`](paper/long_paper.md)** — Extended paper with full development, numerical evidence, prior-art discussion, and limitations.
 - **[`paper/short_paper.md`](paper/short_paper.md)** — Concise version for external attack.
+- **[`theory/full_proof.md`](theory/full_proof.md)** — Complete write-up of the hybrid Stinespring same-label theorem.
+- **[`theory/full_proof_verification.md`](theory/full_proof_verification.md)** — Machine-precision verification of the identities.
 
 ## Supporting notes (in order of development)
 
 | File | Content |
 |------|---------|
+| `STATUS.md` | Current status summary |
+| `theory/full_proof.md` | Full proof of the hybrid isometry theorem |
+| `theory/full_proof_verification.md` | Machine-precision verification |
 | `theory/PRIOR_ART_VETO_UPDATED.md` | Deeper literature search: no match for hybrid same-label theorem |
 | `theory/hybrid_stinespring_isometry.md` | Hybrid isometry construction and key identities |
 | `theory/PRIOR_ART_VETO.md` | Initial literature search |
