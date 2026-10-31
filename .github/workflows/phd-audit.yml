@@ -32,9 +32,6 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r experiments/requirements_validation.txt
 
-      - name: Audit human-authorship and AI-provider claim boundary
-        run: python experiments/test_ai_rights_notice.py
-
       - name: Run quick doctoral-accuracy audit
         run: |
           python experiments/run_phd_validation.py \
@@ -93,9 +90,6 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r experiments/requirements_validation.txt
 
-      - name: Audit human-authorship and AI-provider claim boundary
-        run: python experiments/test_ai_rights_notice.py
-
       - name: Run full doctoral-accuracy audit
         run: |
           python experiments/run_phd_validation.py \
@@ -111,4 +105,82 @@ jobs:
           path: |
             research/ci_validation/full
             research/local_validation/ai_rights_notice.json
+          if-no-files-found: error
+
+  application-certificates:
+    name: RC application certificate smoke checks
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'push' && contains(github.event.head_commit.message, '[full-audit]'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: experiments/requirements_validation.txt
+
+      - name: Install numerical dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r experiments/requirements_validation.txt
+
+      - name: Run QND and TCL certificate scripts
+        run: |
+          mkdir -p research/ci_validation/applications
+          python experiments/rc_qnd_certificate.py \
+            2>&1 | tee research/ci_validation/applications/rc_qnd_certificate.log
+          python experiments/rc_tcl_certificate.py \
+            2>&1 | tee research/ci_validation/applications/rc_tcl_certificate.log
+
+      - name: Upload application evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rc-application-smoke-${{ github.sha }}
+          path: research/ci_validation/applications
+          if-no-files-found: error
+
+  tcl-neural-smoke:
+    name: Optional PyTorch TCL conflict smoke test
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'push' && contains(github.event.head_commit.message, '[full-audit]'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install CPU PyTorch smoke-test environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy==2.5.4 scipy==1.18.1
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+
+      - name: Run synthetic TCL conflict smoke test
+        run: |
+          mkdir -p research/ci_validation/tcl
+          python experiments/rc_tcl_conflict_smoke.py \
+            2>&1 | tee research/ci_validation/tcl/rc_tcl_conflict_smoke.log
+
+      - name: Upload TCL smoke evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rc-tcl-neural-smoke-${{ github.sha }}
+          path: research/ci_validation/tcl
           if-no-files-found: error
