@@ -1,14 +1,18 @@
 # VIBE MATH — RC-Discovery
 
-**VIBE MATH** is the working name for this AI-assisted mathematical discovery programme. Christopher Gardner directs the questions, judgement, counterexample search and research strategy; AI is used for derivation, coding, numerical testing, proof attacks, literature triage and formalisation support.
+**Human author and research director:** Christopher Gardner  
+**Research workflow:** VIBE MATH  
+**Repository status:** internally reconstructed, computationally audited, partially formalised, novelty unverified
 
 > **Vibe to generate. Audit to believe.**
 
-This repository deliberately distinguishes conjecture, numerical evidence, internal proof, machine-checked lemmas, external verification and novelty.
+RC-Discovery separates conjecture, numerical evidence, internal proof reconstruction, machine-checked lemmas, external verification, provenance and novelty. Those categories are not interchangeable.
+
+AI systems are used as research tools for derivation support, coding, testing, adversarial auditing, editing, literature triage and formalisation assistance. They are not designated as authors, inventors, owners, sponsors, endorsers or claimants. See [`AI_RIGHTS_AND_ATTRIBUTION.md`](AI_RIGHTS_AND_ATTRIBUTION.md).
 
 ## Current strongest theorem candidate
 
-Let \(\{E_j\}_{j=1}^m\) be a finite POVM. Fix \(0<\delta<1/2\). For every nonzero outcome let \(P_j\ne0\) be the full spectral projection of \(E_j\) onto eigenvalues at least \(1-\delta\).
+Let \(\{E_j\}_{j=1}^m\) be a finite POVM. Fix \(0<\delta<1/2\). For every nonzero outcome, let \(P_j\neq0\) be the full spectral projection of \(E_j\) onto eigenvalues at least \(1-\delta\).
 
 Define
 
@@ -32,7 +36,7 @@ Let \(T=U|T|\), let \(Q_j\) be the mutually orthogonal polar-rounded sectors, an
 R=I-\sum_jQ_j.
 \]
 
-The same-label completion is
+The same-label residual completion is
 
 \[
 \boxed{F_j=Q_j+R E_jR.}
@@ -44,7 +48,7 @@ Internally reconstructed consequences include
 \boxed{\gamma_F\ge\delta}
 \]
 
-and the outcome-count- and dimension-independent movement bound
+and the outcome-count- and dimension-independent measurement movement estimate
 
 \[
 \boxed{
@@ -56,11 +60,11 @@ and the outcome-count- and dimension-independent movement bound
 }
 \]
 
-The coefficient-two refinement is proved in `theory/BOUND_CANDIDATE_2026-10-31.md`; optimality is not claimed.
+The coefficient-two refinement is derived in [`theory/BOUND_CANDIDATE_2026-10-31.md`](theory/BOUND_CANDIDATE_2026-10-31.md). Optimality is not claimed.
 
 ## Correctly typed hybrid dilation
 
-The theorem uses the labelled direct-sum inclusion
+The canonical theorem uses the labelled direct-sum inclusion
 
 \[
 J_{\mathcal K}:\mathcal K\to\bigoplus_j\mathcal H,
@@ -68,9 +72,15 @@ J_{\mathcal K}:\mathcal K\to\bigoplus_j\mathcal H,
 J_{\mathcal K}(x_1,\ldots,x_m)=(x_1,\ldots,x_m),
 \]
 
-not the alternative map that embeds polar vectors \(q_j\) into the label blocks.
+not the historical alternative map that embeds polar-rounded vectors into the label blocks.
 
-With the canonical measurement isometry \(Wz=(\sqrt{E_j}z)_j\), define
+With the canonical measurement isometry
+
+\[
+(Wz)_j=\sqrt{E_j}\,z,
+\]
+
+define
 
 \[
 \boxed{V=J_{\mathcal K}U^*+WR.}
@@ -84,7 +94,7 @@ V^*V=I,
 V^*\Lambda_jV=Q_j+R E_jR=F_j.
 \]
 
-This typed distinction resolves the apparent contradiction in the imported Cruxy notes.
+The typed distinction is essential and is covered by the theorem-contract test and a deliberate negative control for the incorrect map.
 
 ## Repaired exact-idempotent record certificate
 
@@ -138,7 +148,7 @@ Since \(e\le\delta\), substitution of the coefficient-two movement bound gives
 }
 \]
 
-This repaired route avoids placing movement error inside the spectral-gap denominator. See `research/CERTIFICATE_PROGRESS_2026-10-31.md`.
+The full derivation and limitations are in [`research/CERTIFICATE_PROGRESS_2026-10-31.md`](research/CERTIFICATE_PROGRESS_2026-10-31.md).
 
 ## Core results and refutations
 
@@ -173,28 +183,67 @@ The programme has established that:
 - local near-repeatability diagnostics do not remove the regular-simplex packing obstruction;
 - \(m>d\) blocks same-label exact repeatability;
 - threshold data alone do not support a generic linear \(O(\delta)\) movement bound;
-- routing all residual mass to a new projective outcome may move the measurement channel by the maximum distance \(2\);
-- pure-state total-variation sampling is not automatically a complete diamond-norm calculation.
+- routing all residual mass to a new projective outcome can move the measurement channel by distance \(2\);
+- pure-state total-variation sampling is not automatically a diamond-norm calculation;
+- the historical polar-vector embedding is not interchangeable with \(J_{\mathcal K}\).
+
+## Executable validation
+
+The canonical validation entry point is
+
+```bash
+python experiments/run_phd_validation.py --profile full
+```
+
+Convenience launchers:
+
+```powershell
+.\scripts\run_phd_audit.ps1 -Profile full
+```
+
+```bash
+bash scripts/run_phd_audit.sh --profile full
+```
+
+The completed clean CI audit at commit `d46b7ebdf83a23323486397ec4ac8187600ff687` passed:
+
+- Python quick audit;
+- Python full SDP audit;
+- pinned Lean build;
+- theorem-contract tests;
+- adversarial many-outcome and higher-rank tests;
+- record-accessibility and repaired-certificate tests;
+- provenance, claim-discipline and AI-provider non-claim audits.
+
+Detailed report: [`research/PHD_VALIDATION_REPORT_2026-10-31.md`](research/PHD_VALIDATION_REPORT_2026-10-31.md).
+
+A passing suite is computational and formalisation evidence within its tested scope. It is not external proof, peer review or a novelty certificate.
 
 ## Latest Cruxy source synchronisation
 
-The public source repository was pulled again in full and checked at Git-object level:
+The public source repository has been pulled again in full and checked at Git-object level:
 
 - source: `Cruxy234/RC-Packing-Feasible-Note`;
 - source branch: `main`;
-- source commit: `f94275addb491f1b4be428e2a65939bd4c153897`;
-- source tree: `ef0eaf35289b2f489031baaa28163cc2bd97dff0`;
+- source commit: `fcef89be09dd9167a5a94d887e34d5ef1a8d0746`;
+- source tree: `2d0e9ef233a39aea8b1555a8d51db31bf934ef44`;
 - exact snapshot: `imports/RC-Packing-Feasible-Note/`.
 
-Compared with the previous snapshot, GitHub reports exactly four changed paths: updated source `README.md`, plus new `STATUS.md`, `theory/full_proof.md`, and `theory/full_proof_verification.md`. All four are imported, and the imported `lean/`, `paper/`, and `theory/` tree SHAs match the source exactly.
+Compared with the previous imported source commit, GitHub reports ten commits and exactly nine changed paths. All nine were imported. The imported `lean/`, `paper/` and `theory/` subtree SHAs match the source exactly.
 
 Detailed evidence:
 
-- `imports/RC-Packing-Feasible-Note/SNAPSHOT_MANIFEST.md`;
-- `research/CRUXY_SYNC_REPORT_F94275_2026-10-31.md`;
-- `research/CRUXY_REMERGE_AUDIT_2026-10-31.md`.
+- [`imports/RC-Packing-Feasible-Note/SNAPSHOT_MANIFEST.md`](imports/RC-Packing-Feasible-Note/SNAPSHOT_MANIFEST.md);
+- [`research/CRUXY_SYNC_REPORT_FCEF89_2026-10-31.md`](research/CRUXY_SYNC_REPORT_FCEF89_2026-10-31.md);
+- [`research/CRUXY_REMERGE_AUDIT_2026-10-31.md`](research/CRUXY_REMERGE_AUDIT_2026-10-31.md).
 
-The imported snapshot is provenance, not canonical truth. In particular, the source `full_proof.md` uses ambiguous rank-one wording for \(J\), retains the older coefficient-four estimate, and leaves its distance step at sketch level. Canonical statements remain in root `theory/`, `research/`, `paper/`, `review/`, `README.md` and `STATUS.md`.
+The imported snapshot is provenance, not canonical truth. In particular:
+
+- its `NOVELTY_STATEMENT.md` is not adopted as a verified novelty claim;
+- its `REVIEW_PACKAGE.md` retains the older coefficient-four review framing;
+- its `full_proof.md` uses ambiguous notation for \(J\);
+- its source Lean files prove algebraic consequences under supplied hypotheses, not the end-to-end physical theorem;
+- its `paper/FINAL.md` is useful source material but does not replace the typed theorem, repaired certificate, validation report or canonical review package.
 
 ## Prior-art boundary
 
@@ -235,9 +284,9 @@ No exact prior theorem matching the full chain was located in the searches perfo
 
 Canonical policy:
 
-- `literature/PRIOR_ART_AND_ATTRIBUTION.md`;
-- `literature/NOVELTY_LEDGER.md`;
-- `literature/DEEP_PRIOR_ART_VETO_2026-10-31.md`.
+- [`literature/PRIOR_ART_AND_ATTRIBUTION.md`](literature/PRIOR_ART_AND_ATTRIBUTION.md);
+- [`literature/NOVELTY_LEDGER.md`](literature/NOVELTY_LEDGER.md);
+- [`literature/DEEP_PRIOR_ART_VETO_2026-10-31.md`](literature/DEEP_PRIOR_ART_VETO_2026-10-31.md).
 
 ## Lean formalisation
 
@@ -248,49 +297,28 @@ Machine checked with Lean 4 + Mathlib and zero `sorry`:
 - `near_orthonormal_overlap`;
 - `rank1_core_package`.
 
-Four rectangular-matrix lemmas in `Hybrid.lean` and five projection/compression lemmas in `Gap.lean` also compile without `sorry`. They establish the hybrid isometry and compression identities under explicit hypotheses and the operator-order step behind the residual spectral gap.
+Additional rectangular-matrix and projection/compression lemmas compile under explicit hypotheses. The complete spectral-sector construction, coefficient-two analytic bridge, diamond-norm transfer and end-to-end record certificate are not yet fully formalised.
 
-Not yet formalised:
+Canonical formalisation scope: [`lean/README.md`](lean/README.md).
 
-- construction of all typed spectral-sector hypotheses;
-- complete Hilbert-space polar geometry;
-- the diamond-norm channel step;
-- the end-to-end record certificate.
+## Doctoral-style and external-review package
 
-## Doctoral-style research package
+- [`paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md`](paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md);
+- [`theory/THEOREM_V1_FREEZE.md`](theory/THEOREM_V1_FREEZE.md);
+- [`review/EXTERNAL_REVIEW_PACKET.md`](review/EXTERNAL_REVIEW_PACKET.md);
+- [`review/PROOF_DEPENDENCY_MAP.md`](review/PROOF_DEPENDENCY_MAP.md);
+- [`review/TEST_CLAIM_MATRIX.md`](review/TEST_CLAIM_MATRIX.md);
+- [`review/REPRODUCIBILITY_GUIDE.md`](review/REPRODUCIBILITY_GUIDE.md).
 
-- `paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md`;
-- `theory/THEOREM_V1_FREEZE.md`;
-- `review/README.md`;
-- `review/EXTERNAL_REVIEW_PACKET.md`;
-- `review/PROOF_DEPENDENCY_MAP.md`;
-- `review/REPRODUCIBILITY_GUIDE.md`.
-
-These documents are doctoral-style in depth and structure, but are not represented as an awarded thesis or peer-reviewed result.
+These materials are doctoral-style in depth and structure. They are not represented as an awarded thesis or peer-reviewed result.
 
 ## Current priorities
 
-1. external specialist audit of the correctly typed theorem;
+1. external specialist reconstruction of the correctly typed theorem and coefficient-two bridge;
 2. expert prior-art review in quantum measurements, operator algebras and fusion frames;
 3. complete Lean formalisation of the operator/channel proof;
-4. determine optimality beyond coefficient 2 and the restricted linear-rate results;
-5. prepare a concise external-review paper after those gates;
-6. continue secondary work on redundancy, metastability and continual learning.
-
-## Key files
-
-- `theory/same_label_dimension_free_theorem.md`;
-- `theory/BOUND_CANDIDATE_2026-10-31.md`;
-- `theory/THEOREM_V1_FREEZE.md`;
-- `research/CERTIFICATE_PROGRESS_2026-10-31.md`;
-- `research/VERIFIED_PROGRESS_2026-10-31.md`;
-- `research/CRUXY_SYNC_REPORT_F94275_2026-10-31.md`;
-- `literature/PRIOR_ART_AND_ATTRIBUTION.md`;
-- `experiments/test_same_label_hybrid_dilation.py`;
-- `experiments/test_constant_two_bound.py`;
-- `experiments/test_record_accessibility.py`;
-- `lean/RCProof/Core.lean`;
-- `STATUS.md`.
+4. determine optimality beyond coefficient two and the restricted linear-rate results;
+5. prepare a concise external-review paper only after those gates.
 
 ## Research discipline
 
@@ -298,8 +326,8 @@ Before any public novelty or breakthrough claim:
 
 1. proof audit;
 2. adversarial counterexample search;
-3. reproducibility;
+3. clean reproducibility;
 4. prior-art veto;
 5. independent expert reconstruction or formal verification.
 
-Author and research direction: **Christopher Gardner**
+**Author and research direction:** Christopher Gardner
