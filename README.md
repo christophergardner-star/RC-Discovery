@@ -2,17 +2,17 @@
 
 **Human author and research director:** Christopher Gardner  
 **Research workflow:** VIBE MATH  
-**Repository status:** internally reconstructed, computationally audited, partially formalised, novelty unverified
+**Scientific status:** internally reconstructed, computationally audited, partially formalised, novelty unverified
 
 > **Vibe to generate. Audit to believe.**
 
-RC-Discovery separates conjecture, numerical evidence, internal proof reconstruction, machine-checked lemmas, external verification, provenance and novelty. These categories are not interchangeable.
+RC-Discovery separates conjecture, analytic proof, numerical evidence, machine-checked lemmas, external verification, provenance and novelty. These categories are not interchangeable.
 
-AI systems are used as research tools for derivation support, coding, numerical testing, adversarial auditing, editing, literature triage and formalisation assistance. They are not designated as authors, inventors, owners, sponsors, endorsers or claimants. See [`AI_RIGHTS_AND_ATTRIBUTION.md`](AI_RIGHTS_AND_ATTRIBUTION.md).
+AI systems are used as research tools for derivation support, coding, testing, adversarial auditing, editing, literature triage and formalisation assistance. OpenAI and other AI providers are not designated as authors, inventors, owners, sponsors, endorsers or claimants. Automated Git metadata is operational provenance, not research attribution. See [`AI_RIGHTS_AND_ATTRIBUTION.md`](AI_RIGHTS_AND_ATTRIBUTION.md).
 
-## Current strongest theorem candidate
+## Current theorem candidate
 
-Let \(\{E_j\}_{j=1}^m\) be a finite POVM. Fix \(0<\delta<1/2\). For every nonzero outcome, let \(P_j\neq0\) be the full spectral projection of \(E_j\) onto eigenvalues at least \(1-\delta\).
+Let \(\{E_j\}_{j=1}^m\) be a finite POVM on a finite-dimensional Hilbert space. Fix \(0<\delta<1/2\). For every nonzero outcome, let \(P_j\neq0\) be the full spectral projection of \(E_j\) onto eigenvalues at least \(1-\delta\).
 
 Define
 
@@ -30,57 +30,62 @@ and assume
 \alpha=\sigma_{\min}(T)>0.
 \]
 
-Let \(T=U|T|\), let \(Q_j\) be the mutually orthogonal polar-rounded sectors, and put
+Write \(T=U|T|\). Let \(Q_j\) be the mutually orthogonal polar-rounded sectors and put
 
 \[
 R=I-\sum_jQ_j.
 \]
 
-The same-label residual completion is
+The canonical same-label residual completion is
 
 \[
 \boxed{F_j=Q_j+R E_jR.}
 \]
 
-Internally reconstructed consequences include
+The internally reconstructed consequences are
 
 \[
 \boxed{\gamma_F\ge\delta}
 \]
 
-and the outcome-count- and dimension-independent movement estimate
+and
 
 \[
 \boxed{
-\nu_{\rm meas}
-=
 \|\mathcal M_E-\mathcal M_F\|_\diamond
 \le
 2\min\left\{1,\sqrt{1-\alpha^2}+\sqrt\delta\right\}.
 }
 \]
 
-The coefficient-two refinement is derived in [`theory/BOUND_CANDIDATE_2026-10-31.md`](theory/BOUND_CANDIDATE_2026-10-31.md). Optimality is not claimed. The latest source sharpness searches report ratios below `0.5` on their valid tested POVMs; those searches are numerical evidence, not an optimality proof.
+There is no explicit dependence on outcome count, ambient Hilbert-space dimension, or total packed rank. The coefficient two is not claimed optimal.
+
+Canonical documents:
+
+- [`theory/THEOREM_V1_FREEZE.md`](theory/THEOREM_V1_FREEZE.md);
+- [`theory/same_label_dimension_free_theorem.md`](theory/same_label_dimension_free_theorem.md);
+- [`theory/BOUND_CANDIDATE_2026-10-31.md`](theory/BOUND_CANDIDATE_2026-10-31.md);
+- [`theory/README.md`](theory/README.md).
 
 ## Correctly typed hybrid dilation
 
-The canonical theorem uses the labelled direct-sum inclusion
+Let
 
 \[
-J_{\mathcal K}:\mathcal K\to\bigoplus_j\mathcal H,
+\mathcal Y=\bigoplus_j\mathcal H,
 \qquad
+(Wz)_j=\sqrt{E_j}\,z.
+\]
+
+The canonical labelled map is the direct-sum inclusion
+
+\[
 J_{\mathcal K}(x_1,\ldots,x_m)=(x_1,\ldots,x_m),
 \]
 
-not the historical alternative map embedding polar-rounded vectors into the label blocks.
+not the historical map that embeds polar-rounded vectors into output blocks.
 
-With the canonical measurement isometry
-
-\[
-(Wz)_j=\sqrt{E_j}\,z,
-\]
-
-define
+Define
 
 \[
 \boxed{V=J_{\mathcal K}U^*+WR.}
@@ -94,25 +99,23 @@ V^*V=I,
 V^*\Lambda_jV=Q_j+R E_jR=F_j.
 \]
 
-The typed distinction is covered by the theorem-contract test and a deliberate negative control for the incorrect historical map.
+The typed distinction is covered by an executable negative control for the incorrect historical map.
 
-## Repaired exact-idempotent record certificate
+## Exact-idempotent record certificate
 
-Let
+For
 
 \[
-\Phi_E(\rho)=\sum_j\operatorname{Tr}(E_j\rho)\sigma_j
+\Phi_E(\rho)=\sum_j\operatorname{Tr}(E_j\rho)\sigma_j,
 \]
 
-have record margin \(\kappa>0\), idempotence defect
+let \(\kappa>0\) be the record margin, let
 
 \[
 \eta=\|\Phi_E^2-\Phi_E\|_\diamond,
 \]
 
-and label inaccessibility \(e<1/2\).
-
-For any valid measurement-movement upper bound \(b\), direct record accessibility and projection construct an exactly idempotent channel \(\Pi\) satisfying
+and let \(e<1/2\) be the label inaccessibility. Direct record accessibility and projection construct an exactly idempotent channel \(\Pi\) satisfying, for any valid measurement-movement bound \(b\),
 
 \[
 \boxed{
@@ -122,15 +125,12 @@ For any valid measurement-movement upper bound \(b\), direct record accessibilit
 2,
 \ b+2\sqrt{1-\alpha^2}
 +
-\sqrt{
-\frac{2\eta}
-{\kappa\delta(1-2e)}
-}
+\sqrt{\frac{2\eta}{\kappa\delta(1-2e)}}
 \right\}.
 }
 \]
 
-Since \(e\le\delta\), substitution of the coefficient-two movement bound gives
+Since \(e\le\delta\), the coefficient-two movement estimate gives
 
 \[
 \boxed{
@@ -140,19 +140,16 @@ Since \(e\le\delta\), substitution of the coefficient-two movement bound gives
 2,
 4\sqrt{1-\alpha^2}+2\sqrt\delta
 +
-\sqrt{
-\frac{2\eta}
-{\kappa\delta(1-2\delta)}
-}
+\sqrt{\frac{2\eta}{\kappa\delta(1-2\delta)}}
 \right\}.
 }
 \]
 
-The derivation and limitations are in [`research/CERTIFICATE_PROGRESS_2026-10-31.md`](research/CERTIFICATE_PROGRESS_2026-10-31.md).
+The derivation, exact examples and limitations are in [`research/CERTIFICATE_PROGRESS_2026-10-31.md`](research/CERTIFICATE_PROGRESS_2026-10-31.md).
 
-## Core results and refutations
+## Core stability results
 
-### Record-Margin Stability
+### Sharp Record-Margin theorem
 
 \[
 \boxed{
@@ -162,9 +159,9 @@ The derivation and limitations are in [`research/CERTIFICATE_PROGRESS_2026-10-31
 }
 \]
 
-Internal proof reconstruction: passed.
+Internal proof reconstruction: passed. An explicit two-record family attains equality.
 
-### POVM spectral-gap extension
+### Fixed-POVM spectral-gap extension
 
 \[
 \boxed{
@@ -174,89 +171,96 @@ Internal proof reconstruction: passed.
 }
 \]
 
-Internal proof reconstruction: passed.
+Internal proof reconstruction: passed. An explicit qutrit family saturates the \(\gamma^{-1/2}\) dependence.
 
-### Refuted stronger claims
+## Full-work validation
 
-The programme has established that:
+The latest retained end-to-end review is:
 
-- local near-repeatability diagnostics do not remove the regular-simplex packing obstruction;
-- \(m>d\) blocks same-label exact repeatability;
-- threshold data alone do not support a generic linear \(O(\delta)\) movement bound;
-- routing all residual mass to a new projective outcome can move the measurement channel by distance \(2\);
-- pure-state total-variation sampling is not automatically a diamond-norm calculation;
-- the historical polar-vector embedding is not interchangeable with \(J_{\mathcal K}\).
+- [`research/END_TO_END_VERIFICATION_2026-10-31.md`](research/END_TO_END_VERIFICATION_2026-10-31.md);
+- [`research/FULL_WORK_AUDIT_2026-10-31.md`](research/FULL_WORK_AUDIT_2026-10-31.md).
 
-## Executable validation
+The audit established:
 
-Canonical entry point:
+- all sixteen canonical `test_*.py` scripts passed;
+- the corrected frozen theorem contract passed 10 valid cases, 16 expected rejections and 6 primal/dual SDP checks;
+- 408 adversarial same-label cases and 12 associated SDPs passed;
+- the accessibility suite passed 26 primal/dual SDPs;
+- the residual-rate suite passed 20 primal/dual SDPs;
+- the canonical Lean project built and the audited theorem declarations contained no `sorryAx` or custom axiom;
+- a real theorem-input validation defect was found and repaired;
+- eighteen of nineteen executable scripts passed in the audited Windows environment;
+- the sole blocked script was the optional PyTorch TCL neural smoke test, owing to a missing local Microsoft runtime, not a failure of the quantum theorem.
+
+The repository workflow now runs the optional TCL neural smoke separately on Linux during a tagged full audit.
+
+Run locally:
 
 ```bash
 python experiments/run_phd_validation.py --profile full
 ```
 
-Convenience launchers:
+or
 
 ```powershell
-.\scripts\run_phd_audit.ps1 -Profile full
+.\scripts\run_phd_audit.ps1 -Profile full -RequireLean
 ```
 
-```bash
-bash scripts/run_phd_audit.sh --profile full
-```
+A passing run is evidence for the tested finite cases. It is not external proof, peer review, optimality, or a novelty certificate.
 
-The retained clean CI audit at commit `d46b7ebdf83a23323486397ec4ac8187600ff687` passed:
+## Refuted stronger claims
 
-- Python quick audit;
-- Python full SDP audit;
-- pinned Lean build;
-- theorem-contract tests;
-- adversarial many-outcome and higher-rank tests;
-- record-accessibility and repaired-certificate tests;
-- provenance, claim-discipline and AI-provider non-claim audits.
+The programme records explicit failures of several tempting statements:
 
-Detailed report: [`research/PHD_VALIDATION_REPORT_2026-10-31.md`](research/PHD_VALIDATION_REPORT_2026-10-31.md).
+- local near-repeatability diagnostics do not remove the regular-simplex packing obstruction;
+- \(m>d\) blocks nonzero same-label exact unit sectors;
+- threshold data alone do not imply a generic linear \(O(\delta)\) movement rate;
+- routing all residual mass to a new projective outcome can produce channel distance \(2\);
+- pure-state system-only sampling is not automatically the diamond norm;
+- the historical polar-vector embedding is not interchangeable with \(J_{\mathcal K}\);
+- the imported single-defect sharpness sketch and unqualified Lipschitz robustness statement are not canonical conclusions.
 
-A passing suite is computational and formalisation evidence within its tested scope. It is not external proof, peer review or a novelty certificate.
+## Lean formalisation boundary
 
-## Latest Cruxy source synchronisation
+Machine-checked with pinned Lean 4 + Mathlib and zero `sorry` within the stated scope:
 
-The public source repository has been pulled again in full and checked at Git-object level:
+- four scalar/core lemmas;
+- rectangular hybrid-isometry identities under explicit hypotheses;
+- residual projection and compression lemmas under explicit hypotheses.
 
-- source: `Cruxy234/RC-Packing-Feasible-Note`;
-- source branch: `main`;
-- source commit: `297ec2fcf6114598418863c5fcf13b7090364652`;
-- source tree: `99d063fea0157aa4afcbd0664a0aa0cf7161e387`;
-- exact snapshot: `imports/RC-Packing-Feasible-Note/`.
+Not yet formalised end to end:
 
-Compared with the previous imported source commit, GitHub reports seven commits and exactly six changed paths. All six were imported. The imported `lean/`, `paper/` and `theory/` subtree SHAs match the source exactly.
+- construction of all spectral-sector objects from the POVM hypotheses;
+- the full polar/principal-angle argument;
+- the noncommuting coefficient-two bridge;
+- the channel diamond-norm transfer;
+- the direct accessibility certificate.
 
-New source material includes `CLOSING_PROOFS.md`, `HARDER_PUSH.md` and `HARDER_PUSH_2.md`. These files are preserved as provenance. Their numerical sharpness results are useful evidence, but proposed lower-bound and robustness closures are not promoted as canonical without complete constructions, quantified hypotheses and independent reconstruction.
+See [`lean/README.md`](lean/README.md).
 
-Detailed evidence:
+## Cruxy source provenance
+
+The synchronized source snapshot is retained under
+
+`imports/RC-Packing-Feasible-Note/`.
+
+Current imported source:
+
+- commit `297ec2fcf6114598418863c5fcf13b7090364652`;
+- tree `99d063fea0157aa4afcbd0664a0aa0cf7161e387`.
+
+The snapshot is Git-object checked and complete, but it is provenance rather than canonical truth. Imported novelty statements, closing-proof notes, informal robustness arguments, and Lean files under assumed conclusions do not override the canonical theorem or claim policy.
+
+See:
 
 - [`imports/RC-Packing-Feasible-Note/SNAPSHOT_MANIFEST.md`](imports/RC-Packing-Feasible-Note/SNAPSHOT_MANIFEST.md);
-- [`research/CRUXY_SYNC_REPORT_297EC2_2026-10-31.md`](research/CRUXY_SYNC_REPORT_297EC2_2026-10-31.md);
-- [`research/CRUXY_REMERGE_AUDIT_2026-10-31.md`](research/CRUXY_REMERGE_AUDIT_2026-10-31.md).
-
-The imported snapshot is provenance, not canonical truth. Source drafts and notes do not replace the typed theorem, repaired certificate, executable validation report, prior-art policy or canonical external-review packet.
+- [`research/CRUXY_SYNC_REPORT_297EC2_2026-10-31.md`](research/CRUXY_SYNC_REPORT_297EC2_2026-10-31.md).
 
 ## Prior-art boundary
 
-RC-Discovery claims no ownership of established ingredients, including:
+RC-Discovery claims no ownership of established ingredients including polar/Löwdin orthogonalisation, synthesis and fusion-frame theory, Naimark and Stinespring dilation, KSW continuity, repeatability criteria, POVM orthogonalisation/projectivisation, projective simulation, diamond-norm/SDP theory, almost-idempotent channel structure, or known regular-simplex obstructions.
 
-- polar / Löwdin / Fan–Hoffman / Higham orthogonalisation;
-- frame and fusion-frame synthesis theory;
-- Naimark and Stinespring dilation;
-- Kretschmann–Schlingemann–Werner continuity;
-- repeatability criteria for discrete POVMs;
-- de la Salle and earlier POVM orthogonalisation/projectivisation;
-- projective simulation of POVMs, including Kotowski–Oszmaniec;
-- Watrous diamond-norm and SDP theory;
-- Kitaev's almost-idempotent channel structure;
-- known regular-simplex negative examples.
-
-The only object being investigated as potentially distinct is the complete, correctly typed chain
+The only object under investigation as potentially distinct is the complete, correctly typed chain
 
 \[
 \boxed{
@@ -272,7 +276,7 @@ The only object being investigated as potentially distinct is the complete, corr
 }
 \]
 
-No exact prior theorem matching the full chain was located in the searches performed. That is not proof of novelty. The status remains
+No exact prior theorem matching that full chain was located in the searches performed. That does not prove novelty. The status remains
 
 \[
 \boxed{\text{potentially distinct; novelty unverified}.}
@@ -284,46 +288,13 @@ Canonical policy:
 - [`literature/NOVELTY_LEDGER.md`](literature/NOVELTY_LEDGER.md);
 - [`literature/DEEP_PRIOR_ART_VETO_2026-10-31.md`](literature/DEEP_PRIOR_ART_VETO_2026-10-31.md).
 
-## Lean formalisation
+## Current credibility gates
 
-Machine checked with Lean 4 + Mathlib and zero `sorry`:
-
-- `projector_const_one`;
-- `polar_residual_le`;
-- `near_orthonormal_overlap`;
-- `rank1_core_package`.
-
-Additional rectangular-matrix and projection/compression lemmas compile under explicit hypotheses. The complete spectral-sector construction, coefficient-two analytic bridge, diamond-norm transfer and end-to-end record certificate are not yet fully formalised.
-
-Canonical formalisation scope: [`lean/README.md`](lean/README.md).
-
-## Doctoral-style and external-review package
-
-- [`paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md`](paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md);
-- [`theory/THEOREM_V1_FREEZE.md`](theory/THEOREM_V1_FREEZE.md);
-- [`review/EXTERNAL_REVIEW_PACKET.md`](review/EXTERNAL_REVIEW_PACKET.md);
-- [`review/PROOF_DEPENDENCY_MAP.md`](review/PROOF_DEPENDENCY_MAP.md);
-- [`review/TEST_CLAIM_MATRIX.md`](review/TEST_CLAIM_MATRIX.md);
-- [`review/REPRODUCIBILITY_GUIDE.md`](review/REPRODUCIBILITY_GUIDE.md).
-
-These materials are doctoral-style in depth and structure. They are not represented as an awarded thesis or peer-reviewed result.
-
-## Current priorities
-
-1. external specialist reconstruction of the correctly typed theorem and coefficient-two bridge;
-2. expert prior-art review in quantum measurements, operator algebras and fusion frames;
-3. complete Lean formalisation of the operator/channel proof;
-4. determine the optimal movement constant and rigorously quantify perturbative robustness;
-5. prepare a concise external-review paper only after those gates.
-
-## Research discipline
-
-Before any public novelty or breakthrough claim:
-
-1. proof audit;
-2. adversarial counterexample search;
-3. clean reproducibility;
-4. prior-art veto;
-5. independent expert reconstruction or formal verification.
+1. Independent specialist reconstruction of the typed same-label theorem.
+2. External checking of the coefficient-two overlap argument.
+3. Full operator/channel formalisation.
+4. Definitive prior-art and novelty assessment.
+5. Optimal-constant and quantified perturbation analysis.
+6. Independent reproduction outside the author-controlled repository.
 
 **Author and research direction:** Christopher Gardner
