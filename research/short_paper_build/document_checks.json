@@ -1,0 +1,44 @@
+{
+  "result": "PASS",
+  "pdf_sha256": "5e2291833415913be77439be3b30e191c773fff800f47929f51b6522c3611963",
+  "pages": 8,
+  "title": "Stability of a prescribed repeatable completion of a quantum measurement",
+  "author": "Christopher Gardner",
+  "page_extracted_character_counts": [
+    2769,
+    1886,
+    2182,
+    1994,
+    2460,
+    3236,
+    2552,
+    2791
+  ],
+  "numbered_equations": 23,
+  "resolved_reference_keys": [
+    "busch1995",
+    "debruijn1980",
+    "delasalle2022",
+    "higham1986",
+    "kitaev2025",
+    "kotowski2025",
+    "ksw2008",
+    "watrous2018"
+  ],
+  "latex_overflow_missing_character_or_undefined_reference_findings": [],
+  "source_and_pdf_hashes_match_build_manifest": true,
+  "pdf_pages_rendered": 8,
+  "scope": "Document and artifact checks, not proof of the mathematical claims.",
+  "compiler_environment_note": "The compiler console reports Fontconfig configuration/cache messages. Compilation and PDFium rendering succeed; the TeX log contains no missing-character or overfull-box warning.",
+  "local_link_counts": {
+    "README.md": 18,
+    "theory/README.md": 21,
+    "paper/README.md": 10,
+    "paper/arxiv_ready.md": 0,
+    "paper/prescribed_repeatable_completion.md": 0,
+    "review/SHORT_PAPER_REVIEW_BRIEF.md": 4,
+    "review/EXTERNAL_REVIEW_PACKET.md": 5,
+    "review/README.md": 5,
+    "research/SHORT_PAPER_REVIEW_2026-10-31.md": 10
+  }
+}

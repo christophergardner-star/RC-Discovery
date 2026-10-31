@@ -19,6 +19,14 @@ novelty claim.
 
 ## Current theorem candidate
 
+For a complete, focused presentation, start with the
+[short paper PDF](paper/prescribed_repeatable_completion.pdf),
+[readable manuscript](paper/prescribed_repeatable_completion.md), and
+[external-review brief](review/SHORT_PAPER_REVIEW_BRIEF.md).
+The paper gives the full analytic argument, corrected attribution, and
+explicit limitations. It remains an external-review draft with novelty
+unverified.
+
 Let \(\{E_j\}_{j=1}^m\) be a finite POVM on a finite-dimensional Hilbert space. Fix \(0<\delta<1/2\). For every nonzero outcome, let \(P_j\neq0\) be the full spectral projection of \(E_j\) onto eigenvalues at least \(1-\delta\).
 
 Define

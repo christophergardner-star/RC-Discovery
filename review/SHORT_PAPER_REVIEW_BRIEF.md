@@ -1,0 +1,103 @@
+# Review brief: prescribed repeatable measurement completion
+
+Prepared 31 October 2026 for independent mathematical review. This is a local
+review packet, not a record of external review or a message sent to a reviewer.
+
+## Material to review
+
+Start with the short paper:
+
+- [PDF](../paper/prescribed_repeatable_completion.pdf)
+- [LaTeX source](../paper/prescribed_repeatable_completion.tex)
+- [Readable Markdown](../paper/prescribed_repeatable_completion.md)
+
+Use the [statement-and-proof comparison](../literature/COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
+for the prior-art analysis. The older long research document and historical
+imports are not needed to assess this paper.
+
+## Precise proposed contribution
+
+For a finite POVM, choose the full spectral sectors at or above `1-delta` and
+assume their synthesis map `T` is injective. The paper controls the particular
+unweighted polar completion
+
+\[
+T=U|T|,\qquad Q_j=UC_jU^*,\qquad
+F_j=Q_j+RE_jR,\qquad R=I-UU^*.
+\]
+
+Its intended contribution is an explicit quantitative specialization for
+this prescribed correction and, with extra record assumptions, correction
+to an exactly idempotent measure-and-prepare channel. It is not presented as
+a new general orthogonalization, dilation, Jordan-product, or idempotent
+structure theorem. The weighted polar alternative from existing machinery
+must be considered when judging whether the prescribed construction adds
+useful content.
+
+## Questions for a correctness referee
+
+1. **Hypotheses and domains.** Are zero effects removed consistently, full
+   spectral sectors used at the stated closed threshold, and injectivity
+   distinguished from a rectangular singular-value convention? Are
+   `T`, `U`, the original-sector labelled inclusion `J`, and `W` correctly
+   typed throughout?
+2. **Construction and gap.** Do the sector-angle estimate, labelwise
+   cross-zero identities, hybrid isometry, exact compression, and residual
+   spectral bound follow from the stated hypotheses alone?
+3. **Operational estimate.** Is the Jordan-product condition used only in
+   the justified parameter region, and does the case split prove the
+   unconditional coefficient-two bound? Does the proof cover arbitrary
+   reference systems with the full diamond norm, whose ceiling is two?
+4. **Record corollary.** Is the margin the distance to the entire competing
+   convex hull, rather than pairwise distance? Does accessibility control
+   individual record residuals? Are zero projection weight, one nonzero
+   label, and zero effects handled? Does the constructed channel satisfy
+   exact idempotence without an additional assumption?
+5. **Examples and limitations.** Are bounds against the prescribed
+   construction clearly distinguished from bounds against every repeatable
+   target? Does the square-root lower-bound proof establish exactly its
+   claimed scope? Is threshold discontinuity described as a limitation of
+   this selection rule, rather than a failure of the pointwise theorem?
+
+## Questions for a prior-art referee
+
+Please examine the argument, not merely whether the final formula appears
+verbatim elsewhere. In particular:
+
+- Can the bound for the **unweighted** completion, including its packing-only
+  projector estimate, be obtained directly from a cited theorem? If so,
+  identify the theorem and parameter substitution or provide the reduction.
+- The weighted construction is an elementary adaptation of published polar
+  machinery and already provides a strong existential measurement bound.
+  Does retaining the prescribed unweighted construction have a useful
+  mathematical or operational reason, or should this paper be framed simply
+  as an expository corollary?
+- Does an existing record-stability theorem already give the explicit
+  correction of the supplied effects and states with these parameters?
+  The endpoint's exact classical encoding/decoding structure, accessibility
+  estimate's elementary norm argument, convex-hull conditioning, and gentle
+  projection are explicitly credited as established or elementary tools.
+- Are the closest hypotheses, norms, quantifiers, and conclusions compared
+  accurately? Identify any overlooked source or stronger available result.
+
+Relevant primary sources are
+[de la Salle, v2, Theorems 1.1--1.2 and Section 3](https://arxiv.org/pdf/2103.14126v2),
+[Kretschmann--Schlingemann--Werner](https://arxiv.org/html/0710.2495),
+[de Bruijn, Theorem 3.2](https://pure.tue.nl/ws/portalfiles/portal/2165089/597564.pdf),
+[Kotowski--Oszmaniec, Theorem 6](https://arxiv.org/pdf/2501.09339v1), and
+[Kitaev, v2, Theorems 1.2 and 12.3](https://arxiv.org/html/2405.02434v2).
+The comparison report records the exact reductions and additional sources.
+
+## Requested review outcome
+
+For each concern, identify the exact proposition or proof step, give a
+counterexample or missing argument where possible, and classify the concern
+as fatal, repairable, or expository. For overlap, distinguish an exact prior
+statement, a direct corollary, an elementary adaptation, and a genuinely
+additional argument. An assessment that the result is correct but only an
+elementary specialization is a useful outcome.
+
+Numerical tests and partial Lean checks are supporting evidence. They do not
+replace review of the complete analytic proof; the full channel theorem is
+not yet formalized. No literature-priority or optimal-constant claim is
+assumed in requesting this review.

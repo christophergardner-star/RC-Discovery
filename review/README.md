@@ -1,12 +1,12 @@
-# External Review and Doctoral-Style Documentation
+# External Review Package
 
 This directory packages the canonical theorem candidate for external attack.
 
 ## Start here
 
-1. `../paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md`
-2. `../theory/THEOREM_V1_FREEZE.md`
-3. `EXTERNAL_REVIEW_PACKET.md`
+1. [Short paper PDF](../paper/prescribed_repeatable_completion.pdf) or [readable manuscript](../paper/prescribed_repeatable_completion.md)
+2. [Focused review brief](SHORT_PAPER_REVIEW_BRIEF.md)
+3. [Frozen theorem](../theory/THEOREM_V1_FREEZE.md) and [full review packet](EXTERNAL_REVIEW_PACKET.md)
 4. `PROOF_DEPENDENCY_MAP.md`
 5. `TEST_CLAIM_MATRIX.md`
 6. `REPRODUCIBILITY_GUIDE.md`
@@ -49,7 +49,9 @@ The canonical non-claim and attribution notice is `../AI_RIGHTS_AND_ATTRIBUTION.
 
 ## Status
 
-The package is doctoral-style in depth and structure. It is not an awarded thesis and does not claim peer review.
+The short paper is a complete external-review draft with novelty unverified.
+The longer research document remains supporting material; it is not an awarded
+thesis. No part of this package claims external peer review.
 
 Canonical label:
 

@@ -12,11 +12,14 @@ Polite encouragement is less useful than a precise failure.
 
 ## Minimal reading order
 
-1. `theory/THEOREM_V1_FREEZE.md`
-2. `paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md`, Chapters 4–9
-3. canonical theorem and bound files in RC-Discovery
-4. prior-art and attribution ledger
-5. numerical and Lean evidence only after the analytic proof
+1. [Short paper PDF](../paper/prescribed_repeatable_completion.pdf) or [readable manuscript](../paper/prescribed_repeatable_completion.md)
+2. [Focused review brief](SHORT_PAPER_REVIEW_BRIEF.md)
+3. [Frozen statement](../theory/THEOREM_V1_FREEZE.md)
+4. [Theorem-level prior-art comparison](../literature/COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
+5. Numerical and Lean evidence only after the analytic proof
+
+The short paper is self-contained. The longer research document is optional
+background, not a prerequisite for reviewing the argument.
 
 ## Core verification questions
 
