@@ -43,10 +43,7 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 
 ## Numerical evidence
 
-New proof statements, exact examples and limitations are collected in
-[the verified progress report](research/VERIFIED_PROGRESS_2026-10-31.md).
-New runs include 46 paired primal/dual SDP problems, of which two are
-normalization anchors, in addition to rechecking the previously saved 12 SDPs.
+New proof statements, exact examples and limitations are collected in [the verified progress report](research/VERIFIED_PROGRESS_2026-10-31.md). New runs include 46 paired primal/dual SDP problems, of which two are normalization anchors, in addition to rechecking the previously saved 12 SDPs.
 
 | Item | Status | Notes |
 |---|---|---|
@@ -118,3 +115,12 @@ Canonical reconciliation:
 | “Locked conflict predicts more next-step forgetting” | **Refuted in smoke test** | Immediate forgetting moved in the opposite direction. |
 | Locked conflict vs joint accuracy | **Supported in smoke test** | Pearson \(r=-0.312\), \(p=7.97\times10^{-7}\). |
 | Idempotence in continual learning as an RC novelty | **Vetoed** | IDER and other prior work already use idempotence in continual learning. |
+
+## Doctoral-style consolidation
+
+| Item | Status | Notes |
+|---|---|---|
+| Doctoral-style monograph | **Pushed** | `paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md`; comprehensive statement, derivation, refutations, validation, formalisation, prior art and research programme. |
+| Theorem v1 freeze | **Pushed** | `theory/THEOREM_V1_FREEZE.md`; canonical hypotheses and conclusions without research-history clutter. |
+| External-review packet | **Pushed** | `review/`; reviewer checklist, proof dependencies and reproducibility guide. |
+| Degree status | **Not applicable** | The package is doctoral-style in depth and structure; it is not represented as an awarded or examined PhD thesis. |
