@@ -1,20 +1,23 @@
 # RC Record-Margin Stability Theorem
 
+**Status:** internally proved and independently reconstructed; novelty unverified  
+**Scope:** finite-dimensional sharp measure-and-prepare channels
+
 ## Setting
 
-Let \(\mathcal H\) be finite dimensional. Let \(\{P_j\}_{j=1}^m\) be non-zero pairwise orthogonal projectors with
+Let \(\mathcal H\) be finite dimensional. Let \(\{P_j\}_{j=1}^m\) be nonzero pairwise orthogonal projectors satisfying
 
 \[
 \sum_jP_j=I.
 \]
 
-Let \(\sigma_j\) be density operators on \(\mathcal H\). Define
+Let \(\sigma_j\) be density operators and define
 
 \[
 \Phi(\rho)=\sum_j\operatorname{Tr}(P_j\rho)\sigma_j.
 \]
 
-Define the **record margin**
+Define the record margin
 
 \[
 \kappa
@@ -25,7 +28,7 @@ Define the **record margin**
 \|\sigma_j-\omega\|_1,
 \]
 
-and the **idempotence defect**
+and the idempotence defect
 
 \[
 \eta=\|\Phi^2-\Phi\|_\diamond.
@@ -55,23 +58,23 @@ and
 }
 \]
 
-The constant is independent of \(\dim\mathcal H\) and the number of record sectors.
+The bound has no explicit dependence on \(\dim\mathcal H\) or the number of sectors.
 
 ## Proof
 
-Fix \(j\). For any input state \(\rho_j\) supported entirely in \(P_j\),
+Fix \(j\), and choose any input state \(\rho_j\) supported in \(P_j\). Then
 
 \[
 \Phi(\rho_j)=\sigma_j.
 \]
 
-Define
+Set
 
 \[
 a_j=\operatorname{Tr}(P_j\sigma_j).
 \]
 
-If \(a_j<1\), define
+When \(a_j<1\), define
 
 \[
 \omega_j
@@ -81,7 +84,7 @@ If \(a_j<1\), define
 \operatorname{Tr}(P_i\sigma_j)\sigma_i.
 \]
 
-This is a convex combination of competing records, and
+Then \(\omega_j\) is a convex combination of competing records and
 
 \[
 \Phi(\sigma_j)=a_j\sigma_j+(1-a_j)\omega_j.
@@ -90,21 +93,15 @@ This is a convex combination of competing records, and
 Therefore
 
 \[
-\|\Phi(\sigma_j)-\sigma_j\|_1
-=
-(1-a_j)\|\omega_j-\sigma_j\|_1
-\ge
-2\kappa(1-a_j).
-\]
-
-The diamond norm dominates output trace distance on every ordinary input state, so
-
-\[
+\begin{aligned}
 \eta
-\ge
-\|\Phi^2(\rho_j)-\Phi(\rho_j)\|_1
-=
-\|\Phi(\sigma_j)-\sigma_j\|_1.
+&\ge
+\|\Phi^2(\rho_j)-\Phi(\rho_j)\|_1\\
+&=
+\|\Phi(\sigma_j)-\sigma_j\|_1\\
+&=(1-a_j)\|\omega_j-\sigma_j\|_1\\
+&\ge2\kappa(1-a_j).
+\end{aligned}
 \]
 
 Hence
@@ -114,52 +111,37 @@ Hence
 \tag{1}
 \]
 
-Assume first \(a_j>0\). Define
+If \(a_j>0\), define
 
 \[
-\tau_j
-=
-\frac{P_j\sigma_jP_j}{a_j}.
+\tau_j=\frac{P_j\sigma_jP_j}{a_j}.
 \]
 
-It is supported entirely in the \(j\)-th sector. The standard fidelity/trace-distance estimate for normalized post-selection gives
+Normalized postselection gives
 
 \[
 \|\sigma_j-\tau_j\|_1
-\le
-2\sqrt{1-a_j}.
-\]
-
-Using (1),
-
-\[
-\|\sigma_j-\tau_j\|_1
+\le2\sqrt{1-a_j}
 \le
 \sqrt{\frac{2\eta}{\kappa}}.
 \tag{2}
 \]
 
-If \(a_j=0\), the earlier inequality gives \(\eta\ge2\kappa\), so the right-hand side of (2) is at least \(2\), the maximum trace distance between states. Choose any density operator \(\tau_j\) supported in \(P_j\); (2) still holds.
+If \(a_j=0\), equation (1) implies \(\eta\ge2\kappa\), so the right-hand side of (2) is at least the maximal trace distance \(2\). Any state supported in \(P_j\) then satisfies (2).
 
-Now define
+Define
 
 \[
-\Pi(\rho)
-=
-\sum_j\operatorname{Tr}(P_j\rho)\tau_j.
+\Pi(\rho)=\sum_j\operatorname{Tr}(P_j\rho)\tau_j.
 \]
 
-Because each \(\tau_j\) is supported in \(P_j\),
+Because \(\tau_j\) is supported in \(P_j\),
 
 \[
 \operatorname{Tr}(P_i\tau_j)=\delta_{ij},
 \]
 
-so \(\Pi(\tau_j)=\tau_j\) and therefore
-
-\[
-\Pi^2=\Pi.
-\]
+and hence \(\Pi(\tau_j)=\tau_j\), so \(\Pi^2=\Pi\).
 
 For a system-plus-ancilla state \(\rho_{AR}\),
 
@@ -169,44 +151,18 @@ For a system-plus-ancilla state \(\rho_{AR}\),
 \sum_j(\sigma_j-\tau_j)\otimes R_j,
 \]
 
-where \(R_j\ge0\) and \(\sum_j\operatorname{Tr}R_j=1\). Hence
+where \(R_j\ge0\) and \(\sum_j\operatorname{Tr}R_j=1\). Therefore
 
 \[
 \|[(\Phi-\Pi)\otimes I_R](\rho_{AR})\|_1
 \le
-\sum_j
-\|\sigma_j-\tau_j\|_1
-\operatorname{Tr}R_j
-\le
 \max_j\|\sigma_j-\tau_j\|_1.
 \]
 
-Taking the diamond-norm supremum and applying (2),
+Taking the diamond-norm supremum and applying (2) proves the result.
 
-\[
-\boxed{
-\|\Phi-\Pi\|_\diamond
-\le
-\sqrt{\frac{2\eta}{\kappa}}.
-}
-\]
+## Sharpness and verification
 
-QED.
+The family in [`sharpness_example.md`](sharpness_example.md) attains equality, so the square-root dependence and universal prefactor are worst-case sharp within this theorem class.
 
-## Interpretation
-
-Within this channel class:
-
-> If records are geometrically distinguishable and applying the process twice is almost the same as applying it once, an exactly repeatable record process lies nearby with a dimension-independent error certificate.
-
-The role of \(\kappa\) is essential. As record geometry collapses, the guarantee is allowed to become weak.
-
-## Current status
-
-- Internal proof audit: passed.
-- Analytic sharpness family: available.
-- Numerical stress tests: passed for implemented families.
-- Exact prior theorem located: not yet.
-- Independent external audit: pending.
-
-This is therefore a **provisionally novel theorem candidate**, not a publication claim.
+Internal proof reconstruction and implemented numerical tests have passed. The theorem has not been externally peer reviewed, and no literature-search result should be interpreted as a verified novelty certificate.
