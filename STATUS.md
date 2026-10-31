@@ -23,6 +23,7 @@ Updated: 31 October 2026
 | Packing-conditioned many-outcome channel theorem | **Internally proved; non-optimal** | Positive bound with current (m)-dependent measurement-channel perturbation. |
 | Outcome-count-independent measurement-channel move | **Internally proved theorem candidate** | Naimark-close completion gives an absolute m,d-independent bound; its residual spectral gap is not yet controlled. |
 | Extra-outcome gamma=1 closure | **Refuted** | Exact α=1 counterexample gives maximal measurement-channel distance 2 after routing residual to a new projective outcome. |
+| Residual spectral radius as independent invariant | **Eliminated** | For residual projector orthogonal to the total near-unit span, \(\rho_{res}\le1-\delta\) automatically; explicit residual completion has \(\gamma_F\ge\delta\). |
 | Extra-outcome route forces gamma_F=1 without cost | **Refuted** | Residual-to-reject can be diamond distance 2 even at alpha=1, delta=0. |
 | Complete packed sectors (total rank = d) | **Internally closed theorem candidate** | No residual subspace; Naimark move is dimension-free, moved POVM is a PVM, gamma_F=1. |
 | Incomplete packed sectors need residual control | **Proved obstruction** | gamma can tend to 0 with alpha=1, delta=0, eta=0, kappa=1. |
