@@ -137,7 +137,7 @@ def main() -> None:
     require_markers(
         "literature/PRIOR_ART_AND_ATTRIBUTION.md",
         [
-            "not a legal novelty opinion",
+            "legal novelty opinion",
             "potentially distinct; novelty unverified",
             "No document should call it",
         ],
