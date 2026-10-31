@@ -1,379 +1,174 @@
 # Open Problems
 
-Updated after the independent moving-POVM audit on 31 October 2026.
+Updated: 31 October 2026 after the refreshed Cruxy merge and typed-space audit.
 
 ## Resolved or substantially narrowed
 
-### No-go side
+The following are no longer the main open problems:
+
+- local diagnostics alone are insufficient: regular-simplex and constant-channel obstructions are known;
+- the global packing variable is identified as the conditioning of the near-unit-sector synthesis operator;
+- polar orthogonalisation works at arbitrary rank using standard machinery;
+- the same-label completion
+  \[
+  F_j=Q_j+R E_jR
+  \]
+  is a genuine POVM with exact unit sectors;
+- its repeatability spectral gap satisfies
+  \[
+  \gamma_F\ge\delta;
+  \]
+- with the correctly typed direct-sum labelled map \(J_{\mathcal K}\), the hybrid isometry
+  \[
+  V=J_{\mathcal K}U^*+WR
+  \]
+  implements the completion exactly;
+- the internal reconstruction gives an outcome-count- and dimension-independent operational estimate;
+- the extra-outcome shortcut is false and has been removed from the canonical route;
+- the residual spectral radius is not an independent missing invariant for the explicit same-label completion.
+
+## A. External correctness audit
+
+The highest-priority gate is now external reconstruction of the correctly typed theorem by a specialist in quantum measurements/operator theory.
+
+Specific points to verify:
+
+1. the direct-sum type of
+   \[
+   J_{\mathcal K}:\bigoplus_j\mathcal S_j\to\bigoplus_j\mathcal H;
+   \]
+2. the identity
+   \[
+   J_{\mathcal K}^*WU=D|T|;
+   \]
+3. the orthogonality
+   \[
+   J_{\mathcal K}^*WR=0;
+   \]
+4. exact implementation
+   \[
+   V^*\Lambda_jV=Q_j+R E_jR;
+   \]
+5. all norm conventions in the Stinespring-to-diamond step;
+6. threshold endpoint and zero-effect cases;
+7. the transfer estimate
+   \[
+   \|\widetilde\Phi_F^2-\widetilde\Phi_F\|_\diamond
+   \le
+   \eta+3\nu.
+   \]
 
-A theorem based only on
+The imported Cruxy notes use a second map \(J_q\) that embeds polar-rounded vectors. Its matrix-element calculation must not be conflated with the theorem's \(J_{\mathcal K}\).
 
-- small idempotence defect,
-- large record margin,
-- almost reachable records,
-- almost norm-1 POVM effects
+## B. Prior-art and novelty review
 
-is impossible.
+A broad first search found no exact theorem matching the complete typed chain, but that does not establish novelty.
 
-The regular-simplex family defeats all of those local diagnostics simultaneously.
+Required specialist comparisons:
 
-### Binary side
+- de la Salle and predecessor POVM orthogonalisation lemmas;
+- Kotowski–Oszmaniec and other projective-simulation / dimension-deficient Naimark results;
+- fusion-frame and Riesz-fusion-basis perturbation theory;
+- Naimark/Stinespring perturbation and continuity theorems;
+- repeatable-instrument theory;
+- diamond-norm measurement discrimination.
 
-For two outcomes, moving the POVM is possible under explicit reachability and edge-gap control.
+Canonical no-overclaim policy:
 
-See:
+- `literature/PRIOR_ART_AND_ATTRIBUTION.md`
 
-- theory/moving_povm_boundary.md
+The current label is:
 
-### Many-outcome geometric side
+\[
+\boxed{\text{potentially distinct; novelty unverified}.}
+\]
 
-The synthesis operator
+## C. Formal verification
 
-[
-T:igoplus_joperatorname{ran}(P_j)	omathcal H,
-qquad
-(x_j)mapstosum_jx_j
-]
+The current Lean artefact checks only the scalar algebraic core.
 
-is now a concrete global conditioner.
+High-value formalisation targets:
 
-If
+1. direct sums of finite-dimensional Hilbert spaces;
+2. synthesis operator and polar isometry;
+3. equality of total ranges;
+4. the typed labelled inclusion \(J_{\mathcal K}\);
+5. \(J_{\mathcal K}^*WR=0\);
+6. \(V^*V=I\);
+7. \(V^*\Lambda_jV=F_j\);
+8. the spectral-gap compression bound;
+9. the easy Stinespring-to-channel estimate;
+10. eventual composition with Record-Margin Stability.
 
-[
-sigma_{min}(T)>0,
-]
+## D. Optimal constants and rates
 
-the polar factor gives a constructive simultaneous orthogonalization of all near-unit sectors, at arbitrary rank.
+The current conservative estimate is
 
-The POVM condition also gives an automatic upper singular-value bound.
+\[
+\nu
+\le
+4\left(
+\sqrt{1-\alpha^2}+\sqrt\delta
+\right).
+\]
 
-See:
+Open questions:
 
-- theory/packing_conditioned_rounding.md
+- can the constant \(4\) be reduced analytically?
+- is the packing dependence \(\sqrt{1-\alpha^2}\) optimal?
+- the \(\sqrt\delta\) lower-bound family shows threshold dependence cannot generally be linear, but what is the sharp joint bound?
+- can a matching converse be proved away from the singular simplex endpoint?
 
-## A. Outcome-count factor: internally resolved at the existence level
+## E. Reproducible operational verification
 
-A common Naimark-dilation construction now gives a repeatability-admissible POVM whose measurement channel is within an absolute, outcome-count-independent distance of the original measurement channel.
+Pure-state total-variation sampling is not a complete diamond-norm computation by itself.
 
-See:
+Next computational targets:
 
-- theory/dimension_free_nu_via_naimark.md
-- experiments/test_dimension_free_naimark.py
+- implement a reliable Watrous-style SDP for selected finite cases;
+- include ancilla-assisted discrimination explicitly;
+- compare exact SDP values with the Stinespring upper bound;
+- stress-test degenerate/high-rank sectors and tiny nonzero sectors;
+- package all random seeds and generated fixtures.
 
-The current theorem candidate gives
+## F. Experimental estimation
 
-[
-nu
-=
-|mathcal M_E-mathcal M_F|_diamond
-=
-Oleft(
-sqrt{1-alpha^2}+sqrtdelta
-right),
-]
+Develop practical protocols to estimate or lower-bound:
 
-with no dependence on (m) or (d).
+- \(\alpha=\sigma_{\min}(T)\);
+- the threshold \(\delta\);
+- record margin \(\kappa\);
+- idempotence defect \(\eta\);
+- the resulting certificate without full process tomography.
 
-This corrects the earlier conjectured linear dependence on (delta); the explicit lower-bound family already shows that (sqrtdelta) is generically necessary under spectral-threshold-only assumptions.
+## G. Application programmes
 
-### Gamma audit update
+### Quantum readout
 
-The proposed shortcut of routing all residual mass to an extra reject outcome is **false as a general small-perturbation step**.
+Obtain exact reconstructed POVM/instrument data and apply the certificate to repeated superconducting-qubit readout.
 
-An explicit two-outcome example has
+### Metastability
 
-[
-alpha=1,qquad delta=0
-]
+Derive RC parameters from a microscopic open-system model rather than assuming them.
 
-but sending the residual subspace to a new label changes the measurement channel by diamond distance 2.
+### Redundancy
 
-Stronger: there is a family with
+Extend sharp results from two pure records to many mixed and correlated records.
 
-[
-alpha=1,quad delta=0,quad eta=0,quad kappa=1
-]
+### Continual learning
 
-while the repeatability spectral gap tends to zero. Therefore no positive lower bound
+Test anchor-conflict and horizon-rounding diagnostics on canonical TCL checkpoints and real benchmarks. This remains an application programme, not evidence for the quantum theorem.
 
-[
-gamma_F ge g(alpha,delta,eta,kappa)
-]
+## H. Publication gate
 
-exists in the incomplete-sector regime.
+Before an arXiv or journal claim:
 
-See:
+1. external theorem audit;
+2. specialist prior-art review;
+3. exact statement/notation freeze;
+4. reproducible tests;
+5. conservative novelty wording;
+6. clear attribution of every standard ingredient;
+7. ideally, formalisation of the hybrid core.
 
-- research/GAMMA_CLOSURE_AUDIT_2026-10-31.md
-- experiments/test_gamma_extra_outcome_counterexample.py
-
-### New theorem boundary
-
-If the packed sectors are complete,
-
-[
-sum_j rank(P_j)=d,
-]
-
-then there is no residual subspace. In that regime the polar/Naimark move directly produces a PVM, so
-
-[
-gamma_F=1,
-]
-
-and the dimension-free end-to-end certificate closes.
-
-The remaining open problem is now the **incomplete packed-sector regime**:
-
-> what residual invariant is necessary and sufficient to control the gap / projective completion without losing the dimension-free measurement-channel bound?
-
-Candidate residual quantities:
-
-1. residual spectral gap,
-2. residual determinism / ambiguity,
-3. distance of the residual measurement channel to a deterministic coarse-graining,
-4. a direct record-consistency quantity on the residual subspace.
-
-A secondary question is whether the same outcome-independent bound can be proved for the explicit residual formula
-
-[
-F_j=Q_j+RE_jR.
-]
-
-## B. Sharp spectral-threshold rate
-
-A linear (O(delta)) movement bound is false under spectral-threshold assumptions.
-
-The current constructive upper bound is of square-root type.
-
-Open:
-
-- optimize constants,
-- determine the exact exponent in the mixed packing/spectral regime,
-- prove a matching converse beyond the explicit adversarial family.
-
-## C. Necessity of the synthesis conditioner
-
-Prove a quantitative converse:
-
-> if (sigma_{min}(T)) is small, how large must any label-preserving repeatable rounding move be?
-
-The regular simplex gives the singular endpoint (alpha=0). A useful theorem should interpolate quantitatively away from that endpoint.
-
-## D. Prior-art comparison
-
-The moving-POVM theory must be compared directly with:
-
-- de la Salle (2022), *Orthogonalization of Positive Operator Valued Measures*,
-- the finite-dimensional projectivization results cited there,
-- classical polar / Löwdin orthogonalization,
-- frame and fusion-frame perturbation theory.
-
-The main question is whether the RC combination of synthesis conditioning + repeatability + record-margin/idempotence + diamond-norm control is genuinely new.
-
-## E. Multi-record redundancy geometry
-
-Obtain sharp (kappa_R) rates for many mixed records and correlated fragments.
-
-## F. Microscopic metastability
-
-Apply the record-structured transfer theorem to an explicit open-system model and derive (eta,delta,kappa,gamma) from microscopic parameters.
-
-## G. Experimental certification
-
-Find protocols that estimate enough of (eta,kappa,gamma), and the packing conditioner, without full process tomography.
-
-## H. Independent audit
-
-Current priority order:
-
-1. packing-conditioned many-outcome theorem,
-2. binary moving-POVM theorem,
-3. metastability transfer theorem,
-4. redundancy extension,
-5. formalization of the elementary core after theorem statements stabilize.
-
-The sharp Record-Margin and POVM spectral-gap proofs have now survived independent reconstruction.
-
-
-## A2. Residual spectral geometry
-
-The proposed shortcut
-
-[
-F_j=Q_j,quad jle m,qquad
-F_{m+1}=I-sum_{j=1}^mQ_j
-]
-
-does give (gamma_F=1), but it does **not** preserve the dimension-free Naimark closeness in general.
-
-An exact counterexample with
-
-[
-E_1=operatorname{diag}(1,0,1/2),qquad
-E_2=operatorname{diag}(0,1,1/2)
-]
-
-has perfectly packed near-unit sectors ((alpha=1)), yet routing the residual basis state to a new projective outcome gives measurement-channel diamond distance (2).
-
-See:
-
-- research/DEFINITIVE_CONCLUSION_AUDIT_2026-10-31.md
-- experiments/test_extra_outcome_gap_closure.py
-
-The live question is therefore:
-
-> What additional residual-geometry condition allows one to retain the outcome-independent Naimark closeness while obtaining a quantitative repeatability spectral gap?
-
-Equivalent alternatives are to remove the gap from the Record-Margin rounding theorem, or identify a new residual invariant controlling it.
-
-
-## A3. Residual spectral radius is not independent
-
-A later audit eliminates the proposed residual radius as an additional invariant for the explicit residual completion.
-
-Because the polar isometry preserves the **total span** of the original near-unit sectors,
-
-[
-R=I-sum_jQ_j
-]
-
-is orthogonal to every original spectral projector (P_j). Hence, if (P_j) contains all eigenvalues of (E_j) at least (1-delta),
-
-[
-R E_j Rle(1-delta)R.
-]
-
-Therefore
-
-[
-oxed{ho_{m res}le1-delta}
-]
-
-automatically, and for
-
-[
-F_j=Q_j+R E_jR
-]
-
-one has
-
-[
-oxed{gamma_Fgedelta.}
-]
-
-So the same-label spectral-gap problem for this residual completion is solved.
-
-The highest-value remaining target returns to the collective channel movement:
-
-> Prove an outcome-count-independent bound on
-> [
-> |mathcal M_E-mathcal M_F|_diamond
-> ]
-> for the specific residual completion (F_j=Q_j+R E_jR).
-
-Numerics suggest this is possible. A proof would close the same-label dimension-free chain without introducing an extra outcome.
-
-
-## A4. Same-label outcome-independent bound: internally closed
-
-The previous same-label conjecture for
-
-[
-F_j=Q_j+R E_jR
-]
-
-admits a direct hybrid-dilation proof.
-
-Let (W) be the canonical Naimark isometry of the original POVM, (J) the labelled isometry of the original near-unit sectors, and (T=UH) the synthesis polar decomposition.
-
-Because the residual projector (R) is orthogonal to every original spectral sector (P_j),
-
-[
-J^*WR=0
-]
-
-exactly.
-
-Hence
-
-[
-V=JU^*+WR
-]
-
-is an isometry and implements the **same-label** completed POVM exactly:
-
-[
-V^*Lambda_jV
-=
-Q_j+R E_jR
-=
-F_j.
-]
-
-Moreover
-
-[
-|V-W|_infty
-=
-|J-WU|_infty
-=
-arepsilon.
-]
-
-Therefore
-
-[
-oxed{
-
-u
-=
-|mathcal M_E-mathcal M_F|_diamond
-le
-2arepsilon
-}
-]
-
-with
-
-[
-arepsilon^2
-le
-2eta+2r_delta M,
-]
-
-and consequently, for (0<delta<1/2),
-
-[
-oxed{
-
-u
-le
-4left(
-sqrt{1-alpha^2}+sqrtdelta
-ight).
-}
-]
-
-Together with the already proved
-
-[
-gamma_Fgedelta,
-]
-
-the same-label chain is internally closed.
-
-See:
-
-- theory/same_label_dimension_free_theorem.md
-- experiments/test_same_label_hybrid_dilation.py
-
-### Remaining work is now audit/novelty, not an internal missing bound
-
-The next mathematical priorities are:
-
-1. independent reconstruction of the hybrid-dilation proof;
-2. literature veto against existing Naimark/POVM perturbation theorems;
-3. sharpen the constant (4);
-4. formalise the operator/channel proof in Lean;
-5. determine whether the (sqrtdelta) dependence is jointly optimal with the packing term.
+The refreshed Cruxy source snapshot is preserved under `imports/`, but only the canonical root files should be used to prepare a submission.
