@@ -17,41 +17,41 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "research" / "local_validation" / "claim_discipline.json"
 
-SOURCE_COMMIT = "fcef89be09dd9167a5a94d887e34d5ef1a8d0746"
-SOURCE_TREE = "2d0e9ef233a39aea8b1555a8d51db31bf934ef44"
+SOURCE_COMMIT = "297ec2fcf6114598418863c5fcf13b7090364652"
+SOURCE_TREE = "99d063fea0157aa4afcbd0664a0aa0cf7161e387"
 SOURCE_PREFIX = "imports/RC-Packing-Feasible-Note"
 
-# Git-object parity with the exact Cruxy source snapshot. The import directory
-# has one deliberate extra file, SNAPSHOT_MANIFEST.md, so its top-level tree is
-# not expected to equal SOURCE_TREE. The source-controlled root blobs and the
-# complete lean/, paper/, and theory/ subtrees must match exactly.
+# The imported directory contains one deliberate extra file,
+# SNAPSHOT_MANIFEST.md, so its top-level tree is not expected to equal the
+# source root tree. Source-controlled root blobs and complete subtrees must
+# match Git exactly.
 EXPECTED_SOURCE_OBJECTS = {
     f"{SOURCE_PREFIX}/NOVELTY_STATEMENT.md":
         "3de4de1c91951cb8bd6acb0a0d7e4d35e1abe8f8",
     f"{SOURCE_PREFIX}/README.md":
-        "acfa204d11a43342814d8db1a1ce7167b0369f4f",
+        "4f86306db05e644437acd5c215b85e384e959d79",
     f"{SOURCE_PREFIX}/REVIEW_PACKAGE.md":
         "afaedc8c2b6b03ac6d662bd69bf44c5427227559",
     f"{SOURCE_PREFIX}/REVIEW_REQUEST.md":
         "cc8462c2672da120aef69f8ad3ac74e4635833e2",
     f"{SOURCE_PREFIX}/STATUS.md":
-        "229c2a46fe0dd24f77928f6a61dfb0b6f36f327a",
+        "32a8cab2eb8d96ec621ba30eb89f3841e0a1ddf5",
     f"{SOURCE_PREFIX}/lean":
         "c2b7e33e591d9e89d1859655052d85759352b031",
     f"{SOURCE_PREFIX}/paper":
-        "23b5f1a2a565d6a578ecc4c751f6a19755d5aeb7",
+        "0c0dc5b187f665df811a01088fe3a7e6b5a01d72",
     f"{SOURCE_PREFIX}/theory":
-        "7beb09564e84e019160b42f4c674441bb3a3cd28",
+        "0f0f76897314689c6dba981e539eb06c5969af47",
 }
 
 
 def read_required(relative: str) -> str:
     path = ROOT / relative
     if not path.is_file():
-        raise AssertionError(f"required canonical file is missing: {relative}")
+        raise AssertionError(f"required file is missing: {relative}")
     text = path.read_text(encoding="utf-8")
     if not text.strip():
-        raise AssertionError(f"required canonical file is empty: {relative}")
+        raise AssertionError(f"required file is empty: {relative}")
     return text
 
 
@@ -59,7 +59,7 @@ def require_markers(relative: str, markers: list[str]) -> None:
     text = read_required(relative)
     for marker in markers:
         if marker not in text:
-            raise AssertionError(f"{relative} is missing required marker: {marker!r}")
+            raise AssertionError(f"{relative} is missing marker: {marker!r}")
 
 
 def forbid_patterns(relative: str, patterns: list[str]) -> None:
@@ -72,7 +72,6 @@ def forbid_patterns(relative: str, patterns: list[str]) -> None:
 
 
 def git_object_sha(relative: str) -> str:
-    """Return the Git blob/tree SHA for a path at HEAD."""
     try:
         return subprocess.check_output(
             ["git", "rev-parse", f"HEAD:{relative}"],
@@ -110,10 +109,7 @@ def check_markdown_integrity(relative: str) -> dict[str, int]:
     checked_links = 0
     for match in re.finditer(r"\[[^\]]+\]\(([^)]+)\)", text):
         target = match.group(1).strip()
-        if (
-            target.startswith(("http://", "https://", "mailto:", "#"))
-            or "://" in target
-        ):
+        if target.startswith(("http://", "https://", "mailto:", "#")) or "://" in target:
             continue
         target = target.split("#", 1)[0]
         if not target or not target.endswith(".md"):
@@ -143,7 +139,7 @@ def main() -> None:
         "theory/BOUND_CANDIDATE_2026-10-31.md",
         "research/CERTIFICATE_PROGRESS_2026-10-31.md",
         "research/PHD_VALIDATION_REPORT_2026-10-31.md",
-        "research/CRUXY_SYNC_REPORT_FCEF89_2026-10-31.md",
+        "research/CRUXY_SYNC_REPORT_297EC2_2026-10-31.md",
         "literature/PRIOR_ART_AND_ATTRIBUTION.md",
         "literature/DEEP_PRIOR_ART_VETO_2026-10-31.md",
         f"{SOURCE_PREFIX}/SNAPSHOT_MANIFEST.md",
@@ -152,6 +148,9 @@ def main() -> None:
         f"{SOURCE_PREFIX}/paper/FINAL.md",
         f"{SOURCE_PREFIX}/lean/RCProof/Hybrid.lean",
         f"{SOURCE_PREFIX}/lean/RCProof/HybridExtended.lean",
+        f"{SOURCE_PREFIX}/theory/CLOSING_PROOFS.md",
+        f"{SOURCE_PREFIX}/theory/HARDER_PUSH.md",
+        f"{SOURCE_PREFIX}/theory/HARDER_PUSH_2.md",
         f"{SOURCE_PREFIX}/theory/RECHECK_2026-10-31.md",
         "review/EXTERNAL_REVIEW_PACKET.md",
         "review/PROOF_DEPENDENCY_MAP.md",
@@ -172,6 +171,7 @@ def main() -> None:
             "potentially distinct; novelty unverified",
             SOURCE_COMMIT,
             SOURCE_TREE,
+            "seven commits and exactly six changed paths",
             "AI_RIGHTS_AND_ATTRIBUTION.md",
         ],
     )
@@ -180,52 +180,30 @@ def main() -> None:
         [
             SOURCE_COMMIT,
             SOURCE_TREE,
-            "Ten commits; exactly nine changed paths",
+            "Seven commits; exactly six changed paths",
             "AI-provider non-claim boundary",
+            "Sharpness of coefficient two",
         ],
     )
     require_markers(
         "theory/THEOREM_V1_FREEZE.md",
-        [
-            "external verification pending",
-            r"2\min",
-            "not novelty certified",
-            r"1-2e",
-        ],
+        ["external verification pending", r"2\min", "not novelty certified", r"1-2e"],
     )
     require_markers(
         "theory/same_label_dimension_free_theorem.md",
-        [
-            r"J_{\mathcal K}",
-            r"V=J_{\mathcal K}U^*+WR",
-            r"2\min",
-            "external review",
-        ],
+        [r"J_{\mathcal K}", r"V=J_{\mathcal K}U^*+WR", r"2\min", "external review"],
     )
     require_markers(
         "paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md",
-        [
-            "not represented as an awarded PhD thesis",
-            "novelty unverified",
-            r"2\min",
-        ],
+        ["not represented as an awarded PhD thesis", "novelty unverified", r"2\min"],
     )
     require_markers(
         "literature/PRIOR_ART_AND_ATTRIBUTION.md",
-        [
-            "legal novelty opinion",
-            "potentially distinct; novelty unverified",
-            "No document should call it",
-        ],
+        ["legal novelty opinion", "potentially distinct; novelty unverified", "No document should call it"],
     )
     require_markers(
         "AI_RIGHTS_AND_ATTRIBUTION.md",
-        [
-            "Christopher Gardner",
-            "OpenAI",
-            "not authorised",
-            "not legal advice",
-        ],
+        ["Christopher Gardner", "OpenAI", "not authorised", "not legal advice"],
     )
     require_markers(
         f"{SOURCE_PREFIX}/SNAPSHOT_MANIFEST.md",
@@ -233,39 +211,36 @@ def main() -> None:
             SOURCE_COMMIT,
             SOURCE_TREE,
             "not the canonical",
-            "exactly nine changed paths",
+            "exactly six changed paths",
+            "CLOSING_PROOFS.md",
             "AI-provider non-claim boundary",
         ],
     )
     require_markers(
-        "research/CRUXY_SYNC_REPORT_FCEF89_2026-10-31.md",
+        "research/CRUXY_SYNC_REPORT_297EC2_2026-10-31.md",
         [
             SOURCE_COMMIT,
             SOURCE_TREE,
-            "all source-controlled files imported",
-            "no blind overwrite",
+            "No path reported by the comparison was omitted",
+            "No blind canonical promotion",
+            "potentially distinct; novelty unverified",
         ],
     )
 
-    # Historical source files must remain quarantined under imports/. Their
-    # statements are provenance and may be weaker, ambiguous, or more assertive
-    # than the canonical RC-Discovery policy.
-    if (ROOT / "theory" / "full_proof.md").exists():
-        raise AssertionError(
-            "historical Cruxy full_proof.md must not exist in canonical theory/"
-        )
-    if (ROOT / "paper" / "FINAL.md").exists():
-        raise AssertionError(
-            "Cruxy paper/FINAL.md must remain under imports/, not canonical paper/"
-        )
-    if (ROOT / "NOVELTY_STATEMENT.md").exists():
-        raise AssertionError(
-            "Cruxy NOVELTY_STATEMENT.md must remain under imports/"
-        )
-    read_required(f"{SOURCE_PREFIX}/theory/full_proof.md")
+    # Historical source material remains quarantined under imports/. It may be
+    # weaker, ambiguous, or more assertive than canonical RC-Discovery files.
+    forbidden_canonical_paths = [
+        "theory/full_proof.md",
+        "theory/CLOSING_PROOFS.md",
+        "theory/HARDER_PUSH.md",
+        "theory/HARDER_PUSH_2.md",
+        "paper/FINAL.md",
+        "NOVELTY_STATEMENT.md",
+    ]
+    for relative in forbidden_canonical_paths:
+        if (ROOT / relative).exists():
+            raise AssertionError(f"historical Cruxy file must remain under imports/: {relative}")
 
-    # These patterns target unsupported affirmative claims. Policy documents
-    # may quote the same vocabulary when explicitly prohibiting it.
     prohibited = [
         r"\bwe (?:have )?proved the first\b",
         r"\bthis is (?:a )?first[- ]ever\b",
@@ -294,17 +269,14 @@ def main() -> None:
         "paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md",
         "theory/THEOREM_V1_FREEZE.md",
         "theory/same_label_dimension_free_theorem.md",
-        "research/CRUXY_SYNC_REPORT_FCEF89_2026-10-31.md",
+        "research/CRUXY_SYNC_REPORT_297EC2_2026-10-31.md",
         "review/EXTERNAL_REVIEW_PACKET.md",
         "review/PROOF_DEPENDENCY_MAP.md",
         "review/REPRODUCIBILITY_GUIDE.md",
         "review/TEST_CLAIM_MATRIX.md",
         "experiments/PHD_VALIDATION_PROTOCOL.md",
     ]
-    integrity = {
-        relative: check_markdown_integrity(relative)
-        for relative in integrity_files
-    }
+    integrity = {relative: check_markdown_integrity(relative) for relative in integrity_files}
 
     output = {
         "source_commit": SOURCE_COMMIT,
