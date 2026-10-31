@@ -21,7 +21,7 @@ Updated: 31 October 2026
 | Repeatability-admissible completion (F_j=R_j+CE_jC) | **Internally proved** | Handles (m<d) without forcing rank-one PVM completeness. |
 | Linear (O(delta)) spectral-threshold movement | **Refuted** | Explicit (alpha=1) family requires (Omega(sqrtdelta)) movement. |
 | Packing-conditioned many-outcome channel theorem | **Internally proved; non-optimal** | Positive bound with current (m)-dependent measurement-channel perturbation. |
-| Outcome-count-independent many-outcome diamond bound | **Open** | Current top mathematical target. |
+| Outcome-count-independent measurement-channel move | **Internally proved theorem candidate** | Naimark-completion construction gives an absolute m,d-independent bound; direct residual formula remains open. |
 | Two pure independent records: (kappa_R=sqrt{1-s^{2R}}) | **Known math / derived RC corollary** | Redundancy certificate. |
 | Correlated redundancy always helps | **Refuted** | Common-mode noise can keep (kappa_R) fixed. |
 | Record-structured metastability transfer | **Internally proved corollary** | No explicit phase-count dependence inside classical-record subclass. |
@@ -31,7 +31,9 @@ Updated: 31 October 2026
 
 - research/INDEPENDENT_PROOF_AUDIT_2026-10-31.md
 - theory/packing_conditioned_rounding.md
+- theory/dimension_free_nu_via_naimark.md
 - experiments/test_spectral_threshold_rate.py
+- experiments/test_dimension_free_naimark.py
 
 ## Prior-art warning
 
