@@ -20,6 +20,7 @@ Following the full-work audit, the repository was tightened in the following are
 10. Aligned the Record-Margin, POVM spectral-gap and redundancy documents with the canonical novelty-unverified wording.
 11. Expanded GitHub Actions to run QND/TCL certificate scripts and the optional PyTorch TCL neural smoke test during a tagged full audit.
 12. Updated the local launchers and validation documentation to match the actual runner.
+13. Corrected the status-ledger wording expected by the claim-discipline test after the first remediation run exposed the mismatch.
 
 ## Automated gates requested by this commit
 
