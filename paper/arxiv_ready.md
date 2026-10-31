@@ -3,7 +3,8 @@
 **Author:** Christopher Gardner  
 **Affiliation:** Independent / RC-Discovery programme  
 **Date:** 31 October 2026  
-**Status:** research draft; not peer-reviewed; novelty unverified
+**Status:** research draft; not peer-reviewed; novelty unverified  
+**Research workflow:** VIBE MATH — AI-assisted conjecture, adversarial testing, proof reconstruction and formal verification
 
 ## Abstract
 
@@ -523,3 +524,12 @@ The remaining work is external validation and positioning:
 4. formalise the full theorem;
 5. determine the optimal joint dependence on (alpha) and (delta).
 
+
+
+## VIBE MATH research workflow
+
+This work was developed using the **VIBE MATH** workflow: rapid human–AI mathematical exploration followed by adversarial counterexample search, numerical stress testing, independent proof reconstruction, prior-art checks and formal verification where practical.
+
+The workflow is methodological rather than evidential: AI assistance is not treated as proof. Only statements surviving the audit pipeline are promoted to theorem-candidate status.
+
+Research direction and authorship remain with Christopher Gardner; AI tools were used for derivation support, coding, testing, proof checking and formalisation assistance.
