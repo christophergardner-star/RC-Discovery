@@ -1,537 +1,426 @@
-# A Packing Condition for Approximate Quantum Measurements
+# Synthesis-Conditioned Same-Label Rounding of Approximate Quantum Measurements
 
 **Author:** Christopher Gardner  
 **Affiliation:** Independent / RC-Discovery programme  
 **Date:** 31 October 2026  
-**Status:** research draft; not peer-reviewed; novelty unverified  
-**Research workflow:** VIBE MATH — AI-assisted conjecture, adversarial testing, proof reconstruction and formal verification
+**Status:** external-review draft; not peer-reviewed; novelty unverified; not yet submission-ready  
+**Research workflow:** VIBE MATH — AI-assisted conjecture, adversarial testing, proof reconstruction, prior-art review and formalisation support
 
 ## Abstract
 
-We study a record-structured class of finite POVMs with near-unit spectral sectors. Let (P_j) be the full spectral projection of (E_j) onto eigenvalues at least (1-delta), and let
+We study a record-structured class of finite positive-operator-valued measurements (POVMs) with near-unit spectral sectors. Let \(P_j\) be the full spectral projection of \(E_j\) onto eigenvalues at least \(1-\delta\), and let
 
-[
-T:igoplus_joperatorname{ran}(P_j)	omathcal H,
-qquad
-T(x_j)=sum_jx_j
-]
+\[
+T:\bigoplus_j\operatorname{ran}(P_j)\to\mathcal H,
+\qquad
+T(x_1,\ldots,x_m)=\sum_jx_j
+\]
 
-be the synthesis operator. Writing
+be the sector synthesis operator. Under the packing condition \(\alpha=\sigma_{\min}(T)>0\), the polar isometry of \(T\) produces pairwise orthogonal sectors \(Q_j\). We consider the same-label completion
 
-[
-alpha=sigma_{min}(T)>0,
-]
+\[
+F_j=Q_j+R E_jR,
+\qquad
+R=I-\sum_jQ_j.
+\]
 
-the polar factor of (T) produces mutually orthogonal sectors (Q_j) with
+For every nonzero outcome we assume a nonzero near-unit sector at the chosen threshold. The completion is repeatability-admissible and has repeatability spectral gap \(\gamma_F\ge\delta\).
 
-[
-|P_j-Q_j|_inftylesqrt{1-alpha^2}.
-]
+Using the labelled direct-sum inclusion
 
-For every nonzero outcome effect we assume (P_j
-eq0). Let
+\[
+J_{\mathcal K}(x_1,\ldots,x_m)=(x_1,\ldots,x_m)
+\]
 
-[
-R=I-sum_jQ_j
-]
+and the hybrid Naimark/Stinespring isometry
 
-and define the same-label completion
+\[
+V=J_{\mathcal K}U^*+WR,
+\]
 
-[
-F_j=Q_j+R E_jR.
-]
+we obtain the internally reconstructed bound
 
-Then ({F_j}) is a POVM whose nonzero effects possess exact repeatable eigenvalue-1 sectors and whose repeatability spectral gap obeys
+\[
+\|\mathcal M_E-\mathcal M_F\|_\diamond
+\le
+4\left(\sqrt{1-\alpha^2}+\sqrt\delta\right),
+\]
 
-[
-gamma_Fgedelta.
-]
+with no explicit dependence on the number of outcomes, Hilbert-space dimension or total packed rank. Combined with the RC spectral-gap Record-Margin theorem, this yields an exactly idempotent measure-and-prepare channel \(\Pi\) satisfying
 
-Using a hybrid Naimark/Stinespring isometry
+\[
+\|\Phi_E-\Pi\|_\diamond
+\le
+\nu+
+\sqrt{\frac{2(\eta+3\nu)}{\kappa\delta}},
+\]
 
-[
-V=JU^*+WR,
-]
-
-where (W) is the canonical measurement dilation and (J) is the labelled embedding of the packed sectors, one obtains the outcome-count- and dimension-independent measurement-channel estimate
-
-[
-
-u=
-|mathcal M_E-mathcal M_F|_diamond
-le
-4left(
-sqrt{1-alpha^2}+sqrtdelta
-ight).
-]
-
-Combining this with the RC spectral-gap Record-Margin theorem yields an exactly idempotent measure-and-prepare channel (Pi) satisfying
-
-[
-oxed{
-|Phi_E-Pi|_diamond
-le
-
-u+
-sqrt{
-rac{2(eta+3
-u)}
-{kappadelta}
-},
-}
-]
-
-where (eta=|Phi_E^2-Phi_E|_diamond) and (kappa) is the record margin. The bound has no explicit dependence on the number of outcomes, Hilbert-space dimension, or total packed rank. The hybrid-isometry proof has survived an independent internal reconstruction. The main remaining gates are prior-art novelty, sharper constants, and full formalisation.
+where \(\nu=\|\Phi_E-\widetilde\Phi_F\|_\diamond\), \(\eta=\|\Phi_E^2-\Phi_E\|_\diamond\), and \(\kappa\) is the record margin. The result remains a theorem candidate pending external specialist audit and a complete novelty review.
 
 ## 1. Motivation
 
-Local diagnostics do not suffice to guarantee proximity to repeatable measurement. In particular, regular-simplex families can simultaneously exhibit:
+Local diagnostics do not guarantee proximity to a repeatable measurement. Regular-simplex families show that idempotence defect, record separation, near-unit effects and record reachability may all look favourable while the candidate repeatable sectors cannot be packed simultaneously.
 
-- small idempotence defect,
-- good record separation,
-- near-unit effects,
-- near-reachable records,
+The synthesis lower bound \(\alpha=\sigma_{\min}(T)\) is used here as a global conditioning parameter. The polar/fusion-frame machinery itself is standard; the question is whether it can be combined with a same-label residual completion and a channel-level operational bound.
 
-while remaining far from same-label repeatability.
+## 2. Setting and packing geometry
 
-This motivates a global packing parameter.
+Let \(\{E_j\}_{j=1}^m\) be a POVM on a finite-dimensional Hilbert space \(\mathcal H\), and fix \(0<\delta<1/2\). For every nonzero \(E_j\), let \(P_j\neq0\) be the full spectral projection onto eigenvalues in \([1-\delta,1]\).
 
-## 2. Packing condition
+Define
 
-Let ({E_j}_{j=1}^m) be a finite POVM on a finite-dimensional Hilbert space (mathcal H). Fix (0<delta<1/2).
-
-For every nonzero (E_j), let (P_j
-eq0) be the full spectral projection onto eigenvalues at least (1-delta). Define
-
-[
-mathcal K=igoplus_joperatorname{ran}(P_j)
-]
+\[
+\mathcal S_j=\operatorname{ran}(P_j),
+\qquad
+\mathcal K=\bigoplus_j\mathcal S_j,
+\]
 
 and
 
-[
-T:mathcal K	omathcal H,
-qquad
-T(x_1,ldots,x_m)=sum_jx_j.
-]
+\[
+T:\mathcal K\to\mathcal H,
+\qquad
+T(x_1,\ldots,x_m)=\sum_jx_j.
+\]
 
-Assume
+Assume \(\alpha=\sigma_{\min}(T)>0\), and write
 
-[
-alpha=sigma_{min}(T)>0.
-]
+\[
+T=UH,
+\qquad H=|T|.
+\]
 
-Then (T) is injective and the total packed rank is at most (dimmathcal H).
+Let \(R_j^{\mathcal K}\) be the coordinate projector onto \(\mathcal S_j\), and set
 
-## 3. Polar packing theorem
+\[
+Q_j=UR_j^{\mathcal K}U^*.
+\]
 
-Let
+The \(Q_j\) are pairwise orthogonal, preserve the sector ranks and satisfy the principal-angle bound
 
-[
-T=UH
-]
+\[
+\|P_j-Q_j\|_\infty
+\le
+\sqrt{1-\alpha^2}.
+\]
 
-be the polar decomposition, with (H=|T|). Let (R_j^{m coord}) be the coordinate projection on the (j)-th direct-sum sector and define
+This step uses established polar/Löwdin and frame/fusion-frame geometry and is not claimed as new.
 
-[
-Q_j=U R_j^{m coord}U^*.
-]
+## 3. Same-label completion and spectral gap
 
-The (Q_j) are pairwise orthogonal and have the same ranks as the (P_j).
+Put
 
-For every (j),
-
-[
-oxed{
-|P_j-Q_j|_infty
-le
-sqrt{1-alpha^2}.
-}
-]
-
-The proof follows from principal-angle geometry and the inequality
-
-[
-langle Te,Ueangle
-=
-langle He,eangle
-gealpha
-]
-
-for unit coordinate vectors (e).
-
-The polar step itself is classical linear algebra and is not a novelty claim.
-
-## 4. Same-label repeatable completion
-
-Define
-
-[
-S=sum_jQ_j=UU^*,
-qquad
+\[
+S=UU^*=\sum_jQ_j,
+\qquad
 R=I-S.
-]
+\]
 
-Because (operatorname{ran}(U)=operatorname{ran}(T)), (R) is orthogonal to every original near-unit sector (P_j):
+Since \(\operatorname{ran}(U)=\operatorname{ran}(T)=\sum_j\mathcal S_j\),
 
-[
+\[
 P_jR=RP_j=0.
-]
+\]
 
 Define
 
-[
-oxed{
+\[
 F_j=Q_j+R E_jR.
-}
-]
+\]
 
-Then:
+Then
 
-1. (F_jge0);
-2. (sum_jF_j=I);
-3. (F_iQ_j=delta_{ij}Q_j).
+\[
+\sum_jF_j=S+R\left(\sum_jE_j\right)R=I,
+\]
 
-Hence ({F_j}) is repeatability-admissible.
+and
 
-Because
+\[
+F_iQ_j=\delta_{ij}Q_j.
+\]
 
-[
-E_jle P_j+(1-delta)(I-P_j),
-]
+Thus the completion retains the original labels and gives each nonzero outcome an exact eigenvalue-1 sector.
 
-compression by (R) gives
+Because \(P_j\) is the full threshold projection,
 
-[
-R E_jRle(1-delta)R.
-]
+\[
+E_j\le P_j+(1-\delta)(I-P_j).
+\]
 
-Therefore
+Compression by \(R\) gives
 
-[
-oxed{gamma_Fgedelta.}
-]
+\[
+R E_jR\le(1-\delta)R,
+\]
 
-## 5. Hybrid isometry
+so
+
+\[
+\gamma_F\ge\delta.
+\]
+
+## 4. The typed labelled embedding
+
+A notation issue discovered during the source re-merge must be stated explicitly.
 
 Let
 
-[
-mathcal Y=igoplus_{j=1}^mmathcal H
-]
+\[
+\mathcal Y=\bigoplus_{j=1}^m\mathcal H
+\]
 
 and define the canonical measurement isometry
 
-[
-W:mathcal H	omathcal Y,
-qquad
-(Wx)_j=sqrt{E_j},x.
-]
+\[
+Wz=(\sqrt{E_1}z,\ldots,\sqrt{E_m}z).
+\]
 
-Let
+The labelled map used in the theorem is
 
-[
-J:mathcal K	omathcal Y
-]
+\[
+J_{\mathcal K}:\mathcal K\to\mathcal Y,
+\qquad
+J_{\mathcal K}(x_1,\ldots,x_m)=(x_1,\ldots,x_m).
+\]
 
-embed the (j)-th direct-sum coordinate into output label (j).
+It embeds the original sector vector in its outcome block. In a rank-one sector, the coordinate vector representing \(v_j\in\mathcal S_j\) is sent to \(v_j\), not to its polar-rounded image \(q_j\).
 
-Since (P_j) commutes with (sqrt{E_j}) and (P_jR=0),
-
-[
-oxed{J^*WR=0.}
-]
+An alternative source note defined a different map by embedding \(q_j\) in block \(j\) and correctly found a different overlap matrix. That calculation does not refute the theorem with \(J_{\mathcal K}\); it reveals that the two maps must not share one symbol without a type declaration.
 
 Define
 
-[
-oxed{
-V=JU^*+WR.
-}
-]
-
-The two terms have orthogonal initial and final spaces, so
-
-[
-V^*V=I.
-]
-
-If (Lambda_j) is the projector onto output label (j), then the cross terms vanish and
-
-[
-oxed{
-V^*Lambda_jV
-=
-Q_j+R E_jR
-=
-F_j.
-}
-]
-
-Thus (V) is an exact Naimark/Stinespring dilation of the same-label completed POVM.
-
-## 6. Dimension-free measurement-channel bound
-
-Let
-
-[
-D=
-igoplus_j
-left.sqrt{E_j}ight|_{operatorname{ran}(P_j)}.
-]
+\[
+D=\bigoplus_j\left.\sqrt{E_j}\right|_{\mathcal S_j}.
+\]
 
 Then
 
-[
-sqrt{1-delta},Ile Dle I
-]
+\[
+J_{\mathcal K}^*WU=DH.
+\]
 
-and
+Indeed, the \(j\)-th component is
 
-[
-J^*WU=DH.
-]
+\[
+P_j\sqrt{E_j}Ux
+=
+\sqrt{E_j}P_jUx,
+\]
 
-Therefore
+while the \(j\)-th component of \(T^*Ux=Hx\) is \(P_jUx\).
 
-[
-(WU-J)^*(WU-J)
+## 5. Hybrid dilation and operational distance
+
+Because \(P_jR=0\) and \(P_j\) commutes with \(\sqrt{E_j}\),
+
+\[
+J_{\mathcal K}^*WR=0.
+\]
+
+Define
+
+\[
+V=J_{\mathcal K}U^*+WR.
+\]
+
+Then
+
+\[
+V^*V=I
+\]
+
+and, for the label projector \(\Lambda_j\subset\mathcal Y\),
+
+\[
+V^*\Lambda_jV=Q_j+R E_jR=F_j.
+\]
+
+Thus \(V\) is an exact dilation of the same-label completion.
+
+Both \(WU\) and \(J_{\mathcal K}\) are isometries, and
+
+\[
+(WU-J_{\mathcal K})^*(WU-J_{\mathcal K})
 =
 2I-HD-DH.
-]
+\]
 
-Define
+Let
 
-[
-arepsilon=|WU-J|_infty,
-]
-
-[
-eta=|H-I|_infty,
-qquad
-r_delta=1-sqrt{1-delta},
-qquad
-M=|H|_infty.
-]
+\[
+\varepsilon=\|WU-J_{\mathcal K}\|_\infty,
+\quad
+\beta=\|H-I\|_\infty,
+\quad
+r_\delta=1-\sqrt{1-\delta},
+\quad
+M=\|H\|_\infty.
+\]
 
 Then
 
-[
-oxed{
-arepsilon^2
-le
-2eta+2r_delta M.
-}
-]
+\[
+\varepsilon^2
+\le
+2\beta+2r_\delta M.
+\]
 
 The POVM condition gives
 
-[
-Mle(1-delta)^{-1/2}
-]
+\[
+M\le(1-\delta)^{-1/2},
+\]
 
 and
 
-[
-etale
-maxleft{
-1-alpha,,
-(1-delta)^{-1/2}-1
-ight}.
-]
+\[
+\beta\le
+\max\left\{
+1-\alpha,
+(1-\delta)^{-1/2}-1
+\right\}.
+\]
 
 Also,
 
-[
-|V-W|_infty
-=
-|J-WU|_infty
-=
-arepsilon.
-]
+\[
+\|V-W\|_\infty=\varepsilon.
+\]
 
-Since both measurement channels are obtained from the two isometric channels by the same label-reading CPTP post-processing,
+By standard Stinespring continuity and common label-reading post-processing,
 
-[
-|mathcal M_E-mathcal M_F|_diamond
-le
-2|V-W|_infty.
-]
+\[
+\|\mathcal M_E-\mathcal M_F\|_\diamond
+\le
+2\varepsilon.
+\]
 
-Hence
+For \(0<\delta<1/2\), a conservative simplification is
 
-[
-oxed{
-
-u
-le
-2arepsilon.
+\[
+\boxed{
+\|\mathcal M_E-\mathcal M_F\|_\diamond
+\le
+4\left(\sqrt{1-\alpha^2}+\sqrt\delta\right).
 }
-]
+\]
 
-For (0<delta<1/2), a simple explicit bound is
+The constant is not claimed optimal.
 
-[
-oxed{
+## 6. Record-process certificate
 
-u
-le
-4left(
-sqrt{1-alpha^2}
-+
-sqrtdelta
-ight).
-}
-]
-
-The constant (4) is conservative and not claimed optimal.
-
-## 7. Exact-idempotent record certificate
+**Certificate limitation:** substituting either scalar movement envelope into the bound below with denominator \(\kappa\delta\) always exceeds 2. Only actual or sufficiently sharp instance-dependent movement can make that version nontrivial. See [the focused prior-art and certificate audit, Section 4](../literature/SAME_LABEL_PRIOR_ART_VETO_2026-10-31.md). Dimension independence alone does not establish a useful exact-idempotent stability guarantee.
 
 Let
 
-[
-Phi_E(ho)
-=
-sum_joperatorname{Tr}(E_jho)sigma_j
-]
+\[
+\Phi_E(\rho)=\sum_j\operatorname{Tr}(E_j\rho)\sigma_j
+\]
 
-with record margin (kappa>0) and idempotence defect
+have record margin \(\kappa>0\) and idempotence defect \(\eta\). Let \(\widetilde\Phi_F\) use \(F_j\) with the same records. Record preparation is common CPTP post-processing, so
 
-[
-eta=|Phi_E^2-Phi_E|_diamond.
-]
+\[
+\nu:=\|\Phi_E-\widetilde\Phi_F\|_\diamond
+\le
+\|\mathcal M_E-\mathcal M_F\|_\diamond.
+\]
 
-Let (widetildePhi_F) use the moved POVM (F_j) with the same records.
+Moreover,
 
-Because the record-preparation map is a common CPTP post-processing,
+\[
+\|\widetilde\Phi_F^2-\widetilde\Phi_F\|_\diamond
+\le
+\eta+3\nu.
+\]
 
-[
-|Phi_E-widetildePhi_F|_diamondle
-u.
-]
+The RC spectral-gap theorem then gives an exactly idempotent channel \(\Pi\) satisfying
 
-Also,
-
-[
-|widetildePhi_F^2-widetildePhi_F|_diamond
-le
-eta+3
-u.
-]
-
-Applying the RC spectral-gap Record-Margin theorem with (gamma_Fgedelta) gives an exactly idempotent channel (Pi) satisfying
-
-[
-oxed{
-|Phi_E-Pi|_diamond
-le
-
-u+
-sqrt{
-rac{2(eta+3
-u)}
-{kappadelta}
-}.
+\[
+\boxed{
+\|\Phi_E-\Pi\|_\diamond
+\le
+\nu+
+\sqrt{\frac{2(\eta+3\nu)}{\kappa\delta}}.
 }
-]
+\]
 
-This is the current dimension-free same-label certificate.
+## 7. Negative results and limitations
 
-## 8. Negative results and sharpness information
+The derivation is constrained by several counterexamples:
 
-Several stronger statements were falsified during the derivation.
+- local diagnostics without packing do not suffice;
+- \(m>d\) prevents same-label exact unit sectors;
+- generic threshold-only movement may require order \(\sqrt\delta\);
+- dumping the residual space into an additional projective outcome can move the measurement channel by distance \(2\);
+- system-only pure-state sampling is numerical evidence, not a complete diamond-norm computation.
 
-### Local diagnostics alone are insufficient
+The full operator/channel theorem has not been machine formalised. External specialist verification is still required.
 
-The regular-simplex obstruction shows that local near-repeatability does not imply global repeatability.
+## 8. Prior-art boundary
 
-### Linear spectral-threshold movement is false
+The following are established ingredients and are not claimed as contributions of this note:
 
-An explicit (d=4,m=3), (alpha=1) family requires order-(sqrtdelta) movement, so generic (O(delta)) dependence is impossible under spectral-threshold-only assumptions.
+- polar and Löwdin orthogonalisation, Fan–Hoffman and Higham best-approximation results;
+- synthesis operators, Riesz bases and fusion-frame geometry;
+- Naimark and Stinespring dilation;
+- Kretschmann–Schlingemann–Werner continuity;
+- Busch–Grabowski–Lahti repeatability criteria;
+- de la Salle and earlier POVM orthogonalisation/projectivisation;
+- Oszmaniec and collaborators' projective-simulation results, including Kotowski–Oszmaniec's dimension-deficient Naimark theorem;
+- Watrous diamond-norm/SDP theory;
+- Kitaev's approximate-algebraic treatment of almost-idempotent channels;
+- known regular-simplex negative examples.
 
-### Extra-outcome shortcut fails
+The only object being investigated as potentially distinct is the complete, correctly typed combination presented here. No exact prior theorem matching that full chain was located in the searches performed. That is not a novelty certificate.
 
-Routing all residual mass to a new projective outcome can produce measurement-channel diamond distance (2), even with perfect packing.
+Canonical attribution policy:
 
-Thus the same-label hybrid construction is not replaceable by that shortcut.
+- `literature/PRIOR_ART_AND_ATTRIBUTION.md`
+- `literature/DEEP_PRIOR_ART_VETO_2026-10-31.md`
 
 ## 9. Verification status
 
-### Independently reconstructed internally
+Internally reconstructed:
 
-- sharp Record-Margin theorem;
-- POVM spectral-gap theorem;
-- same-label hybrid-isometry construction;
-- exact implementation (V^*Lambda_jV=F_j);
-- dimension-free measurement-channel estimate;
-- (gamma_Fgedelta).
+- the sharp Record-Margin theorem;
+- the POVM spectral-gap theorem;
+- the typed overlap identity;
+- the hybrid isometry;
+- exact implementation of the same-label completion;
+- the dimension-free estimate;
+- \(\gamma_F\ge\delta\).
 
-### Numerically stress-tested
-
-- rank-1 and higher-rank polar sector movement;
-- same-label hybrid isometry;
-- exact POVM implementation;
-- scaling with outcome count.
-
-### Lean 4 + Mathlib
-
-Machine checked with zero `sorry`:
+Machine checked in Lean at the scalar algebraic core:
 
 - `projector_const_one`;
 - `polar_residual_le`;
 - `near_orthonormal_overlap`;
 - `rank1_core_package`.
 
-The full Hilbert-space/channel theorem is not yet machine formalised.
+The laptop validation additionally machine-checked four rectangular complex-matrix lemmas (`spectral_cross_zero`, `hybrid_cross_zero`, `hybrid_isometry`, `hybrid_compression`) under explicit algebraic hypotheses. The spectral construction and channel-norm estimate remain unformalized. All nine original mathematical tests, 408 additional adversarial cases and 12 ancilla-assisted channel-distance SDPs passed. See [the validation report](../research/LOCAL_VALIDATION_2026-10-31.md) for assumptions, numerical tolerances and the separate blocked neural smoke test.
 
-## 10. Prior-art boundary
+Novelty and external correctness remain open review gates.
 
-**31 October 2026 audit:** [the focused prior-art veto](../literature/SAME_LABEL_PRIOR_ART_VETO_2026-10-31.md) found no direct combined theorem in the sources examined, but adds mandatory square-root-measurement, frame, clean-POVM, sharpness, and Ulam-stability comparisons. It also proves a limitation of the final certificate: inserting either current scalar movement envelope into the bound with denominator \(\kappa\delta\) always exceeds 2. Only actual or sufficiently sharp instance-dependent movement can make that version nontrivial. This draft needs that distinction before external circulation; dimension independence by itself is insufficient.
+## 10. Conclusion
 
-The following ingredients are known and are not claimed as novel:
+The internal theorem candidate gives a synthesis-conditioned, same-label route from approximate measurement to a repeatability-admissible POVM and then to an exactly idempotent record process, with no explicit dimension or outcome-count factor. The important contribution, if external review confirms it, is not any individual classical ingredient but their precisely typed combination.
 
-- polar / Löwdin / Fan-Hoffman nearest-isometry results;
-- quantitative POVM orthogonalisation, including de la Salle;
-- continuity of Stinespring dilations and channel distance, including Kretschmann-Schlingemann-Werner;
-- Kitaev's approximate-algebra treatment of almost-idempotent channels.
+## VIBE MATH methodology and attribution
 
-The potentially distinct contribution is the particular synthesis-conditioned same-label construction and its combination with Record-Margin stability to produce the explicit dimension-free exact-idempotent certificate above.
+The result was developed through the VIBE MATH workflow: rapid human–AI conjecture generation followed by counterexample search, numerical testing, independent reconstruction and prior-art review. AI assistance is methodological support, not evidence of correctness.
 
-Novelty remains unverified.
+Research direction and authorship: Christopher Gardner.
 
-## 11. Conclusion
+## References
 
-At the internal-proof level, the same-label chain is closed:
-
-[
-oxed{
-	ext{synthesis packing}
-	o
-	ext{orthogonal repeatable sectors}
-	o
-	ext{same-label dimension-free channel move}
-	o
-	ext{spectral gap}
-	o
-	ext{exact idempotent record process}.
-}
-]
-
-The remaining work is external validation and positioning:
-
-1. deep prior-art search;
-2. external review;
-3. sharpen constants;
-4. formalise the full theorem;
-5. determine the optimal joint dependence on (alpha) and (delta).
-
-
-
-## VIBE MATH research workflow
-
-This work was developed using the **VIBE MATH** workflow: rapid human–AI mathematical exploration followed by adversarial counterexample search, numerical stress testing, independent proof reconstruction, prior-art checks and formal verification where practical.
-
-The workflow is methodological rather than evidential: AI assistance is not treated as proof. Only statements surviving the audit pipeline are promoted to theorem-candidate status.
-
-Research direction and authorship remain with Christopher Gardner; AI tools were used for derivation support, coding, testing, proof checking and formalisation assistance.
+1. K. Fan and A. J. Hoffman, *Some Metric Inequalities in the Space of Matrices*, Proc. AMS 6 (1955), 111–116. DOI: `10.1090/S0002-9939-1955-0067841-7`.
+2. P.-O. Löwdin, *On the Non-Orthogonality Problem Connected with the Use of Atomic Wave Functions in the Theory of Molecules and Crystals*, J. Chem. Phys. 18 (1950), 365–375. DOI: `10.1063/1.1747632`.
+3. N. J. Higham, *Computing the Polar Decomposition—with Applications*, SIAM J. Sci. Stat. Comput. 7 (1986), 1160–1174. DOI: `10.1137/0907079`.
+4. P. Busch, M. Grabowski and P. J. Lahti, *Repeatable Measurements in Quantum Theory: Their Role and Feasibility*, Foundations of Physics 25 (1995), 1239–1266. DOI: `10.1007/BF02055331`.
+5. D. Kretschmann, D. Schlingemann and R. F. Werner, *The Information-Disturbance Tradeoff and the Continuity of Stinespring's Representation*, IEEE Trans. Inf. Theory 54 (2008), 1708–1717. DOI: `10.1109/TIT.2008.917696`.
+6. D. Kretschmann, D. Schlingemann and R. F. Werner, *A Continuity Theorem for Stinespring's Dilation*, J. Funct. Anal. 255 (2008), 1889–1904. DOI: `10.1016/j.jfa.2008.07.023`.
+7. M. de la Salle, *Orthogonalization of Positive Operator Valued Measures*, Comptes Rendus Mathématique 360 (2022), 549–560. DOI: `10.5802/crmath.326`; arXiv:2103.14126.
+8. M. Kotowski and M. Oszmaniec, *Pretty Good Simulation of All Quantum Measurements by Projective Measurements*, IEEE Trans. Inf. Theory 72 (2026), 3156–3174. DOI: `10.1109/TIT.2026.3678498`; arXiv:2501.09339.
+9. A. Kitaev, *Almost-idempotent quantum channels and approximate C*-algebras*, arXiv:2405.02434.
+10. J. Watrous, *Semidefinite Programs for Completely Bounded Norms*, Theory of Computing 5 (2009), 217–238. DOI: `10.4086/toc.2009.v005a011`.

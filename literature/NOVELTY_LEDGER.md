@@ -1,207 +1,213 @@
 # Novelty and Prior-Art Ledger
 
-Updated: 31 October 2026.
+Updated: 31 October 2026
 
-## Focused same-label prior-art veto
+This ledger records what is known, what RC-Discovery has internally derived, and what remains novelty-unverified.
 
-See [the detailed search and implication audit](SAME_LABEL_PRIOR_ART_VETO_2026-10-31.md).
+A literature search cannot certify absence of prior art. The canonical no-overclaim policy is:
 
-No direct prior statement or complete implication was located in the sources examined. Novelty remains **unverified**. Additional mandatory comparisons are Eldar–Forney's square-root measurement, Frank–Paulsen–Tiballi's symmetric frame approximation, the clean-POVM and measurement-sharpness literature, operator-valued frame perturbation, and Ulam stability. The report distinguishes inspected theorem statements from inaccessible originals and records search limitations.
+- `literature/PRIOR_ART_AND_ATTRIBUTION.md`
 
-**Certificate limitation found:** substituting either current scalar movement envelope into the threshold-based exact-idempotent certificate always gives a bound greater than the trivial maximum of 2. This does not refute the measurement-rounding theorem or the certificate using actual/instance-dependent movement. See Section 4 of the report for the proof and the condition for a nontrivial certificate.
+## Focused laptop prior-art and certificate audit
 
-## Confirmed neighbouring results
+See [the focused search and implication audit](SAME_LABEL_PRIOR_ART_VETO_2026-10-31.md) and [local validation results](../research/LOCAL_VALIDATION_2026-10-31.md). No direct prior statement or complete implication was located in the sources examined; novelty remains unverified. The report distinguishes inspected theorem statements from inaccessible originals and records search limitations.
 
-### Kitaev (2024)
+**Certificate limitation:** substituting either current scalar movement envelope into the threshold-based exact-idempotent certificate always gives a bound greater than the trivial maximum of 2. This does not refute the measurement-rounding theorem or the certificate using actual/instance-dependent movement. Section 4 of the focused report gives the proof and the condition for a nontrivial certificate.
 
-*Almost-idempotent quantum channels and approximate C*-algebras*, arXiv:2405.02434.
+## Established ingredients
 
-### Chenxiao (2026)
+### Polar and Löwdin orthogonalisation
 
-*Almost-Idempotent Quantum Channels Need Not Be Close to Idempotent Channels*, Zenodo 22906336, 23 September 2026.
+Established sources include Fan–Hoffman, Löwdin and Higham. Nearest-isometry properties of the polar factor, orthogonalisation of frames, singular-value residual formulas and related perturbation facts are prior art.
 
-The paper constructs regular-simplex bistochastic entanglement-breaking maps whose idempotence defects vanish while their distance from all UCP idempotents remains bounded below.
+**RC claim:** none for the polar step itself.
 
-This is the decisive veto against any general dimension-independent exact-rounding theorem.
+### Frame and fusion-frame synthesis operators
+
+Synthesis operators, lower Riesz bounds, fusion Riesz bases and equivalence/perturbation relationships with orthonormal fusion structures are established frame-theory concepts.
+
+**RC claim:** none for introducing a synthesis operator or using its smallest singular value as a conditioning quantity by itself.
 
 ### Repeatable POVMs
 
-Busch, Grabowski and Lahti, *Repeatable measurements in quantum theory: Their role and feasibility*, Foundations of Physics 25 (1995), DOI 10.1007/BF02055331.
+Busch, Grabowski and Lahti (1995), DOI `10.1007/BF02055331`, and related measurement theory establish the structure and feasibility limits of repeatable measurements. The eigenvalue-1/norm-1 criterion for nonzero discrete effects is prior art.
 
-For finite discrete POVMs, repeatable implementation is possible exactly when every nonzero effect has eigenvalue 1.
+**RC claim:** none for the criterion.
 
-### POVM orthogonalization / projectivization
+### POVM orthogonalisation and projectivisation
 
-Mikael de la Salle, *Orthogonalization of Positive Operator Valued Measures*, Comptes Rendus Mathématique 360 (2022), DOI 10.5802/crmath.326.
+Mikael de la Salle, *Orthogonalization of Positive Operator Valued Measures*, Comptes Rendus Mathématique 360 (2022), DOI `10.5802/crmath.326`, arXiv `2103.14126`, proves dimension-independent quantitative rounding of almost-orthogonal POVMs and improves earlier finite-dimensional results of Kempe–Vidick and Ji–Natarajan–Vidick–Wright–Yuen.
 
-This work proves quantitative rounding of almost-orthogonal POVMs to PVMs in a state-dependent (L_2)-type metric and improves earlier finite-dimensional results.
+**RC claim:** none for the general idea that almost-orthogonal/almost-projective POVMs can be rounded.
 
-This is mandatory prior art for any RC claim of “almost projective POVM implies nearby projective measurement.”
+### POVM simulation by projective measurements
 
-### Polar / Löwdin orthogonalization
+Prior art includes Oszmaniec and collaborators' simulation/postselection results and Kotowski–Oszmaniec, *Pretty Good Simulation of All Quantum Measurements by Projective Measurements*, IEEE Trans. Inf. Theory 72 (2026), 3156–3174, DOI `10.1109/TIT.2026.3678498`, arXiv `2501.09339`, including a dimension-deficient Naimark theorem.
 
-The fact that the polar factor is a closest matrix with orthonormal columns in unitarily invariant norms is classical (Fan–Hoffman / Higham / Löwdin orthogonalization).
+**RC claim:** none for projective simulation, noisy simulation or dimension-deficient Naimark constructions generally.
 
-No novelty claim belongs to the polar step itself.
+### Naimark/Stinespring dilation and continuity
 
-### Stinespring continuity
+Naimark dilation and Stinespring representation are classical. Kretschmann–Schlingemann–Werner (2008), DOI `10.1109/TIT.2008.917696` and `10.1016/j.jfa.2008.07.023`, establish dimension-independent continuity between channels and suitable dilations.
 
-Kretschmann, Schlingemann and Werner, *The Information-Disturbance Tradeoff and the Continuity of Stinespring's Representation* (IEEE Trans. Inf. Theory 54, 2008) and *A Continuity Theorem for Stinespring's Dilation* (J. Funct. Anal. 255, 2008).
+**RC claim:** none for the generic implication that nearby isometries induce nearby channels.
 
-These works establish dimension-independent continuity between completely bounded / diamond channel distance and distances between Stinespring representations.
+### Diamond norm and channel discrimination
 
-Therefore no novelty claim belongs to the generic implication
+Watrous and the channel/measurement-discrimination literature establish diamond-norm SDP methods and show that ancilla assistance can matter.
 
-[
-|W-V|_infty 	ext{small}
-Rightarrow
-|operatorname{Ad}_W-operatorname{Ad}_V|_diamond 	ext{small}.
-]
+**RC policy:** pure-state total-variation sampling is numerical evidence only, not a complete diamond-norm computation unless a theorem proves ancillas unnecessary in the exact class considered.
 
-The potentially distinct part of the RC argument is the explicit synthesis-conditioned construction of a same-label (V) implementing
+### Almost-idempotent channels
 
-[
-F_j=Q_j+R E_jR
-]
+- Kitaev, *Almost-idempotent quantum channels and approximate C*-algebras*, arXiv `2405.02434`.
+- Chenxiao, *Almost-Idempotent Quantum Channels Need Not Be Close to Idempotent Channels*, Zenodo `22906336`, DOI `10.5281/zenodo.22906336`.
 
-together with the resulting packing/spectral parameter bound.
+The unrestricted structural theory and the regular-simplex negative mechanism are prior art.
 
-### QMSM metastability
+## RC theorem candidates
 
-Li, Lin and Ragone, *Quantum Markov State Models for Metastable Dynamics*, arXiv:2609.40214 (2026).
+### Sharp Record-Margin Stability
 
-### Quantum Chernoff redundancy
+\[
+\|\Phi-\Pi\|_\diamond
+\le
+\sqrt{\frac{2\eta}{\kappa}}.
+\]
 
-Zwolak, Riedel and Zurek, *Amplification, Redundancy, and Quantum Chernoff Information*, PRL 112, 140406 (2014).
+Status:
 
-## Current RC theorem candidates
+- internally proved;
+- independent reconstruction passed;
+- numerical equality family available;
+- exact prior theorem not located;
+- novelty unverified.
 
-### 1. Sharp Record-Margin theorem
+### Repeatability-admissible spectral-gap extension
 
-[
-|Phi-Pi|_diamondlesqrt{2eta/kappa}.
-]
+\[
+\|\Phi-\Pi\|_\diamond
+\le
+\sqrt{\frac{2\eta}{\kappa\gamma}}.
+\]
 
-Independent proof reconstruction on 31 October 2026: **survives**.
+Status:
 
-The proof should explicitly cite:
+- internally proved;
+- independent reconstruction passed;
+- exact prior theorem not located;
+- novelty unverified.
 
-- the state-optimization characterization of the diamond norm for Hermiticity-preserving maps,
-- the normalized post-selection / gentle-projection trace-distance inequality.
+### Same-label synthesis-conditioned theorem candidate
 
-### 2. Repeatability-admissible POVM extension
+Under the stated nonzero-sector and packing hypotheses, define
 
-[
-|Phi-Pi|_diamond
-le
-sqrt{2eta/(kappagamma)}.
-]
+\[
+F_j=Q_j+R E_jR.
+\]
 
-Independent proof reconstruction on 31 October 2026: **survives**.
+The internally reconstructed candidate gives
 
-Neither exact RC inequality has yet been located in prior work.
+\[
+\gamma_F\ge\delta
+\]
 
-## Moving-POVM result status
+and
 
-The broad moving-POVM conjecture based only on local diagnostics is false.
+\[
+\|\mathcal M_E-\mathcal M_F\|_\diamond
+\le
+4\left(
+\sqrt{1-\alpha^2}+\sqrt\delta
+\right).
+\]
 
-The session has now produced:
+Combined with Record-Margin Stability,
 
-- an elementary packing inequality,
-- a direct same-label packing no-go,
-- a binary positive transfer theorem,
-- a synthesis-operator conditioner for many-outcome near-unit sectors,
-- a constructive polar orthogonalization lemma valid at arbitrary rank,
-- an explicit repeatability-admissible POVM completion,
-- a non-optimal many-outcome channel theorem with an (m)-dependent perturbation term.
+\[
+\|\Phi_E-\Pi\|_\diamond
+\le
+\nu+
+\sqrt{
+\frac{2(\eta+3\nu)}
+{\kappa\delta}
+}.
+\]
 
-### Important correction
+The labelled map must be typed as
 
-The 31 October proposed linear effect movement
+\[
+J_{\mathcal K}(x_1,\ldots,x_m)=(x_1,\ldots,x_m),
+\]
 
-[
-O!left(delta+sqrt{1-alpha^2}ight)
-]
+embedding original sector vectors. It is not the alternative map embedding polar-rounded vectors. The refreshed Cruxy source notes exposed this ambiguity; see `research/CRUXY_REMERGE_AUDIT_2026-10-31.md`.
 
-is too strong when (delta) only specifies a near-unit spectral threshold.
+Status:
 
-An explicit (d=4,m=3) family has perfect packing (alpha=1) but requires order-(sqrtdelta) movement.
+- internally reconstructed with the typed map;
+- finite numerical tests support the exact isometry/effect identities;
+- full Lean formalisation open;
+- external specialist audit pending;
+- no exact combined prior theorem located in searches;
+- novelty remains unverified.
 
-See:
+## Negative results established or adopted
 
-- theory/packing_conditioned_rounding.md
-- experiments/test_spectral_threshold_rate.py
-- research/INDEPENDENT_PROOF_AUDIT_2026-10-31.md
+- Local diagnostics alone do not remove global packing obstructions.
+- Same-label exact repeatability with more nonzero labels than dimension is impossible.
+- A generic linear \(O(\delta)\) threshold movement rate is false.
+- Routing the residual subspace to an extra projective outcome can produce maximum channel distance.
+- The broad unrestricted almost-idempotent-to-idempotent theorem is false by known negative results.
 
-The correct generic rate must permit square-root spectral-threshold dependence unless stronger whole-effect control is assumed.
+## Refreshed Cruxy source status
 
-### Current novelty boundary
+The exact source snapshot at commit `78be7962931f9f95e6e6aecd93f4dde00c3fe14d` is preserved under:
 
-No novelty claim should be attached to:
+- `imports/RC-Packing-Feasible-Note/`
 
-- the polar decomposition,
-- nearest orthonormal-frame properties,
-- the general fact that almost-projective POVMs can be rounded,
-- the regular-simplex obstruction itself.
+The snapshot includes historical documents with stronger novelty language and inconsistent definitions. They are not canonical novelty claims.
 
-The potentially distinct RC contribution is the combination of:
+## Current claim boundary
 
-- near-unit sector synthesis conditioning,
-- repeatability-admissible completion,
-- record-margin and idempotence control,
-- a downstream diamond-norm stability certificate.
+No novelty claim is attached to any individual standard ingredient.
 
-That combination remains **novelty unverified**.
+The only potentially distinct object is the complete, precisely typed combination:
+
+\[
+\text{synthesis-conditioned near-unit sectors}
+\to
+\text{same-label residual completion}
+\to
+\text{dimension-free operational control}
+\to
+\text{repeatability gap}
+\to
+\text{exact-idempotent record certificate}.
+\]
+
+Current label:
+
+\[
+\boxed{\text{potentially distinct; novelty unverified}.}
+\]
+
+Prohibited until external review:
+
+- “first”;
+- “unprecedented”;
+- “prior-art free”;
+- “breakthrough theorem”;
+- legal or patentability conclusions.
 
 ## Before publication
 
-Required:
-
-1. outcome-count-independent measurement-channel perturbation bound, or a proof that some count dependence is unavoidable,
-2. comparison against de la Salle and the earlier finite-dimensional projectivization results it cites,
-3. independent reconstruction of the packing-conditioned theorem,
-4. proof-assistant or second-researcher verification of the core finite-dimensional lemmas,
-5. norm-convention audit.
+1. external reconstruction by a quantum measurement/operator-theory specialist;
+2. full comparison with de la Salle, Kotowski–Oszmaniec, KSW and fusion-frame perturbation theory;
+3. proof-assistant formalisation of the typed hybrid construction if practical;
+4. norm and endpoint audit;
+5. reproducible diamond-norm checks beyond pure-state proxies;
+6. conservative wording that separates known ingredients from the potentially distinct combination.
 
 ## Continual-learning bridge
 
-### IDER (ICLR 2026)
-
-Liu et al., *IDER: IDempotent Experience Replay for Reliable Continual Learning*, ICLR 2026 / arXiv:2603.00624.
-
-IDER already uses idempotence directly in continual learning, including an idempotence loss and an idempotence-distillation objective. Therefore:
-
-- “idempotence for continual learning” is **not** an RC novelty claim,
-- projection-style stability is **not** an RC novelty claim,
-- quadratic parameter anchoring is **not** an RC novelty claim.
-
-### RC-TCL pilot
-
-The 29 October 2026 pilot derives an exact affine task-horizon diagnostic for the frozen canonical TCL memory penalty and introduces an **anchor-conflict variance** for stored task checkpoints.
-
-Current status:
-
-- exact diagonal/horizon rounding identity: **derived elementary math; no novelty claim**,
-- anchor-barycentre decomposition: **standard quadratic algebra; no novelty claim**,
-- using horizon rounding + anchor conflict as a retained/joint-performance diagnostic: **potentially distinct application; novelty unverified**.
-
-A literature veto is required across EWC/Laplace consolidation, parameter-conflict diagnostics, projection-based continual learning, and idempotent neural-network training before stronger wording is allowed.
-
-
-## Same-label hybrid-isometry audit — 31 October 2026
-
-An independent reconstruction of the same-label dimension-free theorem has now **passed**, with one hypothesis made explicit: every nonzero outcome effect must have a nonzero near-unit spectral sector at the chosen threshold.
-
-The proof reconstructs:
-
-- (J^*WU=DH),
-- (J^*WR=0),
-- exact isometry (V=JU^*+WR),
-- exact implementation (V^*Lambda_jV=Q_j+RE_jR),
-- (|V-W|=|WU-J|),
-- outcome-independent (
-ule2arepsilon),
-- (gamma_Fgedelta),
-- the composite exact-idempotent certificate.
-
-This strengthens correctness confidence but does not establish novelty.
+Idempotence, projection-style stability and quadratic parameter anchoring already have substantial continual-learning prior art, including IDER. RC-TCL claims remain application/diagnostic hypotheses only, not foundational novelty claims.

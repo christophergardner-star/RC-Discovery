@@ -2,64 +2,112 @@
 
 Updated: 31 October 2026
 
+This ledger separates mathematical correctness, numerical evidence, formal verification, and novelty. They are not interchangeable.
+
+## Core record-stability results
+
 | Item | Status | Notes |
 |---|---|---|
-| Almost-idempotent UCP maps induce approximate (C^*)-algebra structure | **Known** | Kitaev (2024). |
-| General dimension-independent exact rounding fails | **Known / 2026 preprint** | Regular-simplex entanglement-breaking counterexamples. |
-| Discrete repeatable POVM iff each nonzero effect has eigenvalue 1 | **Known** | Standard repeatable-measurement theory. |
-| Sharp Record-Margin theorem | **Internally proved; independent reconstruction passed** | (|Phi-Pi|_diamondlesqrt{2eta/kappa}). |
-| POVM spectral-gap extension | **Internally proved; independent reconstruction passed** | (|Phi-Pi|_diamondlesqrt{2eta/(kappagamma)}). |
-| Moving-POVM theorem from (eta,kappa), local accessibility alone | **Refuted** | Constant-channel and regular-simplex obstructions. |
-| Record-packing inequality (sum_j a_jle d) | **Derived elementary lemma** | Forces (m(1-epsilon)le d). |
-| Same-label exact repeatability with (m>d) | **Impossible** | At most (d) nonzero unit-eigenvalue outcome sectors. |
-| Regular-simplex moving-POVM obstruction | **Derived / aligns with known 2026 counterexample mechanism** | Local diagnostics improve while same-label rounding remains order-one impossible. |
-| Binary moving-POVM transfer bound | **Internally proved** | Positive result using reachability plus post-move spectral gap. |
-| Synthesis-operator packing conditioner | **Validated geometric invariant** | (alpha=sigma_{min}(T)); polar factor gives simultaneous orthogonalization. |
-| Higher-rank polar packing lemma | **Internally proved** | Same synthesis construction works for arbitrary near-unit sector ranks. |
+| Sharp Record-Margin theorem | **Internally proved; independent reconstruction passed** | \(\|\Phi-\Pi\|_\diamond\le\sqrt{2\eta/\kappa}\). Exact prior theorem not located; novelty unverified. |
+| POVM spectral-gap extension | **Internally proved; independent reconstruction passed** | \(\|\Phi-\Pi\|_\diamond\le\sqrt{2\eta/(\kappa\gamma)}\). Novelty unverified. |
+| General dimension-free exact rounding of arbitrary almost-idempotent channels | **False / known obstruction** | General negative examples include regular-simplex entanglement-breaking channels. |
+| RC as a fundamental physical theory | **Not established** | No such claim is made. |
 
-| Per-sector polar movement bound | **Internally proved; numerically stress-tested** | For all ranks, \(\|P_j-R_j\|_\infty\le\sqrt{1-\alpha^2}\); 20k rank-1 + 10k higher-rank random cases gave 0 violations. |
-| Repeatability-admissible completion (F_j=R_j+CE_jC) | **Internally proved** | Handles (m<d) without forcing rank-one PVM completeness. |
-| Linear (O(delta)) spectral-threshold movement | **Refuted** | Explicit (alpha=1) family requires (Omega(sqrtdelta)) movement. |
-| Packing-conditioned many-outcome channel theorem | **Internally proved; non-optimal** | Positive bound with current (m)-dependent measurement-channel perturbation. |
-| Outcome-count-independent same-label measurement-channel move | **Internally proved theorem candidate** | Exact hybrid dilation realizes F_j=Q_j+R E_j R and gives ν≤2ε≤4(√(1-α²)+√δ), independent of m,d. |
-| Extra-outcome gamma=1 closure | **Refuted** | Exact α=1 counterexample gives maximal measurement-channel distance 2 after routing residual to a new projective outcome. |
-| Residual spectral radius as independent invariant | **Eliminated** | For residual projector orthogonal to the total near-unit span, \(\rho_{res}\le1-\delta\) automatically; explicit residual completion has \(\gamma_F\ge\delta\). |
-| Same-label dimension-free chain | **Internally closed theorem candidate** | ν is outcome-independent and γ_F≥δ, yielding a fully dimension-free composite certificate for the record-structured class. |
-| Extra-outcome route forces gamma_F=1 without cost | **Refuted** | Residual-to-reject can be diamond distance 2 even at alpha=1, delta=0. |
-| Complete packed sectors (total rank = d) | **Internally closed theorem candidate** | No residual subspace; Naimark move is dimension-free, moved POVM is a PVM, gamma_F=1. |
-| Incomplete packed sectors need residual control | **Proved obstruction** | gamma can tend to 0 with alpha=1, delta=0, eta=0, kappa=1. |
-| Two pure independent records: (kappa_R=sqrt{1-s^{2R}}) | **Known math / derived RC corollary** | Redundancy certificate. |
-| Correlated redundancy always helps | **Refuted** | Common-mode noise can keep (kappa_R) fixed. |
-| Record-structured metastability transfer | **Internally proved corollary** | No explicit phase-count dependence inside classical-record subclass. |
-| RC is a fundamental theory | **Not established** | No such claim is made. |
+## Moving-POVM programme
 
-## 31 October proof-audit files
+| Item | Status | Notes |
+|---|---|---|
+| Local diagnostics alone imply nearby repeatability | **Refuted** | Constant-channel and regular-simplex obstructions. |
+| Same-label repeatability when \(m>d\) | **Impossible** | At most \(d\) nonzero mutually orthogonal unit sectors. |
+| Synthesis-operator packing conditioner \(\alpha=\sigma_{\min}(T)\) | **Valid conditioning parameter; underlying frame geometry is prior art** | Detects linear dependence and the simplex endpoint. |
+| Polar orthogonalisation of rank-one and higher-rank sectors | **Internally proved / standard machinery** | Polar/Löwdin/fusion-frame ingredients are not claimed as new. |
+| Per-sector movement | **Internally proved; stress-tested** | \(\|P_j-Q_j\|_\infty\le\sqrt{1-\alpha^2}\). |
+| Same-label completion | **Internally proved** | \(F_j=Q_j+R E_jR\) is a POVM with exact unit sectors. |
+| Repeatability gap of same-label completion | **Internally proved** | For full threshold projections, \(\gamma_F\ge\delta\). |
+| Linear \(O(\delta)\) movement from threshold data alone | **Refuted** | Explicit perfectly packed family needs \(\Omega(\sqrt\delta)\) movement. |
+| Extra-outcome residual dump preserves closeness for free | **Refuted** | Exact counterexample gives measurement-channel distance \(2\). |
+| Residual spectral radius as an independent missing invariant | **Eliminated** | It is automatically bounded by \(1-\delta\) on the residual complement. |
 
-- research/INDEPENDENT_PROOF_AUDIT_2026-10-31.md
-- theory/packing_conditioned_rounding.md
-- theory/dimension_free_nu_via_naimark.md
-- research/GAMMA_CLOSURE_AUDIT_2026-10-31.md
-- experiments/test_spectral_threshold_rate.py
-- experiments/test_dimension_free_naimark.py
-- experiments/test_gamma_extra_outcome_counterexample.py
+## Same-label dimension-free theorem candidate
 
-## Prior-art warning
+| Component | Status | Notes |
+|---|---|---|
+| Correct labelled embedding | **Reconciled and explicitly typed** | The theorem uses \(J_{\mathcal K}(x_1,\ldots,x_m)=(x_1,\ldots,x_m)\), not the alternative map embedding polar vectors \(q_j\). |
+| Identity \(J_{\mathcal K}^*WU=D|T|\) | **Internally re-derived** | The Cruxy source counter-check used a different map \(J_q\); it does not refute the typed identity. |
+| Hybrid isometry \(V=J_{\mathcal K}U^*+WR\) | **Internally reconstructed theorem candidate** | Implements \(F_j=Q_j+R E_jR\) exactly. |
+| Outcome-count-independent measurement move | **Internally reconstructed theorem candidate** | \(\nu\le2\varepsilon\le4(\sqrt{1-\alpha^2}+\sqrt\delta)\), with no explicit \(m,d\) factor. |
+| Composite exact-idempotent certificate | **Internally closed theorem candidate** | \(\|\Phi_E-\Pi\|_\diamond\le\nu+\sqrt{2(\eta+3\nu)/(\kappa\delta)}\). |
+| External specialist verification | **Pending** | Required before publication as an established theorem. |
+| Full Lean verification | **Open** | Current Lean work covers only scalar algebraic lemmas. |
+| Novelty | **Unverified** | No exact combined theorem located in searches, but absence of prior art is not proved. |
 
-The polar orthogonalization step is standard matrix analysis.
+## Numerical evidence
 
-POVM projectivization / orthogonalization is also established prior art; de la Salle (2022) is now a mandatory comparison.
+| Item | Status | Notes |
+|---|---|---|
+| Record-Margin stress tests | **Passed** | 10,000 random two-record cases; zero violations; analytic equality family. |
+| Moving-POVM stress tests | **Passed for implemented families** | Includes simplex obstruction and binary transfer tests. |
+| Synthesis-packing tests | **Passed** | 20,000 rank-one and 10,000 higher-rank random cases; zero violations. |
+| Same-label hybrid-dilation tests | **Passed for implemented finite examples** | Exact isometry and effect implementation to numerical precision using the direct-sum embedding. |
+| Pure-state total-variation proxy | **Evidence only** | It is not treated as a full diamond-norm computation; ancilla assistance can matter in measurement/channel discrimination. |
 
-The potentially distinct RC contribution is the combination of packing conditioning, repeatability-admissible completion, record-margin/idempotence control, and a diamond-norm channel certificate.
+## Lean formalisation
 
-Novelty remains unverified.
+| Item | Status |
+|---|---|
+| `projector_const_one` | **Machine checked; zero `sorry`** |
+| `polar_residual_le` | **Machine checked; zero `sorry`** |
+| `near_orthonormal_overlap` | **Machine checked; zero `sorry`** |
+| `rank1_core_package` | **Machine checked; zero `sorry`** |
+| Hilbert-space polar theorem | **Not formalised** |
+| Typed hybrid isometry | **Not formalised** |
+| Diamond-norm transfer and composite theorem | **Not formalised** |
+
+## Prior-art boundary
+
+The following are explicitly treated as prior art and are not claimed by RC-Discovery:
+
+- polar / Löwdin / Fan–Hoffman / Higham orthogonalisation and nearest-isometry results;
+- frame and fusion-frame synthesis-operator theory;
+- Naimark and Stinespring dilation;
+- Kretschmann–Schlingemann–Werner continuity;
+- repeatability criteria for discrete POVMs;
+- de la Salle and earlier POVM orthogonalisation/projectivisation;
+- projective simulation of POVMs, including Kotowski–Oszmaniec's dimension-deficient Naimark theorem;
+- Watrous diamond-norm and SDP theory;
+- Kitaev's almost-idempotent channel structure;
+- the general regular-simplex obstruction to exact rounding.
+
+Canonical policy:
+
+- `literature/PRIOR_ART_AND_ATTRIBUTION.md`
+- `literature/NOVELTY_LEDGER.md`
+- `literature/DEEP_PRIOR_ART_VETO_2026-10-31.md`
+
+The only potentially distinct object is the complete, correctly typed synthesis-conditioned same-label chain. It remains **novelty-unverified**.
+
+## Refreshed Cruxy source merge
+
+Exact source snapshot:
+
+- source: `Cruxy234/RC-Packing-Feasible-Note`
+- source commit: `78be7962931f9f95e6e6aecd93f4dde00c3fe14d`
+- imported path: `imports/RC-Packing-Feasible-Note/`
+
+The imported snapshot is provenance, not canonical truth. It contains exploratory, superseded, and contradictory notes.
+
+Canonical reconciliation:
+
+- `research/CRUXY_REMERGE_AUDIT_2026-10-31.md`
+- `theory/same_label_dimension_free_theorem.md`
+- `literature/PRIOR_ART_AND_ATTRIBUTION.md`
 
 ## RC-TCL application bridge
 
 | Item | Status | Notes |
 |---|---|---|
-| RC-TCL task-horizon affine rounding identity | **Derived elementary result** | Exact for frozen quadratic memory under isolated plain-SGD probe; not claimed novel. |
-| Momentum-aware TCL horizon probe | **Computed** | Canonical Split-CIFAR-10 settings give a 50% contraction boundary near total importance (A=0.05521). |
-| TCL anchor-conflict variance | **Derived diagnostic** | Detects stable compromise anchors that may represent no stored task. |
+| Task-horizon affine rounding identity | **Derived elementary result** | Exact for frozen quadratic memory under isolated probe dynamics. |
+| Anchor-conflict variance | **Derived diagnostic** | Detects stable compromise anchors. |
 | “Locked conflict predicts more next-step forgetting” | **Refuted in smoke test** | Immediate forgetting moved in the opposite direction. |
-| Locked conflict vs joint accuracy | **Supported in smoke test** | Pearson (r=-0.312), (p=7.97	imes10^{-7}). |
-| “Idempotence in continual learning” as novelty | **Vetoed** | IDER, ICLR 2026, already uses idempotence as a CL principle. |
+| Locked conflict vs joint accuracy | **Supported in smoke test** | Pearson \(r=-0.312\), \(p=7.97\times10^{-7}\). |
+| Idempotence in continual learning as an RC novelty | **Vetoed** | IDER and other prior work already use idempotence in continual learning. |
