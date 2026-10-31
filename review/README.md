@@ -11,6 +11,7 @@ This directory packages the canonical theorem candidate for external attack.
 5. `TEST_CLAIM_MATRIX.md`
 6. `REPRODUCIBILITY_GUIDE.md`
 7. `../experiments/PHD_VALIDATION_PROTOCOL.md`
+8. `../AI_RIGHTS_AND_ATTRIBUTION.md`
 
 ## Local validation
 
@@ -39,6 +40,12 @@ bash scripts/run_phd_audit.sh --profile full
 ```
 
 The runner retains complete logs, environment metadata, package versions, Git state and SHA-256 hashes of executed tests. A passing run is computational evidence, not a proof or novelty certificate.
+
+## Human authorship and AI assistance
+
+Christopher Gardner directs and authors the research programme. AI systems, including OpenAI tools, are disclosed as research instruments; they are not designated as authors, inventors, assignees, owners, sponsors, institutions, endorsers, or claimants to the work.
+
+The canonical non-claim and attribution notice is `../AI_RIGHTS_AND_ATTRIBUTION.md`.
 
 ## Status
 
