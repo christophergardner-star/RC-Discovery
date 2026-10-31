@@ -226,3 +226,50 @@ The live question is therefore:
 > What additional residual-geometry condition allows one to retain the outcome-independent Naimark closeness while obtaining a quantitative repeatability spectral gap?
 
 Equivalent alternatives are to remove the gap from the Record-Margin rounding theorem, or identify a new residual invariant controlling it.
+
+
+## A3. Residual spectral radius is not independent
+
+A later audit eliminates the proposed residual radius as an additional invariant for the explicit residual completion.
+
+Because the polar isometry preserves the **total span** of the original near-unit sectors,
+
+[
+R=I-sum_jQ_j
+]
+
+is orthogonal to every original spectral projector (P_j). Hence, if (P_j) contains all eigenvalues of (E_j) at least (1-delta),
+
+[
+R E_j Rle(1-delta)R.
+]
+
+Therefore
+
+[
+oxed{ho_{m res}le1-delta}
+]
+
+automatically, and for
+
+[
+F_j=Q_j+R E_jR
+]
+
+one has
+
+[
+oxed{gamma_Fgedelta.}
+]
+
+So the same-label spectral-gap problem for this residual completion is solved.
+
+The highest-value remaining target returns to the collective channel movement:
+
+> Prove an outcome-count-independent bound on
+> [
+> |mathcal M_E-mathcal M_F|_diamond
+> ]
+> for the specific residual completion (F_j=Q_j+R E_jR).
+
+Numerics suggest this is possible. A proof would close the same-label dimension-free chain without introducing an extra outcome.
