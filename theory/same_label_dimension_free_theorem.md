@@ -7,7 +7,7 @@ Status: **internally proved theorem candidate; independent audit required**
 
 The remaining same-label measurement-channel bottleneck can be removed directly.
 
-Let ({E_j}_{j=1}^m) be a finite POVM. Fix (0<delta<1/2), and let (P_j) be the full spectral projection of (E_j) onto eigenvalues at least (1-delta).
+Let ({E_j}_{j=1}^m) be a finite POVM. Fix (0<delta<1/2), and let (P_j) be the full spectral projection of (E_j) onto eigenvalues at least (1-delta). Assume every nonzero outcome effect (E_j) has a nonzero such sector (P_j); zero effects may be discarded.
 
 Let
 
