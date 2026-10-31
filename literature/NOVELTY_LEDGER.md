@@ -197,3 +197,40 @@ ule2arepsilon),
 - the composite exact-idempotent certificate.
 
 This strengthens correctness confidence but does not establish novelty.
+
+
+## Deep prior-art veto — same-label dimension-free theorem
+
+A focused literature search on 31 October 2026 compared the current theorem candidate against:
+
+- de la Salle (2022), quantitative POVM orthogonalisation;
+- Kempe–Vidick / Ji–Natarajan–Vidick–Wright–Yuen projectivisation lemmas;
+- Kretschmann–Schlingemann–Werner (2008), Stinespring continuity;
+- Kotowski–Oszmaniec (IEEE TIT 2026), projective simulation and the dimension-deficient Naimark theorem;
+- fusion-frame / Riesz-fusion-basis synthesis-operator theory;
+- Busch–Grabowski–Lahti repeatability theory;
+- Kitaev (2024) and Chenxiao (2026) on almost-idempotent channels.
+
+No exact prior theorem was located for the combined statement
+
+[
+alpha,delta
+Rightarrow
+F_j=Q_j+R E_jR
+Rightarrow
+gamma_Fgedelta,quad
+
+u=O(sqrt{1-alpha^2}+sqrtdelta)
+Rightarrow
+	ext{exact-idempotent record certificate}.
+]
+
+This does **not** establish novelty. It upgrades the status only to:
+
+**potentially distinct combined theorem; first deep literature veto passed provisionally.**
+
+See:
+
+- literature/DEEP_PRIOR_ART_VETO_2026-10-31.md
+
+Kotowski–Oszmaniec (2026) is now mandatory prior art alongside de la Salle and KSW.
