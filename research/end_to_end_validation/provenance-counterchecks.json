@@ -1,0 +1,36 @@
+{
+  "result": "IMPORT_CLAIMS_NOT_CANONICAL",
+  "normalization_obstruction": "For orthonormal bases of each original sector, trace(T* T)=dim K. A spectrum with all singular values 1 except alpha<1 has trace dim K-1+alpha^2<dim K and cannot occur.",
+  "polar_residual_correction": "On a singular direction, ||T-U|| gives |sigma-1|, not sqrt(1-sigma^2). The existing scalar Lean lemma does not prove the projector-angle bound.",
+  "threshold_discontinuity_example": "Binary POVM E0=diag(1,1-delta,0,1/2),E1=I-E0,delta=1/5. Perturb E0 second diagonal down by epsilon. Both POVMs have nonzero full threshold sectors and injective orthogonal synthesis alpha=1; original canonical measurement movement=2delta, perturbed movement=0. There is no uniform Lipschitz movement without a threshold isolation hypothesis.",
+  "threshold_discontinuity_numerics": [
+    {
+      "epsilon": 0.001,
+      "delta": 0.2,
+      "original_movement": 0.3999999999999999,
+      "estimated_movement": 0.0,
+      "ratio": 399.9999999999999,
+      "alpha_original": 1.0,
+      "alpha_estimated": 1.0
+    },
+    {
+      "epsilon": 1e-06,
+      "delta": 0.2,
+      "original_movement": 0.3999999999999999,
+      "estimated_movement": 0.0,
+      "ratio": 399999.99999999994,
+      "alpha_original": 1.0,
+      "alpha_estimated": 1.0
+    },
+    {
+      "epsilon": 1e-09,
+      "delta": 0.2,
+      "original_movement": 0.3999999999999999,
+      "estimated_movement": 0.0,
+      "ratio": 399999999.9999999,
+      "alpha_original": 1.0,
+      "alpha_estimated": 1.0
+    }
+  ],
+  "canonical_assessment": "The manifest and sync report already quarantine these imported sharpness/robustness assertions. These counterchecks do not refute the canonical coefficient-two or accessibility theorems."
+}

@@ -1,0 +1,11 @@
+{
+  "notice": "AI_RIGHTS_AND_ATTRIBUTION.md",
+  "notice_bytes": 5740,
+  "linked_from": [
+    "VIBE_MATH.md",
+    "review/README.md"
+  ],
+  "official_openai_terms_links": 2,
+  "result": "PASS",
+  "qualification": "governance audit only; not a legal opinion"
+}

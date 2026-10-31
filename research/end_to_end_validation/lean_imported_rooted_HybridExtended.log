@@ -1,0 +1,16 @@
+C:\Users\cgard\Favorites\RC Discovery\imports\RC-Packing-Feasible-Note\lean\RCProof\HybridExtended.lean:29:44: warning: This simp argument is unused:
+  Matrix.mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.sub_mul, Matrix.mul_sub, hS, Matrix.one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\cgard\Favorites\RC Discovery\imports\RC-Packing-Feasible-Note\lean\RCProof\HybridExtended.lean:29:60: warning: This simp argument is unused:
+  Matrix.one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.sub_mul, Matrix.mul_sub, hS, Matrix.mul_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+residual_orthogonal {n : ℕ} (S : Matrix (Fin n) (Fin n) ℂ) (hS : S * S = S) : S * (1 - S) = 0 ∧ (1 - S) * S = 0
+residual_idempotent {n : ℕ} (S : Matrix (Fin n) (Fin n) ℂ) (hS : S * S = S) : (1 - S) * (1 - S) = 1 - S

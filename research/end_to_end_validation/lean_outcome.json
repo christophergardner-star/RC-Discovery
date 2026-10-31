@@ -1,0 +1,12 @@
+{
+  "head": "cb1610f3042a47a16b4b82ce79edb40e475882e7",
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "canonical_commands_passed": true,
+  "fresh_canonical_source_files": 4,
+  "canonical_theorems_axiom_checked": 13,
+  "canonical_sorryAx_found": false,
+  "imported_exact_source_files_compiled": 2,
+  "imported_commands_passed": true,
+  "initial_imported_path_errors_resolved": true,
+  "scope": "Canonical conditional matrix/scalar lemmas and imported algebraic files compile. This does not formalize the full spectral/channel theorem. Imported implements_completion assumes its conclusion verbatim."
+}

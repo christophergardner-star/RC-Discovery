@@ -1,0 +1,286 @@
+{
+  "seed": 2026103123,
+  "tolerance": 2e-08,
+  "case_count": 10,
+  "cases": [
+    {
+      "dimension": 3.0,
+      "outcomes": 3.0,
+      "total_rank": 3.0,
+      "alpha": 1.0,
+      "delta": 0.1,
+      "packing_bound": 0.0,
+      "maximum_sector_movement": 0.0,
+      "residual_gap_lower_bound": 1.0,
+      "epsilon": 0.0,
+      "conservative_channel_bound": 1.2649110640673518,
+      "maximum_identity_error": 0.0,
+      "name": "exact_pvm"
+    },
+    {
+      "dimension": 4.0,
+      "outcomes": 2.0,
+      "total_rank": 2.0,
+      "alpha": 1.0,
+      "delta": 0.1,
+      "packing_bound": 0.0,
+      "maximum_sector_movement": 0.0,
+      "residual_gap_lower_bound": 0.5,
+      "epsilon": 0.0,
+      "conservative_channel_bound": 1.2649110640673518,
+      "maximum_identity_error": 2.220446049250313e-16,
+      "name": "exact_residual"
+    },
+    {
+      "dimension": 2.0,
+      "outcomes": 1.0,
+      "total_rank": 2.0,
+      "alpha": 1.0,
+      "delta": 0.1,
+      "packing_bound": 0.0,
+      "maximum_sector_movement": 0.0,
+      "residual_gap_lower_bound": 1.0,
+      "epsilon": 0.0,
+      "conservative_channel_bound": 1.2649110640673518,
+      "maximum_identity_error": 0.0,
+      "name": "exact_single_outcome"
+    },
+    {
+      "dimension": 2.0,
+      "outcomes": 3.0,
+      "total_rank": 2.0,
+      "alpha": 1.0,
+      "delta": 0.1,
+      "packing_bound": 0.0,
+      "maximum_sector_movement": 0.0,
+      "residual_gap_lower_bound": 1.0,
+      "epsilon": 0.0,
+      "conservative_channel_bound": 1.2649110640673518,
+      "maximum_identity_error": 0.0,
+      "name": "exact_zero_label_preserved"
+    },
+    {
+      "dimension": 3.0,
+      "outcomes": 2.0,
+      "total_rank": 2.0,
+      "alpha": 1.0,
+      "delta": 1.1499999999999998e-06,
+      "packing_bound": 0.0,
+      "maximum_sector_movement": 3.763335895741307e-16,
+      "residual_gap_lower_bound": 0.4999998714095002,
+      "epsilon": 0.0007909113929396309,
+      "conservative_channel_bound": 0.004289522117905443,
+      "maximum_identity_error": 9.091502154894404e-16,
+      "name": "rank1_small"
+    },
+    {
+      "dimension": 5.0,
+      "outcomes": 3.0,
+      "total_rank": 3.0,
+      "alpha": 0.9998818309866291,
+      "delta": 0.00115,
+      "packing_bound": 0.015372835224061408,
+      "maximum_sector_movement": 0.00011242599859814143,
+      "residual_gap_lower_bound": 0.6664263067341836,
+      "epsilon": 0.03152797346289973,
+      "conservative_channel_bound": 0.197137940558751,
+      "maximum_identity_error": 6.418476861114186e-15,
+      "name": "rank1_three"
+    },
+    {
+      "dimension": 8.0,
+      "outcomes": 3.0,
+      "total_rank": 6.0,
+      "alpha": 0.9963965177810528,
+      "delta": 0.023,
+      "packing_bound": 0.08481732932480354,
+      "maximum_sector_movement": 0.003336298752513612,
+      "residual_gap_lower_bound": 0.6621818495936053,
+      "epsilon": 0.14424108895028323,
+      "conservative_channel_bound": 0.9458993528233383,
+      "maximum_identity_error": 3.701922060923737e-15,
+      "name": "higher_rank"
+    },
+    {
+      "dimension": 9.0,
+      "outcomes": 3.0,
+      "total_rank": 6.0,
+      "alpha": 0.9879533510284199,
+      "delta": 0.092,
+      "packing_bound": 0.1547519828361364,
+      "maximum_sector_movement": 0.010962870984223612,
+      "residual_gap_lower_bound": 0.6443380585598679,
+      "epsilon": 0.2892487926514065,
+      "conservative_channel_bound": 1.8322680023927937,
+      "maximum_identity_error": 4.719311178105479e-15,
+      "name": "unequal_rank"
+    },
+    {
+      "dimension": 5.0,
+      "outcomes": 3.0,
+      "total_rank": 3.0,
+      "alpha": 0.9738382777410697,
+      "delta": 0.207,
+      "packing_bound": 0.22724218095746931,
+      "maximum_sector_movement": 0.02247009630464526,
+      "residual_gap_lower_bound": 0.6079490442333946,
+      "epsilon": 0.4154299418384747,
+      "conservative_channel_bound": 2.7288588304022494,
+      "maximum_identity_error": 4.164725375849646e-15,
+      "name": "moderate_noise"
+    },
+    {
+      "dimension": 3.0,
+      "outcomes": 2.0,
+      "total_rank": 2.0,
+      "alpha": 1.0,
+      "delta": 0.1,
+      "packing_bound": 0.0,
+      "maximum_sector_movement": 0.0,
+      "residual_gap_lower_bound": 0.5,
+      "epsilon": 0.32036448601393447,
+      "conservative_channel_bound": 1.2649110640673518,
+      "maximum_identity_error": 2.220446049250313e-16,
+      "name": "threshold_endpoint_included"
+    }
+  ],
+  "expected_rejections": [
+    {
+      "name": "nonhermitian_effects",
+      "reason": "an effect is not Hermitian within tolerance"
+    },
+    {
+      "name": "nonfinite_nan",
+      "reason": "all effect entries must be finite"
+    },
+    {
+      "name": "nonfinite_infinity",
+      "reason": "all effect entries must be finite"
+    },
+    {
+      "name": "empty_effect_list",
+      "reason": "at least one outcome is required"
+    },
+    {
+      "name": "nonsquare_effect",
+      "reason": "effects must be nonempty square matrices"
+    },
+    {
+      "name": "zero_dimension_effect",
+      "reason": "effects must be nonempty square matrices"
+    },
+    {
+      "name": "mixed_dimensions",
+      "reason": "all effects must be square matrices of one dimension"
+    },
+    {
+      "name": "nonpositive_effect",
+      "reason": "an effect is not positive semidefinite"
+    },
+    {
+      "name": "not_normalized",
+      "reason": "effects do not sum to the identity"
+    },
+    {
+      "name": "tiny_nonzero_label_without_sector",
+      "reason": "nonzero label 2 has no eigenvalue at least 1-delta"
+    },
+    {
+      "name": "missing_near_unit_sector",
+      "reason": "nonzero label 0 has no eigenvalue at least 1-delta"
+    },
+    {
+      "name": "total_rank_exceeds_dimension",
+      "reason": "total near-unit sector rank exceeds dimension"
+    },
+    {
+      "name": "singular_synthesis",
+      "reason": "synthesis operator is singular"
+    },
+    {
+      "name": "threshold_just_below",
+      "reason": "nonzero label 0 has no eigenvalue at least 1-delta"
+    },
+    {
+      "name": "invalid_delta_zero",
+      "reason": "delta must lie strictly in (0, 1/2)"
+    },
+    {
+      "name": "invalid_delta_half",
+      "reason": "delta must lie strictly in (0, 1/2)"
+    }
+  ],
+  "wrong_embedding_negative_control": {
+    "attempt": 0.0,
+    "wrong_overlap_error": 0.004000645204412517,
+    "wrong_cross_error": 0.0004717654495366358
+  },
+  "sdp_skipped": false,
+  "theorem_sdp_cases_requested": 4,
+  "theorem_sdp_cases_run": 4,
+  "sdp_results": [
+    {
+      "solver": "CLARABEL",
+      "primal": 0.0,
+      "dual": 2.913117003076052e-11,
+      "gap": 2.913117003076052e-11,
+      "feasibility_violation": 2.220446049250313e-16,
+      "name": "zero_anchor"
+    },
+    {
+      "solver": "CLARABEL",
+      "primal": 1.9999999999682938,
+      "dual": 2.0000000001234026,
+      "gap": 1.5510881468117077e-10,
+      "feasibility_violation": 2.078781591308143e-12,
+      "name": "distance_two_anchor"
+    },
+    {
+      "solver": "CLARABEL",
+      "primal": 1.2506699437418216e-06,
+      "dual": 1.2510145347088458e-06,
+      "gap": 3.4459096702425903e-10,
+      "feasibility_violation": 2.8880226546149537e-11,
+      "name": "theorem_case_0",
+      "alpha": 1.0,
+      "delta": 1.1499999999999998e-06,
+      "coefficient_two_bound": 0.0021447610589527214
+    },
+    {
+      "solver": "CLARABEL",
+      "primal": 0.001647207113494843,
+      "dual": 0.0016472074149989754,
+      "gap": 3.0150413242446827e-10,
+      "feasibility_violation": 3.262787250651452e-11,
+      "name": "theorem_case_1",
+      "alpha": 0.9998818309866291,
+      "delta": 0.00115,
+      "coefficient_two_bound": 0.0985689702793755
+    },
+    {
+      "solver": "SCS",
+      "primal": 0.26173695822691595,
+      "dual": 0.2617369582227166,
+      "gap": 4.199363079493423e-12,
+      "feasibility_violation": 2.963603494635955e-11,
+      "name": "theorem_case_2",
+      "alpha": 0.9738382777410697,
+      "delta": 0.207,
+      "coefficient_two_bound": 1.3644294152011247
+    },
+    {
+      "solver": "CLARABEL",
+      "primal": 0.19999999985913589,
+      "dual": 0.2000000000061422,
+      "gap": 1.4700632378072953e-10,
+      "feasibility_violation": 5.5942056542690466e-12,
+      "name": "theorem_case_3",
+      "alpha": 1.0,
+      "delta": 0.1,
+      "coefficient_two_bound": 0.6324555320336759
+    }
+  ],
+  "maximum_identity_error": 6.418476861114186e-15,
+  "minimum_alpha": 0.9738382777410697,
+  "maximum_dimension": 9
+}

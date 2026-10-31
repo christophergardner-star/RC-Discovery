@@ -1,0 +1,93 @@
+{
+  "source_repository": "Cruxy234/RC-Packing-Feasible-Note",
+  "source_commit": "297ec2fcf6114598418863c5fcf13b7090364652",
+  "expected_source_tree": "99d063fea0157aa4afcbd0664a0aa0cf7161e387",
+  "remote_source_root_entries": [
+    {
+      "name": "NOVELTY_STATEMENT.md",
+      "path": "NOVELTY_STATEMENT.md",
+      "sha": "3de4de1c91951cb8bd6acb0a0d7e4d35e1abe8f8",
+      "type": "file"
+    },
+    {
+      "name": "README.md",
+      "path": "README.md",
+      "sha": "4f86306db05e644437acd5c215b85e384e959d79",
+      "type": "file"
+    },
+    {
+      "name": "REVIEW_PACKAGE.md",
+      "path": "REVIEW_PACKAGE.md",
+      "sha": "afaedc8c2b6b03ac6d662bd69bf44c5427227559",
+      "type": "file"
+    },
+    {
+      "name": "REVIEW_REQUEST.md",
+      "path": "REVIEW_REQUEST.md",
+      "sha": "cc8462c2672da120aef69f8ad3ac74e4635833e2",
+      "type": "file"
+    },
+    {
+      "name": "STATUS.md",
+      "path": "STATUS.md",
+      "sha": "32a8cab2eb8d96ec621ba30eb89f3841e0a1ddf5",
+      "type": "file"
+    },
+    {
+      "name": "lean",
+      "path": "lean",
+      "sha": "c2b7e33e591d9e89d1859655052d85759352b031",
+      "type": "dir"
+    },
+    {
+      "name": "paper",
+      "path": "paper",
+      "sha": "0c0dc5b187f665df811a01088fe3a7e6b5a01d72",
+      "type": "dir"
+    },
+    {
+      "name": "theory",
+      "path": "theory",
+      "sha": "0f0f76897314689c6dba981e539eb06c5969af47",
+      "type": "dir"
+    }
+  ],
+  "remote_compare": {
+    "ahead_by": 7,
+    "behind_by": 0,
+    "total_commits": 7,
+    "status": "ahead",
+    "files": [
+      {
+        "filename": "README.md",
+        "status": "modified",
+        "sha": "4f86306db05e644437acd5c215b85e384e959d79"
+      },
+      {
+        "filename": "STATUS.md",
+        "status": "modified",
+        "sha": "32a8cab2eb8d96ec621ba30eb89f3841e0a1ddf5"
+      },
+      {
+        "filename": "paper/FINAL.md",
+        "status": "modified",
+        "sha": "e98d303f39bee718a1cf9e6a091f38fe8df9421f"
+      },
+      {
+        "filename": "theory/CLOSING_PROOFS.md",
+        "status": "added",
+        "sha": "48794d7056ebf5304d91504fe1fee81f609b473a"
+      },
+      {
+        "filename": "theory/HARDER_PUSH.md",
+        "status": "added",
+        "sha": "8fb83919cb49dd17d830e1324ae1f2b515e2a427"
+      },
+      {
+        "filename": "theory/HARDER_PUSH_2.md",
+        "status": "added",
+        "sha": "87fba28c833d98365ea95294e2833ef5c5b02328"
+      }
+    ]
+  }
+}

@@ -1,0 +1,154 @@
+[
+  {
+    "name": "lean_build",
+    "command": [
+      "lake",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 10.469,
+    "log": "lean_build.log"
+  },
+  {
+    "name": "lean_fresh_Core",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\lean\\RCProof\\Core.lean",
+      "-o",
+      ".lake\\end_to_end_audit\\Core.olean"
+    ],
+    "exit_code": 0,
+    "seconds": 54.156,
+    "log": "lean_fresh_Core.log",
+    "source": "lean\\RCProof\\Core.lean",
+    "sha256": "9c6fcbb25f4da6425c4f2214615c936351be6a2cfe4c668458f3fcfff8cde467"
+  },
+  {
+    "name": "lean_fresh_Hybrid",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\lean\\RCProof\\Hybrid.lean",
+      "-o",
+      ".lake\\end_to_end_audit\\Hybrid.olean"
+    ],
+    "exit_code": 0,
+    "seconds": 61.047,
+    "log": "lean_fresh_Hybrid.log",
+    "source": "lean\\RCProof\\Hybrid.lean",
+    "sha256": "8c71ba0a23508e1306b9fd6048e7e476942866a2bfc615e85c747f69716f69d4"
+  },
+  {
+    "name": "lean_fresh_Gap",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\lean\\RCProof\\Gap.lean",
+      "-o",
+      ".lake\\end_to_end_audit\\Gap.olean"
+    ],
+    "exit_code": 0,
+    "seconds": 57.906,
+    "log": "lean_fresh_Gap.log",
+    "source": "lean\\RCProof\\Gap.lean",
+    "sha256": "ae74247d50a64e078dc249b1b11380a38dc97ee39184c58d72a5b448daf1f611"
+  },
+  {
+    "name": "lean_fresh_root",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\lean\\RCProof.lean",
+      "-o",
+      ".lake\\end_to_end_audit\\RCProof.olean"
+    ],
+    "exit_code": 0,
+    "seconds": 40.39,
+    "log": "lean_fresh_root.log",
+    "source": "lean\\RCProof.lean",
+    "sha256": "112fce59bb5616c152ba370fc2383de86ff7c853e1724adb917740621b44419a"
+  },
+  {
+    "name": "lean_axioms",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      ".lake\\end_to_end_audit\\AxiomAudit.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 35.485,
+    "log": "lean_axioms.log"
+  },
+  {
+    "name": "lean_imported_Hybrid",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\imports\\RC-Packing-Feasible-Note\\lean\\RCProof\\Hybrid.lean",
+      "-o",
+      ".lake\\end_to_end_audit\\ImportedHybrid.olean"
+    ],
+    "exit_code": 1,
+    "seconds": 7.093,
+    "log": "lean_imported_Hybrid.log",
+    "source": "imports\\RC-Packing-Feasible-Note\\lean\\RCProof\\Hybrid.lean",
+    "sha256": "bea772f0b53323e88b7a50051bd4d33dad99b23e35249f9630080c7bd4d81315"
+  },
+  {
+    "name": "lean_imported_HybridExtended",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\imports\\RC-Packing-Feasible-Note\\lean\\RCProof\\HybridExtended.lean",
+      "-o",
+      ".lake\\end_to_end_audit\\ImportedHybridExtended.olean"
+    ],
+    "exit_code": 1,
+    "seconds": 7.719,
+    "log": "lean_imported_HybridExtended.log",
+    "source": "imports\\RC-Packing-Feasible-Note\\lean\\RCProof\\HybridExtended.lean",
+    "sha256": "6ac6c090c6a74f17fc6c9357ba16cf6d1b80bb7f1cf95c898bbe2b9ed75e5e8e"
+  },
+  {
+    "name": "lean_imported_rooted_Hybrid",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--root=C:\\Users\\cgard\\Favorites\\RC Discovery\\imports\\RC-Packing-Feasible-Note\\lean",
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\imports\\RC-Packing-Feasible-Note\\lean\\RCProof\\Hybrid.lean",
+      "-o",
+      ".lake\\end_to_end_audit\\ImportedHybrid.olean"
+    ],
+    "exit_code": 0,
+    "seconds": 62.875,
+    "log": "lean_imported_rooted_Hybrid.log",
+    "source": "imports\\RC-Packing-Feasible-Note\\lean\\RCProof\\Hybrid.lean",
+    "sha256": "bea772f0b53323e88b7a50051bd4d33dad99b23e35249f9630080c7bd4d81315"
+  },
+  {
+    "name": "lean_imported_rooted_HybridExtended",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--root=C:\\Users\\cgard\\Favorites\\RC Discovery\\imports\\RC-Packing-Feasible-Note\\lean",
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\imports\\RC-Packing-Feasible-Note\\lean\\RCProof\\HybridExtended.lean",
+      "-o",
+      ".lake\\end_to_end_audit\\ImportedHybridExtended.olean"
+    ],
+    "exit_code": 0,
+    "seconds": 64.407,
+    "log": "lean_imported_rooted_HybridExtended.log",
+    "source": "imports\\RC-Packing-Feasible-Note\\lean\\RCProof\\HybridExtended.lean",
+    "sha256": "6ac6c090c6a74f17fc6c9357ba16cf6d1b80bb7f1cf95c898bbe2b9ed75e5e8e"
+  }
+]

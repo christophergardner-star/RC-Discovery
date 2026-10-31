@@ -1,0 +1,26 @@
+C:\Users\cgard\Favorites\RC Discovery\lean\RCProof\Hybrid.lean:12:0: warning: automatically included section variable(s) unused in theorem `RCProof.spectral_cross_zero`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\cgard\Favorites\RC Discovery\lean\RCProof\Hybrid.lean:17:0: warning: automatically included section variable(s) unused in theorem `RCProof.hybrid_isometry`:
+  [DecidableEq y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\cgard\Favorites\RC Discovery\lean\RCProof\Hybrid.lean:41:0: warning: automatically included section variable(s) unused in theorem `RCProof.hybrid_cross_zero`:
+  [DecidableEq y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\cgard\Favorites\RC Discovery\lean\RCProof\Hybrid.lean:51:0: warning: automatically included section variable(s) unused in theorem `RCProof.hybrid_compression`:
+  [DecidableEq d]
+  [DecidableEq k]
+  [DecidableEq y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] [DecidableEq k] [DecidableEq y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

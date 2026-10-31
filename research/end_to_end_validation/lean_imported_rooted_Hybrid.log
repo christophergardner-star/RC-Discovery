@@ -1,0 +1,3 @@
+hybrid_is_isometry {n : ℕ} (JU WR : Matrix (Fin n) (Fin n) ℂ) (hCross : JUᴴ * WR = 0) (hCross' : WRᴴ * JU = 0)
+  (hSum : JUᴴ * JU + WRᴴ * WR = 1) : (JU + WR)ᴴ * (JU + WR) = 1
+implements_completion {n : ℕ} (V Λ F : Matrix (Fin n) (Fin n) ℂ) (h : Vᴴ * Λ * V = F) : Vᴴ * Λ * V = F

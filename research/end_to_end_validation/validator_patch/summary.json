@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv-audit\\Scripts\\python.exe",
+    "experiments/test_theorem_v1_contract.py",
+    "--sdp-cases",
+    "4",
+    "--output",
+    "research\\end_to_end_validation\\validator_patch\\theorem_v1_contract.json"
+  ],
+  "exit_code": 0,
+  "seconds": 14.609000000000378,
+  "script_sha256": "24d493aaae4dad76f629c9a872742ad5689539fe1d668f565ff05e55346442a8"
+}

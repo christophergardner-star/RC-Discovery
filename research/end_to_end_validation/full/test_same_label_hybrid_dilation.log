@@ -1,0 +1,11 @@
+$ C:\Users\cgard\Favorites\RC Discovery\.venv-audit\Scripts\python.exe C:\Users\cgard\Favorites\RC Discovery\experiments\test_same_label_hybrid_dilation.py
+
+Same-label hybrid dilation audit
+seed: 20261031
+m   mean(alpha)   mean(2epsilon)   max(2epsilon)   mean(C=4 bound)
+ 2    1.00000000       0.11006489      0.12367243        0.40000004
+ 4    0.99935810       0.14327855      0.15172237        0.54203076
+ 8    0.99942563       0.14788500      0.14935370        0.53537615
+16    0.99963768       0.14713122      0.14919374        0.50733752
+
+PASS

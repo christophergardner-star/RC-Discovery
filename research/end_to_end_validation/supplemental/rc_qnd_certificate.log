@@ -1,0 +1,5 @@
+kappa_state: 0.97
+idempotence_defect: 0.0388
+exact_qnd_distance: 0.04
+generic_rc_bound: 0.282842712475
+kappa_label: 0.93

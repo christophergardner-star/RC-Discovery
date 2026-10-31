@@ -1,0 +1,1237 @@
+{
+  "seed": 2026103111,
+  "imported_povm_seed": 2026103107,
+  "abstract_generated": 6000,
+  "abstract_condition_satisfied": 1982,
+  "minimum_valid_floor_slack": 6.560676800190481e-10,
+  "negative_control_slack": -0.008274280997842404,
+  "physical_cases": [
+    {
+      "alpha": 0.9999997960249923,
+      "delta": 1.1e-06,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994428557986,
+      "claimed_floor": 0.9999992460249533
+    },
+    {
+      "alpha": 0.9999999016200678,
+      "delta": 1.1e-06,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999995630888387,
+      "claimed_floor": 0.9999993516199707
+    },
+    {
+      "alpha": 0.9999998089546167,
+      "delta": 1.1e-06,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994971531706,
+      "claimed_floor": 0.9999992589545705
+    },
+    {
+      "alpha": 0.9999998676142726,
+      "delta": 1.1e-06,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999995119321803,
+      "claimed_floor": 0.9999993176141942
+    },
+    {
+      "alpha": 0.999839158563182,
+      "delta": 0.0011,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994504640951971,
+      "claimed_floor": 0.9992890957170681
+    },
+    {
+      "alpha": 0.9998201764996221,
+      "delta": 0.0011,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994326338138263,
+      "claimed_floor": 0.9992701240965158
+    },
+    {
+      "alpha": 0.9999161168446429,
+      "delta": 0.0011,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9995534115074953,
+      "claimed_floor": 0.9993660116598279
+    },
+    {
+      "alpha": 0.999897037910908,
+      "delta": 0.0011,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9995178190050854,
+      "claimed_floor": 0.9993469432223938
+    },
+    {
+      "alpha": 0.9983610320137698,
+      "delta": 0.022000000000000002,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.992388156276379,
+      "claimed_floor": 0.9873179861312363
+    },
+    {
+      "alpha": 0.9961176137770587,
+      "delta": 0.022000000000000002,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9895252154693348,
+      "claimed_floor": 0.9850993827357774
+    },
+    {
+      "alpha": 0.9974671092679785,
+      "delta": 0.022000000000000002,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.990350226306978,
+      "claimed_floor": 0.9864339512211885
+    },
+    {
+      "alpha": 0.9963978087617538,
+      "delta": 0.022000000000000002,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.988724098658291,
+      "claimed_floor": 0.9853764784347703
+    },
+    {
+      "alpha": 0.9894953268848388,
+      "delta": 0.165,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9372070167750459,
+      "claimed_floor": 0.9041843487967428
+    },
+    {
+      "alpha": 0.9769858011879062,
+      "delta": 0.165,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9179685927206913,
+      "claimed_floor": 0.8927533525719841
+    },
+    {
+      "alpha": 0.9828332924246879,
+      "delta": 0.165,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9255101274875324,
+      "claimed_floor": 0.8980966926690711
+    },
+    {
+      "alpha": 0.96923591783762,
+      "delta": 0.165,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9214815872530675,
+      "claimed_floor": 0.8856716382475819
+    },
+    {
+      "alpha": 0.9227135233586996,
+      "delta": 0.44000000000000006,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.8064520962798568,
+      "claimed_floor": 0.6904955741102575
+    },
+    {
+      "alpha": 0.9278027203367483,
+      "delta": 0.44000000000000006,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7850063071800947,
+      "claimed_floor": 0.6943039804033903
+    },
+    {
+      "alpha": 0.8700793574168164,
+      "delta": 0.44000000000000006,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7263086438801435,
+      "claimed_floor": 0.6511077709516311
+    },
+    {
+      "alpha": 0.8232613324682528,
+      "delta": 0.44000000000000006,
+      "dimension": 3,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.6853686740195853,
+      "claimed_floor": 0.6160723691750392
+    },
+    {
+      "alpha": 0.999999904489887,
+      "delta": 1.1e-06,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999996025277769,
+      "claimed_floor": 0.9999993544897883
+    },
+    {
+      "alpha": 0.9999998737739371,
+      "delta": 1.1e-06,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999995140964901,
+      "claimed_floor": 0.9999993237738553
+    },
+    {
+      "alpha": 0.9999999497940566,
+      "delta": 1.1e-06,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999995756722865,
+      "claimed_floor": 0.999999399793933
+    },
+    {
+      "alpha": 0.9999999288042988,
+      "delta": 1.1e-06,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999995752562719,
+      "claimed_floor": 0.9999993788041868
+    },
+    {
+      "alpha": 0.9999174901910474,
+      "delta": 0.0011,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.999559615167199,
+      "claimed_floor": 0.999367384250684
+    },
+    {
+      "alpha": 0.9999316414012538,
+      "delta": 0.0011,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9995969540888993,
+      "claimed_floor": 0.9993815276755833
+    },
+    {
+      "alpha": 0.999958815402153,
+      "delta": 0.0011,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9996131170018364,
+      "claimed_floor": 0.9994086867266697
+    },
+    {
+      "alpha": 0.9999137647095936,
+      "delta": 0.0011,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9995504557501755,
+      "claimed_floor": 0.9993636608188088
+    },
+    {
+      "alpha": 0.9972194120229221,
+      "delta": 0.022000000000000002,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9905820862481661,
+      "claimed_floor": 0.9861889937986557
+    },
+    {
+      "alpha": 0.9974422230876193,
+      "delta": 0.022000000000000002,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9910391179416551,
+      "claimed_floor": 0.9864093403112202
+    },
+    {
+      "alpha": 0.9980201785409439,
+      "delta": 0.022000000000000002,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9913117708015036,
+      "claimed_floor": 0.9869809028982525
+    },
+    {
+      "alpha": 0.9977026597066473,
+      "delta": 0.022000000000000002,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9904177255769211,
+      "claimed_floor": 0.9866668961952824
+    },
+    {
+      "alpha": 0.9871639118581883,
+      "delta": 0.165,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9341601627663169,
+      "claimed_floor": 0.9020539405771473
+    },
+    {
+      "alpha": 0.9853565007096026,
+      "delta": 0.165,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9303055731159683,
+      "claimed_floor": 0.900402358373584
+    },
+    {
+      "alpha": 0.9861311142612256,
+      "delta": 0.165,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9350082574001102,
+      "claimed_floor": 0.9011101873351905
+    },
+    {
+      "alpha": 0.9925643218588631,
+      "delta": 0.165,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9388187675608717,
+      "claimed_floor": 0.9069887452872092
+    },
+    {
+      "alpha": 0.856499215468687,
+      "delta": 0.44000000000000006,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.6747597676391497,
+      "claimed_floor": 0.6409453232648996
+    },
+    {
+      "alpha": 0.8960799794392047,
+      "delta": 0.44000000000000006,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7285022643310829,
+      "claimed_floor": 0.6705648548417883
+    },
+    {
+      "alpha": 0.8817327901261216,
+      "delta": 0.44000000000000006,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.6910138791673976,
+      "claimed_floor": 0.65982840146724
+    },
+    {
+      "alpha": 0.9393624429974765,
+      "delta": 0.44000000000000006,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.8106573901600144,
+      "claimed_floor": 0.7029544847399046
+    },
+    {
+      "alpha": 0.9999997995372878,
+      "delta": 1.1e-06,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994507854546,
+      "claimed_floor": 0.9999992495372468
+    },
+    {
+      "alpha": 0.9999997819074355,
+      "delta": 1.1e-06,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994073742304,
+      "claimed_floor": 0.9999992319074043
+    },
+    {
+      "alpha": 0.9999998322415731,
+      "delta": 1.1e-06,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994463917931,
+      "claimed_floor": 0.9999992822415141
+    },
+    {
+      "alpha": 0.9999998380773526,
+      "delta": 1.1e-06,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.999999455908311,
+      "claimed_floor": 0.9999992880772904
+    },
+    {
+      "alpha": 0.9997932606128355,
+      "delta": 0.0011,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994362239622554,
+      "claimed_floor": 0.9992432230175402
+    },
+    {
+      "alpha": 0.9998054176061844,
+      "delta": 0.0011,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994307574398293,
+      "claimed_floor": 0.999255373322703
+    },
+    {
+      "alpha": 0.9998246893668288,
+      "delta": 0.0011,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.999449674833342,
+      "claimed_floor": 0.9992746344809625
+    },
+    {
+      "alpha": 0.9998595821845009,
+      "delta": 0.0011,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994757411685339,
+      "claimed_floor": 0.9993095081023046
+    },
+    {
+      "alpha": 0.995808905908858,
+      "delta": 0.022000000000000002,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9882356872485306,
+      "claimed_floor": 0.9847940895392671
+    },
+    {
+      "alpha": 0.9962106235253786,
+      "delta": 0.022000000000000002,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9885119050104899,
+      "claimed_floor": 0.9851913636870135
+    },
+    {
+      "alpha": 0.9962867460350653,
+      "delta": 0.022000000000000002,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9881827589494223,
+      "claimed_floor": 0.9852666441923148
+    },
+    {
+      "alpha": 0.996763329182452,
+      "delta": 0.022000000000000002,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9900180250437014,
+      "claimed_floor": 0.9857379557702045
+    },
+    {
+      "alpha": 0.9727006697107539,
+      "delta": 0.165,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9200609199016233,
+      "claimed_floor": 0.888837670800777
+    },
+    {
+      "alpha": 0.9675278099404399,
+      "delta": 0.165,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.908429199970277,
+      "claimed_floor": 0.8841107977011706
+    },
+    {
+      "alpha": 0.9696199622839167,
+      "delta": 0.165,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9144499879441309,
+      "claimed_floor": 0.8860225716660115
+    },
+    {
+      "alpha": 0.9681279001422932,
+      "delta": 0.165,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9106319471211216,
+      "claimed_floor": 0.8846591501325968
+    },
+    {
+      "alpha": 0.8727715122184719,
+      "delta": 0.44000000000000006,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.750780319883117,
+      "claimed_floor": 0.6531223951316217
+    },
+    {
+      "alpha": 0.8732146360315911,
+      "delta": 0.44000000000000006,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7208394610646653,
+      "claimed_floor": 0.6534539986293443
+    },
+    {
+      "alpha": 0.9251966952098228,
+      "delta": 0.44000000000000006,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7858511349409892,
+      "claimed_floor": 0.6923538097701344
+    },
+    {
+      "alpha": 0.8975165290914032,
+      "delta": 0.44000000000000006,
+      "dimension": 6,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7385331358862651,
+      "claimed_floor": 0.6716398701653116
+    },
+    {
+      "alpha": 0.9999998723989157,
+      "delta": 1.1e-06,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994934515662,
+      "claimed_floor": 0.9999993223988347
+    },
+    {
+      "alpha": 0.9999998348283419,
+      "delta": 1.1e-06,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.999999447491476,
+      "claimed_floor": 0.9999992848282815
+    },
+    {
+      "alpha": 0.9999998533625815,
+      "delta": 1.1e-06,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999995054785901,
+      "claimed_floor": 0.9999993033625109
+    },
+    {
+      "alpha": 0.9999998671827165,
+      "delta": 1.1e-06,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999995034525969,
+      "claimed_floor": 0.9999993171826383
+    },
+    {
+      "alpha": 0.9998493613051719,
+      "delta": 0.0011,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994718250827576,
+      "claimed_floor": 0.9992992928460059
+    },
+    {
+      "alpha": 0.9998779029362255,
+      "delta": 0.0011,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9995386491664712,
+      "claimed_floor": 0.9993278187748431
+    },
+    {
+      "alpha": 0.999888475313408,
+      "delta": 0.0011,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994980537209475,
+      "claimed_floor": 0.9993383853356183
+    },
+    {
+      "alpha": 0.9998987642018814,
+      "delta": 0.0011,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9995340623731573,
+      "claimed_floor": 0.9993486685636459
+    },
+    {
+      "alpha": 0.9969255686769514,
+      "delta": 0.022000000000000002,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9892450336756575,
+      "claimed_floor": 0.9858984007052967
+    },
+    {
+      "alpha": 0.996728693676823,
+      "delta": 0.022000000000000002,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9890584517802751,
+      "claimed_floor": 0.9857037033739573
+    },
+    {
+      "alpha": 0.997525138396949,
+      "delta": 0.022000000000000002,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9904207786025017,
+      "claimed_floor": 0.9864913384798203
+    },
+    {
+      "alpha": 0.9973476383535596,
+      "delta": 0.022000000000000002,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9906246487674435,
+      "claimed_floor": 0.9863158017954368
+    },
+    {
+      "alpha": 0.973664766261497,
+      "delta": 0.165,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9233503836779106,
+      "claimed_floor": 0.8897186461709744
+    },
+    {
+      "alpha": 0.9736796316960907,
+      "delta": 0.165,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9224283896600504,
+      "claimed_floor": 0.8897322299575093
+    },
+    {
+      "alpha": 0.978682435613632,
+      "delta": 0.165,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9208818840139952,
+      "claimed_floor": 0.8943037088512811
+    },
+    {
+      "alpha": 0.9723993839415053,
+      "delta": 0.165,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9200110130044916,
+      "claimed_floor": 0.8885623608830159
+    },
+    {
+      "alpha": 0.9034197291914512,
+      "delta": 0.44000000000000006,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7766914494118288,
+      "claimed_floor": 0.6760574206173013
+    },
+    {
+      "alpha": 0.8735527385201868,
+      "delta": 0.44000000000000006,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7277557899497851,
+      "claimed_floor": 0.6537070113641323
+    },
+    {
+      "alpha": 0.8815691873074407,
+      "delta": 0.44000000000000006,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.715444352102547,
+      "claimed_floor": 0.6597059723282371
+    },
+    {
+      "alpha": 0.927448924840488,
+      "delta": 0.44000000000000006,
+      "dimension": 9,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.760280983892936,
+      "claimed_floor": 0.6940392240969924
+    },
+    {
+      "alpha": 0.9999998632549646,
+      "delta": 1.1e-06,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994900246679,
+      "claimed_floor": 0.9999993132548886
+    },
+    {
+      "alpha": 0.9999998269423797,
+      "delta": 1.1e-06,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994652806565,
+      "claimed_floor": 0.9999992769423236
+    },
+    {
+      "alpha": 0.9999998493571756,
+      "delta": 1.1e-06,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994467158686,
+      "claimed_floor": 0.9999992993571072
+    },
+    {
+      "alpha": 0.9999998233028486,
+      "delta": 1.1e-06,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994609261138,
+      "claimed_floor": 0.9999992733027946
+    },
+    {
+      "alpha": 0.9998231551813204,
+      "delta": 0.0011,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994434653133509,
+      "claimed_floor": 0.9992731011394884
+    },
+    {
+      "alpha": 0.9998570875501295,
+      "delta": 0.0011,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994944586956448,
+      "claimed_floor": 0.9993070148403596
+    },
+    {
+      "alpha": 0.9998364242151538,
+      "delta": 0.0011,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.999456317495897,
+      "claimed_floor": 0.9992863628733452
+    },
+    {
+      "alpha": 0.999814423425351,
+      "delta": 0.0011,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994110437591105,
+      "claimed_floor": 0.9992643741873062
+    },
+    {
+      "alpha": 0.9965619951951795,
+      "delta": 0.022000000000000002,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9885844391209319,
+      "claimed_floor": 0.9855388487733572
+    },
+    {
+      "alpha": 0.9968318568969773,
+      "delta": 0.022000000000000002,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9890307187116486,
+      "claimed_floor": 0.9858057254877012
+    },
+    {
+      "alpha": 0.9966176002862466,
+      "delta": 0.022000000000000002,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9890389829306568,
+      "claimed_floor": 0.9855938388067925
+    },
+    {
+      "alpha": 0.9966228218484628,
+      "delta": 0.022000000000000002,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9887102394515079,
+      "claimed_floor": 0.9855990026123964
+    },
+    {
+      "alpha": 0.9735621921676787,
+      "delta": 0.165,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9109336159537946,
+      "claimed_floor": 0.8896249156725045
+    },
+    {
+      "alpha": 0.9740316531990405,
+      "delta": 0.165,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9142662099686375,
+      "claimed_floor": 0.8900539013436786
+    },
+    {
+      "alpha": 0.9668488129379081,
+      "delta": 0.165,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9125866189746236,
+      "claimed_floor": 0.8834903415495464
+    },
+    {
+      "alpha": 0.96963449546963,
+      "delta": 0.165,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.910703912123995,
+      "claimed_floor": 0.8860358518490534
+    },
+    {
+      "alpha": 0.8677820002186464,
+      "delta": 0.44000000000000006,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7401715325647116,
+      "claimed_floor": 0.6493885862455128
+    },
+    {
+      "alpha": 0.8996710720899185,
+      "delta": 0.44000000000000006,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7641638476992371,
+      "claimed_floor": 0.6732521825104149
+    },
+    {
+      "alpha": 0.9001388864493947,
+      "delta": 0.44000000000000006,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7608402242097296,
+      "claimed_floor": 0.6736022627211695
+    },
+    {
+      "alpha": 0.879600038201825,
+      "delta": 0.44000000000000006,
+      "dimension": 8,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7442318681034052,
+      "claimed_floor": 0.6582323960688998
+    },
+    {
+      "alpha": 0.9999998732676516,
+      "delta": 1.1e-06,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994544905362,
+      "claimed_floor": 0.9999993232675701
+    },
+    {
+      "alpha": 0.9999998927469715,
+      "delta": 1.1e-06,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994913670459,
+      "claimed_floor": 0.9999993427468793
+    },
+    {
+      "alpha": 0.9999998579607512,
+      "delta": 1.1e-06,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994944627675,
+      "claimed_floor": 0.9999993079606782
+    },
+    {
+      "alpha": 0.9999998430340228,
+      "delta": 1.1e-06,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999994741984266,
+      "claimed_floor": 0.999999293033958
+    },
+    {
+      "alpha": 0.9998447343477258,
+      "delta": 0.0011,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994722039885532,
+      "claimed_floor": 0.9992946684340867
+    },
+    {
+      "alpha": 0.9998714910026278,
+      "delta": 0.0011,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994937252357117,
+      "claimed_floor": 0.9993214103687793
+    },
+    {
+      "alpha": 0.9998500496435964,
+      "delta": 0.0011,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994497283904017,
+      "claimed_floor": 0.9992999808057401
+    },
+    {
+      "alpha": 0.9998567443348576,
+      "delta": 0.0011,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9994900398886051,
+      "claimed_floor": 0.999306671813908
+    },
+    {
+      "alpha": 0.9974564309114384,
+      "delta": 0.022000000000000002,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9897544570492413,
+      "claimed_floor": 0.9864233909798166
+    },
+    {
+      "alpha": 0.9973753023997747,
+      "delta": 0.022000000000000002,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9895464141580544,
+      "claimed_floor": 0.9863431598448011
+    },
+    {
+      "alpha": 0.9974159414160335,
+      "delta": 0.022000000000000002,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9902805913565287,
+      "claimed_floor": 0.9863833493457977
+    },
+    {
+      "alpha": 0.9975798160848746,
+      "delta": 0.022000000000000002,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9900498631872967,
+      "claimed_floor": 0.9865454113682824
+    },
+    {
+      "alpha": 0.9745291895661812,
+      "delta": 0.165,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9177353234419868,
+      "claimed_floor": 0.8905085417890681
+    },
+    {
+      "alpha": 0.9734013765011685,
+      "delta": 0.165,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9208473117710441,
+      "claimed_floor": 0.8894779649949732
+    },
+    {
+      "alpha": 0.9775442849836332,
+      "delta": 0.165,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9175426022903802,
+      "claimed_floor": 0.8932636857624829
+    },
+    {
+      "alpha": 0.9823008599473859,
+      "delta": 0.165,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9233450715147106,
+      "claimed_floor": 0.8976101647394414
+    },
+    {
+      "alpha": 0.9014487833679946,
+      "delta": 0.44000000000000006,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7285588530097086,
+      "claimed_floor": 0.6745824998174479
+    },
+    {
+      "alpha": 0.8986446757514345,
+      "delta": 0.44000000000000006,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.740936261602989,
+      "claimed_floor": 0.6724840978220856
+    },
+    {
+      "alpha": 0.9130336916011202,
+      "delta": 0.44000000000000006,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7854617062359834,
+      "claimed_floor": 0.6832518513105624
+    },
+    {
+      "alpha": 0.8648625083649774,
+      "delta": 0.44000000000000006,
+      "dimension": 11,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.7168745063668865,
+      "claimed_floor": 0.6472038385935314
+    },
+    {
+      "alpha": 9.999999999990988e-05,
+      "delta": 0.275,
+      "dimension": 8,
+      "outcomes": 8,
+      "condition": false,
+      "actual_overlap_floor": 8.66025403784491e-05,
+      "claimed_floor": 8.514693182955526e-05
+    },
+    {
+      "alpha": 0.01000000000000014,
+      "delta": 0.275,
+      "dimension": 8,
+      "outcomes": 8,
+      "condition": false,
+      "actual_overlap_floor": 0.008660254037844317,
+      "claimed_floor": 0.00851469318296332
+    },
+    {
+      "alpha": 0.2000000000000003,
+      "delta": 0.275,
+      "dimension": 8,
+      "outcomes": 8,
+      "condition": true,
+      "actual_overlap_floor": 0.1732050807568879,
+      "claimed_floor": 0.17029386365926424
+    },
+    {
+      "alpha": 0.7999999999999997,
+      "delta": 0.275,
+      "dimension": 8,
+      "outcomes": 8,
+      "condition": true,
+      "actual_overlap_floor": 0.6928203230275507,
+      "claimed_floor": 0.6811754546370558
+    },
+    {
+      "alpha": 9.99999999994658e-05,
+      "delta": 0.1375,
+      "dimension": 16,
+      "outcomes": 16,
+      "condition": false,
+      "actual_overlap_floor": 9.354143466899778e-05,
+      "claimed_floor": 9.287087810453744e-05
+    },
+    {
+      "alpha": 0.01000000000000016,
+      "delta": 0.1375,
+      "dimension": 16,
+      "outcomes": 16,
+      "condition": false,
+      "actual_overlap_floor": 0.009354143466935149,
+      "claimed_floor": 0.009287087810503504
+    },
+    {
+      "alpha": 0.20000000000000065,
+      "delta": 0.1375,
+      "dimension": 16,
+      "outcomes": 16,
+      "condition": true,
+      "actual_overlap_floor": 0.18708286933869744,
+      "claimed_floor": 0.1857417562100677
+    },
+    {
+      "alpha": 0.8000000000000007,
+      "delta": 0.1375,
+      "dimension": 16,
+      "outcomes": 16,
+      "condition": true,
+      "actual_overlap_floor": 0.7483314773547889,
+      "claimed_floor": 0.7429670248402691
+    },
+    {
+      "alpha": 0.000100000000000892,
+      "delta": 0.06875,
+      "dimension": 32,
+      "outcomes": 32,
+      "condition": false,
+      "actual_overlap_floor": 9.682458365622981e-05,
+      "claimed_floor": 9.650129532895471e-05
+    },
+    {
+      "alpha": 0.009999999999999171,
+      "delta": 0.06875,
+      "dimension": 32,
+      "outcomes": 32,
+      "condition": true,
+      "actual_overlap_floor": 0.009682458365517621,
+      "claimed_floor": 0.009650129532808591
+    },
+    {
+      "alpha": 0.1999999999999998,
+      "delta": 0.06875,
+      "dimension": 32,
+      "outcomes": 32,
+      "condition": true,
+      "actual_overlap_floor": 0.19364916731036985,
+      "claimed_floor": 0.19300259065618763
+    },
+    {
+      "alpha": 0.7999999999999995,
+      "delta": 0.06875,
+      "dimension": 32,
+      "outcomes": 32,
+      "condition": true,
+      "actual_overlap_floor": 0.7745966692414835,
+      "claimed_floor": 0.7720103626247509
+    },
+    {
+      "alpha": 1.0,
+      "delta": 0.01000001,
+      "dimension": 4,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.99498743710662,
+      "claimed_floor": 0.9949874320814309
+    },
+    {
+      "alpha": 1.0,
+      "delta": 0.0001000001,
+      "dimension": 4,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999499987499375,
+      "claimed_floor": 0.999949998699935
+    },
+    {
+      "alpha": 1.0,
+      "delta": 1.0000009999999998e-06,
+      "dimension": 4,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.999999499999875,
+      "claimed_floor": 0.999999499999375
+    },
+    {
+      "alpha": 1.0,
+      "delta": 1.000001e-08,
+      "dimension": 4,
+      "outcomes": 3,
+      "condition": true,
+      "actual_overlap_floor": 0.9999999949999999,
+      "claimed_floor": 0.9999999949999949
+    }
+  ],
+  "previous_ancilla_cases_checked": 408,
+  "previous_sdp_cases_checked": 12,
+  "maximum_sdp_to_bound_ratio": 0.535143254807137
+}

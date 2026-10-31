@@ -144,11 +144,24 @@ def mixed_povm(
 
 
 def validate_povm(effects: Sequence[np.ndarray], tol: float = TOL) -> int:
-    if len(effects) < 2:
-        raise HypothesisError("at least two outcomes are required")
+    """Validate raw inputs before any projection onto Hermitian matrices.
+
+    This is a floating-point contract: Hermiticity and normalization use
+    operator-norm tolerance ``tol``; eigenvalues may lie in [-tol, 1+tol].
+    The subsequent square root clips only these tolerated negative roundoffs.
+    """
+    if not effects:
+        raise HypothesisError("at least one outcome is required")
+    if any(effect.ndim != 2 or effect.shape[0] != effect.shape[1]
+           or effect.shape[0] == 0 for effect in effects):
+        raise HypothesisError("effects must be nonempty square matrices")
     d = effects[0].shape[0]
     if any(effect.shape != (d, d) for effect in effects):
         raise HypothesisError("all effects must be square matrices of one dimension")
+    if any(not np.isfinite(effect).all() for effect in effects):
+        raise HypothesisError("all effect entries must be finite")
+    if any(operator_norm(effect - effect.conj().T) > tol for effect in effects):
+        raise HypothesisError("an effect is not Hermitian within tolerance")
     if operator_norm(sum(effects) - np.eye(d)) > tol:
         raise HypothesisError("effects do not sum to the identity")
     for effect in effects:
@@ -164,8 +177,10 @@ def build_rounding(effects: Sequence[np.ndarray], delta: float) -> RoundingData:
     if not (0.0 < delta < 0.5):
         raise HypothesisError("delta must lie strictly in (0, 1/2)")
 
-    copied = [hermitian(np.asarray(effect, dtype=complex)) for effect in effects]
-    d = validate_povm(copied)
+    raw = [np.asarray(effect, dtype=complex) for effect in effects]
+    d = validate_povm(raw)
+    # Remove only tolerated floating-point skew, after validating raw inputs.
+    copied = [hermitian(effect) for effect in raw]
     threshold = 1.0 - delta
 
     bases: list[np.ndarray] = []
@@ -175,7 +190,10 @@ def build_rounding(effects: Sequence[np.ndarray], delta: float) -> RoundingData:
     for label, effect in enumerate(copied):
         values, vectors = np.linalg.eigh(effect)
         basis = vectors[:, values >= threshold]
-        if basis.shape[1] == 0:
+        # Exact zero effects retain their labels through empty sector blocks.
+        # A tiny nonzero label must still have a near-unit sector: do not use
+        # the numerical tolerance to silently discard it.
+        if basis.shape[1] == 0 and np.count_nonzero(raw[label]) != 0:
             raise HypothesisError(
                 f"nonzero label {label} has no eigenvalue at least 1-delta"
             )
@@ -574,6 +592,7 @@ def main() -> None:
     exact_cases = [
         ("exact_pvm", [1, 1, 1], 0, 0.0, 0.1),
         ("exact_residual", [1, 1], 2, 0.0, 0.1),
+        ("exact_single_outcome", [2], 0, 0.0, 0.1),
     ]
     for name, ranks, residual, noise, delta in exact_cases:
         data = build_rounding(
@@ -583,6 +602,17 @@ def main() -> None:
         row["name"] = name
         assert row["epsilon"] <= 100 * TOL
         cases.append(row)
+
+    zero_label_effects = [
+        np.diag([1.0, 0.0]), np.zeros((2, 2)), np.diag([0.0, 1.0]),
+    ]
+    zero_label = build_rounding(zero_label_effects, 0.1)
+    zero_row = assert_contract(zero_label)
+    zero_row["name"] = "exact_zero_label_preserved"
+    assert len(zero_label.completed_effects) == len(zero_label_effects)
+    assert zero_label.bases[1].shape[1] == 0
+    assert operator_norm(zero_label.completed_effects[1]) == 0.0
+    cases.append(zero_row)
 
     random_specs = [
         ("rank1_small", [1, 1], 1, 1e-6),
@@ -609,8 +639,47 @@ def main() -> None:
     endpoint_row = assert_contract(endpoint)
     endpoint_row["name"] = "threshold_endpoint_included"
     cases.append(endpoint_row)
+    sdp_inputs.append(endpoint)
+    if not args.skip_sdp and args.sdp_cases > len(sdp_inputs):
+        parser.error(f"requested {args.sdp_cases} theorem SDP cases, but only "
+                     f"{len(sdp_inputs)} are available")
 
+    nonhermitian = np.diag([0.95, 0.05]) + np.array([[0.0, 1.0], [-1.0, 0.0]])
+    tiny = 1e-12
     rejections = [
+        assert_rejected(
+            "nonhermitian_effects",
+            [nonhermitian, np.eye(2) - nonhermitian], 0.1, "not Hermitian",
+        ),
+        assert_rejected(
+            "nonfinite_nan", [np.diag([np.nan, 1.0])], 0.1, "finite",
+        ),
+        assert_rejected(
+            "nonfinite_infinity", [np.diag([np.inf, 1.0])], 0.1, "finite",
+        ),
+        assert_rejected("empty_effect_list", [], 0.1, "at least one"),
+        assert_rejected(
+            "nonsquare_effect", [np.zeros((2, 3))], 0.1, "square",
+        ),
+        assert_rejected(
+            "zero_dimension_effect", [np.zeros((0, 0))], 0.1, "nonempty square",
+        ),
+        assert_rejected(
+            "mixed_dimensions", [np.eye(2), np.eye(3)], 0.1, "one dimension",
+        ),
+        assert_rejected(
+            "nonpositive_effect",
+            [np.diag([1.01, -0.01]), np.diag([-0.01, 1.01])],
+            0.1, "not positive semidefinite",
+        ),
+        assert_rejected(
+            "not_normalized", [np.eye(2), np.eye(2)], 0.1, "sum to the identity",
+        ),
+        assert_rejected(
+            "tiny_nonzero_label_without_sector",
+            [np.diag([1.0-tiny, 0.0]), np.diag([0.0, 1.0-tiny]), tiny*np.eye(2)],
+            0.1, "no eigenvalue",
+        ),
         assert_rejected(
             "missing_near_unit_sector",
             [np.eye(2) / 2.0, np.eye(2) / 2.0],
@@ -690,6 +759,8 @@ def main() -> None:
         "expected_rejections": rejections,
         "wrong_embedding_negative_control": wrong_embedding,
         "sdp_skipped": args.skip_sdp,
+        "theorem_sdp_cases_requested": args.sdp_cases,
+        "theorem_sdp_cases_run": 0 if args.skip_sdp else args.sdp_cases,
         "sdp_results": sdp_results,
         "maximum_identity_error": max(
             float(row["maximum_identity_error"]) for row in cases

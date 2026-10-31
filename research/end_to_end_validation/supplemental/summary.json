@@ -1,0 +1,60 @@
+[
+  {
+    "name": "test_ai_rights_notice",
+    "command": [
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv-audit\\Scripts\\python.exe",
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_ai_rights_notice.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.23400000000037835,
+    "sha256": "bbd253bad1eaf3f829296cb864af06196a3f708039a9a32941a7153f73416155"
+  },
+  {
+    "name": "test_dimension_free_naimark",
+    "command": [
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv-audit\\Scripts\\python.exe",
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_dimension_free_naimark.py"
+    ],
+    "exit_code": 0,
+    "seconds": 2.062999999998283,
+    "sha256": "112332da5b39458c8e487cec776b0eaf530ed84dfb58997cc65e01e4b1a7a213"
+  },
+  {
+    "name": "rc_tcl_certificate",
+    "command": [
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv-audit\\Scripts\\python.exe",
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\rc_tcl_certificate.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.8590000000003783,
+    "sha256": "026c4f401d03ff0a520c2ad04c772bbbc84649c026e9f7b5b014bfb241f2b501"
+  },
+  {
+    "name": "rc_qnd_certificate",
+    "command": [
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv-audit\\Scripts\\python.exe",
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\rc_qnd_certificate.py",
+      "--eta-up",
+      ".01",
+      "--eta-down",
+      ".02",
+      "--eps-1-given-0",
+      ".03",
+      "--eps-0-given-1",
+      ".04"
+    ],
+    "exit_code": 0,
+    "seconds": 0.21900000000096043,
+    "sha256": "8e20681201ee1173e484f72e2ab428c653a2737d7345b92171c662e1bd36e7bc"
+  },
+  {
+    "name": "rc_tcl_conflict_smoke",
+    "command": [
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\rc_tcl_conflict_smoke.py"
+    ],
+    "exit_code": 1,
+    "seconds": 0.8429999999971187,
+    "sha256": "abefcb7e5e3ebb2022915e02cee7f2311e36e832148ce99d582ff964a87fffa4"
+  }
+]

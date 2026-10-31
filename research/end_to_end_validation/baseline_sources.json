@@ -1,0 +1,28 @@
+{
+  "commit": "cb1610f3042a47a16b4b82ce79edb40e475882e7",
+  "time_utc": "2026-10-31T18:51:10.673246+00:00",
+  "full_history": true,
+  "experiment_sources": {
+    "experiments/rc_qnd_certificate.py": "8e20681201ee1173e484f72e2ab428c653a2737d7345b92171c662e1bd36e7bc",
+    "experiments/rc_tcl_certificate.py": "026c4f401d03ff0a520c2ad04c772bbbc84649c026e9f7b5b014bfb241f2b501",
+    "experiments/rc_tcl_conflict_smoke.py": "abefcb7e5e3ebb2022915e02cee7f2311e36e832148ce99d582ff964a87fffa4",
+    "experiments/run_local_validation.py": "4cd876b6cdbcd06b6054f0fd93a14d19fb2fee2e2fbfd2c6a8d62813c2cc152e",
+    "experiments/run_phd_validation.py": "42e80f4de8ced091af3d8e56f0fce146daf96a321a03bd39d7ef2335ea00f218",
+    "experiments/test_adversarial_same_label.py": "f948e50a44c718ebcfb285d4e77f886f37ee108c0b882188143bddb799acc189",
+    "experiments/test_ai_rights_notice.py": "bbd253bad1eaf3f829296cb864af06196a3f708039a9a32941a7153f73416155",
+    "experiments/test_constant_two_bound.py": "78a7c5d806a889c82db03135e4e34883858fb49a3ba4ab99d56f0b353e781026",
+    "experiments/test_dimension_free_naimark.py": "112332da5b39458c8e487cec776b0eaf530ed84dfb58997cc65e01e4b1a7a213",
+    "experiments/test_extra_outcome_gap_closure.py": "2b76866e1946f63809229ee673ad7d4bf396ce3dea6718c19397696cb19d77bd",
+    "experiments/test_gamma_extra_outcome_counterexample.py": "45471e69b09ad55f4f1c27047cd6b9c4b9a681fe1edf6f58409994aa22904285",
+    "experiments/test_moving_povm.py": "1803f76e307d4fcdcf090d7097f0957b6bf5ab5dc810200cae17284051dec6eb",
+    "experiments/test_record_accessibility.py": "2c5d60d4cacf7ee618ea18137e090d896f029fea4c4d304b0a744127501864f3",
+    "experiments/test_record_margin.py": "005f1010a0e7669ae52b75f5e093a107d3c4fcf70625fd5ea989bf21dbfbddf8",
+    "experiments/test_repository_claim_discipline.py": "6632b68b5152cfc139945923cff2c46ac83493de59de47c0cfe94ed5fef7dd48",
+    "experiments/test_residual_coupling_rates.py": "a6f73d55b458257fb0ca2a444d64ae7eb459cb648c4e0cf629a54280cb7914f9",
+    "experiments/test_same_label_hybrid_dilation.py": "0f6b7b4a31120daf2f708c8e952e0bcea7670b1ff514fcff92d9c3629d58a403",
+    "experiments/test_spectral_threshold_rate.py": "18d456c524063111cefe081ea4b28a475d289c4ff6ca3a3b1ff27f3801b6091f",
+    "experiments/test_synthesis_packing.py": "041fdd605d2b39dfb980dd5a2b059d6a603df8af14fff9a21a80f303e57bc8d0",
+    "experiments/test_theorem_v1_contract.py": "e954732c4b38a105ad9d6c3b4b8aae25d685d9e4057c3617eed1b309c011cd97",
+    "experiments/test_three_extensions.py": "9359247b7c8e18bca4b09fe8bf2cc0517ddb542114a00d32f7d12e2fa25ca668"
+  }
+}

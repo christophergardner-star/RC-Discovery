@@ -1,0 +1,15 @@
+$ C:\Users\cgard\Favorites\RC Discovery\.venv-audit\Scripts\python.exe C:\Users\cgard\Favorites\RC Discovery\experiments\test_gamma_extra_outcome_counterexample.py
+
+balanced residual example
+original padded distribution: [0.5 0.5 0. ]
+extra-outcome distribution:  [0. 0. 1.]
+l1 distance: 2.0
+
+gap-collapse family
+eps        gamma
+1e-01   0.1
+1e-02   0.01
+1e-04   0.0001
+1e-06   1.00000000003e-06
+
+PASS

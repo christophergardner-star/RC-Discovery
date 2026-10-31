@@ -1,0 +1,10 @@
+Microsoft Visual C++ Redistributable is not installed, this may lead to the DLL load failure.
+It can be downloaded at https://aka.ms/vs/17/release/vc_redist.x64.exe
+Traceback (most recent call last):
+  File "C:\Users\cgard\Favorites\RC Discovery\experiments\rc_tcl_conflict_smoke.py", line 38, in <module>
+    import torch
+  File "C:\Users\cgard\Favorites\RC Discovery\.venv\Lib\site-packages\torch\__init__.py", line 319, in <module>
+    _load_dll_libraries()
+  File "C:\Users\cgard\Favorites\RC Discovery\.venv\Lib\site-packages\torch\__init__.py", line 315, in _load_dll_libraries
+    raise err
+OSError: [WinError 126] The specified module could not be found. Error loading "C:\Users\cgard\Favorites\RC Discovery\.venv\Lib\site-packages\torch\lib\c10.dll" or one of its dependencies.

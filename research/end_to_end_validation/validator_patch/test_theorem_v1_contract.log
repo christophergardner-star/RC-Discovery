@@ -1,0 +1,5 @@
+(CVXPY) Oct 31 06:53:49 PM: Encountered unexpected exception importing solver OSQP:
+RuntimeError('No algebra backend available!')
+C:\Users\cgard\Favorites\RC Discovery\.venv-audit\Lib\site-packages\cvxpy\problems\problem.py:1539: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  warnings.warn(
+PASS 10 valid theorem cases; 16 expected rejections; 6 SDP checks; max identity error 6.418476861114186e-15

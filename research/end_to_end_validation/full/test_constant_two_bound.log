@@ -1,0 +1,3 @@
+$ C:\Users\cgard\Favorites\RC Discovery\.venv-audit\Scripts\python.exe C:\Users\cgard\Favorites\RC Discovery\experiments\test_constant_two_bound.py
+
+PASS 1982 conditional abstract matrix cases; 136 POVM cases; 408 saved ancilla cases; 12 saved SDP cases; max SDP/bound 0.535143254807137

@@ -1,0 +1,16 @@
+$ C:\Users\cgard\Favorites\RC Discovery\.venv-audit\Scripts\python.exe C:\Users\cgard\Favorites\RC Discovery\experiments\test_synthesis_packing.py
+
+Synthesis-polar packing stress test
+seed: 20261031
+rank-1 violations: 0
+rank-1 max movement/bound: 0.759176809250
+higher-rank violations: 0
+higher-rank max movement/bound: 0.766703524718
+
+Equicorrelated family, alpha=0.5
+m=  4 movement/bound=0.651387818866
+m= 10 movement/bound=0.791159995342
+m= 50 movement/bound=0.912414806157
+m=200 movement/bound=0.957605129411
+
+PASS

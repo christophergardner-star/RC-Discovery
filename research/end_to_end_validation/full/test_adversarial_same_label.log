@@ -1,0 +1,26 @@
+$ C:\Users\cgard\Favorites\RC Discovery\.venv-audit\Scripts\python.exe C:\Users\cgard\Favorites\RC Discovery\experiments\test_adversarial_same_label.py
+
+random ranks [1, 1] checked 54
+random ranks [1, 1, 1] checked 108
+random ranks [2, 2] checked 162
+random ranks [1, 5, 2] checked 216
+random ranks [3, 3, 3] checked 270
+random ranks [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] checked 324
+random ranks [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] checked 378
+(CVXPY) Oct 31 06:56:57 PM: Encountered unexpected exception importing solver OSQP:
+RuntimeError('No algebra backend available!')
+SDP 24 {'solver': 'CLARABEL', 'primal': np.float64(0.0010554227942887104), 'dual': 0.0010554227138375252, 'gap': np.float64(8.045118521024519e-11), 'feasibility_violation': 4.134638560488305e-11}
+C:\Users\cgard\Favorites\RC Discovery\.venv-audit\Lib\site-packages\cvxpy\problems\problem.py:1539: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  warnings.warn(
+SDP 30 {'solver': 'SCS', 'primal': np.float64(0.21598039172579314), 'dual': 0.21598039172704636, 'gap': np.float64(1.2532197501968767e-12), 'feasibility_violation': 1.276815214903538e-12}
+SDP 78 {'solver': 'CLARABEL', 'primal': np.float64(0.0016660058256659032), 'dual': 0.0016660063896166383, 'gap': np.float64(5.639507350690964e-10), 'feasibility_violation': 1.0186396105319724e-11}
+SDP 84 {'solver': 'SCS', 'primal': np.float64(0.24076068620309313), 'dual': 0.24076068620633956, 'gap': np.float64(3.246430901882036e-12), 'feasibility_violation': 3.460602231309115e-10}
+SDP 132 {'solver': 'CLARABEL', 'primal': np.float64(0.0010442988841517895), 'dual': 0.0010442990979012774, 'gap': np.float64(2.1374948794457282e-10), 'feasibility_violation': 1.7468533774166444e-12}
+SDP 138 {'solver': 'SCS', 'primal': np.float64(0.282135030631877), 'dual': 0.2821350277770228, 'gap': np.float64(2.8548541863848698e-09), 'feasibility_violation': 1.159994620922359e-09}
+SDP 380 {'solver': 'SCS', 'primal': np.float64(1.070286509614274), 'dual': 1.070286511394318, 'gap': np.float64(1.7800441121096355e-09), 'feasibility_violation': 1.5211872659952377e-08}
+SDP 381 {'solver': 'SCS', 'primal': np.float64(0.9460201295703776), 'dual': 0.9460201350242826, 'gap': np.float64(5.453904994290326e-09), 'feasibility_violation': 1.2820374948754685e-09}
+SDP 400 {'solver': 'CLARABEL', 'primal': np.float64(0.055555555216861036), 'dual': 0.05555555542246841, 'gap': np.float64(2.0560737140629115e-10), 'feasibility_violation': 4.530715299461141e-11}
+SDP 401 {'solver': 'CLARABEL', 'primal': np.float64(0.005050504986329169), 'dual': 0.00505050483086319, 'gap': np.float64(1.5546597949972485e-10), 'feasibility_violation': 6.869153379787662e-11}
+SDP 402 {'solver': 'CLARABEL', 'primal': np.float64(0.0005005003149953821), 'dual': 0.0005005004949024519, 'gap': np.float64(1.7990706981888677e-10), 'feasibility_violation': 1.7596555424485234e-12}
+SDP 403 {'solver': 'CLARABEL', 'primal': np.float64(5.000468286304749e-05), 'dual': 5.000498909600747e-05, 'gap': np.float64(3.062329599767149e-10), 'feasibility_violation': 3.381229868906712e-12}
+PASS 408 valid cases; 3 expected rejections; 12 SDPs; max identity error 2.4202861936828413e-14

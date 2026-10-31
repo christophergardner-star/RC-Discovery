@@ -1,0 +1,19 @@
+$ C:\Users\cgard\Favorites\RC Discovery\.venv\Scripts\python.exe C:\Users\cgard\Favorites\RC Discovery\experiments\test_record_accessibility.py
+
+(CVXPY) Oct 31 06:53:19 PM: Encountered unexpected exception importing solver OSQP:
+RuntimeError('No algebra backend available!')
+PASS 2 1e-06 0 certificate 0.21848432499195747
+PASS 2 1e-06 1 certificate 0.22270294494891751
+PASS 2 0.0001 0 certificate 0.5646583815137319
+PASS 2 0.0001 1 certificate 0.5827244953458339
+C:\Users\cgard\Favorites\RC Discovery\.venv\Lib\site-packages\cvxpy\problems\problem.py:1539: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  warnings.warn(
+PASS 2 0.01 0 certificate 1.7478099716999416
+PASS 2 0.01 1 certificate 1.79973787311522
+PASS 3 1e-06 0 certificate 0.22828314865053134
+PASS 3 1e-06 1 certificate 0.22240390378018127
+PASS 3 0.0001 0 certificate 0.615800728297676
+PASS 3 0.0001 1 certificate 0.622366962345204
+PASS 3 0.01 0 certificate 2.0
+PASS 3 0.01 1 certificate 2.0
+PASS 7 exact cases; 12 random cases; 26 primal/dual SDPs

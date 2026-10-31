@@ -1,0 +1,213 @@
+{
+  "schema": 1,
+  "started_utc": "2026-10-31T18:51:45.699107+00:00",
+  "profile": "full",
+  "python": {
+    "executable": "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+    "version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "git": {
+    "commit": "cb1610f3042a47a16b4b82ce79edb40e475882e7",
+    "branch": "main",
+    "dirty": true,
+    "porcelain": "?? research/end_to_end_validation/"
+  },
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "cvxpy": "1.7.5",
+    "clarabel": "0.11.1",
+    "scs": "3.3.1"
+  },
+  "runs": [
+    {
+      "name": "test_repository_claim_discipline",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_repository_claim_discipline.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 1.484,
+      "log": "test_repository_claim_discipline.log"
+    },
+    {
+      "name": "test_theorem_v1_contract",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_theorem_v1_contract.py",
+        "--sdp-cases",
+        "4"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 8.922,
+      "log": "test_theorem_v1_contract.log"
+    },
+    {
+      "name": "test_record_margin",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_record_margin.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 6.859,
+      "log": "test_record_margin.log"
+    },
+    {
+      "name": "test_synthesis_packing",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_synthesis_packing.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 46.984,
+      "log": "test_synthesis_packing.log"
+    },
+    {
+      "name": "test_spectral_threshold_rate",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_spectral_threshold_rate.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.469,
+      "log": "test_spectral_threshold_rate.log"
+    },
+    {
+      "name": "test_same_label_hybrid_dilation",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_same_label_hybrid_dilation.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.578,
+      "log": "test_same_label_hybrid_dilation.log"
+    },
+    {
+      "name": "test_adversarial_same_label",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_adversarial_same_label.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 23.734,
+      "log": "test_adversarial_same_label.log"
+    },
+    {
+      "name": "test_constant_two_bound",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_constant_two_bound.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 2.328,
+      "log": "test_constant_two_bound.log"
+    },
+    {
+      "name": "test_record_accessibility",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_record_accessibility.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 11.562,
+      "log": "test_record_accessibility.log"
+    },
+    {
+      "name": "test_residual_coupling_rates",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_residual_coupling_rates.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 15.875,
+      "log": "test_residual_coupling_rates.log"
+    },
+    {
+      "name": "test_extra_outcome_gap_closure",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_extra_outcome_gap_closure.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.484,
+      "log": "test_extra_outcome_gap_closure.log"
+    },
+    {
+      "name": "test_gamma_extra_outcome_counterexample",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_gamma_extra_outcome_counterexample.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.469,
+      "log": "test_gamma_extra_outcome_counterexample.log"
+    },
+    {
+      "name": "test_moving_povm",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_moving_povm.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 29.344,
+      "log": "test_moving_povm.log"
+    },
+    {
+      "name": "test_three_extensions",
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\experiments\\test_three_extensions.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 17.016,
+      "log": "test_three_extensions.log"
+    }
+  ],
+  "script_hashes": {
+    "experiments\\test_repository_claim_discipline.py": "6632b68b5152cfc139945923cff2c46ac83493de59de47c0cfe94ed5fef7dd48",
+    "experiments\\test_theorem_v1_contract.py": "e954732c4b38a105ad9d6c3b4b8aae25d685d9e4057c3617eed1b309c011cd97",
+    "experiments\\test_record_margin.py": "005f1010a0e7669ae52b75f5e093a107d3c4fcf70625fd5ea989bf21dbfbddf8",
+    "experiments\\test_synthesis_packing.py": "041fdd605d2b39dfb980dd5a2b059d6a603df8af14fff9a21a80f303e57bc8d0",
+    "experiments\\test_spectral_threshold_rate.py": "18d456c524063111cefe081ea4b28a475d289c4ff6ca3a3b1ff27f3801b6091f",
+    "experiments\\test_same_label_hybrid_dilation.py": "0f6b7b4a31120daf2f708c8e952e0bcea7670b1ff514fcff92d9c3629d58a403",
+    "experiments\\test_adversarial_same_label.py": "f948e50a44c718ebcfb285d4e77f886f37ee108c0b882188143bddb799acc189",
+    "experiments\\test_constant_two_bound.py": "78a7c5d806a889c82db03135e4e34883858fb49a3ba4ab99d56f0b353e781026",
+    "experiments\\test_record_accessibility.py": "2c5d60d4cacf7ee618ea18137e090d896f029fea4c4d304b0a744127501864f3",
+    "experiments\\test_residual_coupling_rates.py": "a6f73d55b458257fb0ca2a444d64ae7eb459cb648c4e0cf629a54280cb7914f9",
+    "experiments\\test_extra_outcome_gap_closure.py": "2b76866e1946f63809229ee673ad7d4bf396ce3dea6718c19397696cb19d77bd",
+    "experiments\\test_gamma_extra_outcome_counterexample.py": "45471e69b09ad55f4f1c27047cd6b9c4b9a681fe1edf6f58409994aa22904285",
+    "experiments\\test_moving_povm.py": "1803f76e307d4fcdcf090d7097f0957b6bf5ab5dc810200cae17284051dec6eb",
+    "experiments\\test_three_extensions.py": "9359247b7c8e18bca4b09fe8bf2cc0517ddb542114a00d32f7d12e2fa25ca668"
+  },
+  "finished_utc": "2026-10-31T18:54:35.513910+00:00",
+  "passed": true
+}

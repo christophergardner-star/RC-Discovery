@@ -1,0 +1,12 @@
+C:\Users\cgard\Favorites\RC Discovery\lean\RCProof\Gap.lean:14:0: warning: automatically included section variable(s) unused in theorem `RCProof.range_projection_idempotent`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\cgard\Favorites\RC Discovery\lean\RCProof\Gap.lean:50:0: warning: automatically included section variable(s) unused in theorem `RCProof.residual_effect_positive`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

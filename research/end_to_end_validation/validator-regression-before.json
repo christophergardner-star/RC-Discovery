@@ -1,0 +1,91 @@
+{
+  "baseline_commit": "cb1610f3042a47a16b4b82ce79edb40e475882e7",
+  "script_sha256": "e954732c4b38a105ad9d6c3b4b8aae25d685d9e4057c3617eed1b309c011cd97",
+  "observations": [
+    {
+      "name": "invalid_nonhermitian",
+      "effects": [
+        [
+          [
+            0.95,
+            1.0
+          ],
+          [
+            -1.0,
+            0.05
+          ]
+        ],
+        [
+          [
+            0.050000000000000044,
+            -1.0
+          ],
+          [
+            1.0,
+            0.95
+          ]
+        ]
+      ],
+      "delta": 0.1,
+      "accepted": true,
+      "error": null
+    },
+    {
+      "name": "valid_zero_label",
+      "effects": [
+        [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      ],
+      "delta": 0.1,
+      "accepted": false,
+      "error": "HypothesisError: nonzero label 1 has no eigenvalue at least 1-delta"
+    },
+    {
+      "name": "valid_single_label",
+      "effects": [
+        [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      ],
+      "delta": 0.1,
+      "accepted": false,
+      "error": "HypothesisError: at least two outcomes are required"
+    }
+  ],
+  "interpretation": "Validator defects, not counterexamples to the mathematical theorem."
+}

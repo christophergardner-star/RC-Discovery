@@ -1,0 +1,7 @@
+$ C:\Users\cgard\Favorites\RC Discovery\.venv\Scripts\python.exe C:\Users\cgard\Favorites\RC Discovery\experiments\test_theorem_v1_contract.py --sdp-cases 4
+
+(CVXPY) Oct 31 06:51:52 PM: Encountered unexpected exception importing solver OSQP:
+RuntimeError('No algebra backend available!')
+C:\Users\cgard\Favorites\RC Discovery\.venv\Lib\site-packages\cvxpy\problems\problem.py:1539: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  warnings.warn(
+PASS 8 valid theorem cases; 6 expected rejections; 5 SDP checks; max identity error 6.418476861114186e-15
