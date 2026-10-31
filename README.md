@@ -241,13 +241,13 @@ The potentially distinct contribution is the combined chain
 }
 ]
 
-Novelty remains unverified pending a deeper literature veto.
+An initial deep literature veto has now been completed. No exact prior theorem matching the combined same-label synthesis-conditioned certificate was located, but novelty remains unverified pending expert review.
 
 ## Current next steps
 
 The main internal proof gap is no longer open. Current priorities are:
 
-1. literature/novelty audit of the combined theorem;
+1. external/domain-expert novelty review of the combined theorem after the first deep literature veto;
 2. sharpen the constant (4);
 3. test joint optimality of the (sqrt{1-alpha^2}) and (sqrtdelta) rates;
 4. formalise the operator/channel proof in Lean;
@@ -267,6 +267,7 @@ The main internal proof gap is no longer open. Current priorities are:
 - `experiments/test_same_label_hybrid_dilation.py`
 - `lean/RCProof/Core.lean`
 - `literature/NOVELTY_LEDGER.md`
+- `literature/DEEP_PRIOR_ART_VETO_2026-10-31.md`
 - `STATUS.md`
 
 ## Research discipline
