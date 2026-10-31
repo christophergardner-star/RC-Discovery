@@ -45,6 +45,12 @@ if ($FailFast) {
     $Arguments += "--fail-fast"
 }
 
+Write-Host "Auditing human authorship and AI-provider non-claim boundary"
+& $Python "experiments\test_ai_rights_notice.py"
+if ($LASTEXITCODE -ne 0) {
+    throw "AI-rights notice audit failed with exit code $LASTEXITCODE."
+}
+
 Write-Host "Running VIBE MATH PhD audit profile '$Profile'"
 & $Python @Arguments
 if ($LASTEXITCODE -ne 0) {
