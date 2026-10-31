@@ -32,6 +32,9 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r experiments/requirements_validation.txt
 
+      - name: Audit human-authorship and AI-provider claim boundary
+        run: python experiments/test_ai_rights_notice.py
+
       - name: Run quick doctoral-accuracy audit
         run: |
           python experiments/run_phd_validation.py \
@@ -44,7 +47,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: phd-audit-quick-${{ github.sha }}
-          path: research/ci_validation/quick
+          path: |
+            research/ci_validation/quick
+            research/local_validation/ai_rights_notice.json
           if-no-files-found: error
 
   lean:
@@ -86,6 +91,9 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r experiments/requirements_validation.txt
 
+      - name: Audit human-authorship and AI-provider claim boundary
+        run: python experiments/test_ai_rights_notice.py
+
       - name: Run full doctoral-accuracy audit
         run: |
           python experiments/run_phd_validation.py \
@@ -98,5 +106,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: phd-audit-full-${{ github.sha }}
-          path: research/ci_validation/full
+          path: |
+            research/ci_validation/full
+            research/local_validation/ai_rights_notice.json
           if-no-files-found: error
