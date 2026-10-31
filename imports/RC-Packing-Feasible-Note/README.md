@@ -1,43 +1,36 @@
-# Packing Condition for Approximate Quantum Measurements
+# Packing-Conditioned Same-Label Rounding
 
 **Share this link:** https://github.com/Cruxy234/RC-Packing-Feasible-Note
 
-**Current status:** [`STATUS.md`](STATUS.md)
+**Final version:** [`paper/FINAL.md`](paper/FINAL.md)
 
-Related upstream: [christophergardner-star/RC-Discovery](https://github.com/christophergardner-star/RC-Discovery)
+**Canonical repository:** [christophergardner-star/RC-Discovery](https://github.com/christophergardner-star/RC-Discovery)
+
+**Current status:** [`STATUS.md`](STATUS.md)
 
 ## Papers
 
-- **[`paper/long_paper.md`](paper/long_paper.md)** — Extended paper with full development, numerical evidence, prior-art discussion, and limitations.
-- **[`paper/short_paper.md`](paper/short_paper.md)** — Concise version for external attack.
-- **[`theory/full_proof.md`](theory/full_proof.md)** — Complete write-up of the hybrid Stinespring same-label theorem.
-- **[`theory/full_proof_verification.md`](theory/full_proof_verification.md)** — Machine-precision verification of the identities.
+- **[`paper/FINAL.md`](paper/FINAL.md)** — Clean final version aligned with the validated coefficient-two bound.
+- **[`paper/long_paper.md`](paper/long_paper.md)** — Extended development.
+- **[`paper/short_paper.md`](paper/short_paper.md)** — Concise version.
+- **[`theory/full_proof.md`](theory/full_proof.md)** — Full proof write-up.
 
-## Supporting notes (in order of development)
+## Supporting materials
 
 | File | Content |
 |------|---------|
-| `STATUS.md` | Current status summary |
-| `theory/full_proof.md` | Full proof of the hybrid isometry theorem |
-| `theory/full_proof_verification.md` | Machine-precision verification |
-| `theory/PRIOR_ART_VETO_UPDATED.md` | Deeper literature search: no match for hybrid same-label theorem |
-| `theory/hybrid_stinespring_isometry.md` | Hybrid isometry construction and key identities |
-| `theory/PRIOR_ART_VETO.md` | Initial literature search |
-| `theory/adversarial_theorem_audit.md` | Extreme-case probes; bound holds |
-| `theory/diamond_norm_computation.md` | Pure-state diamond proxies |
-| `theory/constant_tightening.md` | Empirical constant ~2; rates consistent |
-| `theory/hybrid_isometry_verification.md` | Machine-precision check of hybrid isometry |
-| `theory/same_label_nu_attack.md` | Analytic attack on same-label ν |
-| `theory/residual_spectral_radius.md` | Identification of residual invariant (later resolved) |
-| `theory/correct_WU_J_relation.md` | Corrected overlap matrix elements |
-| `lean/RCProof/Core.lean` | Lean core of geometric constant |
+| `STATUS.md` | Current status |
+| `lean/RCProof/Hybrid.lean` | Formalised algebraic core (builds) |
+| `theory/RECHECK_2026-10-31.md` | Fresh machine-precision recheck |
+| `REVIEW_PACKAGE.md` | Package for external specialists |
+| `NOVELTY_STATEMENT.md` | Novelty claim and search scope |
 
 ## Headline
 
-Under packing condition \(\alpha = \sigma_{\min}(T) > 0\), the same-label completion \(F_j = Q_j + R E_j R\) admits a hybrid Stinespring isometry such that
+Under packing condition \(\alpha = \sigma_{\min}(T) > 0\), the same-label completion admits a hybrid Stinespring isometry such that
 \[
-\nu \le 4\big(\sqrt{1-\alpha^2} + \sqrt{\delta}\big),
+\nu \le 2\min\bigl(1,\,\sqrt{1-\alpha^2} + \sqrt{\delta}\bigr),
 \qquad
 \gamma_F \ge \delta.
 \]
-Composition with Record-Margin Stability yields a fully dimension-free certificate. Prior-art search found no exact match for the combined statement. Independent audit of the hybrid isometry remains the credibility gate.
+The result is internally reconstructed, computationally audited, and partially formalised. Novelty is unverified. Independent external reconstruction of the hybrid distance bound remains the credibility gate.
