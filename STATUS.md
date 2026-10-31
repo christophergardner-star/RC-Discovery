@@ -22,6 +22,9 @@ Updated: 31 October 2026
 | Linear (O(delta)) spectral-threshold movement | **Refuted** | Explicit (alpha=1) family requires (Omega(sqrtdelta)) movement. |
 | Packing-conditioned many-outcome channel theorem | **Internally proved; non-optimal** | Positive bound with current (m)-dependent measurement-channel perturbation. |
 | Outcome-count-independent measurement-channel move | **Internally proved theorem candidate** | Naimark-completion construction gives an absolute m,d-independent bound; direct residual formula remains open. |
+| Extra-outcome route forces gamma_F=1 without cost | **Refuted** | Residual-to-reject can be diamond distance 2 even at alpha=1, delta=0. |
+| Complete packed sectors (total rank = d) | **Internally closed theorem candidate** | No residual subspace; Naimark move is dimension-free, moved POVM is a PVM, gamma_F=1. |
+| Incomplete packed sectors need residual control | **Proved obstruction** | gamma can tend to 0 with alpha=1, delta=0, eta=0, kappa=1. |
 | Two pure independent records: (kappa_R=sqrt{1-s^{2R}}) | **Known math / derived RC corollary** | Redundancy certificate. |
 | Correlated redundancy always helps | **Refuted** | Common-mode noise can keep (kappa_R) fixed. |
 | Record-structured metastability transfer | **Internally proved corollary** | No explicit phase-count dependence inside classical-record subclass. |
@@ -32,8 +35,10 @@ Updated: 31 October 2026
 - research/INDEPENDENT_PROOF_AUDIT_2026-10-31.md
 - theory/packing_conditioned_rounding.md
 - theory/dimension_free_nu_via_naimark.md
+- research/GAMMA_CLOSURE_AUDIT_2026-10-31.md
 - experiments/test_spectral_threshold_rate.py
 - experiments/test_dimension_free_naimark.py
+- experiments/test_gamma_extra_outcome_counterexample.py
 
 ## Prior-art warning
 
