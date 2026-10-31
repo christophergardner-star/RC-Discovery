@@ -7,3 +7,6 @@ research/ci_validation/
 research/local_validation/phd_quick/
 research/local_validation/phd_full/
 research/local_validation/phd_audit/
+research/local_validation/ai_rights_notice.json
+research/local_validation/claim_discipline.json
+research/local_validation/theorem_v1_contract.json
