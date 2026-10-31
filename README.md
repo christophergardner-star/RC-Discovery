@@ -1,205 +1,220 @@
 # VIBE MATH — RC-Discovery
 
-**VIBE MATH** is the working name for this AI-assisted mathematical discovery programme: Christopher Gardner drives the questions, judgement, counterexample hunting and research direction while AI is used interactively to derive, attack, test, formalise and rewrite the mathematics.
+**VIBE MATH** is the working name for this AI-assisted mathematical discovery programme. Christopher Gardner directs the questions, judgement, counterexample search and research strategy; AI is used interactively for derivation, coding, numerical testing, proof attacks, literature triage and formalisation support.
 
-This repository contains the **Resolvance Calculus (RC)** programme and its packing-conditioned quantum-measurement results.
+The rule is:
 
-The repository is deliberately conservative. Claims are labelled as known, derived, internally proved, open, refuted, or novelty-unverified.
+> **Vibe to generate. Audit to believe.**
 
-## What VIBE MATH means
+This repository is deliberately conservative. A conjecture, a numerical pattern, an internal proof, a machine-checked lemma and a novelty claim are treated as different things.
 
-VIBE MATH is not a claim that informal prompting replaces proof. It names the workflow used here: rapid human–AI mathematical exploration followed by adversarial testing, numerical stress tests, proof reconstruction, prior-art checks and formal verification where practical.
+## Current strongest theorem candidate
 
-The rule is simple: **vibe to generate; audit to believe.**
+Let \(\{E_j\}_{j=1}^m\) be a finite POVM. Fix \(0<\delta<1/2\). For every nonzero outcome, let \(P_j\neq0\) be the full spectral projection of \(E_j\) onto eigenvalues at least \(1-\delta\).
 
-## Current strongest result
+Define
 
-The moving-POVM programme now has an internally closed **same-label, dimension-free theorem candidate** for a record-structured class.
+\[
+\mathcal K=\bigoplus_j\operatorname{ran}(P_j),
+\qquad
+T:\mathcal K\to\mathcal H,
+\qquad
+T(x_1,\ldots,x_m)=\sum_jx_j,
+\]
 
-Let ({E_j}_{j=1}^m) be a finite POVM. Fix (0<delta<1/2), and for every nonzero outcome effect let (P_j
-eq0) be the full spectral projection onto eigenvalues at least (1-delta).
+and assume
 
-Define the synthesis operator
+\[
+\alpha=\sigma_{\min}(T)>0.
+\]
 
-[
-T:igoplus_joperatorname{ran}(P_j)	omathcal H,
-qquad
-T(x_j)=sum_jx_j,
-]
+Let \(T=U|T|\) be the polar decomposition, let \(Q_j\) be the mutually orthogonal polar-rounded sectors, and put
 
-and the global packing conditioner
+\[
+R=I-\sum_jQ_j.
+\]
 
-[
-alpha=sigma_{min}(T)>0.
-]
+The same-label completion is
 
-Let (T=UH) be the polar decomposition, (Q_j) the mutually orthogonal polar-rounded sectors, and
-
-[
-R=I-sum_jQ_j.
-]
-
-Define the same-label completed POVM
-
-[
-oxed{
+\[
+\boxed{
 F_j=Q_j+R E_jR.
 }
-]
+\]
 
-Then:
+Internally reconstructed consequences:
 
-- ({F_j}) is a POVM;
-- every nonzero (F_j) has an exact eigenvalue-1 repeatable sector (Q_j);
-- the repeatability spectral gap satisfies
-
-[
-oxed{gamma_Fgedelta;}
-]
-
-- the measurement-channel move is outcome-count and dimension independent:
-
-[
-oxed{
-
-u
-=
-|mathcal M_E-mathcal M_F|_diamond
-le
-2arepsilon
-le
-4left(sqrt{1-alpha^2}+sqrtdeltaight).
+\[
+\boxed{
+\gamma_F\ge\delta,
 }
-]
+\]
 
-The proof uses the exact hybrid Naimark/Stinespring isometry
+and, for the associated measurement channels,
 
-[
-oxed{
-V=JU^*+WR,
+\[
+\boxed{
+\nu=
+\|\mathcal M_E-\mathcal M_F\|_\diamond
+\le
+4\left(
+\sqrt{1-\alpha^2}+\sqrt\delta
+\right).
 }
-]
+\]
 
-where (W) is the canonical measurement isometry and (J) is the labelled embedding of the packed sectors.
+The operational bound is constructed using a correctly typed labelled isometry
 
-An independent reconstruction of this hybrid-isometry derivation has passed, with the explicit hypothesis that every nonzero outcome has a nonzero near-unit sector.
+\[
+J_{\mathcal K}:\mathcal K\to\bigoplus_j\mathcal H,
+\qquad
+J_{\mathcal K}(x_1,\ldots,x_m)=(x_1,\ldots,x_m),
+\]
 
-## Composite exact-idempotent certificate
+and the hybrid dilation
 
-Let the original measure-and-prepare channel have record margin (kappa>0) and idempotence defect
+\[
+\boxed{
+V=J_{\mathcal K}U^*+WR,
+}
+\]
 
-[
-eta=|Phi_E^2-Phi_E|_diamond.
-]
+where \(Wz=(\sqrt{E_j}z)_j\) is the canonical measurement isometry.
 
-Using the same records after the POVM move, the moved channel has defect at most
+The direct-sum definition of \(J_{\mathcal K}\) matters. In the rank-one case it embeds the original sector vector \(v_j\) in label block \(j\), not the polar-rounded vector \(q_j\). This resolves the apparent contradiction in the refreshed Cruxy source notes.
 
-[
-eta+3
-u.
-]
+## Composite record-process certificate
 
-Applying the RC spectral-gap Record-Margin theorem gives an exactly idempotent channel (Pi) satisfying
+Let
 
-[
-oxed{
-|Phi_E-Pi|_diamond
-le
+\[
+\Phi_E(\rho)=\sum_j\operatorname{Tr}(E_j\rho)\sigma_j
+\]
 
-u+
-sqrt{
-rac{2(eta+3
-u)}
-{kappadelta}
+have record margin \(\kappa>0\) and idempotence defect
+
+\[
+\eta=\|\Phi_E^2-\Phi_E\|_\diamond.
+\]
+
+Using the same records after the POVM move, the RC spectral-gap theorem gives an exactly idempotent channel \(\Pi\) satisfying
+
+\[
+\boxed{
+\|\Phi_E-\Pi\|_\diamond
+\le
+\nu+
+\sqrt{
+\frac{2(\eta+3\nu)}
+{\kappa\delta}
 }.
 }
-]
+\]
 
-There is no explicit dependence on:
+There is no explicit dependence on the number of outcomes, Hilbert-space dimension or total packed rank.
 
-- the number of outcomes (m),
-- Hilbert-space dimension (d),
-- total packed-sector rank.
+This is an **internally reconstructed theorem candidate**, not yet an externally established or novelty-certified theorem.
 
-This is currently the strongest internally supported RC result.
+## Core results and negative results
 
-## Earlier core results
+### Record-Margin Stability
 
-### Sharp Record-Margin Stability
-
-For sharp record sectors,
-
-[
-oxed{
-|Phi-Pi|_diamond
-le
-sqrt{rac{2eta}{kappa}}.
+\[
+\boxed{
+\|\Phi-\Pi\|_\diamond
+\le
+\sqrt{\frac{2\eta}{\kappa}}.
 }
-]
+\]
 
-Independent reconstruction: **passed**.
+Internal proof reconstruction: passed.
 
 ### POVM spectral-gap extension
 
-For repeatability-admissible POVMs,
-
-[
-oxed{
-|Phi-Pi|_diamond
-le
-sqrt{rac{2eta}{kappagamma}}.
+\[
+\boxed{
+\|\Phi-\Pi\|_\diamond
+\le
+\sqrt{\frac{2\eta}{\kappa\gamma}}.
 }
-]
+\]
 
-Independent reconstruction: **passed**.
+Internal proof reconstruction: passed.
 
-## Important negative results
+### Refuted stronger claims
 
-The unrestricted moving-POVM problem is false.
+The programme has also established that:
 
-A regular-simplex family shows that local properties such as:
+- local near-repeatability diagnostics do not remove the regular-simplex packing obstruction;
+- \(m>d\) blocks same-label exact repeatability;
+- threshold data alone do not support a generic linear \(O(\delta)\) movement bound;
+- routing all residual mass to a new projective outcome may move the measurement channel by the maximum distance \(2\);
+- a pure-state total-variation proxy is not automatically a complete diamond-norm computation.
 
-- small idempotence defect,
-- large record margin,
-- near-unit effects,
-- near-reachable records,
+## Refreshed Cruxy merge
 
-do not imply proximity to a repeatable measurement. A global packing condition is necessary.
+The latest public source repository was imported again in full:
 
-Other refutations established during the programme:
+- source: `Cruxy234/RC-Packing-Feasible-Note`
+- source commit: `78be7962931f9f95e6e6aecd93f4dde00c3fe14d`
+- exact snapshot: `imports/RC-Packing-Feasible-Note/`
 
-- (m>d) blocks same-label exact repeatability;
-- a generic linear (O(delta)) spectral-threshold movement bound is false;
-- routing all residual mass to a new projective outcome can produce diamond distance (2);
-- residual spectral radius is not an independent missing invariant for the same-label completion.
+The snapshot is retained as provenance. It records the evolving research process and includes conjectures, superseded conclusions, refutations, numerical proxy notes and a notation mismatch involving two inequivalent maps both called `J`.
 
-## Packing geometry
+Canonical reconciliation:
 
-The synthesis conditioner
+- `imports/RC-Packing-Feasible-Note/SNAPSHOT_MANIFEST.md`
+- `research/CRUXY_REMERGE_AUDIT_2026-10-31.md`
+- `theory/same_label_dimension_free_theorem.md`
 
-[
-alpha=sigma_{min}(T)
-]
+Imported source drafts are not automatically canonical claims.
 
-detects the global packing obstruction.
+## Prior-art boundary
 
-For the polar-rounded sectors,
+RC-Discovery claims no ownership of established ingredients, including:
 
-[
-oxed{
-|P_j-Q_j|_infty
-le
-sqrt{1-alpha^2}.
+- polar / Löwdin / Fan–Hoffman / Higham orthogonalisation and nearest-isometry results;
+- frame and fusion-frame synthesis operators;
+- Naimark and Stinespring dilation;
+- Kretschmann–Schlingemann–Werner continuity;
+- repeatability criteria for discrete POVMs;
+- de la Salle and earlier POVM orthogonalisation/projectivisation;
+- projective simulation of POVMs, including Kotowski–Oszmaniec's dimension-deficient Naimark theorem;
+- Watrous diamond-norm and SDP theory;
+- Kitaev's almost-idempotent channel structure;
+- known regular-simplex negative examples.
+
+The only object being investigated as potentially distinct is the complete, precisely typed chain
+
+\[
+\boxed{
+\text{synthesis packing}
+\to
+\text{same-label hybrid completion}
+\to
+\text{dimension-free operational movement}
+\to
+\text{spectral-gap control}
+\to
+\text{exact idempotent record process}.
 }
-]
+\]
 
-This holds at arbitrary rank and has passed large numerical stress tests.
+No exact prior theorem matching that full chain was located in the searches performed. That is not proof of novelty. The status remains:
 
-The polar / Löwdin orthogonalisation step itself is classical and is **not** claimed as novel.
+\[
+\boxed{\text{potentially distinct; novelty unverified}.}
+\]
+
+Canonical policy:
+
+- `literature/PRIOR_ART_AND_ATTRIBUTION.md`
+- `literature/NOVELTY_LEDGER.md`
+- `literature/DEEP_PRIOR_ART_VETO_2026-10-31.md`
 
 ## Lean formalisation
 
-The current Lean 4 + Mathlib development machine-checks the real-arithmetic core with zero `sorry`:
+Machine checked with Lean 4 + Mathlib and zero `sorry`:
 
 - `projector_const_one`
 - `polar_residual_le`
@@ -208,51 +223,19 @@ The current Lean 4 + Mathlib development machine-checks the real-arithmetic core
 
 Not yet formalised:
 
-- the Hilbert-space polar decomposition step,
-- the hybrid isometry (V=JU^*+WR),
-- the diamond-norm transfer,
-- the full composite theorem.
+- Hilbert-space polar geometry;
+- the typed hybrid isometry;
+- the diamond-norm channel step;
+- the complete composite theorem.
 
-## Prior-art boundary
+## Current priorities
 
-Known neighbouring ingredients include:
-
-- classical polar / Löwdin / Fan-Hoffman nearest-isometry results;
-- quantitative POVM orthogonalisation, including de la Salle (2022);
-- continuity of Stinespring dilations and channel distance, including Kretschmann-Schlingemann-Werner;
-- Kitaev's almost-idempotent channel / approximate (C^*)-algebra programme;
-- the 2026 negative result showing general almost-idempotent channels need not be close to idempotents.
-
-No novelty claim belongs to those ingredients individually.
-
-The potentially distinct contribution is the combined chain
-
-[
-oxed{
-	ext{synthesis packing}
-	o
-	ext{explicit same-label hybrid dilation}
-	o
-	ext{dimension-free measurement move}
-	o
-	ext{spectral gap}
-	o
-	ext{exact idempotent record process}.
-}
-]
-
-An initial deep literature veto has now been completed. No exact prior theorem matching the combined same-label synthesis-conditioned certificate was located, but novelty remains unverified pending expert review.
-
-## Current next steps
-
-The main internal proof gap is no longer open. Current priorities are:
-
-1. external/domain-expert novelty review of the combined theorem after the first deep literature veto;
-2. sharpen the constant (4);
-3. test joint optimality of the (sqrt{1-alpha^2}) and (sqrtdelta) rates;
-4. formalise the operator/channel proof in Lean;
-5. prepare a concise external-review/arXiv note only after the literature veto;
-6. continue secondary RC applications: redundancy, metastability, and the TCL bridge.
+1. external specialist audit of the correctly typed theorem;
+2. further prior-art review by experts in quantum measurements, operator algebras and fusion frames;
+3. formalisation of the operator/channel proof;
+4. sharpen the constant and establish optimal rates;
+5. prepare an external-review paper only after those gates;
+6. continue secondary RC work on redundancy, metastability and continual learning.
 
 ## Key files
 
@@ -263,21 +246,20 @@ The main internal proof gap is no longer open. Current priorities are:
 - `theory/same_label_dimension_free_theorem.md`
 - `research/INDEPENDENT_PROOF_AUDIT_2026-10-31.md`
 - `research/INDEPENDENT_HYBRID_ISOMETRY_AUDIT_2026-10-31.md`
-- `research/OPEN_PROBLEMS.md`
+- `research/CRUXY_REMERGE_AUDIT_2026-10-31.md`
+- `literature/PRIOR_ART_AND_ATTRIBUTION.md`
 - `experiments/test_same_label_hybrid_dilation.py`
 - `lean/RCProof/Core.lean`
-- `literature/NOVELTY_LEDGER.md`
-- `literature/DEEP_PRIOR_ART_VETO_2026-10-31.md`
 - `STATUS.md`
 
 ## Research discipline
 
-Before any breakthrough or novelty claim:
+Before any public novelty or breakthrough claim:
 
-1. proof audit,
-2. adversarial counterexample search,
-3. reproducibility,
-4. literature veto,
-5. independent reconstruction or formal verification.
+1. proof audit;
+2. adversarial counterexample search;
+3. reproducibility;
+4. prior-art veto;
+5. independent expert reconstruction or formal verification.
 
-Author: **Christopher Gardner**
+Author and research direction: **Christopher Gardner**
