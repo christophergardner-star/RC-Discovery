@@ -1,0 +1,43 @@
+=== POVM spectral-gap stress test ===
+seed: 20261028
+random cases: 20000
+violations: 0
+max intermediate ratio: 0.899026324834
+
+=== Exact qutrit saturation ===
+c=0.5 theta= 5deg gamma=0.500000 eta=0.007596 actual=0.174311485 bound=0.174311485
+c=0.5 theta=20deg gamma=0.500000 eta=0.116978 actual=0.684040287 bound=0.684040287
+c=0.5 theta=45deg gamma=0.500000 eta=0.500000 actual=1.414213562 bound=1.414213562
+c=0.7 theta= 5deg gamma=0.300000 eta=0.004558 actual=0.174311485 bound=0.174311485
+c=0.7 theta=20deg gamma=0.300000 eta=0.070187 actual=0.684040287 bound=0.684040287
+c=0.7 theta=45deg gamma=0.300000 eta=0.300000 actual=1.414213562 bound=1.414213562
+c=0.9 theta= 5deg gamma=0.100000 eta=0.001519 actual=0.174311485 bound=0.174311485
+c=0.9 theta=20deg gamma=0.100000 eta=0.023396 actual=0.684040287 bound=0.684040287
+c=0.9 theta=45deg gamma=0.100000 eta=0.100000 actual=1.414213562 bound=1.414213562
+
+=== Independent pure-record redundancy ===
+R= 1 kappa_R=0.435889894
+R= 2 kappa_R=0.586429876
+R= 4 kappa_R=0.754673963
+R= 8 kappa_R=0.902606216
+R=16 kappa_R=0.982681618
+R=32 kappa_R=0.999410317
+
+=== Perfectly correlated-noise counterexample ===
+R= 1 kappa_R=0.600000000
+R= 2 kappa_R=0.600000000
+R= 4 kappa_R=0.600000000
+R= 8 kappa_R=0.600000000
+R=16 kappa_R=0.600000000
+R=32 kappa_R=0.600000000
+
+=== Many classical phases ===
+m=   2 kappa=0.990000 eta=0.009900000 actual=0.010000000 bound=0.141421356
+m=   4 kappa=0.990000 eta=0.014850000 actual=0.015000000 bound=0.173205081
+m=  16 kappa=0.990000 eta=0.018562500 actual=0.018750000 bound=0.193649167
+m=  64 kappa=0.990000 eta=0.019490625 actual=0.019687500 bound=0.198431348
+m= 256 kappa=0.990000 eta=0.019722656 actual=0.019921875 bound=0.199608993
+m=1024 kappa=0.990000 eta=0.019780664 actual=0.019980469 bound=0.199902320
+m=4096 kappa=0.990000 eta=0.019795166 actual=0.019995117 bound=0.199975584
+
+PASS

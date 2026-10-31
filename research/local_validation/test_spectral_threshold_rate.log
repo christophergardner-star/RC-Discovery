@@ -1,0 +1,9 @@
+Spectral-threshold adversarial family
+delta        alpha       coupling       coupling/delta
+1e-02   1.00000000          0.025              2.5
+1e-04   1.00000000         0.0025               25
+1e-06   1.00000000        0.00025              250
+1e-08   1.00000000        2.5e-05             2500
+
+PASS
+The packing is perfect (alpha=1), but the off-sector term scales as sqrt(delta), so a universal O(delta) effect-movement rate is too strong under spectral-threshold assumptions.

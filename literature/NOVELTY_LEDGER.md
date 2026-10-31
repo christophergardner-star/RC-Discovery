@@ -2,6 +2,14 @@
 
 Updated: 31 October 2026.
 
+## Focused same-label prior-art veto
+
+See [the detailed search and implication audit](SAME_LABEL_PRIOR_ART_VETO_2026-10-31.md).
+
+No direct prior statement or complete implication was located in the sources examined. Novelty remains **unverified**. Additional mandatory comparisons are Eldar–Forney's square-root measurement, Frank–Paulsen–Tiballi's symmetric frame approximation, the clean-POVM and measurement-sharpness literature, operator-valued frame perturbation, and Ulam stability. The report distinguishes inspected theorem statements from inaccessible originals and records search limitations.
+
+**Certificate limitation found:** substituting either current scalar movement envelope into the threshold-based exact-idempotent certificate always gives a bound greater than the trivial maximum of 2. This does not refute the measurement-rounding theorem or the certificate using actual/instance-dependent movement. See Section 4 of the report for the proof and the condition for a nontrivial certificate.
+
 ## Confirmed neighbouring results
 
 ### Kitaev (2024)

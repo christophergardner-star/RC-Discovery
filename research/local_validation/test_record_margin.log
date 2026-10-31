@@ -1,0 +1,12 @@
+RC Record-Margin Stability stress test
+seed: 20261028
+random full-rank two-record cases: 10000
+dimensions: (2, 3, 5, 10, 20)
+violations: 0
+max(actual / bound): 0.999925603293
+\nAnalytic sharpness family
+ 5 deg  kappa=0.99619470  eta=0.01513444  actual=0.17431149  bound=0.17431149
+10 deg  kappa=0.98480775  eta=0.05939117  actual=0.34729636  bound=0.34729636
+30 deg  kappa=0.86602540  eta=0.43301270  actual=1.00000000  bound=1.00000000
+45 deg  kappa=0.70710678  eta=0.70710678  actual=1.41421356  bound=1.41421356
+\nPASS

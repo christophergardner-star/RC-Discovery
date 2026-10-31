@@ -487,6 +487,8 @@ The full Hilbert-space/channel theorem is not yet machine formalised.
 
 ## 10. Prior-art boundary
 
+**31 October 2026 audit:** [the focused prior-art veto](../literature/SAME_LABEL_PRIOR_ART_VETO_2026-10-31.md) found no direct combined theorem in the sources examined, but adds mandatory square-root-measurement, frame, clean-POVM, sharpness, and Ulam-stability comparisons. It also proves a limitation of the final certificate: inserting either current scalar movement envelope into the bound with denominator \(\kappa\delta\) always exceeds 2. Only actual or sufficiently sharp instance-dependent movement can make that version nontrivial. This draft needs that distinction before external circulation; dimension independence by itself is insufficient.
+
 The following ingredients are known and are not claimed as novel:
 
 - polar / Löwdin / Fan-Hoffman nearest-isometry results;

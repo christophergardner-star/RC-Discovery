@@ -1,0 +1,112 @@
+{
+  "started_utc": "2026-10-31T15:14:31.965131+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "runs": [
+    {
+      "script": "experiments\\test_dimension_free_naimark.py",
+      "exit_code": 0,
+      "seconds": 8.953,
+      "sha256": "112332da5b39458c8e487cec776b0eaf530ed84dfb58997cc65e01e4b1a7a213",
+      "arguments": [],
+      "log": "test_dimension_free_naimark.log"
+    },
+    {
+      "script": "experiments\\test_extra_outcome_gap_closure.py",
+      "exit_code": 0,
+      "seconds": 0.219,
+      "sha256": "2b76866e1946f63809229ee673ad7d4bf396ce3dea6718c19397696cb19d77bd",
+      "arguments": [],
+      "log": "test_extra_outcome_gap_closure.log"
+    },
+    {
+      "script": "experiments\\test_gamma_extra_outcome_counterexample.py",
+      "exit_code": 0,
+      "seconds": 0.235,
+      "sha256": "45471e69b09ad55f4f1c27047cd6b9c4b9a681fe1edf6f58409994aa22904285",
+      "arguments": [],
+      "log": "test_gamma_extra_outcome_counterexample.log"
+    },
+    {
+      "script": "experiments\\test_moving_povm.py",
+      "exit_code": 0,
+      "seconds": 9.812,
+      "sha256": "1803f76e307d4fcdcf090d7097f0957b6bf5ab5dc810200cae17284051dec6eb",
+      "arguments": [],
+      "log": "test_moving_povm.log"
+    },
+    {
+      "script": "experiments\\test_record_margin.py",
+      "exit_code": 0,
+      "seconds": 2.813,
+      "sha256": "005f1010a0e7669ae52b75f5e093a107d3c4fcf70625fd5ea989bf21dbfbddf8",
+      "arguments": [],
+      "log": "test_record_margin.log"
+    },
+    {
+      "script": "experiments\\test_same_label_hybrid_dilation.py",
+      "exit_code": 0,
+      "seconds": 0.39,
+      "sha256": "0f6b7b4a31120daf2f708c8e952e0bcea7670b1ff514fcff92d9c3629d58a403",
+      "arguments": [],
+      "log": "test_same_label_hybrid_dilation.log"
+    },
+    {
+      "script": "experiments\\test_spectral_threshold_rate.py",
+      "exit_code": 0,
+      "seconds": 0.25,
+      "sha256": "18d456c524063111cefe081ea4b28a475d289c4ff6ca3a3b1ff27f3801b6091f",
+      "arguments": [],
+      "log": "test_spectral_threshold_rate.log"
+    },
+    {
+      "script": "experiments\\test_synthesis_packing.py",
+      "exit_code": 0,
+      "seconds": 21.282,
+      "sha256": "041fdd605d2b39dfb980dd5a2b059d6a603df8af14fff9a21a80f303e57bc8d0",
+      "arguments": [],
+      "log": "test_synthesis_packing.log"
+    },
+    {
+      "script": "experiments\\test_three_extensions.py",
+      "exit_code": 0,
+      "seconds": 11.796,
+      "sha256": "9359247b7c8e18bca4b09fe8bf2cc0517ddb542114a00d32f7d12e2fa25ca668",
+      "arguments": [],
+      "log": "test_three_extensions.log"
+    },
+    {
+      "script": "experiments\\rc_tcl_certificate.py",
+      "exit_code": 0,
+      "seconds": 1.735,
+      "sha256": "026c4f401d03ff0a520c2ad04c772bbbc84649c026e9f7b5b014bfb241f2b501",
+      "arguments": [],
+      "log": "rc_tcl_certificate.log"
+    },
+    {
+      "script": "experiments\\rc_tcl_conflict_smoke.py",
+      "exit_code": 1,
+      "seconds": 4.344,
+      "sha256": "abefcb7e5e3ebb2022915e02cee7f2311e36e832148ce99d582ff964a87fffa4",
+      "arguments": [],
+      "log": "rc_tcl_conflict_smoke.log"
+    },
+    {
+      "script": "experiments\\rc_qnd_certificate.py",
+      "exit_code": 0,
+      "seconds": 0.313,
+      "sha256": "8e20681201ee1173e484f72e2ab428c653a2737d7345b92171c662e1bd36e7bc",
+      "arguments": [
+        "--eta-up",
+        "0.01",
+        "--eta-down",
+        "0.02",
+        "--eps-1-given-0",
+        "0.03",
+        "--eps-0-given-1",
+        "0.04"
+      ],
+      "log": "rc_qnd_certificate.log"
+    }
+  ]
+}

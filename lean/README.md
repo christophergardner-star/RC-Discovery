@@ -1,36 +1,42 @@
-# Lean 4 formalisation
+# Lean 4 formalization
 
-## Status
+Locally checked on 31 October 2026 using Lean 4.35.0 and pinned Mathlib
+`56a005855ea17e0b0958f73ec801ae140b0a1679`.
 
-**Build: succeeded** (Lean 4.35.0 + Mathlib, zero `sorry`).
+## Checked content
 
-## File
+`RCProof/Core.lean` contains four scalar theorems: `projector_const_one`,
+`polar_residual_le`, `near_orthonormal_overlap`, and `rank1_core_package`.
 
-`RCProof/Core.lean` — fully machine-checked proofs of:
+`RCProof/Hybrid.lean` contains rectangular complex-matrix proofs:
 
-1. **`projector_const_one`** — `√(1−c²) ≤ √(2−2c)` for `c ∈ [0,1]`  
-   (sharp geometric constant `C_proj = 1`)
+- `spectral_cross_zero`: commutation and annihilation imply a zero cross term.
+- `hybrid_cross_zero`: the explicit overlap factorization and `U*U=I` imply
+  `J* W (I-U U*)=0`.
+- `hybrid_isometry`: the stated cross-zero, complement and isometry hypotheses
+  imply `V*V=I` for the hybrid dilation.
+- `hybrid_compression`: the stated label compression and cross-zero hypotheses
+  give `V* L V=U C U*+R E R`.
 
-2. **`polar_residual_le`** — if `α ≤ σ ≤ 1` then `|σ−1| ≤ 1−α`  
-   (polar factor residual)
+All assumptions are explicit; no `sorry` or additional axioms are used. This is
+partial operator formalization. Spectral functional calculus, construction of
+the sector overlap identities, the spectral-gap estimate and the channel norm
+bound are not yet formalized. The whole same-label theorem is not machine-checked.
 
-3. **`near_orthonormal_overlap`** — `√(2−2c) ≤ ε ⇒ 1−c ≤ ε²/2`  
-   (necessity / continuity of overlap)
+## Reproduce on Windows
 
-4. **`rank1_core_package`** — packages the three facts together
+From this `lean` directory:
 
-## What is *not* formalised
-
-- Full Hilbert-space / matrix SVD polar decomposition (uses Mathlib matrix theory beyond this file)
-- Diamond-norm channel estimates
-- Higher-rank synthesis operator as a Lean object
-
-The real-arithmetic content that underpins the sharp constant and polar residual is fully verified.
-
-## Reproduce
-
-```bash
-lake build RCProof.Core
+```powershell
+$env:PATH = "$env:USERPROFILE\.elan\bin;$env:PATH"
+$env:MATHLIB_CACHE_DIR = Join-Path (Get-Location) '.lake\mathlib-cache'
+lake update
+lake exe cache get
+lake build
 ```
 
-Requires Lean 4.35.0 and Mathlib.
+The local cache setting avoids the unwritable default cache location encountered
+on this laptop. `lake-manifest.json` pins transitive dependencies. The build can
+emit module-system and unused-variable warnings; these do not invalidate proofs.
+See [the local run report](../research/LOCAL_VALIDATION_2026-10-31.md) for scope
+and numerical evidence.

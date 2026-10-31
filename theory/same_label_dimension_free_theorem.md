@@ -451,6 +451,8 @@ the spectrum outside the exact unit sector (Q_j) is bounded above by (1-delta). 
 
 ## 7. Dimension-free exact-idempotent certificate
 
+**Audit qualification (31 October 2026):** the certificate below can be useful with actual or sufficiently sharp instance-dependent movement. Substituting either scalar movement envelope displayed here always gives an upper bound greater than 2, the trivial maximum channel distance. Thus these substitutions do not establish a nontrivial a priori exact-idempotent stability guarantee. The measurement-rounding bound is unaffected. See [the prior-art and certificate audit, Section 4](../literature/SAME_LABEL_PRIOR_ART_VETO_2026-10-31.md).
+
 Let the original measure-and-prepare channel have record margin
 
 [

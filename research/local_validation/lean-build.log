@@ -1,0 +1,39 @@
+⚠ [3137/3140] Replayed RCProof.Core
+warning: RCProof\Core.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof/Core.lean:18:44: Variable name `hc0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hc0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3138/3140] Built RCProof.Hybrid (21s)
+warning: RCProof\Hybrid.lean: imports `Mathlib.LinearAlgebra.Matrix.ConjTranspose` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof\Hybrid.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof/Hybrid.lean:12:0: automatically included section variable(s) unused in theorem `RCProof.spectral_cross_zero`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Hybrid.lean:17:0: automatically included section variable(s) unused in theorem `RCProof.hybrid_isometry`:
+  [DecidableEq y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Hybrid.lean:41:0: automatically included section variable(s) unused in theorem `RCProof.hybrid_cross_zero`:
+  [DecidableEq y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Hybrid.lean:51:0: automatically included section variable(s) unused in theorem `RCProof.hybrid_compression`:
+  [DecidableEq d]
+  [DecidableEq k]
+  [DecidableEq y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] [DecidableEq k] [DecidableEq y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [3139/3140] Built RCProof (18s)
+Build completed successfully (3140 jobs).
