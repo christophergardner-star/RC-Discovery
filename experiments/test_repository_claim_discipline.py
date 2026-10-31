@@ -21,10 +21,6 @@ SOURCE_COMMIT = "297ec2fcf6114598418863c5fcf13b7090364652"
 SOURCE_TREE = "99d063fea0157aa4afcbd0664a0aa0cf7161e387"
 SOURCE_PREFIX = "imports/RC-Packing-Feasible-Note"
 
-# The imported directory contains one deliberate extra file,
-# SNAPSHOT_MANIFEST.md, so its top-level tree is not expected to equal the
-# source root tree. Source-controlled root blobs and complete subtrees must
-# match Git exactly.
 EXPECTED_SOURCE_OBJECTS = {
     f"{SOURCE_PREFIX}/NOVELTY_STATEMENT.md":
         "3de4de1c91951cb8bd6acb0a0d7e4d35e1abe8f8",
@@ -134,11 +130,14 @@ def main() -> None:
         "STATUS.md",
         "AI_RIGHTS_AND_ATTRIBUTION.md",
         "paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md",
+        "theory/README.md",
         "theory/THEOREM_V1_FREEZE.md",
         "theory/same_label_dimension_free_theorem.md",
         "theory/BOUND_CANDIDATE_2026-10-31.md",
         "research/CERTIFICATE_PROGRESS_2026-10-31.md",
         "research/PHD_VALIDATION_REPORT_2026-10-31.md",
+        "research/END_TO_END_VERIFICATION_2026-10-31.md",
+        "research/FULL_WORK_AUDIT_2026-10-31.md",
         "research/CRUXY_SYNC_REPORT_297EC2_2026-10-31.md",
         "literature/PRIOR_ART_AND_ATTRIBUTION.md",
         "literature/DEEP_PRIOR_ART_VETO_2026-10-31.md",
@@ -171,7 +170,7 @@ def main() -> None:
             "potentially distinct; novelty unverified",
             SOURCE_COMMIT,
             SOURCE_TREE,
-            "seven commits and exactly six changed paths",
+            "FULL_WORK_AUDIT_2026-10-31.md",
             "AI_RIGHTS_AND_ATTRIBUTION.md",
         ],
     )
@@ -180,9 +179,20 @@ def main() -> None:
         [
             SOURCE_COMMIT,
             SOURCE_TREE,
-            "Seven commits; exactly six changed paths",
+            "10 valid cases",
+            "16 expected rejections",
             "AI-provider non-claim boundary",
             "Sharpness of coefficient two",
+        ],
+    )
+    require_markers(
+        "theory/README.md",
+        [
+            "Canonical entry points",
+            "Development notes that are no longer canonical",
+            "dimension_free_nu_via_naimark.md",
+            "packing_conditioned_rounding.md",
+            "packing_feasible_moving_povm.md",
         ],
     )
     require_markers(
@@ -203,7 +213,14 @@ def main() -> None:
     )
     require_markers(
         "AI_RIGHTS_AND_ATTRIBUTION.md",
-        ["Christopher Gardner", "OpenAI", "not authorised", "not legal advice"],
+        [
+            "Christopher Gardner",
+            "OpenAI",
+            "not authorised",
+            "not legal advice",
+            "Automated Git and platform metadata",
+            "Technical Git provenance",
+        ],
     )
     require_markers(
         f"{SOURCE_PREFIX}/SNAPSHOT_MANIFEST.md",
@@ -224,6 +241,15 @@ def main() -> None:
             "No path reported by the comparison was omitted",
             "No blind canonical promotion",
             "potentially distinct; novelty unverified",
+        ],
+    )
+    require_markers(
+        "research/FULL_WORK_AUDIT_2026-10-31.md",
+        [
+            "No fatal algebraic or logical defect was found",
+            "Validator defect found and repaired",
+            "What remains genuinely open",
+            "OpenAI and other AI providers are research-tool providers only",
         ],
     )
 
@@ -256,8 +282,10 @@ def main() -> None:
         "README.md",
         "STATUS.md",
         "paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md",
+        "theory/README.md",
         "theory/THEOREM_V1_FREEZE.md",
         "theory/same_label_dimension_free_theorem.md",
+        "research/FULL_WORK_AUDIT_2026-10-31.md",
     ]
     for relative in public_files:
         forbid_patterns(relative, prohibited)
@@ -267,8 +295,11 @@ def main() -> None:
         "STATUS.md",
         "AI_RIGHTS_AND_ATTRIBUTION.md",
         "paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md",
+        "theory/README.md",
         "theory/THEOREM_V1_FREEZE.md",
         "theory/same_label_dimension_free_theorem.md",
+        "research/END_TO_END_VERIFICATION_2026-10-31.md",
+        "research/FULL_WORK_AUDIT_2026-10-31.md",
         "research/CRUXY_SYNC_REPORT_297EC2_2026-10-31.md",
         "review/EXTERNAL_REVIEW_PACKET.md",
         "review/PROOF_DEPENDENCY_MAP.md",
