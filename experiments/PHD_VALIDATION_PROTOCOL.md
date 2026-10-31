@@ -2,29 +2,28 @@
 
 **Programme:** VIBE MATH / RC-Discovery  
 **Purpose:** local reproduction and hostile pre-publication audit  
-**Status:** executable evidence protocol; not a substitute for proof, peer review or novelty assessment
+**Status:** executable evidence protocol; not proof, peer review, external verification, or novelty certification
 
-## 1. What this protocol is for
+## 1. Purpose
 
-This protocol packages the repository's canonical mathematical checks into a reproducible local workflow. It is designed to expose errors before external review by testing:
+The protocol tests the canonical theorem package in a clean, reproducible order:
 
-1. theorem hypotheses and expected rejection cases;
-2. synthesis packing and polar-sector geometry;
-3. same-label completion and repeatability-gap control;
-4. the correctly typed labelled embedding \(J_{\mathcal K}\);
-5. exact hybrid-isometry identities;
-6. low-dimensional ancilla-assisted diamond-norm SDPs;
-7. the coefficient-two movement bound;
-8. record accessibility and the repaired exact-idempotent certificate;
-9. known counterexamples to stronger false claims;
-10. repository provenance, prior-art wording and claim discipline;
-11. the current Lean build.
+1. human-authorship and AI-provider non-claim policy;
+2. source provenance and claim discipline;
+3. raw theorem hypotheses and expected rejections;
+4. synthesis packing and polar-sector geometry;
+5. same-label completion and repeatability gap;
+6. typed hybrid-isometry identities;
+7. low-dimensional ancilla-assisted primal/dual SDPs;
+8. the coefficient-two movement bound;
+9. direct record accessibility and exact-idempotent rounding;
+10. residual-coupling rates;
+11. explicit counterexamples to stronger false statements;
+12. the currently formalised Lean declarations.
 
-A passing run means that all implemented finite tests and formalised lemmas agree with the stated repository version. It does **not** establish the full theorem, its optimality, its novelty, or publication readiness.
+A pass means the implemented finite checks agree with the audited repository state. It does not establish the universal theorem, optimality, novelty, or publication readiness.
 
-## 2. Clean local setup
-
-From a fresh clone:
+## 2. Clean setup
 
 ```bash
 git clone https://github.com/christophergardner-star/RC-Discovery.git
@@ -32,238 +31,178 @@ cd RC-Discovery
 python -m venv .venv-audit
 ```
 
-### Windows PowerShell
+Windows:
 
 ```powershell
 .\.venv-audit\Scripts\python.exe -m pip install --upgrade pip
 .\.venv-audit\Scripts\python.exe -m pip install -r experiments\requirements_validation.txt
 ```
 
-### Linux or macOS
+Linux/macOS:
 
 ```bash
 ./.venv-audit/bin/python -m pip install --upgrade pip
 ./.venv-audit/bin/python -m pip install -r experiments/requirements_validation.txt
 ```
 
-The pinned validation requirements include NumPy, SciPy, CVXPY, Clarabel and SCS. The TCL neural smoke test has separate dependencies and is not part of the canonical quantum-measurement theorem audit.
-
 ## 3. Quick profile
 
-The quick profile checks theorem algebra, hypotheses, negative controls, provenance and lightweight numerical families. It skips SDP optimization.
-
-### Windows
-
-```powershell
-.\.venv-audit\Scripts\python.exe experiments\run_phd_validation.py `
-  --profile quick `
-  --skip-lean `
-  --output research\local_validation\phd_quick
-```
-
-### Linux or macOS
-
 ```bash
-./.venv-audit/bin/python experiments/run_phd_validation.py \
+python experiments/run_phd_validation.py \
   --profile quick \
   --skip-lean \
   --output research/local_validation/phd_quick
 ```
 
-Quick profile order:
+The quick profile runs:
 
-1. repository claim-discipline audit;
-2. theorem-v1 contract audit without SDP;
-3. sharp Record-Margin stress test;
-4. synthesis-packing test;
-5. spectral-threshold rate and lower-bound family;
-6. extra-outcome counterexample;
-7. residual/gap counterexample.
+1. AI-rights/non-claim governance audit;
+2. repository claim/provenance audit;
+3. theorem contract without SDPs;
+4. Record-Margin stress test;
+5. synthesis-packing stress test;
+6. spectral-threshold lower-bound family;
+7. extra-outcome counterexample;
+8. incomplete-sector/gap counterexample.
 
 ## 4. Full profile
 
-The full profile adds the expensive adversarial and SDP work. It is the preferred pre-review run.
-
-### Windows
-
-```powershell
-.\.venv-audit\Scripts\python.exe experiments\run_phd_validation.py `
-  --profile full `
-  --output research\local_validation\phd_full
-```
-
-### Linux or macOS
-
 ```bash
-./.venv-audit/bin/python experiments/run_phd_validation.py \
+python experiments/run_phd_validation.py \
   --profile full \
   --output research/local_validation/phd_full
 ```
 
-Full profile additionally runs:
+The full profile runs every canonical `test_*.py` script. It adds:
 
-- exact same-label hybrid-dilation tests;
-- adversarial many-outcome and near-singular packing families;
-- primal/dual measurement-channel diamond SDPs;
-- the coefficient-two noncommuting-matrix audit;
-- record accessibility and the repaired certificate;
-- residual-coupling rate tests;
-- moving-POVM and extension tests.
+- the theorem contract with primal/dual SDPs;
+- exact same-label hybrid tests;
+- the earlier Naimark-completion regression test;
+- many-outcome, higher-rank and near-singular adversarial families;
+- the noncommuting coefficient-two audit;
+- record accessibility and repaired certificate tests;
+- residual-coupling and restricted linear-rate tests;
+- moving-POVM, redundancy and metastability extensions.
 
-The adversarial script runs before the constant-two script because the latter deliberately rechecks retained adversarial evidence.
+The adversarial script runs before the coefficient-two test because the latter deliberately rechecks retained adversarial evidence.
 
-## 5. Lean
+## 5. Platform launchers
 
-If `lake` is on the system path, the runner performs:
+Windows:
+
+```powershell
+.\scripts\run_phd_audit.ps1 -Profile full -RequireLean
+```
+
+Linux/macOS:
+
+```bash
+bash scripts/run_phd_audit.sh --profile full --require-lean
+```
+
+The launchers use an isolated `.venv-audit` environment. The governance audit is part of the selected profile and is not run as an untracked side step.
+
+## 6. Frozen theorem contract
+
+```bash
+python experiments/test_theorem_v1_contract.py --sdp-cases 4
+```
+
+The corrected contract validates raw inputs before numerical cleanup. It checks:
+
+- square shape, finite entries, Hermiticity, positivity and normalization;
+- single-outcome POVMs and exact zero effects;
+- rejection of nonzero labels without a near-unit sector;
+- synthesis injectivity and packed-rank capacity;
+- higher-rank and unequal-rank polar geometry;
+- \(P_jR=0\), POVM completion and \(\gamma_F\ge\delta\);
+- \(J_{\mathcal K}^*WU=D|T|\) and \(J_{\mathcal K}^*WR=0\);
+- \(V^*V=I\) and \(V^*\Lambda_jV=F_j\);
+- the incorrect historical \(J_q\) map as a required negative control;
+- channel SDPs and the coefficient-two bound.
+
+The retained end-to-end audit reports 10 valid cases, 16 expected rejections and 6 SDP checks.
+
+## 7. Lean
+
+If `lake` is available, the runner performs:
 
 ```bash
 cd lean
 lake build
 ```
 
-Use `--require-lean` to make absence of Lake a failure. Use `--skip-lean` when testing only Python.
+Use `--require-lean` to fail when Lake is absent. The evidence manifest hashes only repository-owned source under `lean/RCProof.lean` and `lean/RCProof/`; downloaded `.lake` dependencies are excluded.
 
-A successful Lean build certifies only the lemmas actually formalised. It does not certify the complete end-to-end theorem unless every dependency has been formalised.
+A successful build proves only declarations actually formalised.
 
-## 6. New theorem-v1 contract audit
+## 8. Optional application checks
 
-Run directly:
+The quantum theorem suite does not require PyTorch.
 
-```bash
-python experiments/test_theorem_v1_contract.py --sdp-cases 4
-```
-
-Fast algebra-only version:
+Application scripts:
 
 ```bash
-python experiments/test_theorem_v1_contract.py --skip-sdp
+python experiments/rc_qnd_certificate.py
+python experiments/rc_tcl_certificate.py
 ```
 
-The script tests valid rank-one, higher-rank, unequal-rank, residual and threshold-endpoint cases. It verifies:
-
-\[
-\sum_jE_j=I,
-\qquad
-U^*U=I,
-\qquad
-P_jR=0,
-\]
-
-\[
-\|P_j-Q_j\|_\infty
-\le
-\sqrt{1-\alpha^2},
-\]
-
-\[
-\sum_jF_j=I,
-\qquad
-F_iQ_j=\delta_{ij}Q_j,
-\qquad
-RE_jR\le(1-\delta)R,
-\]
-
-\[
-J_{\mathcal K}^*WU=D|T|,
-\qquad
-J_{\mathcal K}^*WR=0,
-\]
-
-\[
-V^*V=I,
-\qquad
-V^*\Lambda_jV=F_j,
-\qquad
-\|V-W\|=\|WU-J_{\mathcal K}\|.
-\]
-
-It also includes expected rejection tests for:
-
-- a nonzero label with no near-unit sector;
-- total packed rank exceeding dimension;
-- a singular synthesis operator;
-- an eigenvalue just below the threshold;
-- invalid threshold endpoints \(\delta=0\) and \(\delta=1/2\).
-
-The alternative polar-vector embedding \(J_q\) is included as a negative control. The test requires it to fail at least one identity on a discriminating nonorthogonal-sector example, preventing accidental reintroduction of the historical notation error.
-
-When SDPs are enabled, the script solves independent primal and dual problems, checks the primal-dual gap and feasibility residual, validates distance-0 and distance-2 anchors, and verifies the coefficient-two theorem bound on low-dimensional cases.
-
-## 7. Claim-discipline audit
-
-Run:
+The optional neural TCL smoke test requires PyTorch:
 
 ```bash
-python experiments/test_repository_claim_discipline.py
+python experiments/rc_tcl_conflict_smoke.py
 ```
 
-This test protects the public-facing repository from avoidable credibility failures. It checks:
+On Windows, a compatible Microsoft C++ runtime is also required. Tagged full GitHub Actions audits run the neural smoke separately on Linux with CPU PyTorch so a local runtime problem cannot be confused with a theorem failure.
 
-- the canonical theorem, doctoral document, prior-art policy and review packet exist;
-- the correct typed \(J_{\mathcal K}\) appears in canonical statements;
-- the coefficient-two bound and repaired certificate are present;
-- novelty remains explicitly unverified;
-- the doctoral document does not claim an awarded degree;
-- the Cruxy source commit and tree are current in the provenance manifest;
-- the historical Cruxy `full_proof.md` remains under `imports/` rather than canonical `theory/`;
-- prohibited public wording such as “first-ever”, “prior-art free”, “patentable” and “proven breakthrough” is absent;
-- selected local Markdown links resolve;
-- canonical Markdown contains no null or vertical-tab control characters and has balanced fenced code blocks.
+## 9. Retained evidence
 
-This is a publication-hygiene test, not a legal prior-art opinion.
+Each profile writes:
 
-## 8. Evidence retained by the runner
-
-Each run writes:
-
-- `summary.json` — machine-readable result manifest;
-- `summary.md` — human-readable table;
+- `summary.json` and `summary.md`;
 - one complete log per test;
-- Python, platform and package versions;
-- Git commit, branch and dirty-worktree status;
-- SHA-256 hashes of every executed test script;
-- Lean source hashes when Lean is run;
-- `requirements.lock.txt` from the active environment.
+- Git commit, branch and dirty-state information;
+- Python/platform and package versions;
+- SHA-256 hashes for executed scripts;
+- repository-owned Lean source hashes;
+- a package lock from the active environment.
 
-The individual theorem scripts also retain JSON evidence in `research/local_validation/`.
+SDP scripts separately retain primal/dual values, solver status, gaps and feasibility diagnostics.
 
-## 9. Failure policy
+## 10. Failure policy
 
-A failed check must not be hidden by rerunning until it disappears. Record:
+Do not hide a failure by repeatedly rerunning it. Record:
 
-1. exact commit;
-2. exact command;
-3. environment and package lock;
-4. random seed;
-5. complete log;
-6. whether the failure is deterministic;
-7. whether it invalidates a theorem hypothesis, a proof step, a numerical claim or only a tolerance;
-8. the smallest reproducible case.
+1. exact commit and command;
+2. package lock and platform;
+3. seed and complete log;
+4. determinism;
+5. smallest reproducer;
+6. whether it affects a hypothesis check, analytic step, numerical claim, tolerance, governance rule, or only an optional application.
 
-Use `--fail-fast` when isolating a failure. Use the default non-fail-fast mode when collecting a full failure matrix.
-
-## 10. Interpretation hierarchy
+## 11. Interpretation hierarchy
 
 From weakest to strongest:
 
-1. pure-state or random numerical witness;
-2. adversarial finite numerical test;
-3. independently solved primal/dual SDP with feasibility diagnostics;
-4. analytic proof reconstruction;
-5. machine-checked formal proof;
-6. independent expert proof reconstruction;
+1. random or pure-state witness;
+2. adversarial finite test;
+3. primal/dual SDP with feasibility diagnostics;
+4. analytic reconstruction;
+5. machine-checked proof;
+6. independent specialist reconstruction;
 7. peer review and community scrutiny.
 
-A result must never be described at a stronger level than the evidence actually supports.
+The repository must not describe a statement at a stronger level than its evidence supports.
 
-## 11. Current scientific status
-
-The tests are written around the canonical status:
+## 12. Current status
 
 \[
 \boxed{
 \text{internally reconstructed, computationally audited, partially formalised, novelty unverified}.
 }
-\]
 
-They are intended to make errors easy to discover, not to manufacture certainty.
+See:
+
+- [`../research/END_TO_END_VERIFICATION_2026-10-31.md`](../research/END_TO_END_VERIFICATION_2026-10-31.md);
+- [`../research/FULL_WORK_AUDIT_2026-10-31.md`](../research/FULL_WORK_AUDIT_2026-10-31.md);
+- [`../theory/README.md`](../theory/README.md).
