@@ -16,6 +16,8 @@ Updated: 31 October 2026
 | Binary moving-POVM transfer bound | **Internally proved** | Positive result using reachability plus post-move spectral gap. |
 | Synthesis-operator packing conditioner | **Validated geometric invariant** | (alpha=sigma_{min}(T)); polar factor gives simultaneous orthogonalization. |
 | Higher-rank polar packing lemma | **Internally proved** | Same synthesis construction works for arbitrary near-unit sector ranks. |
+
+| Per-sector polar movement bound | **Internally proved; numerically stress-tested** | For all ranks, \(\|P_j-R_j\|_\infty\le\sqrt{1-\alpha^2}\); 20k rank-1 + 10k higher-rank random cases gave 0 violations. |
 | Repeatability-admissible completion (F_j=R_j+CE_jC) | **Internally proved** | Handles (m<d) without forcing rank-one PVM completeness. |
 | Linear (O(delta)) spectral-threshold movement | **Refuted** | Explicit (alpha=1) family requires (Omega(sqrtdelta)) movement. |
 | Packing-conditioned many-outcome channel theorem | **Internally proved; non-optimal** | Positive bound with current (m)-dependent measurement-channel perturbation. |
