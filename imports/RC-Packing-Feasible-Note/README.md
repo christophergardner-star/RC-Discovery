@@ -1,46 +1,36 @@
 # Packing Condition for Approximate Quantum Measurements
 
-**Public entry point for the full research package from the RC packing-feasible work.**
-
 **Share this link:** https://github.com/Cruxy234/RC-Packing-Feasible-Note
 
-Related upstream programme: [christophergardner-star/RC-Discovery](https://github.com/christophergardner-star/RC-Discovery)
+Related upstream: [christophergardner-star/RC-Discovery](https://github.com/christophergardner-star/RC-Discovery)
 
----
+## Papers
 
-## Start here
+- **[`paper/long_paper.md`](paper/long_paper.md)** — Extended paper with full development, numerical evidence, prior-art discussion, and limitations.
+- **[`paper/short_paper.md`](paper/short_paper.md)** — Concise version for external attack.
 
-| Priority | File | What it is |
-|----------|------|------------|
-| **1** | [`paper/arxiv_ready.md`](paper/arxiv_ready.md) | Submission-ready short paper (author line, theorems, MQC) |
-| **2** | [`REVIEW_REQUEST.md`](REVIEW_REQUEST.md) | External review checklist for Theorems 1–3 |
-| **3** | [`lean/RCProof/Core.lean`](lean/RCProof/Core.lean) | Lean 4 + Mathlib proofs (zero `sorry`) |
+## Supporting notes (in order of development)
 
-## Full contents
+| File | Content |
+|------|---------|
+| `theory/PRIOR_ART_VETO_UPDATED.md` | Deeper literature search: no match for hybrid same-label theorem |
+| `theory/hybrid_stinespring_isometry.md` | Hybrid isometry construction and key identities |
+| `theory/PRIOR_ART_VETO.md` | Initial literature search |
+| `theory/adversarial_theorem_audit.md` | Extreme-case probes; bound holds |
+| `theory/diamond_norm_computation.md` | Pure-state diamond proxies |
+| `theory/constant_tightening.md` | Empirical constant ~2; rates consistent |
+| `theory/hybrid_isometry_verification.md` | Machine-precision check of hybrid isometry |
+| `theory/same_label_nu_attack.md` | Analytic attack on same-label ν |
+| `theory/residual_spectral_radius.md` | Identification of residual invariant (later resolved) |
+| `theory/correct_WU_J_relation.md` | Corrected overlap matrix elements |
+| `lean/RCProof/Core.lean` | Lean core of geometric constant |
 
-### Paper
-- `paper/arxiv_ready.md` — main manuscript
-- `paper/arxiv_draft.md` — earlier draft
-- `paper/end_to_end_demo.md` — synthetic detector MQC numbers
+## Headline
 
-### Theory
-- `theory/packing_feasible_moving_povm.md` — packing condition + rank-1/higher-rank
-- `theory/measurement_quality_certificate.md` — MQC draft
-- `theory/MQC_complete_status.md` — items 1–4 (sharp constant, estimation, FT illustration, audit)
-- `theory/items_5_7_complete.md` — items 5–7 (global C, higher-rank bounds, Lean obligations)
-
-### Lean
-- `lean/RCProof/Core.lean` — `projector_const_one`, `polar_residual_le`, `near_orthonormal_overlap`, `rank1_core_package`
-- `lean/README.md` — how to reproduce the build
-
-## Headline result
-
-A positive lower bound on $\sigma_{\min}(T)$ (synthesis operator of near-unit POVM sectors) is necessary and sufficient (up to constants) for quantitative rounding to a repeatable measurement.
-
-- Sharp geometric constant: $C_{\mathrm{proj}} = 1$
-- MQC: $\|\Phi-\Pi\|_\diamond \le C(\delta + (1-\alpha) + \sqrt{\eta/(\kappa\alpha)})$ with working $C=6$, conservative $C=8$
-- Algebraic core machine-checked in Lean 4
-
-## Status
-
-Public intermediate research package. Not peer-reviewed. Ready for external audit and arXiv submission by the author.
+Under packing condition \(\alpha = \sigma_{\min}(T) > 0\), the same-label completion \(F_j = Q_j + R E_j R\) admits a hybrid Stinespring isometry such that
+\[
+\nu \le 4\big(\sqrt{1-\alpha^2} + \sqrt{\delta}\big),
+\qquad
+\gamma_F \ge \delta.
+\]
+Composition with Record-Margin Stability yields a fully dimension-free certificate. Prior-art search found no exact match for the combined statement. Independent audit of the hybrid isometry remains the credibility gate.
