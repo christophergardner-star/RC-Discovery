@@ -37,6 +37,9 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 | Hybrid isometry \(V=J_{\mathcal K}U^*+WR\) | **Internally reconstructed theorem candidate** | Implements \(F_j=Q_j+R E_jR\) exactly. |
 | Outcome-count-independent movement | **Analytically refined; internally cross-checked** | \(\nu\le2\min\{1,\sqrt{1-\alpha^2}+\sqrt\delta\}\). Coefficient 2 not claimed optimal. |
 | Composite exact-idempotent certificate | **Repaired; useful explicit examples verified** | Direct record accessibility removes movement from the spectral-gap denominator. |
+| Sharpness of coefficient two | **Open** | Valid source searches report ratios about `0.18–0.47`; no family approaching `2` has been exhibited. |
+| Higher-rank uniformity | **Supported by the typed operator-norm argument and tests** | No rank-dependent factor appears in the current construction; full external reconstruction remains pending. |
+| Perturbative robustness | **Sketch only** | Requires an isolated threshold, a lower packing bound and fully quantified spectral/polar perturbation constants. |
 | External specialist verification | **Pending** | Required before presentation as an externally established theorem. |
 | Full Lean verification | **Open; operator progress verified** | Scalar and selected matrix/projection lemmas compile; complete spectral/channel proof remains open. |
 | Novelty | **Unverified** | No exact combined theorem located in searches, but absence of prior art is not proved. |
@@ -110,29 +113,31 @@ Canonical policy:
 | Item | Status | Notes |
 |---|---|---|
 | Source repository | **Synced** | `Cruxy234/RC-Packing-Feasible-Note`, branch `main`. |
-| Source commit | **Frozen in manifest** | `fcef89be09dd9167a5a94d887e34d5ef1a8d0746`. |
-| Source tree | **Recorded** | `2d0e9ef233a39aea8b1555a8d51db31bf934ef44`. |
-| Delta from previous import | **Complete** | Ten commits; exactly nine changed paths, all imported. |
+| Source commit | **Frozen in manifest** | `297ec2fcf6114598418863c5fcf13b7090364652`. |
+| Source tree | **Recorded** | `99d063fea0157aa4afcbd0664a0aa0cf7161e387`. |
+| Delta from previous import | **Complete** | Seven commits; exactly six changed paths, all imported. |
 | Root source files | **Hash-identical** | NOVELTY_STATEMENT, README, REVIEW_PACKAGE, REVIEW_REQUEST and STATUS match source blob SHAs. |
 | `lean/` subtree | **Hash-identical** | Tree SHA `c2b7e33e591d9e89d1859655052d85759352b031`. |
-| `paper/` subtree | **Hash-identical** | Tree SHA `23b5f1a2a565d6a578ecc4c751f6a19755d5aeb7`. |
-| `theory/` subtree | **Hash-identical** | Tree SHA `7beb09564e84e019160b42f4c674441bb3a3cd28`. |
-| Canonical promotion | **Audited, not blind** | New source files are preserved exactly but do not replace stronger typed, coefficient-two, accessibility and validation material. |
+| `paper/` subtree | **Hash-identical** | Tree SHA `0c0dc5b187f665df811a01088fe3a7e6b5a01d72`. |
+| `theory/` subtree | **Hash-identical** | Tree SHA `0f0f76897314689c6dba981e539eb06c5969af47`. |
+| Canonical promotion | **Audited, not blind** | New source files are preserved exactly but do not replace stronger typed, accessibility, validation and claim-boundary material. |
 
 Detailed records:
 
 - `imports/RC-Packing-Feasible-Note/SNAPSHOT_MANIFEST.md`;
-- `research/CRUXY_SYNC_REPORT_FCEF89_2026-10-31.md`;
+- `research/CRUXY_SYNC_REPORT_297EC2_2026-10-31.md`;
 - `research/CRUXY_REMERGE_AUDIT_2026-10-31.md`.
 
 Important source/canonical distinctions:
 
-- source `NOVELTY_STATEMENT.md` is not adopted as verified novelty;
-- source `REVIEW_PACKAGE.md` retains coefficient-four framing;
-- source `full_proof.md` uses ambiguous notation for \(J\);
-- source `paper/FINAL.md` is useful source material but not the canonical paper;
-- source Lean files do not formalise the complete theorem;
-- source recheck notes are evidence history, not the canonical executable validation suite.
+- source novelty statements remain literature-search positions, not verified novelty;
+- source `paper/FINAL.md` remains useful source material, not the canonical paper;
+- source `CLOSING_PROOFS.md` overstates several closures relative to the supplied derivations;
+- source sharpness searches are numerical evidence and do not establish the optimal constant;
+- source robustness arguments require explicit isolation and conditioning hypotheses;
+- source Lean files do not formalise the complete theorem.
+
+The imported snapshot is provenance, not canonical truth.
 
 ## Human authorship and AI-provider non-claim boundary
 
