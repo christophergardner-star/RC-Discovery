@@ -126,7 +126,10 @@ have record margin \(\kappa>0\) and idempotence defect
 \eta=\|\Phi^2-\Phi\|_\diamond.
 \]
 
-Let \(e<1/2\) bound label inaccessibility. For any valid measurement movement bound \(B_{\rm move}\), there is an explicit exactly idempotent channel \(\Pi\) such that
+Define the label inaccessibility by
+\(e=\max_{j:E_j\ne0}(1-\lambda_{\max}(E_j))\).
+The near-unit-sector hypothesis gives \(0\le e\le\delta<1/2\).
+For any valid measurement movement bound \(B_{\rm move}\), there is an explicit exactly idempotent channel \(\Pi\) such that
 
 \[
 \boxed{
