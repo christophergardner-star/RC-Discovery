@@ -4,170 +4,176 @@ Updated: 31 October 2026
 
 This ledger separates mathematical correctness, numerical evidence, formal verification, provenance, external review and novelty. They are not interchangeable.
 
+## Canonical scientific status
+
+\[
+\boxed{
+\text{internally reconstructed, computationally audited, partially formalised, novelty unverified}.
+}
+\]
+
+No public file should represent the work as externally proved, peer reviewed, fully machine checked, prior-art free, patentable, or a proven breakthrough.
+
 ## Core record-stability results
 
 | Item | Status | Notes |
 |---|---|---|
-| Sharp Record-Margin theorem | **Internally proved; independent reconstruction passed** | \(\|\Phi-\Pi\|_\diamond\le\sqrt{2\eta/\kappa}\). Exact prior theorem not located; novelty unverified. |
-| POVM spectral-gap extension | **Internally proved; independent reconstruction passed** | \(\|\Phi-\Pi\|_\diamond\le\sqrt{2\eta/(\kappa\gamma)}\). Novelty unverified. |
-| General dimension-free exact rounding of arbitrary almost-idempotent channels | **False / known obstruction** | General negative examples include regular-simplex entanglement-breaking channels. |
+| Sharp Record-Margin theorem | **Internally proved; reconstruction passed** | \(\|\Phi-\Pi\|_\diamond\le\sqrt{2\eta/\kappa}\); equality family recorded. |
+| POVM spectral-gap extension | **Internally proved; reconstruction passed** | \(\|\Phi-\Pi\|_\diamond\le\sqrt{2\eta/(\kappa\gamma)}\); qutrit sharpness family recorded. |
+| General exact rounding of arbitrary almost-idempotent channels | **False / obstructed** | No unrestricted dimension-free modulus is claimed. |
 | RC as a fundamental physical theory | **Not established** | No such claim is made. |
 
-## Moving-POVM programme
-
-| Item | Status | Notes |
-|---|---|---|
-| Local diagnostics alone imply nearby repeatability | **Refuted** | Constant-channel and regular-simplex obstructions. |
-| Same-label repeatability when \(m>d\) | **Impossible** | At most \(d\) nonzero mutually orthogonal unit sectors. |
-| Synthesis conditioner \(\alpha=\sigma_{\min}(T)\) | **Valid conditioning parameter; underlying geometry is prior art** | Detects linear dependence and the simplex endpoint. |
-| Polar orthogonalisation of rank-one and higher-rank sectors | **Internally proved / standard machinery** | Polar/Löwdin/fusion-frame ingredients are not claimed as new. |
-| Per-sector movement | **Internally proved; stress-tested** | \(\|P_j-Q_j\|_\infty\le\sqrt{1-\alpha^2}\). |
-| Same-label completion | **Internally proved** | \(F_j=Q_j+R E_jR\) is a POVM with exact unit sectors. |
-| Repeatability gap | **Internally proved** | For full threshold projections, \(\gamma_F\ge\delta\). |
-| Linear \(O(\delta)\) movement from threshold data alone | **Refuted** | Explicit perfectly packed family needs \(\Omega(\sqrt\delta)\) movement. |
-| Extra-outcome residual dump preserves closeness for free | **Refuted** | Exact counterexample gives measurement-channel distance \(2\). |
-| Residual spectral radius as independent missing invariant | **Eliminated** | It is automatically bounded by \(1-\delta\) on the residual complement. |
-
-## Same-label dimension-free theorem candidate
+## Same-label moving-POVM theorem candidate
 
 | Component | Status | Notes |
 |---|---|---|
-| Correct labelled embedding | **Reconciled and explicitly typed** | The theorem uses \(J_{\mathcal K}(x_1,\ldots,x_m)=(x_1,\ldots,x_m)\), not the alternative polar-vector embedding. |
-| Identity \(J_{\mathcal K}^*WU=D|T|\) | **Internally re-derived** | Historical source counter-checks used a different map \(J_q\). |
-| Hybrid isometry \(V=J_{\mathcal K}U^*+WR\) | **Internally reconstructed theorem candidate** | Implements \(F_j=Q_j+R E_jR\) exactly. |
-| Outcome-count-independent movement | **Analytically refined; internally cross-checked** | \(\nu\le2\min\{1,\sqrt{1-\alpha^2}+\sqrt\delta\}\). Coefficient 2 not claimed optimal. |
-| Composite exact-idempotent certificate | **Repaired; useful explicit examples verified** | Direct record accessibility removes movement from the spectral-gap denominator. |
-| Sharpness of coefficient two | **Open** | Valid source searches report ratios about `0.18–0.47`; no family approaching `2` has been exhibited. |
-| Higher-rank uniformity | **Supported by the typed operator-norm argument and tests** | No rank-dependent factor appears in the current construction; full external reconstruction remains pending. |
-| Perturbative robustness | **Sketch only** | Requires an isolated threshold, a lower packing bound and fully quantified spectral/polar perturbation constants. |
-| External specialist verification | **Pending** | Required before presentation as an externally established theorem. |
-| Full Lean verification | **Open; operator progress verified** | Scalar and selected matrix/projection lemmas compile; complete spectral/channel proof remains open. |
-| Novelty | **Unverified** | No exact combined theorem located in searches, but absence of prior art is not proved. |
+| Near-unit sectors | **Explicit hypothesis** | Every nonzero label must have a nonzero full threshold sector at \(1-\delta\). |
+| Packing conditioner | **Valid parameter; underlying geometry is prior art** | \(\alpha=\sigma_{\min}(T)>0\). |
+| Polar-rounded sectors | **Internally proved / standard machinery** | Pairwise orthogonal, rank preserving. |
+| Per-sector movement | **Internally proved; stress-tested** | \(\|P_j-Q_j\|_\infty\le\sqrt{1-\alpha^2}\). |
+| Correct labelled map | **Reconciled and typed** | \(J_{\mathcal K}(x_1,\ldots,x_m)=(x_1,\ldots,x_m)\), not the historical polar-vector map. |
+| Same-label completion | **Internally proved** | \(F_j=Q_j+RE_jR\) is a POVM with exact unit sectors. |
+| Repeatability gap | **Internally proved** | \(\gamma_F\ge\delta\). |
+| Hybrid isometry | **Internally reconstructed** | \(V=J_{\mathcal K}U^*+WR\), with \(V^*V=I\) and \(V^*\Lambda_jV=F_j\). |
+| Dimension-free measurement movement | **Internally reconstructed; numerically cross-checked** | \(\nu\le2\min\{1,\sqrt{1-\alpha^2}+\sqrt\delta\}\). |
+| Direct exact-idempotent certificate | **Internally derived; tested** | Accessibility route avoids putting movement inside the gap denominator. |
+| Coefficient-two sharpness | **Open** | Valid searches show substantial slack; no saturating family is known. |
+| Higher-rank uniformity | **Supported internally** | No rank factor appears in the typed operator-norm construction. |
+| Perturbative robustness | **Conditional/sketch level** | Requires an isolated threshold and quantified conditioning hypotheses. |
+| External specialist verification | **Pending** | Principal credibility gate. |
+| Novelty | **Unverified** | No exact full-chain prior theorem located; absence is not proved. |
 
-## Executable validation
+## Negative results and boundary findings
+
+| Statement | Status |
+|---|---|
+| Local diagnostics alone force nearby repeatability | **Refuted** |
+| More than \(d\) nonzero same-label repeatable sectors fit in dimension \(d\) | **Impossible** |
+| Threshold-only movement is generically linear in \(\delta\) | **Refuted; \(\sqrt\delta\) can be necessary** |
+| Residual mass can be dumped into a new projective outcome for free | **Refuted; distance can be 2** |
+| Pure-state system-only sampling always equals the diamond norm | **Not assumed / false in general** |
+| Historical polar-vector map equals the direct-sum inclusion | **Refuted by typed negative control** |
+| Imported single-defect sketch proves coefficient-two sharpness | **Not established** |
+| Global Lipschitz robustness without threshold isolation | **Not established** |
+
+## End-to-end executable validation
+
+The latest comprehensive review is recorded in:
+
+- `research/END_TO_END_VERIFICATION_2026-10-31.md`;
+- `research/FULL_WORK_AUDIT_2026-10-31.md`.
 
 | Item | Status | Notes |
 |---|---|---|
-| Clean CI quick audit | **Passed** | Theorem algebra, hypotheses, provenance, claim discipline and counterexamples. |
-| Clean CI full SDP audit | **Passed** | Fourteen checks, including adversarial families and primal/dual SDPs. |
-| Pinned Lean build | **Passed within current scope** | Does not formalise the complete theorem. |
-| Frozen theorem contract | **Passed implemented cases** | 8 valid cases, 6 expected rejections, 5 primal/dual SDP checks; maximum identity error \(4.97\times10^{-15}\). |
-| Adversarial same-label audit | **Passed implemented cases** | 408 valid cases, 3 expected rejections, 12 SDPs; maximum identity residual \(1.35\times10^{-14}\). |
-| Record-accessibility audit | **Passed implemented cases** | 7 exact binary cases, 12 random quantum cases, 26 primal/dual SDPs. |
-| Numerical interpretation | **Evidence, not proof** | Passing finite computations do not establish the general theorem, novelty or peer review. |
+| All canonical `test_*.py` scripts | **Passed** | 16/16 in the retained end-to-end audit. |
+| Corrected theorem contract | **Passed implemented cases** | 10 valid cases, 16 expected rejections, 6 primal/dual SDP checks; max identity residual about \(6.42\times10^{-15}\). |
+| Adversarial same-label suite | **Passed implemented cases** | 408 valid cases and 12 full SDPs. |
+| Record-accessibility suite | **Passed implemented cases** | 26 primal/dual SDPs. |
+| Residual-rate suite | **Passed implemented cases** | 20 primal/dual SDPs. |
+| Canonical full profile | **Passed** | Numerical, algebraic, provenance and counterexample tests. |
+| Pinned Lean build | **Passed within formalised scope** | Does not prove the complete theorem. |
+| Input-validation review | **Defect found and repaired** | Raw Hermiticity/PSD/normalisation now checked before cleanup; one-outcome and exact-zero labels handled correctly. |
+| Optional PyTorch TCL neural smoke | **Environment-separated** | Blocked on audited Windows runtime; dedicated Linux CI job added for tagged full audits. |
+| Numerical interpretation | **Evidence, not proof** | Finite checks do not establish the universal theorem or novelty. |
 
-Canonical validation report:
-
-- `research/PHD_VALIDATION_REPORT_2026-10-31.md`
-
-Canonical local runner:
+Canonical runner:
 
 - `experiments/run_phd_validation.py`
+
+Canonical theory map:
+
+- `theory/README.md`
 
 ## Lean formalisation
 
 | Item | Status |
 |---|---|
-| `projector_const_one` | **Machine checked; zero `sorry`** |
-| `polar_residual_le` | **Machine checked; zero `sorry`** |
-| `near_orthonormal_overlap` | **Machine checked; zero `sorry`** |
-| `rank1_core_package` | **Machine checked; zero `sorry`** |
-| Hilbert-space polar theorem | **Not formalised** |
-| Hybrid isometry and label compression | **Machine checked under explicit matrix hypotheses** |
-| Residual projection and spectral-envelope compression | **Machine checked under explicit hypotheses** |
-| Derivation of all spectral-sector hypotheses | **Not formalised** |
-| Coefficient-two analytic bridge | **Not fully formalised** |
-| Diamond-norm transfer and end-to-end certificate | **Not formalised** |
+| Scalar/core lemmas | **Machine checked; zero `sorry`** |
+| Hybrid matrix identities | **Machine checked under explicit hypotheses** |
+| Residual projection/compression | **Machine checked under explicit hypotheses** |
+| Axiom audit | **Passed current declarations** | No `sorryAx` or custom axioms in audited theorem declarations. |
+| Full spectral-sector construction | **Not formalised** |
+| Principal-angle theorem end to end | **Not formalised** |
+| Coefficient-two analytic bridge | **Not formalised** |
+| Diamond-norm transfer | **Not formalised** |
+| Accessibility certificate end to end | **Not formalised** |
 
-The imported Cruxy Lean files are preserved exactly under `imports/`. They prove elementary algebraic consequences under supplied hypotheses and are not promoted as an end-to-end formalisation.
+The validation runner now hashes only repository-owned Lean sources, not downloaded `.lake` dependencies.
+
+## Cruxy source synchronisation
+
+| Item | Status | Notes |
+|---|---|---|
+| Source repository | **Synced** | `Cruxy234/RC-Packing-Feasible-Note`, branch `main`. |
+| Source commit | **Recorded** | `297ec2fcf6114598418863c5fcf13b7090364652`. |
+| Source tree | **Recorded** | `99d063fea0157aa4afcbd0664a0aa0cf7161e387`. |
+| Source paths | **Complete at recorded commit** | Git-object parity checked under `imports/RC-Packing-Feasible-Note/`. |
+| Canonical promotion | **Audited, not blind** | Imported material does not override stronger typed and tested canonical work. |
+
+Imported material remains provenance. In particular, source novelty statements, `CLOSING_PROOFS.md`, informal robustness claims, and source Lean declarations under supplied hypotheses are not promoted as final conclusions.
 
 ## Prior-art boundary
 
-The following are treated explicitly as prior art and are not claimed by RC-Discovery:
+Established ingredients are credited and not claimed, including polar/Löwdin orthogonalisation, frame/fusion-frame synthesis, Naimark and Stinespring dilation, KSW continuity, repeatability criteria, POVM projectivisation, projective simulation, diamond-norm/SDP methods, almost-idempotent channel structure, and known obstruction families.
 
-- polar / Löwdin / Fan–Hoffman / Higham orthogonalisation;
-- frame and fusion-frame synthesis theory;
-- Naimark and Stinespring dilation;
-- Kretschmann–Schlingemann–Werner continuity;
-- repeatability criteria for discrete POVMs;
-- de la Salle and earlier POVM orthogonalisation/projectivisation;
-- projective simulation of POVMs, including Kotowski–Oszmaniec;
-- Watrous diamond-norm and SDP theory;
-- Kitaev's almost-idempotent channel structure;
-- the general regular-simplex obstruction.
+The only object being investigated as potentially distinct is the complete typed chain
 
-The only potentially distinct object is the complete, correctly typed synthesis-conditioned same-label chain. It remains:
+\[
+\boxed{
+\text{synthesis packing}
+\to
+\text{same-label hybrid completion}
+\to
+\text{dimension-free operational movement}
+\to
+\text{record accessibility}
+\to
+\text{exact idempotent record process}.
+}
+\]
+
+Current label:
 
 \[
 \boxed{\text{potentially distinct; novelty unverified}.}
 \]
 
-Canonical policy:
+Canonical policies:
 
 - `literature/PRIOR_ART_AND_ATTRIBUTION.md`;
 - `literature/NOVELTY_LEDGER.md`;
 - `literature/DEEP_PRIOR_ART_VETO_2026-10-31.md`.
 
-## Complete Cruxy source synchronisation
-
-| Item | Status | Notes |
-|---|---|---|
-| Source repository | **Synced** | `Cruxy234/RC-Packing-Feasible-Note`, branch `main`. |
-| Source commit | **Frozen in manifest** | `297ec2fcf6114598418863c5fcf13b7090364652`. |
-| Source tree | **Recorded** | `99d063fea0157aa4afcbd0664a0aa0cf7161e387`. |
-| Delta from previous import | **Complete** | Seven commits; exactly six changed paths, all imported. |
-| Root source files | **Hash-identical** | NOVELTY_STATEMENT, README, REVIEW_PACKAGE, REVIEW_REQUEST and STATUS match source blob SHAs. |
-| `lean/` subtree | **Hash-identical** | Tree SHA `c2b7e33e591d9e89d1859655052d85759352b031`. |
-| `paper/` subtree | **Hash-identical** | Tree SHA `0c0dc5b187f665df811a01088fe3a7e6b5a01d72`. |
-| `theory/` subtree | **Hash-identical** | Tree SHA `0f0f76897314689c6dba981e539eb06c5969af47`. |
-| Canonical promotion | **Audited, not blind** | New source files are preserved exactly but do not replace stronger typed, accessibility, validation and claim-boundary material. |
-
-Detailed records:
-
-- `imports/RC-Packing-Feasible-Note/SNAPSHOT_MANIFEST.md`;
-- `research/CRUXY_SYNC_REPORT_297EC2_2026-10-31.md`;
-- `research/CRUXY_REMERGE_AUDIT_2026-10-31.md`.
-
-Important source/canonical distinctions:
-
-- source novelty statements remain literature-search positions, not verified novelty;
-- source `paper/FINAL.md` remains useful source material, not the canonical paper;
-- source `CLOSING_PROOFS.md` overstates several closures relative to the supplied derivations;
-- source sharpness searches are numerical evidence and do not establish the optimal constant;
-- source robustness arguments require explicit isolation and conditioning hypotheses;
-- source Lean files do not formalise the complete theorem.
-
-The imported snapshot is provenance, not canonical truth.
-
 ## Human authorship and AI-provider non-claim boundary
 
-| Item | Status | Notes |
-|---|---|---|
-| Human research direction | **Christopher Gardner** | Selects questions, controls canonical statements, interprets evidence and controls publication decisions. |
-| AI systems | **Research tools only** | Used for assistance with derivation, code, testing, auditing, editing, literature triage and formalisation. |
-| AI providers as claimants | **Not designated** | Not designated as authors, inventors, owners, assignees, sponsors, endorsers or claimants. |
+| Item | Status |
+|---|---|
+| Human author and research director | **Christopher Gardner** |
+| AI systems | **Research tools only** |
+| OpenAI or another provider designated as author/inventor/owner/claimant | **No** |
+| Automated tool or bot commit metadata treated as scientific attribution | **No** |
 
 Canonical notice:
 
 - `AI_RIGHTS_AND_ATTRIBUTION.md`
 
-This is a repository-governance statement, not a legal opinion or substitute for qualified advice.
+This is a repository-governance statement, not a legal opinion.
 
-## RC-TCL application bridge
-
-| Item | Status | Notes |
-|---|---|---|
-| Task-horizon affine rounding identity | **Derived elementary result** | Exact for frozen quadratic memory under isolated probe dynamics. |
-| Anchor-conflict variance | **Derived diagnostic** | Detects stable compromise anchors. |
-| “Locked conflict predicts more next-step forgetting” | **Refuted in smoke test** | Immediate forgetting moved in the opposite direction. |
-| Locked conflict vs joint accuracy | **Supported in smoke test** | Pearson \(r=-0.312\), \(p=7.97\times10^{-7}\). |
-| Idempotence in continual learning as RC novelty | **Vetoed** | Prior work already uses idempotence in continual learning. |
-
-## Doctoral-style consolidation
+## Secondary RC applications
 
 | Item | Status | Notes |
 |---|---|---|
-| Doctoral-style monograph | **Pushed** | `paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md`. |
-| Theorem v1 freeze | **Pushed** | `theory/THEOREM_V1_FREEZE.md`. |
-| External-review packet | **Pushed** | `review/`. |
-| Degree status | **Not applicable** | Doctoral-style in depth and structure; not an awarded or examined thesis. |
+| Redundancy-to-margin formulas | **Exact known-information corollaries** | Independent fragments can improve margin; correlated multiplicity can fail. |
+| Metastability transfer | **Internally derived structured corollary** | Applies only near classical record-producing structure. |
+| TCL affine horizon identity | **Derived elementary result** | Separate from the quantum theorem. |
+| Locked conflict predicts immediate forgetting | **Refuted in smoke test** | Initial hypothesis failed. |
+| Locked conflict versus joint accuracy | **Supported in synthetic smoke test** | Application evidence only. |
+
+## Current external gates
+
+1. Independent human reconstruction of the typed same-label theorem.
+2. Specialist audit of the coefficient-two bridge and accessibility certificate.
+3. Complete Lean formalisation of the operator/channel chain.
+4. Definitive prior-art and novelty assessment.
+5. Independent reproduction outside the author-controlled repository.
+6. Optimal-constant and quantified robustness work.
