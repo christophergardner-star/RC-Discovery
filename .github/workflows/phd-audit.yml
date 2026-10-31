@@ -37,7 +37,6 @@ jobs:
           python experiments/run_phd_validation.py \
             --profile quick \
             --skip-lean \
-            --require-lean=false \
             --output research/ci_validation/quick
 
       - name: Upload quick-audit evidence
