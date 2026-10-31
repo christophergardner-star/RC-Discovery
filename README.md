@@ -63,10 +63,7 @@ and, for the associated measurement channels,
 }
 \]
 
-The coefficient was reduced from 4 to 2 in [the follow-up analytic
-audit](theory/BOUND_CANDIDATE_2026-10-31.md); optimality is not claimed. See
-[the verified progress report](research/VERIFIED_PROGRESS_2026-10-31.md) for
-the repaired record certificate, restricted linear rates and new Lean lemmas.
+The coefficient was reduced from 4 to 2 in [the follow-up analytic audit](theory/BOUND_CANDIDATE_2026-10-31.md); optimality is not claimed. See [the verified progress report](research/VERIFIED_PROGRESS_2026-10-31.md) for the repaired record certificate, restricted linear rates and new Lean lemmas.
 
 The operational bound is constructed using a correctly typed labelled isometry
 
@@ -102,8 +99,7 @@ have record margin \(\kappa>0\) and idempotence defect
 \eta=\|\Phi_E^2-\Phi_E\|_\diamond.
 \]
 
-Direct record accessibility and projection give an exactly idempotent channel
-\(\Pi\). For any valid measurement-movement upper bound \(b\), it satisfies
+Direct record accessibility and projection give an exactly idempotent channel \(\Pi\). For any valid measurement-movement upper bound \(b\), it satisfies
 
 \[
 \boxed{
@@ -117,10 +113,7 @@ b+2\sqrt{1-\alpha^2}+
 }
 \]
 
-The bound may also be capped at 2. Unlike the earlier transfer certificate,
-movement is not divided by the spectral threshold. It gives nontrivial
-guarantees on explicit families. See [the full proof and
-checks](research/CERTIFICATE_PROGRESS_2026-10-31.md).
+The bound may also be capped at 2. Unlike the earlier transfer certificate, movement is not divided by the spectral threshold. It gives nontrivial guarantees on explicit families. See [the full proof and checks](research/CERTIFICATE_PROGRESS_2026-10-31.md).
 
 There is no explicit dependence on the number of outcomes, Hilbert-space dimension or total packed rank.
 
@@ -232,11 +225,7 @@ Machine checked with Lean 4 + Mathlib and zero `sorry`:
 - `near_orthonormal_overlap`
 - `rank1_core_package`
 
-Four rectangular-matrix lemmas in `Hybrid.lean` and five projection/compression
-lemmas in `Gap.lean` also compile without `sorry`. They establish the hybrid
-isometry and compression identities under explicit hypotheses, and the
-operator-order step behind the residual spectral gap. See [formalization
-scope](lean/README.md).
+Four rectangular-matrix lemmas in `Hybrid.lean` and five projection/compression lemmas in `Gap.lean` also compile without `sorry`. They establish the hybrid isometry and compression identities under explicit hypotheses, and the operator-order step behind the residual spectral gap. See [formalization scope](lean/README.md).
 
 Not yet formalised:
 
@@ -244,6 +233,22 @@ Not yet formalised:
 - derivation of all typed spectral-sector hypotheses for the hybrid isometry;
 - the diamond-norm channel step;
 - the complete composite theorem.
+
+## Doctoral-style research package
+
+The consolidated doctoral-level account of the programme is:
+
+- [`paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md`](paper/VIBE_MATH_DOCTORAL_RESEARCH_DOCUMENT.md)
+
+The frozen theorem and external-audit materials are:
+
+- [`theory/THEOREM_V1_FREEZE.md`](theory/THEOREM_V1_FREEZE.md)
+- [`review/README.md`](review/README.md)
+- [`review/EXTERNAL_REVIEW_PACKET.md`](review/EXTERNAL_REVIEW_PACKET.md)
+- [`review/PROOF_DEPENDENCY_MAP.md`](review/PROOF_DEPENDENCY_MAP.md)
+- [`review/REPRODUCIBILITY_GUIDE.md`](review/REPRODUCIBILITY_GUIDE.md)
+
+These documents use the latest corrected state: the coefficient-two movement bound, the accessibility-based exact-idempotent certificate, the correctly typed labelled inclusion, partial Lean operator formalisation, and conservative prior-art wording. They are doctoral-style in depth and structure, but are not represented as an awarded thesis or peer-reviewed result.
 
 ## Current priorities
 
