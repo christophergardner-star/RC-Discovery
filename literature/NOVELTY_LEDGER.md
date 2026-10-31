@@ -1,6 +1,6 @@
 # Novelty and Prior-Art Ledger
 
-Updated: 29 October 2026.
+Updated: 31 October 2026.
 
 ## Confirmed neighbouring results
 
@@ -22,6 +22,20 @@ Busch, Grabowski and Lahti, *Repeatable measurements in quantum theory: Their ro
 
 For finite discrete POVMs, repeatable implementation is possible exactly when every nonzero effect has eigenvalue 1.
 
+### POVM orthogonalization / projectivization
+
+Mikael de la Salle, *Orthogonalization of Positive Operator Valued Measures*, Comptes Rendus Mathématique 360 (2022), DOI 10.5802/crmath.326.
+
+This work proves quantitative rounding of almost-orthogonal POVMs to PVMs in a state-dependent (L_2)-type metric and improves earlier finite-dimensional results.
+
+This is mandatory prior art for any RC claim of “almost projective POVM implies nearby projective measurement.”
+
+### Polar / Löwdin orthogonalization
+
+The fact that the polar factor is a closest matrix with orthonormal columns in unitarily invariant norms is classical (Fan–Hoffman / Higham / Löwdin orthogonalization).
+
+No novelty claim belongs to the polar step itself.
+
 ### QMSM metastability
 
 Li, Lin and Ragone, *Quantum Markov State Models for Metastable Dynamics*, arXiv:2609.40214 (2026).
@@ -35,44 +49,88 @@ Zwolak, Riedel and Zurek, *Amplification, Redundancy, and Quantum Chernoff Infor
 ### 1. Sharp Record-Margin theorem
 
 [
-|\Phi-\Pi|_\diamond\le\sqrt{2\eta/\kappa}.
+|Phi-Pi|_diamondlesqrt{2eta/kappa}.
 ]
+
+Independent proof reconstruction on 31 October 2026: **survives**.
+
+The proof should explicitly cite:
+
+- the state-optimization characterization of the diamond norm for Hermiticity-preserving maps,
+- the normalized post-selection / gentle-projection trace-distance inequality.
 
 ### 2. Repeatability-admissible POVM extension
 
 [
-|\Phi-\Pi|_\diamond
-\le
-\sqrt{2\eta/(\kappa\gamma)}.
+|Phi-Pi|_diamond
+le
+sqrt{2eta/(kappagamma)}.
 ]
 
-Neither exact inequality has yet been located in prior work.
+Independent proof reconstruction on 31 October 2026: **survives**.
+
+Neither exact RC inequality has yet been located in prior work.
 
 ## Moving-POVM result status
 
-The broad moving-POVM conjecture is **not novel because it is false**.
+The broad moving-POVM conjecture based only on local diagnostics is false.
 
-The session instead produced:
+The session has now produced:
 
 - an elementary packing inequality,
 - a direct same-label packing no-go,
 - a binary positive transfer theorem,
-- a clear reduction of the open problem to the many-outcome packing-feasible regime.
+- a synthesis-operator conditioner for many-outcome near-unit sectors,
+- a constructive polar orthogonalization lemma valid at arbitrary rank,
+- an explicit repeatability-admissible POVM completion,
+- a non-optimal many-outcome channel theorem with an (m)-dependent perturbation term.
 
-The regular-simplex obstruction must be viewed in light of Chenxiao's 2026 negative result, which already uses the same geometric mechanism at the full channel level.
+### Important correction
 
-No novelty claim should be attached to the existence of the simplex obstruction itself.
+The 31 October proposed linear effect movement
 
-The potentially useful contribution is the RC parameter-level diagnosis: why local record margin, local reachability and near-unit effect norms all fail to detect the obstruction.
+[
+O!left(delta+sqrt{1-alpha^2}ight)
+]
+
+is too strong when (delta) only specifies a near-unit spectral threshold.
+
+An explicit (d=4,m=3) family has perfect packing (alpha=1) but requires order-(sqrtdelta) movement.
+
+See:
+
+- theory/packing_conditioned_rounding.md
+- experiments/test_spectral_threshold_rate.py
+- research/INDEPENDENT_PROOF_AUDIT_2026-10-31.md
+
+The correct generic rate must permit square-root spectral-threshold dependence unless stronger whole-effect control is assumed.
+
+### Current novelty boundary
+
+No novelty claim should be attached to:
+
+- the polar decomposition,
+- nearest orthonormal-frame properties,
+- the general fact that almost-projective POVMs can be rounded,
+- the regular-simplex obstruction itself.
+
+The potentially distinct RC contribution is the combination of:
+
+- near-unit sector synthesis conditioning,
+- repeatability-admissible completion,
+- record-margin and idempotence control,
+- a downstream diamond-norm stability certificate.
+
+That combination remains **novelty unverified**.
 
 ## Before publication
 
 Required:
 
-1. independent proof reconstruction,
-2. expert search in POVM perturbation and frame theory,
-3. comparison with stability results for nearly orthogonal frames/subspaces,
-4. proof-assistant or second-researcher verification,
+1. outcome-count-independent measurement-channel perturbation bound, or a proof that some count dependence is unavoidable,
+2. comparison against de la Salle and the earlier finite-dimensional projectivization results it cites,
+3. independent reconstruction of the packing-conditioned theorem,
+4. proof-assistant or second-researcher verification of the core finite-dimensional lemmas,
 5. norm-convention audit.
 
 ## Continual-learning bridge
@@ -83,7 +141,7 @@ Liu et al., *IDER: IDempotent Experience Replay for Reliable Continual Learning*
 
 IDER already uses idempotence directly in continual learning, including an idempotence loss and an idempotence-distillation objective. Therefore:
 
-- "idempotence for continual learning" is **not** an RC novelty claim,
+- “idempotence for continual learning” is **not** an RC novelty claim,
 - projection-style stability is **not** an RC novelty claim,
 - quadratic parameter anchoring is **not** an RC novelty claim.
 
@@ -95,6 +153,6 @@ Current status:
 
 - exact diagonal/horizon rounding identity: **derived elementary math; no novelty claim**,
 - anchor-barycentre decomposition: **standard quadratic algebra; no novelty claim**,
-- using horizon rounding + locked-anchor conflict as a predictor of TCL forgetting: **potentially distinct application/diagnostic; novelty unverified**.
+- using horizon rounding + anchor conflict as a retained/joint-performance diagnostic: **potentially distinct application; novelty unverified**.
 
 A literature veto is required across EWC/Laplace consolidation, parameter-conflict diagnostics, projection-based continual learning, and idempotent neural-network training before stronger wording is allowed.
