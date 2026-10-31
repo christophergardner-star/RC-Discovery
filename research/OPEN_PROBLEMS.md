@@ -51,32 +51,44 @@ See:
 
 - theory/packing_conditioned_rounding.md
 
-## A. Main target: remove the outcome-count factor
+## A. Outcome-count factor: internally resolved at the existence level
 
-The current positive many-outcome theorem uses the crude estimate
+A common Naimark-dilation construction now gives a repeatability-admissible POVM whose measurement channel is within an absolute, outcome-count-independent distance of the original measurement channel.
+
+See:
+
+- theory/dimension_free_nu_via_naimark.md
+- experiments/test_dimension_free_naimark.py
+
+The current theorem candidate gives
 
 [
-|Phi-widetildePhi|_diamond
-le
-sum_j|E_j-F_j|_infty.
+nu
+=
+|mathcal M_E-mathcal M_F|_diamond
+=
+Oleft(
+sqrt{1-alpha^2}+sqrtdelta
+right),
 ]
 
-This introduces an (m)-factor.
+with no dependence on (m) or (d).
 
-The highest-value open problem is now:
+This corrects the earlier conjectured linear dependence on (delta); the explicit lower-bound family already shows that (sqrtdelta) is generically necessary under spectral-threshold-only assumptions.
 
-> Can the joint POVM structure be used to prove an outcome-count-independent bound for
-> [
-> |mathcal M_E-mathcal M_F|_diamond?
-> ]
+### New highest-value target
 
-Possible routes:
+The remaining bottleneck is no longer the (m)-factor.
 
-1. common Stinespring/Naimark dilation,
-2. square-root measurement operators,
-3. direct SDP dual bound for the measurement-channel difference,
-4. a coupling argument exploiting (sum_j(E_j-F_j)=0),
-5. a state-dependent orthogonalization theorem converted into operator/diamond control.
+It is now:
+
+> Can the repeatability spectral gap of the Naimark-completed POVM be bounded directly from the packing/spectral data, or can the RC record-rounding step be reformulated without a separate gap parameter?
+
+A secondary question is whether the same outcome-independent bound can be proved for the explicit residual formula
+
+[
+F_j=Q_j+RE_jR.
+]
 
 ## B. Sharp spectral-threshold rate
 
