@@ -17,7 +17,6 @@ comparison target is the quantitative guarantee for the prescribed unweighted
 completion and supplied records; broad existence alone is not a defensible
 novelty claim.
 
-
 ## Current theorem candidate
 
 Let \(\{E_j\}_{j=1}^m\) be a finite POVM on a finite-dimensional Hilbert space. Fix \(0<\delta<1/2\). For every nonzero outcome, let \(P_j\neq0\) be the full spectral projection of \(E_j\) onto eigenvalues at least \(1-\delta\).

@@ -2,9 +2,9 @@
   "seed": 2026103141,
   "tolerance": 2e-08,
   "scope": "Exact finite rational checks plus floating-point diagnostics; not a novelty or formal proof certificate.",
-  "starting_commit": "9bb31bdc368fb7de21a229a5ce42a7ce4daa9cd9",
+  "starting_commit": "e6f1f74de37893640e58d569445cd0b88abc420d",
   "source_hashes": {
-    "experiments\\verify_literature_comparison.py": "d8d83cfbd25f37e02f8cb6c829ab011310784ed3f639f3427a8a25964e799c99",
+    "experiments\\verify_literature_comparison.py": "18fccca6b4388db70238aba247f860ae2987ba741341beb9a7aa4c939606b09d",
     "experiments\\test_theorem_v1_contract.py": "24d493aaae4dad76f629c9a872742ad5689539fe1d668f565ff05e55346442a8",
     "experiments\\test_adversarial_same_label.py": "f948e50a44c718ebcfb285d4e77f886f37ee108c0b882188143bddb799acc189",
     "theory\\THEOREM_V1_FREEZE.md": "bc04446016399082f5a0c88a23d3279a08def2270d4172809bd422baa309282b"
