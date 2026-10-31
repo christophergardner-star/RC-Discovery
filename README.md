@@ -6,9 +6,9 @@
 
 > **Vibe to generate. Audit to believe.**
 
-RC-Discovery separates conjecture, numerical evidence, internal proof reconstruction, machine-checked lemmas, external verification, provenance and novelty. Those categories are not interchangeable.
+RC-Discovery separates conjecture, numerical evidence, internal proof reconstruction, machine-checked lemmas, external verification, provenance and novelty. These categories are not interchangeable.
 
-AI systems are used as research tools for derivation support, coding, testing, adversarial auditing, editing, literature triage and formalisation assistance. They are not designated as authors, inventors, owners, sponsors, endorsers or claimants. See [`AI_RIGHTS_AND_ATTRIBUTION.md`](AI_RIGHTS_AND_ATTRIBUTION.md).
+AI systems are used as research tools for derivation support, coding, numerical testing, adversarial auditing, editing, literature triage and formalisation assistance. They are not designated as authors, inventors, owners, sponsors, endorsers or claimants. See [`AI_RIGHTS_AND_ATTRIBUTION.md`](AI_RIGHTS_AND_ATTRIBUTION.md).
 
 ## Current strongest theorem candidate
 
@@ -48,7 +48,7 @@ Internally reconstructed consequences include
 \boxed{\gamma_F\ge\delta}
 \]
 
-and the outcome-count- and dimension-independent measurement movement estimate
+and the outcome-count- and dimension-independent movement estimate
 
 \[
 \boxed{
@@ -60,7 +60,7 @@ and the outcome-count- and dimension-independent measurement movement estimate
 }
 \]
 
-The coefficient-two refinement is derived in [`theory/BOUND_CANDIDATE_2026-10-31.md`](theory/BOUND_CANDIDATE_2026-10-31.md). Optimality is not claimed.
+The coefficient-two refinement is derived in [`theory/BOUND_CANDIDATE_2026-10-31.md`](theory/BOUND_CANDIDATE_2026-10-31.md). Optimality is not claimed. The latest source sharpness searches report ratios below `0.5` on their valid tested POVMs; those searches are numerical evidence, not an optimality proof.
 
 ## Correctly typed hybrid dilation
 
@@ -72,7 +72,7 @@ J_{\mathcal K}:\mathcal K\to\bigoplus_j\mathcal H,
 J_{\mathcal K}(x_1,\ldots,x_m)=(x_1,\ldots,x_m),
 \]
 
-not the historical alternative map that embeds polar-rounded vectors into the label blocks.
+not the historical alternative map embedding polar-rounded vectors into the label blocks.
 
 With the canonical measurement isometry
 
@@ -94,7 +94,7 @@ V^*V=I,
 V^*\Lambda_jV=Q_j+R E_jR=F_j.
 \]
 
-The typed distinction is essential and is covered by the theorem-contract test and a deliberate negative control for the incorrect map.
+The typed distinction is covered by the theorem-contract test and a deliberate negative control for the incorrect historical map.
 
 ## Repaired exact-idempotent record certificate
 
@@ -148,7 +148,7 @@ Since \(e\le\delta\), substitution of the coefficient-two movement bound gives
 }
 \]
 
-The full derivation and limitations are in [`research/CERTIFICATE_PROGRESS_2026-10-31.md`](research/CERTIFICATE_PROGRESS_2026-10-31.md).
+The derivation and limitations are in [`research/CERTIFICATE_PROGRESS_2026-10-31.md`](research/CERTIFICATE_PROGRESS_2026-10-31.md).
 
 ## Core results and refutations
 
@@ -189,7 +189,7 @@ The programme has established that:
 
 ## Executable validation
 
-The canonical validation entry point is
+Canonical entry point:
 
 ```bash
 python experiments/run_phd_validation.py --profile full
@@ -205,7 +205,7 @@ Convenience launchers:
 bash scripts/run_phd_audit.sh --profile full
 ```
 
-The completed clean CI audit at commit `d46b7ebdf83a23323486397ec4ac8187600ff687` passed:
+The retained clean CI audit at commit `d46b7ebdf83a23323486397ec4ac8187600ff687` passed:
 
 - Python quick audit;
 - Python full SDP audit;
@@ -225,25 +225,21 @@ The public source repository has been pulled again in full and checked at Git-ob
 
 - source: `Cruxy234/RC-Packing-Feasible-Note`;
 - source branch: `main`;
-- source commit: `fcef89be09dd9167a5a94d887e34d5ef1a8d0746`;
-- source tree: `2d0e9ef233a39aea8b1555a8d51db31bf934ef44`;
+- source commit: `297ec2fcf6114598418863c5fcf13b7090364652`;
+- source tree: `99d063fea0157aa4afcbd0664a0aa0cf7161e387`;
 - exact snapshot: `imports/RC-Packing-Feasible-Note/`.
 
-Compared with the previous imported source commit, GitHub reports ten commits and exactly nine changed paths. All nine were imported. The imported `lean/`, `paper/` and `theory/` subtree SHAs match the source exactly.
+Compared with the previous imported source commit, GitHub reports seven commits and exactly six changed paths. All six were imported. The imported `lean/`, `paper/` and `theory/` subtree SHAs match the source exactly.
+
+New source material includes `CLOSING_PROOFS.md`, `HARDER_PUSH.md` and `HARDER_PUSH_2.md`. These files are preserved as provenance. Their numerical sharpness results are useful evidence, but proposed lower-bound and robustness closures are not promoted as canonical without complete constructions, quantified hypotheses and independent reconstruction.
 
 Detailed evidence:
 
 - [`imports/RC-Packing-Feasible-Note/SNAPSHOT_MANIFEST.md`](imports/RC-Packing-Feasible-Note/SNAPSHOT_MANIFEST.md);
-- [`research/CRUXY_SYNC_REPORT_FCEF89_2026-10-31.md`](research/CRUXY_SYNC_REPORT_FCEF89_2026-10-31.md);
+- [`research/CRUXY_SYNC_REPORT_297EC2_2026-10-31.md`](research/CRUXY_SYNC_REPORT_297EC2_2026-10-31.md);
 - [`research/CRUXY_REMERGE_AUDIT_2026-10-31.md`](research/CRUXY_REMERGE_AUDIT_2026-10-31.md).
 
-The imported snapshot is provenance, not canonical truth. In particular:
-
-- its `NOVELTY_STATEMENT.md` is not adopted as a verified novelty claim;
-- its `REVIEW_PACKAGE.md` retains the older coefficient-four review framing;
-- its `full_proof.md` uses ambiguous notation for \(J\);
-- its source Lean files prove algebraic consequences under supplied hypotheses, not the end-to-end physical theorem;
-- its `paper/FINAL.md` is useful source material but does not replace the typed theorem, repaired certificate, validation report or canonical review package.
+The imported snapshot is provenance, not canonical truth. Source drafts and notes do not replace the typed theorem, repaired certificate, executable validation report, prior-art policy or canonical external-review packet.
 
 ## Prior-art boundary
 
@@ -317,7 +313,7 @@ These materials are doctoral-style in depth and structure. They are not represen
 1. external specialist reconstruction of the correctly typed theorem and coefficient-two bridge;
 2. expert prior-art review in quantum measurements, operator algebras and fusion frames;
 3. complete Lean formalisation of the operator/channel proof;
-4. determine optimality beyond coefficient two and the restricted linear-rate results;
+4. determine the optimal movement constant and rigorously quantify perturbative robustness;
 5. prepare a concise external-review paper only after those gates.
 
 ## Research discipline
