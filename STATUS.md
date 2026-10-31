@@ -2,7 +2,7 @@
 
 Updated: 31 October 2026
 
-This ledger separates mathematical correctness, numerical evidence, formal verification, provenance and novelty. They are not interchangeable.
+This ledger separates mathematical correctness, numerical evidence, formal verification, provenance, external review and novelty. They are not interchangeable.
 
 ## Core record-stability results
 
@@ -32,27 +32,34 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 
 | Component | Status | Notes |
 |---|---|---|
-| Correct labelled embedding | **Reconciled and explicitly typed** | The theorem uses \(J_{\mathcal K}(x_1,\ldots,x_m)=(x_1,\ldots,x_m)\), not the alternative map embedding polar vectors \(q_j\). |
-| Identity \(J_{\mathcal K}^*WU=D|T|\) | **Internally re-derived** | The source counter-check used a different map \(J_q\). |
+| Correct labelled embedding | **Reconciled and explicitly typed** | The theorem uses \(J_{\mathcal K}(x_1,\ldots,x_m)=(x_1,\ldots,x_m)\), not the alternative polar-vector embedding. |
+| Identity \(J_{\mathcal K}^*WU=D|T|\) | **Internally re-derived** | Historical source counter-checks used a different map \(J_q\). |
 | Hybrid isometry \(V=J_{\mathcal K}U^*+WR\) | **Internally reconstructed theorem candidate** | Implements \(F_j=Q_j+R E_jR\) exactly. |
 | Outcome-count-independent movement | **Analytically refined; internally cross-checked** | \(\nu\le2\min\{1,\sqrt{1-\alpha^2}+\sqrt\delta\}\). Coefficient 2 not claimed optimal. |
-| Composite exact-idempotent certificate | **Repaired; useful explicit examples verified** | Direct record accessibility removes movement from the gap denominator. |
-| External specialist verification | **Pending** | Required before publication as an established theorem. |
-| Full Lean verification | **Open; operator progress verified** | Four scalar and nine matrix/projection lemmas compile; complete spectral/channel proof remains open. |
+| Composite exact-idempotent certificate | **Repaired; useful explicit examples verified** | Direct record accessibility removes movement from the spectral-gap denominator. |
+| External specialist verification | **Pending** | Required before presentation as an externally established theorem. |
+| Full Lean verification | **Open; operator progress verified** | Scalar and selected matrix/projection lemmas compile; complete spectral/channel proof remains open. |
 | Novelty | **Unverified** | No exact combined theorem located in searches, but absence of prior art is not proved. |
 
-## Numerical evidence
-
-Current proof statements, exact examples and limitations are collected in `research/VERIFIED_PROGRESS_2026-10-31.md` and `research/CERTIFICATE_PROGRESS_2026-10-31.md`.
+## Executable validation
 
 | Item | Status | Notes |
 |---|---|---|
-| Record-Margin stress tests | **Passed** | 10,000 random two-record cases; zero violations; analytic equality family. |
-| Moving-POVM stress tests | **Passed for implemented families** | Includes simplex obstruction and binary transfer tests. |
-| Synthesis-packing tests | **Passed** | 20,000 rank-one and 10,000 higher-rank random cases; zero violations. |
-| Same-label hybrid-dilation tests | **Passed for implemented finite examples** | Exact isometry and effect implementation to numerical precision using the direct-sum embedding. |
-| SDP validation | **Passed for retained low-dimensional test set** | Paired primal/dual problems and normalization anchors retained with solver diagnostics. |
-| Pure-state total-variation proxy | **Evidence only** | Not treated as a full diamond-norm computation. |
+| Clean CI quick audit | **Passed** | Theorem algebra, hypotheses, provenance, claim discipline and counterexamples. |
+| Clean CI full SDP audit | **Passed** | Fourteen checks, including adversarial families and primal/dual SDPs. |
+| Pinned Lean build | **Passed within current scope** | Does not formalise the complete theorem. |
+| Frozen theorem contract | **Passed implemented cases** | 8 valid cases, 6 expected rejections, 5 primal/dual SDP checks; maximum identity error \(4.97\times10^{-15}\). |
+| Adversarial same-label audit | **Passed implemented cases** | 408 valid cases, 3 expected rejections, 12 SDPs; maximum identity residual \(1.35\times10^{-14}\). |
+| Record-accessibility audit | **Passed implemented cases** | 7 exact binary cases, 12 random quantum cases, 26 primal/dual SDPs. |
+| Numerical interpretation | **Evidence, not proof** | Passing finite computations do not establish the general theorem, novelty or peer review. |
+
+Canonical validation report:
+
+- `research/PHD_VALIDATION_REPORT_2026-10-31.md`
+
+Canonical local runner:
+
+- `experiments/run_phd_validation.py`
 
 ## Lean formalisation
 
@@ -64,9 +71,12 @@ Current proof statements, exact examples and limitations are collected in `resea
 | `rank1_core_package` | **Machine checked; zero `sorry`** |
 | Hilbert-space polar theorem | **Not formalised** |
 | Hybrid isometry and label compression | **Machine checked under explicit matrix hypotheses** |
-| Residual projection and spectral-envelope compression | **Machine checked; five lemmas** |
+| Residual projection and spectral-envelope compression | **Machine checked under explicit hypotheses** |
 | Derivation of all spectral-sector hypotheses | **Not formalised** |
+| Coefficient-two analytic bridge | **Not fully formalised** |
 | Diamond-norm transfer and end-to-end certificate | **Not formalised** |
+
+The imported Cruxy Lean files are preserved exactly under `imports/`. They prove elementary algebraic consequences under supplied hypotheses and are not promoted as an end-to-end formalisation.
 
 ## Prior-art boundary
 
@@ -83,7 +93,11 @@ The following are treated explicitly as prior art and are not claimed by RC-Disc
 - Kitaev's almost-idempotent channel structure;
 - the general regular-simplex obstruction.
 
-The only potentially distinct object is the complete, correctly typed synthesis-conditioned same-label chain. It remains **novelty unverified**.
+The only potentially distinct object is the complete, correctly typed synthesis-conditioned same-label chain. It remains:
+
+\[
+\boxed{\text{potentially distinct; novelty unverified}.}
+\]
 
 Canonical policy:
 
@@ -96,22 +110,43 @@ Canonical policy:
 | Item | Status | Notes |
 |---|---|---|
 | Source repository | **Synced** | `Cruxy234/RC-Packing-Feasible-Note`, branch `main`. |
-| Source commit | **Frozen in manifest** | `f94275addb491f1b4be428e2a65939bd4c153897`. |
-| Source tree | **Recorded** | `ef0eaf35289b2f489031baaa28163cc2bd97dff0`. |
-| Delta from previous import | **Complete** | Six commits; exactly four changed paths, all imported. |
-| Root source files | **Hash-identical** | README, REVIEW_REQUEST and STATUS match source blob SHAs. |
-| `lean/` subtree | **Hash-identical** | Tree SHA `e2f1ea07c75d82167feb1218d9a8ea8553fa1bdf`. |
-| `paper/` subtree | **Hash-identical** | Tree SHA `d6ffe6859cd62a8cbd5a85b2a4e7ab5301b8e9b4`. |
-| `theory/` subtree | **Hash-identical** | Tree SHA `7f00df5376076a716dedefb64e61b8bbe434157e`. |
-| Canonical promotion | **Audited, not blind** | Source `full_proof.md` is preserved but does not replace the typed coefficient-two canonical theorem. |
+| Source commit | **Frozen in manifest** | `fcef89be09dd9167a5a94d887e34d5ef1a8d0746`. |
+| Source tree | **Recorded** | `2d0e9ef233a39aea8b1555a8d51db31bf934ef44`. |
+| Delta from previous import | **Complete** | Ten commits; exactly nine changed paths, all imported. |
+| Root source files | **Hash-identical** | NOVELTY_STATEMENT, README, REVIEW_PACKAGE, REVIEW_REQUEST and STATUS match source blob SHAs. |
+| `lean/` subtree | **Hash-identical** | Tree SHA `c2b7e33e591d9e89d1859655052d85759352b031`. |
+| `paper/` subtree | **Hash-identical** | Tree SHA `23b5f1a2a565d6a578ecc4c751f6a19755d5aeb7`. |
+| `theory/` subtree | **Hash-identical** | Tree SHA `7beb09564e84e019160b42f4c674441bb3a3cd28`. |
+| Canonical promotion | **Audited, not blind** | New source files are preserved exactly but do not replace stronger typed, coefficient-two, accessibility and validation material. |
 
 Detailed records:
 
 - `imports/RC-Packing-Feasible-Note/SNAPSHOT_MANIFEST.md`;
-- `research/CRUXY_SYNC_REPORT_F94275_2026-10-31.md`;
+- `research/CRUXY_SYNC_REPORT_FCEF89_2026-10-31.md`;
 - `research/CRUXY_REMERGE_AUDIT_2026-10-31.md`.
 
-The imported snapshot is provenance, not canonical truth. It contains exploratory, superseded and contradictory notes.
+Important source/canonical distinctions:
+
+- source `NOVELTY_STATEMENT.md` is not adopted as verified novelty;
+- source `REVIEW_PACKAGE.md` retains coefficient-four framing;
+- source `full_proof.md` uses ambiguous notation for \(J\);
+- source `paper/FINAL.md` is useful source material but not the canonical paper;
+- source Lean files do not formalise the complete theorem;
+- source recheck notes are evidence history, not the canonical executable validation suite.
+
+## Human authorship and AI-provider non-claim boundary
+
+| Item | Status | Notes |
+|---|---|---|
+| Human research direction | **Christopher Gardner** | Selects questions, controls canonical statements, interprets evidence and controls publication decisions. |
+| AI systems | **Research tools only** | Used for assistance with derivation, code, testing, auditing, editing, literature triage and formalisation. |
+| AI providers as claimants | **Not designated** | Not designated as authors, inventors, owners, assignees, sponsors, endorsers or claimants. |
+
+Canonical notice:
+
+- `AI_RIGHTS_AND_ATTRIBUTION.md`
+
+This is a repository-governance statement, not a legal opinion or substitute for qualified advice.
 
 ## RC-TCL application bridge
 
