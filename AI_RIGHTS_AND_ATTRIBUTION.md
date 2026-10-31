@@ -63,7 +63,22 @@ Nothing in this notice claims ownership of OpenAI's or another provider's models
 
 The project claims only its own human-directed research materials and whatever rights may lawfully subsist in them. The fact that AI output may be non-unique is expressly recognised. Questions of copyright subsistence, patent inventorship, protectability, ownership, and enforceability remain governed by applicable law and must not be inferred from this notice alone.
 
-## 5. Disclosure is not attribution of ownership
+## 5. Automated Git and platform metadata
+
+Some commits, pull requests, generated files, logs, or platform records may contain an automated tool name, service account, bot identity, model name, or provider-associated email address in an `author`, `committer`, `actor`, `generator`, or similar technical metadata field.
+
+Such metadata records the mechanism by which a file or commit was transmitted. It does **not** designate the named tool, account, model, or provider as:
+
+- a scientific or legal author;
+- an inventor;
+- an owner or assignee;
+- a source of research priority;
+- a sponsor or endorser;
+- a claimant to the work.
+
+Technical Git provenance is therefore not to be interpreted as research attribution. Rewriting historical commit metadata is not required for this policy to apply; the canonical authorship and responsibility statement is the one in this file and in the human-authored papers.
+
+## 6. Disclosure is not attribution of ownership
 
 The repository will continue to disclose material AI assistance honestly. That disclosure serves research transparency and reproducibility. It does not confer authorship, inventorship, ownership, priority, endorsement, or institutional standing on an AI system or provider.
 
@@ -75,7 +90,7 @@ Prohibited description without Christopher Gardner's express written authorisati
 
 > OpenAI authored, invented, owns, originated, sponsored, or controls RC-Discovery, VIBE MATH, or its theorem candidates.
 
-## 6. Responsibility and verification
+## 7. Responsibility and verification
 
 Christopher Gardner and any future human co-authors remain responsible for:
 
@@ -88,7 +103,7 @@ Christopher Gardner and any future human co-authors remain responsible for:
 
 AI-generated or AI-assisted material is not treated as established merely because a model produced or endorsed it.
 
-## 7. No legal overstatement
+## 8. No legal overstatement
 
 This notice is not:
 
