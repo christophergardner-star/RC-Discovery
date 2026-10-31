@@ -582,3 +582,50 @@ The potentially distinct RC contribution is the combination of:
 - a diamond-norm stability statement.
 
 That combination still requires a deeper literature veto before publication.
+
+
+## 11. Stronger per-sector polar movement bound
+
+A later proof audit gives a cleaner bound than the earlier estimate
+[
+|P_j-R_j|_inftyle 2eta.
+]
+
+Let
+[
+alpha=sigma_{min}(T)>0
+]
+and let (T=U|T|) be the polar decomposition of the synthesis operator on the Hilbert direct sum. If (R_j) is the projection onto the moved sector (Umathcal S_j), then for every label,
+[
+oxed{
+|P_j-R_j|_infty
+le
+sqrt{1-alpha^2}.
+}
+]
+
+This holds at arbitrary rank.
+
+Proof sketch: for a unit vector (xinmathcal S_j), identify (x) with the corresponding unit coordinate vector (e) in the direct sum. Then (Te=x), and
+[
+langle x,Ueangle
+=
+langle |T|e,eangle
+ge
+alpha.
+]
+Hence the largest principal angle between (mathcal S_j) and (Umathcal S_j) has cosine at least (alpha). Equal-dimensional projection geometry then gives the stated bound.
+
+This estimate is useful because it controls **individual sector movement** using only the lower synthesis singular value; it does not require a bound on (sigma_{max}(T)).
+
+The estimate is close to sharp in high-outcome equicorrelated rank-one families. For fixed (alpha=0.5), the ratio
+[
+rac{max_j|P_j-R_j|_infty}{sqrt{1-alpha^2}}
+]
+approaches (1) as the number of vectors grows.
+
+A dedicated stress test is in:
+
+- experiments/test_synthesis_packing.py
+
+The geometric lemma does not remove the remaining outcome-count dependence in the measurement-channel diamond perturbation. That remains the main open step.
