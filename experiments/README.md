@@ -1,6 +1,6 @@
 # Executable Validation Suite
 
-This directory contains numerical, algebraic, SDP and integration checks for the canonical RC-Discovery theorem package.
+This directory contains numerical, algebraic, SDP, governance and integration checks for the canonical RC-Discovery theorem package.
 
 The primary entry point is:
 
@@ -14,10 +14,21 @@ For a fast smoke audit:
 python experiments/run_phd_validation.py --profile quick --skip-lean
 ```
 
+The platform launchers also run the human-authorship and AI-provider non-claim audit:
+
+```powershell
+.\scripts\run_phd_audit.ps1 -Profile full
+```
+
+```bash
+bash scripts/run_phd_audit.sh --profile full
+```
+
 Detailed protocol:
 
 - [`PHD_VALIDATION_PROTOCOL.md`](PHD_VALIDATION_PROTOCOL.md)
 - [`../review/TEST_CLAIM_MATRIX.md`](../review/TEST_CLAIM_MATRIX.md)
+- [`../AI_RIGHTS_AND_ATTRIBUTION.md`](../AI_RIGHTS_AND_ATTRIBUTION.md)
 
 ## Canonical theorem tests
 
@@ -55,6 +66,16 @@ Protects provenance and public claim boundaries. It verifies canonical files, cu
 python experiments/test_repository_claim_discipline.py
 ```
 
+### `test_ai_rights_notice.py`
+
+Audits the canonical human-authorship and AI-provider non-claim notice. It checks that Christopher Gardner is identified as the human research director, AI assistance is disclosed as tool use, OpenAI is not designated as author/inventor/owner/claimant, official OpenAI ownership terms are linked, provider technology is not appropriated, and the notice does not pretend to override law or contract.
+
+```bash
+python experiments/test_ai_rights_notice.py
+```
+
+This is a governance test, not a legal opinion.
+
 ## Existing supporting tests
 
 - `test_record_margin.py` — sharp Record-Margin theorem and equality family.
@@ -74,4 +95,4 @@ python experiments/test_repository_claim_discipline.py
 
 Every stochastic test uses an explicit seed. The runners retain logs, script hashes, package versions and Git metadata. SDP tests record primal and dual values, feasibility residuals and solver choice.
 
-Numerical success is not promoted to proof. Lean success applies only to the statements actually formalised. No test establishes novelty, patentability or freedom to operate.
+Numerical success is not promoted to proof. Lean success applies only to the statements actually formalised. No test establishes novelty, patentability, freedom to operate, or an enforceable intellectual-property conclusion.
