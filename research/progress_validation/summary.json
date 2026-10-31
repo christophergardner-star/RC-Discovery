@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-31T15:37:48.216893+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "runs": [
+    {
+      "script": "experiments\\test_constant_two_bound.py",
+      "exit_code": 0,
+      "seconds": 1.156,
+      "sha256": "78a7c5d806a889c82db03135e4e34883858fb49a3ba4ab99d56f0b353e781026",
+      "arguments": [],
+      "log": "test_constant_two_bound.log"
+    },
+    {
+      "script": "experiments\\test_record_accessibility.py",
+      "exit_code": 0,
+      "seconds": 6.297,
+      "sha256": "2c5d60d4cacf7ee618ea18137e090d896f029fea4c4d304b0a744127501864f3",
+      "arguments": [],
+      "log": "test_record_accessibility.log"
+    },
+    {
+      "script": "experiments\\test_residual_coupling_rates.py",
+      "exit_code": 0,
+      "seconds": 5.906,
+      "sha256": "a6f73d55b458257fb0ca2a444d64ae7eb459cb648c4e0cf629a54280cb7914f9",
+      "arguments": [],
+      "log": "test_residual_coupling_rates.log"
+    }
+  ]
+}

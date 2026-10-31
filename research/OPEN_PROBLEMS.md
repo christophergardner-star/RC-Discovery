@@ -85,7 +85,10 @@ The current label is:
 
 ## C. Formal verification
 
-The current Lean artefact checks only the scalar algebraic core.
+The current Lean artefact checks four scalar lemmas, four hybrid matrix lemmas,
+and five residual projection/compression lemmas. The matrix identities have
+explicit hypotheses; deriving all of them from spectral functional calculus
+remains open. See [the verified progress report](VERIFIED_PROGRESS_2026-10-31.md).
 
 High-value formalisation targets:
 
@@ -102,31 +105,38 @@ High-value formalisation targets:
 
 ## D. Optimal constants and rates
 
-The current conservative estimate is
+The improved estimate is
 
 \[
 \nu
 \le
-4\left(
+2\left(
 \sqrt{1-\alpha^2}+\sqrt\delta
 \right).
 \]
 
 Open questions:
 
-- can the constant \(4\) be reduced analytically?
+- is the now-proved coefficient \(2\) optimal, or can it be reduced further?
 - is the packing dependence \(\sqrt{1-\alpha^2}\) optimal?
 - the \(\sqrt\delta\) lower-bound family shows threshold dependence cannot generally be linear, but what is the sharp joint bound?
 - can a matching converse be proved away from the singular simplex endpoint?
+
+The reducing/full-span case now has a linear upper bound
+\(4(1-\alpha)+5\delta\) and an exact family showing linear threshold order.
+The general sharp joint bound remains open. The direct accessibility
+certificate also fixes the earlier coarse-composition vacuity; sharpness of
+its projection and triangle steps remains open.
 
 ## E. Reproducible operational verification
 
 Pure-state total-variation sampling is not a complete diamond-norm computation by itself.
 
-Next computational targets:
+Implemented checks now include ancilla-assisted primal/dual SDPs, high-rank and
+near-singular cases, retained seeds and source hashes. Further targets:
 
-- implement a reliable Watrous-style SDP for selected finite cases;
-- include ancilla-assisted discrimination explicitly;
+- replace floating-point diagnostics by interval-certified bounds where useful;
+- extend ancilla-assisted discrimination to larger hard families;
 - compare exact SDP values with the Stinespring upper bound;
 - stress-test degenerate/high-rank sectors and tiny nonzero sectors;
 - package all random seeds and generated fixtures.

@@ -1,0 +1,5 @@
+'RCProof.range_projection_idempotent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RCProof.residual_projection_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RCProof.residual_spectral_gap_compression' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RCProof.residual_effect_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RCProof.hybrid_isometry_from_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]

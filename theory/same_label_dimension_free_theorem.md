@@ -412,6 +412,28 @@ If the same record states are prepared after the classical outcome, this prepara
 
 The generic Stinespring-continuity step is established prior art and is not claimed as new.
 
+### 7a. Stronger bound verified in the subsequent audit
+
+The conservative coefficient 4 above can be reduced analytically to 2:
+
+\[
+\boxed{\nu_{\rm meas}\le2\min\{1,\sqrt{1-\alpha^2}+\sqrt\delta\}.}
+\]
+
+The proof controls the Hermitian part of the full dilation overlap, including
+noncommuting \(H,D\). Under the sufficient condition
+\((M-\alpha)(1-\sqrt{1-\delta})\le4\alpha\sqrt{1-\delta}\), it gives the
+stronger joint estimate \(2\sqrt{1-\alpha^2(1-\delta)}\). The condition holds
+where the displayed coefficient-two estimate is nontrivial; elsewhere the
+universal distance bound 2 suffices. See [the complete proof and negative
+control](BOUND_CANDIDATE_2026-10-31.md). Optimality of coefficient 2 is not claimed.
+
+If all effects commute with the total packed projector \(S\), including the
+full-span case \(S=I\), a separate decomposition gives
+\(\nu_{\rm meas}\le\min\{2,4(1-\alpha)+5\delta\}\). See
+[the residual-coupling analysis](RESIDUAL_COUPLING_RATES_2026-10-31.md) for the
+stronger instance-dependent formula and a matching linear-order family.
+
 ## 8. Exact-idempotent record certificate
 
 **Audit qualification (31 October 2026):** the certificate below can be useful with actual or sufficiently sharp instance-dependent movement. Substituting either scalar movement envelope displayed here always gives an upper bound greater than 2, the trivial maximum channel distance. Thus these substitutions do not establish a nontrivial a priori exact-idempotent stability guarantee. The measurement-rounding bound is unaffected. See [the prior-art and certificate audit, Section 4](../literature/SAME_LABEL_PRIOR_ART_VETO_2026-10-31.md).
@@ -455,6 +477,44 @@ Together with
 \]
 
 this is dimension- and outcome-count independent.
+
+### 8a. Direct accessibility certificate
+
+The limitation above belongs to the earlier transfer route. A direct argument
+on the original records avoids putting movement error inside the spectral-gap
+denominator. Define \(e=\max_j(1-\lambda_{\max}(E_j))\le\delta<1/2\).
+Then, with \(D_{\rm rec}=\max_j\|\Phi_E(\sigma_j)-\sigma_j\|_1\),
+
+\[
+ (1-2e)D_{\rm rec}\le\eta\le D_{\rm rec}.
+\]
+
+The lower coefficient is sharp; at \(e=0\) the defect is exactly the largest
+record residual. Projecting the original records into the rounded sectors
+constructs an exactly idempotent channel \(\Pi\) satisfying, for any valid
+measurement movement upper bound \(b\),
+
+\[
+\boxed{\|\Phi_E-\Pi\|_\diamond\le
+\min\left\{2,b+2\sqrt{1-\alpha^2}
++\sqrt{\frac{2\eta}{\kappa\delta(1-2e)}}\right\}.}
+\]
+
+In particular, using coefficient 2 and replacing \(e\) by \(\delta\) gives
+
+\[
+\boxed{\|\Phi_E-\Pi\|_\diamond\le
+\min\left\{2,4\sqrt{1-\alpha^2}+2\sqrt\delta
++\sqrt{\frac{2\eta}{\kappa\delta(1-2\delta)}}\right\}.}
+\]
+
+This is nontrivial on concrete families and tends to zero along admissible
+sequences with \(\alpha\to1\), \(\delta\to0\), and
+\(\eta/(\kappa\delta)\to0\). Full proof, zero-projection handling, exact
+examples and quantum-channel SDP checks are in
+[the accessibility audit](../research/CERTIFICATE_PROGRESS_2026-10-31.md).
+These new analytic refinements are internally checked, not fully formalized or
+externally novelty-certified.
 
 ## 9. Status and claim boundary
 

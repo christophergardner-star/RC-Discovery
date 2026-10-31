@@ -16,6 +16,12 @@ See [the focused search and implication audit](SAME_LABEL_PRIOR_ART_VETO_2026-10
 
 ## Established ingredients
 
+Subsequent internal progress reduces coefficient 4 to 2, repairs the certificate
+through a sharp record-accessibility estimate, and gives linear rates when the
+packed span reduces every effect. These are improvements over this repository's
+previous analysis, **not established literature novelty**. See
+[the proof and verification overview](../research/VERIFIED_PROGRESS_2026-10-31.md).
+
 ### Polar and Löwdin orthogonalisation
 
 Established sources include Fan–Hoffman, Löwdin and Higham. Nearest-isometry properties of the polar factor, orthogonalisation of frames, singular-value residual formulas and related perturbation facts are prior art.

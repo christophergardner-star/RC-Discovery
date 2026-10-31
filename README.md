@@ -57,11 +57,16 @@ and, for the associated measurement channels,
 \nu=
 \|\mathcal M_E-\mathcal M_F\|_\diamond
 \le
-4\left(
+2\left(
 \sqrt{1-\alpha^2}+\sqrt\delta
 \right).
 }
 \]
+
+The coefficient was reduced from 4 to 2 in [the follow-up analytic
+audit](theory/BOUND_CANDIDATE_2026-10-31.md); optimality is not claimed. See
+[the verified progress report](research/VERIFIED_PROGRESS_2026-10-31.md) for
+the repaired record certificate, restricted linear rates and new Lean lemmas.
 
 The operational bound is constructed using a correctly typed labelled isometry
 
@@ -97,19 +102,25 @@ have record margin \(\kappa>0\) and idempotence defect
 \eta=\|\Phi_E^2-\Phi_E\|_\diamond.
 \]
 
-Using the same records after the POVM move, the RC spectral-gap theorem gives an exactly idempotent channel \(\Pi\) satisfying
+Direct record accessibility and projection give an exactly idempotent channel
+\(\Pi\). For any valid measurement-movement upper bound \(b\), it satisfies
 
 \[
 \boxed{
 \|\Phi_E-\Pi\|_\diamond
 \le
-\nu+
+b+2\sqrt{1-\alpha^2}+
 \sqrt{
-\frac{2(\eta+3\nu)}
-{\kappa\delta}
+\frac{2\eta}
+{\kappa\delta(1-2\delta)}
 }.
 }
 \]
+
+The bound may also be capped at 2. Unlike the earlier transfer certificate,
+movement is not divided by the spectral threshold. It gives nontrivial
+guarantees on explicit families. See [the full proof and
+checks](research/CERTIFICATE_PROGRESS_2026-10-31.md).
 
 There is no explicit dependence on the number of outcomes, Hilbert-space dimension or total packed rank.
 
@@ -221,10 +232,16 @@ Machine checked with Lean 4 + Mathlib and zero `sorry`:
 - `near_orthonormal_overlap`
 - `rank1_core_package`
 
+Four rectangular-matrix lemmas in `Hybrid.lean` and five projection/compression
+lemmas in `Gap.lean` also compile without `sorry`. They establish the hybrid
+isometry and compression identities under explicit hypotheses, and the
+operator-order step behind the residual spectral gap. See [formalization
+scope](lean/README.md).
+
 Not yet formalised:
 
 - Hilbert-space polar geometry;
-- the typed hybrid isometry;
+- derivation of all typed spectral-sector hypotheses for the hybrid isometry;
 - the diamond-norm channel step;
 - the complete composite theorem.
 
@@ -233,7 +250,7 @@ Not yet formalised:
 1. external specialist audit of the correctly typed theorem;
 2. further prior-art review by experts in quantum measurements, operator algebras and fusion frames;
 3. formalisation of the operator/channel proof;
-4. sharpen the constant and establish optimal rates;
+4. determine optimality beyond the verified constant 2 and restricted linear rates;
 5. prepare an external-review paper only after those gates;
 6. continue secondary RC work on redundancy, metastability and continual learning.
 

@@ -35,13 +35,18 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 | Correct labelled embedding | **Reconciled and explicitly typed** | The theorem uses \(J_{\mathcal K}(x_1,\ldots,x_m)=(x_1,\ldots,x_m)\), not the alternative map embedding polar vectors \(q_j\). |
 | Identity \(J_{\mathcal K}^*WU=D|T|\) | **Internally re-derived** | The Cruxy source counter-check used a different map \(J_q\); it does not refute the typed identity. |
 | Hybrid isometry \(V=J_{\mathcal K}U^*+WR\) | **Internally reconstructed theorem candidate** | Implements \(F_j=Q_j+R E_jR\) exactly. |
-| Outcome-count-independent measurement move | **Internally reconstructed theorem candidate** | \(\nu\le2\varepsilon\le4(\sqrt{1-\alpha^2}+\sqrt\delta)\), with no explicit \(m,d\) factor. |
-| Composite exact-idempotent certificate | **Internally closed theorem candidate** | \(\|\Phi_E-\Pi\|_\diamond\le\nu+\sqrt{2(\eta+3\nu)/(\kappa\delta)}\). |
+| Outcome-count-independent measurement move | **Analytically refined; internally cross-checked** | \(\nu\le2\min\{1,\sqrt{1-\alpha^2}+\sqrt\delta\}\). Coefficient 2 not claimed optimal. |
+| Composite exact-idempotent certificate | **Repaired; useful explicit examples verified** | Direct accessibility removes movement from the gap denominator; see the progress report. |
 | External specialist verification | **Pending** | Required before publication as an established theorem. |
-| Full Lean verification | **Open** | Current Lean work covers only scalar algebraic lemmas. |
+| Full Lean verification | **Open; operator progress verified** | Four scalar and nine matrix/projection lemmas compile; complete spectral/channel proof remains open. |
 | Novelty | **Unverified** | No exact combined theorem located in searches, but absence of prior art is not proved. |
 
 ## Numerical evidence
+
+New proof statements, exact examples and limitations are collected in
+[the verified progress report](research/VERIFIED_PROGRESS_2026-10-31.md).
+New runs include 46 paired primal/dual SDP problems, of which two are
+normalization anchors, in addition to rechecking the previously saved 12 SDPs.
 
 | Item | Status | Notes |
 |---|---|---|
@@ -60,7 +65,9 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 | `near_orthonormal_overlap` | **Machine checked; zero `sorry`** |
 | `rank1_core_package` | **Machine checked; zero `sorry`** |
 | Hilbert-space polar theorem | **Not formalised** |
-| Typed hybrid isometry | **Not formalised** |
+| Hybrid isometry and label compression | **Machine checked under explicit matrix hypotheses** |
+| Residual projection and spectral-envelope compression | **Machine checked; five new lemmas** |
+| Derivation of spectral-sector hypotheses | **Not formalised** |
 | Diamond-norm transfer and composite theorem | **Not formalised** |
 
 ## Prior-art boundary

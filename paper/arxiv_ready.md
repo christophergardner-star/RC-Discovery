@@ -43,19 +43,22 @@ we obtain the internally reconstructed bound
 \[
 \|\mathcal M_E-\mathcal M_F\|_\diamond
 \le
-4\left(\sqrt{1-\alpha^2}+\sqrt\delta\right),
+2\left(\sqrt{1-\alpha^2}+\sqrt\delta\right),
 \]
 
-with no explicit dependence on the number of outcomes, Hilbert-space dimension or total packed rank. Combined with the RC spectral-gap Record-Margin theorem, this yields an exactly idempotent measure-and-prepare channel \(\Pi\) satisfying
+with no explicit dependence on the number of outcomes, Hilbert-space dimension or total packed rank. Direct record accessibility and projection yield an exactly idempotent measure-and-prepare channel \(\Pi\) satisfying
 
 \[
 \|\Phi_E-\Pi\|_\diamond
 \le
-\nu+
-\sqrt{\frac{2(\eta+3\nu)}{\kappa\delta}},
+b+2\sqrt{1-\alpha^2}+
+\sqrt{\frac{2\eta}{\kappa\delta(1-2\delta)}},
 \]
 
-where \(\nu=\|\Phi_E-\widetilde\Phi_F\|_\diamond\), \(\eta=\|\Phi_E^2-\Phi_E\|_\diamond\), and \(\kappa\) is the record margin. The result remains a theorem candidate pending external specialist audit and a complete novelty review.
+where \(b\) is any valid upper bound on the measurement-channel movement,
+\(\eta=\|\Phi_E^2-\Phi_E\|_\diamond\), and \(\kappa\) is the record margin.
+Both distance bounds can be capped at 2. The result remains a theorem candidate
+pending external specialist audit and a complete novelty review.
 
 ## 1. Motivation
 
@@ -308,7 +311,27 @@ For \(0<\delta<1/2\), a conservative simplification is
 
 The constant is not claimed optimal.
 
+### 5a. Refinement to coefficient 2
+
+Let \(d=\sqrt{1-\delta}\), \(r=1-d\). For
+\(X=H-\alpha I\), \(Y=D-dI\), and \(h=M-\alpha\), positivity of
+\((\sqrt t X+t^{-1/2}Y)^2\) implies
+\(XY+YX\ge-thX-(r/t)Y\). Choosing \(t=2d/h\) when \(h>0\) shows
+\(\operatorname{Re}(HD)\ge\alpha dI\) whenever \(hr\le4\alpha d\);
+the case \(h=0\) is immediate. The exact overlap
+\(W^*V=UHD U^*+R\) then bounds the pure-state output trace distance, including
+arbitrary ancillas, by \(2\sqrt{1-\alpha^2(1-\delta)}\).
+
+When \(\sqrt{1-\alpha^2}+\sqrt\delta<1\), one has
+\(\alpha>\sqrt\delta\) and \(hr\le Mr\le\delta<4\alpha d\), so the
+condition holds. Elsewhere the trivial distance bound 2 suffices. Thus
+\(\nu_{\rm meas}\le2\min\{1,\sqrt{1-\alpha^2}+\sqrt\delta\}\).
+The complete argument and checks are in
+[the coefficient-two audit](../theory/BOUND_CANDIDATE_2026-10-31.md).
+
 ## 6. Record-process certificate
+
+### 6a. Earlier transfer route
 
 **Certificate limitation:** substituting either scalar movement envelope into the bound below with denominator \(\kappa\delta\) always exceeds 2. Only actual or sufficiently sharp instance-dependent movement can make that version nontrivial. See [the focused prior-art and certificate audit, Section 4](../literature/SAME_LABEL_PRIOR_ART_VETO_2026-10-31.md). Dimension independence alone does not establish a useful exact-idempotent stability guarantee.
 
@@ -344,6 +367,32 @@ The RC spectral-gap theorem then gives an exactly idempotent channel \(\Pi\) sat
 \sqrt{\frac{2(\eta+3\nu)}{\kappa\delta}}.
 }
 \]
+
+### 6b. Direct accessibility route
+
+Set \(D_{\rm rec}=\max_j\|\Phi_E(\sigma_j)-\sigma_j\|_1\) and
+\(e=\max_j(1-\lambda_{\max}(E_j))\le\delta\). A label attaining the
+maximum residual can be produced with probability at least \(1-e\).
+Reverse triangle on the corresponding channel defect gives
+\((1-2e)D_{\rm rec}\le\eta\); conversely, the measure-and-prepare
+decomposition gives \(\eta\le D_{\rm rec}\), including ancillas.
+
+Record margin and the full spectral threshold then give
+\(1-\operatorname{Tr}(P_j\sigma_j)\le
+\eta/[2\kappa\delta(1-2e)]\). Projecting a purification into \(Q_j\)
+constructs a record \(\tau_j\) supported there with trace distance at most
+\(2\sqrt{1-\alpha^2}+\sqrt{2\eta/[\kappa\delta(1-2e)]}\).
+If the projection has zero weight, that upper estimate is already at least 2,
+and any state in the nonzero sector works. The channel with effects \(F_j\)
+and records \(\tau_j\) is exactly idempotent.
+
+Adding measurement movement \(b\) and using \(e\le\delta\) proves the
+abstract's certificate. This avoids the earlier route's movement term inside
+the gap denominator. [The accessibility audit](../research/CERTIFICATE_PROGRESS_2026-10-31.md)
+contains the full proof, a sharp accessibility example and nontrivial certificate
+examples. When \(S\) reduces every effect, an additional high/low decomposition
+gives \(\nu_{\rm meas}\le\min\{2,4(1-\alpha)+5\delta\}\), with details in
+[the residual-coupling note](../theory/RESIDUAL_COUPLING_RATES_2026-10-31.md).
 
 ## 7. Negative results and limitations
 
@@ -401,6 +450,13 @@ Machine checked in Lean at the scalar algebraic core:
 The laptop validation additionally machine-checked four rectangular complex-matrix lemmas (`spectral_cross_zero`, `hybrid_cross_zero`, `hybrid_isometry`, `hybrid_compression`) under explicit algebraic hypotheses. The spectral construction and channel-norm estimate remain unformalized. All nine original mathematical tests, 408 additional adversarial cases and 12 ancilla-assisted channel-distance SDPs passed. See [the validation report](../research/LOCAL_VALIDATION_2026-10-31.md) for assumptions, numerical tolerances and the separate blocked neural smoke test.
 
 Novelty and external correctness remain open review gates.
+
+Five additional Lean lemmas now prove residual projection properties and
+compression of a supplied spectral envelope, and assemble the hybrid isometry
+from its overlap factorization. The latest numerical run adds 46 paired
+primal/dual SDP problems (including two anchors) and the rate/constant checks
+in [the progress report](../research/VERIFIED_PROGRESS_2026-10-31.md). The new
+analytic coefficient and accessibility bounds are not Lean-formalized.
 
 ## 10. Conclusion
 

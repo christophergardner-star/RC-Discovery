@@ -18,10 +18,19 @@ Locally checked on 31 October 2026 using Lean 4.35.0 and pinned Mathlib
 - `hybrid_compression`: the stated label compression and cross-zero hypotheses
   give `V* L V=U C U*+R E R`.
 
-All assumptions are explicit; no `sorry` or additional axioms are used. This is
-partial operator formalization. Spectral functional calculus, construction of
-the sector overlap identities, the spectral-gap estimate and the channel norm
-bound are not yet formalized. The whole same-label theorem is not machine-checked.
+`RCProof/Gap.lean` adds five matrix lemmas: range projection idempotence;
+Hermitian, idempotent and positive residual projection; positivity of compressed
+effects; compression of the spectral envelope to `R E R <= (1-delta) R`; and
+assembly of the hybrid isometry with the residual properties derived from `U`.
+
+All assumptions are explicit; no `sorry` or additional axioms are used.
+The five new lemmas were also checked with `#print axioms` and depend only on
+Lean's standard `propext`, `Classical.choice`, and `Quot.sound`.
+This is partial operator formalization. Spectral functional calculus and the
+construction of the sector overlap identities remain explicit hypotheses.
+The final spectral interpretation, the channel norm bound, and the new
+coefficient-two and accessibility proofs are not formalized. The whole
+same-label theorem is not machine-checked.
 
 ## Reproduce on Windows
 
