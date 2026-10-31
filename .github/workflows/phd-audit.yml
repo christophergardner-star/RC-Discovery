@@ -71,7 +71,9 @@ jobs:
 
   python-full:
     name: Python full SDP audit
-    if: github.event_name == 'workflow_dispatch'
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'push' && contains(github.event.head_commit.message, '[full-audit]'))
     runs-on: ubuntu-latest
     timeout-minutes: 90
 
