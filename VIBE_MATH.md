@@ -1,80 +1,84 @@
 # VIBE MATH
 
-**VIBE MATH** is the working name for the research method used in RC-Discovery.
+**VIBE MATH** is the human-directed, AI-assisted research workflow used in RC-Discovery.
 
-The name comes from the way this programme was developed: Christopher Gardner iteratively "vibed" with AI—asking questions, proposing structures, pushing on weak points, demanding counterexamples, rerunning derivations, stress-testing numerically, and formalising the parts that survived.
+Christopher Gardner directs the research questions, selects the canonical claims, demands counterexamples, interprets evidence, controls publication decisions, and assumes responsibility for the programme. AI systems are used as research instruments for derivation support, coding, numerical experiments, adversarial auditing, literature triage, technical editing, and formalisation assistance.
 
-## Definition
+> **Vibe to generate. Audit to believe.**
 
-VIBE MATH is:
+## Method
 
-> **AI-assisted mathematical discovery by rapid conjecture, adversarial iteration, computational testing, proof reconstruction and formal verification.**
+1. **Vibe** — explore a nontrivial idea freely.
+2. **Type** — define the spaces, maps, norms, hypotheses, and quantifiers precisely.
+3. **Translate** — rewrite the idea in standard mathematical language.
+4. **Attack** — search for counterexamples and hidden assumptions.
+5. **Test** — run deterministic, adversarial, random, symbolic, and SDP checks.
+6. **Prove** — reconstruct the surviving statement from definitions.
+7. **Audit** — independently rederive the proof and track every constant.
+8. **Formalise** — machine-check stable components where practical.
+9. **Veto novelty** — compare against prior art before claiming discovery.
+10. **Publish only what survives** — keep theorem, evidence, formalisation, and novelty status separate.
 
-It is deliberately not "prompt and publish".
+VIBE MATH is deliberately not “prompt and publish.” AI agreement is not evidence of correctness.
 
-The workflow is:
+## Current theorem candidate
 
-1. **Vibe** — explore an idea freely and non-trivially.
-2. **Translate** — rewrite the idea in standard mathematical language.
-3. **Attack** — search for counterexamples and hidden assumptions.
-4. **Test** — run numerical or symbolic experiments.
-5. **Prove** — reconstruct the surviving claim from definitions.
-6. **Audit** — independently re-derive the proof and check norm/constants.
-7. **Formalise** — use Lean or another prover where practical.
-8. **Veto novelty** — search prior art before claiming discovery.
-9. **Publish only what survives.**
+For a finite POVM with full near-unit spectral sectors, synthesis conditioner
 
-## Current VIBE MATH result
+\[
+\alpha=\sigma_{\min}(T)>0,
+\]
 
-The strongest current theorem candidate in this repository is the same-label, dimension-free moving-POVM result built from:
+polar-rounded sectors \(Q_j\), and residual projector
 
-[
-	ext{synthesis packing}
-	o
-	ext{polar sectors}
-	o
-	ext{hybrid isometry}
-	o
-	ext{dimension-free measurement move}
-	o
-	ext{spectral-gap control}
-	o
-	ext{exact idempotent record process}.
-]
+\[
+R=I-\sum_jQ_j,
+\]
 
-The current explicit estimate is
+the canonical same-label completion is
 
-[
+\[
+F_j=Q_j+R E_jR.
+\]
 
-u
-le
-4left(sqrt{1-alpha^2}+sqrtdeltaight),
-]
+The current internally reconstructed operational bound is
 
-and the resulting exact-idempotent certificate is
+\[
+\boxed{
+\|\mathcal M_E-\mathcal M_F\|_\diamond
+\le
+2\min\left\{1,\sqrt{1-\alpha^2}+\sqrt\delta\right\}.
+}
+\]
 
-[
-|Phi_E-Pi|_diamond
-le
+The repeatability gap satisfies
 
-u+
-sqrt{
-rac{2(eta+3
-u)}
-{kappadelta}
-}.
-]
+\[
+\gamma_F\ge\delta.
+\]
 
-This remains a theorem candidate pending deeper prior-art review and external audit.
+A direct record-accessibility argument then constructs an exactly idempotent process with a nonvacuous parameter certificate. The result remains externally unverified and novelty-unverified.
 
-## Attribution
+## Human authorship and AI-provider claim boundary
 
-Research direction and authorship: **Christopher Gardner**.
+Research direction and human authorship: **Christopher Gardner**.
 
-AI assistance has been used throughout for derivation, coding, numerical testing, adversarial proof checking, literature triage, and Lean formalisation support.
+OpenAI and other AI providers are tool providers, not designated authors, co-authors, inventors, assignees, sponsors, institutions, owners, endorsers, or claimants to this work merely because their systems assisted it.
 
-The mathematics is not considered established merely because an AI produced or agreed with it. Claims are promoted only after surviving the repository's audit process.
+No acknowledgement of AI assistance transfers authorship, inventorship, ownership, priority, publication control, royalties, or research credit to an AI system or provider.
 
-## Motto
+The canonical detailed notice is:
 
-**Vibe to generate. Audit to believe.**
+- [`AI_RIGHTS_AND_ATTRIBUTION.md`](AI_RIGHTS_AND_ATTRIBUTION.md)
+
+That notice records the project's express non-claim position while recognising applicable law, governing service terms, provider rights in their own services, and the need for qualified legal advice where intellectual-property questions matter.
+
+## Scientific status
+
+\[
+\boxed{
+\text{internally reconstructed, computationally audited, partially formalised, novelty unverified}.
+}
+\]
+
+The mathematics is not considered established because an AI produced, repeated, or endorsed it. Claims advance only after surviving the repository's audit pipeline.
