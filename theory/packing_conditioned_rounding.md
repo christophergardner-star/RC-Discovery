@@ -303,46 +303,51 @@ The square-root rate is not merely proof slack; Section 8 gives an explicit fami
 
 ## 6. Spectral gap of the rounded POVM
 
-Because (P_j) contains all eigenvalues at least (1-delta),
+The polar factor changes the decomposition **inside** the total near-unit span, but it preserves that total span.
+
+Indeed, the sum of the rounded projectors is the orthogonal projector onto
+the range of the synthesis operator, which is exactly the span of the
+original near-unit sectors. Hence the residual projector
 
 [
-E_j
-le
-P_j+(1-delta)(I-P_j).
+C = I-sum_j R_j
 ]
 
-For a unit vector (xin C), the angle estimate gives
+is orthogonal to every original near-unit sector:
 
 [
-|P_jx|le p.
+P_jC=CP_j=0.
 ]
 
+Because (P_j) is the full spectral projection of (E_j) onto eigenvalues
+at least (1-delta),
+
+[
+E_jle P_j+(1-delta)(I-P_j).
+]
+
+Compressing by (C) gives
+
+[
+C E_j Cle(1-delta)C.
+]
+
+For the explicit residual completion
+
+[
+F_j=R_j+C E_j C,
+]
+
+the action on the orthogonal complement of (R_j) is zero on every other
+rounded sector and equal to (C E_j C) on the residual complement.
 Therefore
 
 [
-langle x,E_jxangle
-le
-1-delta+delta p^2.
+oxed{gamma_Fgedelta.}
 ]
 
-So when (p<1),
-
-[
-oxed{
-gamma_F
-ge
-delta(1-p^2)
->0,
-}
-]
-
-where (gamma_F) is the repeatability spectral gap of the rounded POVM ({F_j}).
-
-A sufficient checkable condition is
-
-[
-2eta<1.
-]
+This is stronger than the previous angle-dependent estimate and does not
+require an additional residual invariant.
 
 ## 7. Non-optimal channel theorem
 
@@ -413,7 +418,7 @@ Using the explicit estimates above,
 oxed{
 Deltale marepsilon_{m mov},
 qquad
-gamma_Fgedelta(1-p^2).
+gamma_Fge delta.
 }
 ]
 
