@@ -1,4 +1,9 @@
 .venv/
+.venv-audit/
 __pycache__/
 *.pyc
 .lake/
+research/ci_validation/
+research/local_validation/phd_quick/
+research/local_validation/phd_full/
+research/local_validation/phd_audit/
