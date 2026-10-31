@@ -37,7 +37,7 @@ No public file should represent the work as externally proved, peer reviewed, fu
 | Hybrid isometry | **Internally reconstructed** | \(V=J_{\mathcal K}U^*+WR\), with \(V^*V=I\) and \(V^*\Lambda_jV=F_j\). |
 | Dimension-free measurement movement | **Internally reconstructed; numerically cross-checked** | \(\nu\le2\min\{1,\sqrt{1-\alpha^2}+\sqrt\delta\}\). |
 | Direct exact-idempotent certificate | **Internally derived; tested** | Accessibility route avoids putting movement inside the gap denominator. |
-| Coefficient-two sharpness | **Open** | Valid searches show substantial slack; no saturating family is known. |
+| Sharpness of coefficient two | **Open** | Valid searches show substantial slack; no saturating family is known. |
 | Higher-rank uniformity | **Supported internally** | No rank factor appears in the typed operator-norm construction. |
 | Perturbative robustness | **Conditional/sketch level** | Requires an isolated threshold and quantified conditioning hypotheses. |
 | External specialist verification | **Pending** | Principal credibility gate. |
