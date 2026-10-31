@@ -1,201 +1,269 @@
 # RC-Discovery
 
-A private research repository for the **Resolvance Calculus (RC)** discovery programme developed on 28 October 2026.
+Private research repository for the **Resolvance Calculus (RC)** programme.
 
-The repository is deliberately conservative: every claim is labelled as known, derived, provisionally novel, open, or refuted.
+The repository is deliberately conservative. Claims are labelled as known, derived, internally proved, open, refuted, or novelty-unverified.
 
-## Current strongest internally proved results
+## Current strongest result
+
+The moving-POVM programme now has an internally closed **same-label, dimension-free theorem candidate** for a record-structured class.
+
+Let ({E_j}_{j=1}^m) be a finite POVM. Fix (0<delta<1/2), and for every nonzero outcome effect let (P_j
+eq0) be the full spectral projection onto eigenvalues at least (1-delta).
+
+Define the synthesis operator
+
+[
+T:igoplus_joperatorname{ran}(P_j)	omathcal H,
+qquad
+T(x_j)=sum_jx_j,
+]
+
+and the global packing conditioner
+
+[
+alpha=sigma_{min}(T)>0.
+]
+
+Let (T=UH) be the polar decomposition, (Q_j) the mutually orthogonal polar-rounded sectors, and
+
+[
+R=I-sum_jQ_j.
+]
+
+Define the same-label completed POVM
+
+[
+oxed{
+F_j=Q_j+R E_jR.
+}
+]
+
+Then:
+
+- ({F_j}) is a POVM;
+- every nonzero (F_j) has an exact eigenvalue-1 repeatable sector (Q_j);
+- the repeatability spectral gap satisfies
+
+[
+oxed{gamma_Fgedelta;}
+]
+
+- the measurement-channel move is outcome-count and dimension independent:
+
+[
+oxed{
+
+u
+=
+|mathcal M_E-mathcal M_F|_diamond
+le
+2arepsilon
+le
+4left(sqrt{1-alpha^2}+sqrtdeltaight).
+}
+]
+
+The proof uses the exact hybrid Naimark/Stinespring isometry
+
+[
+oxed{
+V=JU^*+WR,
+}
+]
+
+where (W) is the canonical measurement isometry and (J) is the labelled embedding of the packed sectors.
+
+An independent reconstruction of this hybrid-isometry derivation has passed, with the explicit hypothesis that every nonzero outcome has a nonzero near-unit sector.
+
+## Composite exact-idempotent certificate
+
+Let the original measure-and-prepare channel have record margin (kappa>0) and idempotence defect
+
+[
+eta=|Phi_E^2-Phi_E|_diamond.
+]
+
+Using the same records after the POVM move, the moved channel has defect at most
+
+[
+eta+3
+u.
+]
+
+Applying the RC spectral-gap Record-Margin theorem gives an exactly idempotent channel (Pi) satisfying
+
+[
+oxed{
+|Phi_E-Pi|_diamond
+le
+
+u+
+sqrt{
+rac{2(eta+3
+u)}
+{kappadelta}
+}.
+}
+]
+
+There is no explicit dependence on:
+
+- the number of outcomes (m),
+- Hilbert-space dimension (d),
+- total packed-sector rank.
+
+This is currently the strongest internally supported RC result.
+
+## Earlier core results
 
 ### Sharp Record-Margin Stability
 
 For sharp record sectors,
 
 [
+oxed{
 |Phi-Pi|_diamond
 le
 sqrt{rac{2eta}{kappa}}.
+}
 ]
 
-The 31 October 2026 independent reconstruction passes, subject only to citing two standard background lemmas explicitly: the density-operator optimization of the diamond norm for Hermiticity-preserving maps, and the normalized post-selection trace-distance bound.
+Independent reconstruction: **passed**.
 
-### POVM Spectral-Gap Record-Margin Stability
+### POVM spectral-gap extension
 
-For a finite discrete POVM whose nonzero effects possess eigenvalue-1 repeatable sectors,
+For repeatability-admissible POVMs,
 
 [
+oxed{
 |Phi-Pi|_diamond
 le
 sqrt{rac{2eta}{kappagamma}}.
+}
 ]
 
-This proof also survives independent reconstruction.
+Independent reconstruction: **passed**.
 
-## Moving-POVM programme
+## Important negative results
 
-The unrestricted moving-POVM conjecture is false.
+The unrestricted moving-POVM problem is false.
 
-A regular-simplex family with (m=d+1) simultaneously has small idempotence defect, large record margin, near-unit effects and near-reachable records, while same-label exact repeatability remains far away.
+A regular-simplex family shows that local properties such as:
 
-The missing ingredient is global packing.
+- small idempotence defect,
+- large record margin,
+- near-unit effects,
+- near-reachable records,
 
-### Synthesis-operator conditioner
+do not imply proximity to a repeatable measurement. A global packing condition is necessary.
 
-For near-unit spectral sectors (P_j), define
+Other refutations established during the programme:
 
-[
-T:igoplus_joperatorname{ran}(P_j)	omathcal H,
-qquad
-(x_j)mapstosum_jx_j.
-]
+- (m>d) blocks same-label exact repeatability;
+- a generic linear (O(delta)) spectral-threshold movement bound is false;
+- routing all residual mass to a new projective outcome can produce diamond distance (2);
+- residual spectral radius is not an independent missing invariant for the same-label completion.
 
-The quantity
+## Packing geometry
+
+The synthesis conditioner
 
 [
 alpha=sigma_{min}(T)
 ]
 
-is now the working global conditioner.
+detects the global packing obstruction.
 
-If (alpha>0), the polar factor of (T) gives a constructive simultaneous orthogonalization of the near-unit sectors, including higher-rank sectors.
-
-The POVM constraint also bounds the top singular value:
+For the polar-rounded sectors,
 
 [
-sigma_{max}(T)le(1-delta)^{-1/2}.
-]
-
-### Repeatable completion
-
-If (R_j) are the polar-rounded orthogonal sectors and
-
-[
-C=I-sum_jR_j,
-]
-
-then
-
-[
-F_j=R_j+CE_jC
-]
-
-is a genuine POVM with exact eigenvalue-1 sectors (R_j).
-
-This handles (m<d) without pretending that rank-one projectors alone can sum to the identity.
-
-### Important correction
-
-A linear spectral-threshold movement bound is false in general.
-
-There is an explicit (d=4,m=3) family with perfect packing (alpha=1) that still requires order-(sqrtdelta) effect movement.
-
-So the generic rate must allow square-root dependence on the near-unit spectral defect unless stronger whole-effect closeness is assumed.
-
-### Current many-outcome theorem
-
-A constructive positive theorem now exists in the well-conditioned packing-feasible regime.
-
-The current proof has:
-
-- polar orthogonalization,
-- explicit repeatable POVM completion,
-- a square-root effect-movement bound,
-- transfer of idempotence defect to the moved channel,
-- application of the RC spectral-gap theorem.
-
-The remaining weakness is a crude measurement-channel estimate
-
-[
-|Phi-widetildePhi|_diamond
+oxed{
+|P_j-Q_j|_infty
 le
-sum_j|E_j-F_j|_infty,
+sqrt{1-alpha^2}.
+}
 ]
 
-which introduces an outcome-count factor (m).
+This holds at arbitrary rank and has passed large numerical stress tests.
 
-Removing that factor is now the main mathematical target.
+The polar / Löwdin orthogonalisation step itself is classical and is **not** claimed as novel.
 
-See:
+## Lean formalisation
 
-- theory/packing_conditioned_rounding.md
-- research/INDEPENDENT_PROOF_AUDIT_2026-10-31.md
-- experiments/test_spectral_threshold_rate.py
+The current Lean 4 + Mathlib development machine-checks the real-arithmetic core with zero `sorry`:
+
+- `projector_const_one`
+- `polar_residual_le`
+- `near_orthonormal_overlap`
+- `rank1_core_package`
+
+Not yet formalised:
+
+- the Hilbert-space polar decomposition step,
+- the hybrid isometry (V=JU^*+WR),
+- the diamond-norm transfer,
+- the full composite theorem.
 
 ## Prior-art boundary
 
-The polar orthogonalization step is standard matrix analysis (Fan–Hoffman / Higham / Löwdin).
+Known neighbouring ingredients include:
 
-POVM projectivization is also established prior art. In particular, Mikael de la Salle, *Orthogonalization of Positive Operator Valued Measures* (2022), proves quantitative POVM-to-PVM rounding in a state-dependent (L_2)-type metric.
+- classical polar / Löwdin / Fan-Hoffman nearest-isometry results;
+- quantitative POVM orthogonalisation, including de la Salle (2022);
+- continuity of Stinespring dilations and channel distance, including Kretschmann-Schlingemann-Werner;
+- Kitaev's almost-idempotent channel / approximate (C^*)-algebra programme;
+- the 2026 negative result showing general almost-idempotent channels need not be close to idempotents.
 
-No novelty claim is made for those ingredients.
+No novelty claim belongs to those ingredients individually.
 
-The potentially distinct RC contribution is the combination of:
-
-- synthesis-operator packing conditioning,
-- repeatability-admissible completion,
-- record-margin / idempotence control,
-- diamond-norm stability for the associated measure-and-prepare channel.
-
-Novelty remains unverified.
-
-## Other results
-
-### Redundancy
-
-For two independent pure records with overlap (s),
+The potentially distinct contribution is the combined chain
 
 [
-kappa_R=sqrt{1-s^{2R}}.
+oxed{
+	ext{synthesis packing}
+	o
+	ext{explicit same-label hybrid dilation}
+	o
+	ext{dimension-free measurement move}
+	o
+	ext{spectral gap}
+	o
+	ext{exact idempotent record process}.
+}
 ]
 
-Correlated common-mode errors can remove the redundancy gain.
+Novelty remains unverified pending a deeper literature veto.
 
-### Record-structured metastability
+## Current next steps
 
-If a metastable channel (mathcal C) lies within (delta) of the record-producing class, an exact idempotent (mathcal Q) exists with
+The main internal proof gap is no longer open. Current priorities are:
 
-[
-|mathcal C-mathcal Q|_diamond
-le
-delta+
-sqrt{
-rac{2(eta+3delta)}
-{kappagamma}
-}.
-]
+1. literature/novelty audit of the combined theorem;
+2. sharpen the constant (4);
+3. test joint optimality of the (sqrt{1-alpha^2}) and (sqrtdelta) rates;
+4. formalise the operator/channel proof in Lean;
+5. prepare a concise external-review/arXiv note only after the literature veto;
+6. continue secondary RC applications: redundancy, metastability, and the TCL bridge.
 
-### RC-TCL continual-learning bridge
+## Key files
 
-The classical TCL memory penalty admits an exact task-horizon affine analysis when stored anchors and importance maps are frozen.
-
-The initial “locked conflict predicts more forgetting” hypothesis failed its smoke test, but anchor conflict did track poorer retained/joint performance and disappeared under an anchor-shuffle control.
-
-See:
-
-- research/RC_TCL_BRIDGE.md
-- research/RC_TCL_SMOKE_RESULTS.md
-- experiments/rc_tcl_certificate.py
-
-## Repository map
-
-- theory/record_margin_stability.md
-- theory/povm_spectral_gap_stability.md
-- theory/moving_povm_boundary.md
-- theory/packing_conditioned_rounding.md
-- theory/redundancy_stability.md
-- theory/metastable_record_rounding.md
-- experiments/test_record_margin.py
-- experiments/test_three_extensions.py
-- experiments/test_moving_povm.py
-- experiments/test_spectral_threshold_rate.py
-- experiments/rc_tcl_certificate.py
-- literature/NOVELTY_LEDGER.md
-- research/INDEPENDENT_PROOF_AUDIT_2026-10-31.md
-- research/OPEN_PROBLEMS.md
-- STATUS.md
+- `theory/record_margin_stability.md`
+- `theory/povm_spectral_gap_stability.md`
+- `theory/moving_povm_boundary.md`
+- `theory/packing_conditioned_rounding.md`
+- `theory/same_label_dimension_free_theorem.md`
+- `research/INDEPENDENT_PROOF_AUDIT_2026-10-31.md`
+- `research/INDEPENDENT_HYBRID_ISOMETRY_AUDIT_2026-10-31.md`
+- `research/OPEN_PROBLEMS.md`
+- `experiments/test_same_label_hybrid_dilation.py`
+- `lean/RCProof/Core.lean`
+- `literature/NOVELTY_LEDGER.md`
+- `STATUS.md`
 
 ## Research discipline
 
-Before a novelty claim:
+Before any breakthrough or novelty claim:
 
 1. proof audit,
 2. adversarial counterexample search,
