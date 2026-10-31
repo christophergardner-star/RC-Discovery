@@ -17,28 +17,35 @@ admits an explicit hybrid Stinespring isometry \(V = J U^* + W R\) such that
 \]
 Composition with Record-Margin Stability yields a fully dimension-free and outcome-count-independent certificate of closeness to an exactly idempotent record process.
 
-## What is established
+## Closed internally
 
-- Packing condition \(\alpha\) is necessary and sufficient for simultaneous polar orthogonalization of near-unit sectors.
-- Same-label completion preserves spectral gap \(\gamma_F \ge \delta\).
-- Hybrid isometry \(V = JU^* + WR\) is an exact Stinespring dilation of the completion (machine-precision verified).
-- Numerical probes, adversarial audits, and pure-state diamond proxies are consistent with the bound; empirical constant closer to 2.
-- Prior-art search (two passes) found no match for the combined statement or the hybrid construction.
+- Packing condition, polar orthogonalization, same-label completion, spectral gap argument (analytic write-up).
+- Hybrid isometry construction and exact identities (machine-precision verified).
+- Full proof write-up and verification note.
+- Numerical probes, adversarial audits, diamond proxies, constant tightening.
+- Prior-art search (two passes); no match found.
+- **Lean algebraic + residual core formalised and builds** (`Hybrid.lean`, `HybridExtended.lean`).
+- Review package and novelty statement prepared.
 
-## What remains open
+## Cannot be closed internally
 
-- Independent analytic reconstruction of the bound \(\|V-W\|_\infty \le C(\sqrt{1-\alpha^2} + \sqrt{\delta})\).
-- Optimal constant (analytic claim 4; empirical ~2).
-- Full formalisation.
-- External peer review / arXiv submission.
+| Item | Why it remains open |
+|------|---------------------|
+| Full end-to-end Lean formalisation | Remaining steps are analytic estimates and composition with external theorems; multi-day formalisation effort |
+| Independent external specialist proof review | Requires an external human specialist |
+| Peer review | Requires journal/arXiv submission and external referees |
+| Definitive novelty confirmation | Literature search is complete; definitive confirmation requires external specialist |
 
 ## Primary documents
 
-- `paper/long_paper.md` — extended paper
-- `paper/short_paper.md` — concise version
-- `theory/hybrid_stinespring_isometry.md` — construction and identities
-- `theory/PRIOR_ART_VETO_UPDATED.md` — latest prior-art assessment
+- `theory/full_proof.md`
+- `theory/full_proof_verification.md`
+- `lean/RCProof/Hybrid.lean` and `HybridExtended.lean` (both build)
+- `lean/LEAN_STATUS.md`
+- `REVIEW_PACKAGE.md`
+- `NOVELTY_STATEMENT.md`
+- `paper/long_paper.md` / `paper/short_paper.md`
 
 ## Credibility gate
 
-The result is a coherent theorem candidate. Its credibility rests on independent reconstruction of the hybrid isometry distance bound and on external scrutiny.
+All internal items that can be closed without external humans have been closed. The remaining gates are external by nature.
