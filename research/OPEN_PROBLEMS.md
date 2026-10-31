@@ -76,13 +76,63 @@ with no dependence on (m) or (d).
 
 This corrects the earlier conjectured linear dependence on (delta); the explicit lower-bound family already shows that (sqrtdelta) is generically necessary under spectral-threshold-only assumptions.
 
-### New highest-value target
+### Gamma audit update
 
-The remaining bottleneck is no longer the (m)-factor.
+The proposed shortcut of routing all residual mass to an extra reject outcome is **false as a general small-perturbation step**.
 
-It is now:
+An explicit two-outcome example has
 
-> Can the repeatability spectral gap of the Naimark-completed POVM be bounded directly from the packing/spectral data, or can the RC record-rounding step be reformulated without a separate gap parameter?
+[
+alpha=1,qquad delta=0
+]
+
+but sending the residual subspace to a new label changes the measurement channel by diamond distance 2.
+
+Stronger: there is a family with
+
+[
+alpha=1,quad delta=0,quad eta=0,quad kappa=1
+]
+
+while the repeatability spectral gap tends to zero. Therefore no positive lower bound
+
+[
+gamma_F ge g(alpha,delta,eta,kappa)
+]
+
+exists in the incomplete-sector regime.
+
+See:
+
+- research/GAMMA_CLOSURE_AUDIT_2026-10-31.md
+- experiments/test_gamma_extra_outcome_counterexample.py
+
+### New theorem boundary
+
+If the packed sectors are complete,
+
+[
+sum_j rank(P_j)=d,
+]
+
+then there is no residual subspace. In that regime the polar/Naimark move directly produces a PVM, so
+
+[
+gamma_F=1,
+]
+
+and the dimension-free end-to-end certificate closes.
+
+The remaining open problem is now the **incomplete packed-sector regime**:
+
+> what residual invariant is necessary and sufficient to control the gap / projective completion without losing the dimension-free measurement-channel bound?
+
+Candidate residual quantities:
+
+1. residual spectral gap,
+2. residual determinism / ambiguity,
+3. distance of the residual measurement channel to a deterministic coarse-graining,
+4. a direct record-consistency quantity on the residual subspace.
 
 A secondary question is whether the same outcome-independent bound can be proved for the explicit residual formula
 
