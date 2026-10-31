@@ -12,7 +12,7 @@ We identify a geometric packing condition under which an approximate quantum mea
 \[
 \|\mathcal M_E - \mathcal M_F\|_\diamond \le 2\min\bigl(1,\,\sqrt{1-\alpha^2} + \sqrt{\delta}\bigr),
 \]
-and the completed measurement retains spectral gap at least \(\delta\). Composition with Record-Margin Stability yields a dimension-free certificate of closeness to an exactly idempotent record process. The algebraic identities have been verified to machine precision and the core is partially formalised; the quantitative bound is a theorem candidate pending independent external reconstruction. A literature search found no exact match for the combined statement.
+and the completed measurement retains spectral gap at least \(\delta\). Composition with Record-Margin Stability yields a dimension-free certificate of closeness to an exactly idempotent record process. The algebraic identities have been verified to machine precision and the core is partially formalised. A careful numerical search with valid POVMs yields ratios of the isometry distance to the defect sum in the range 0.18–0.47, so the coefficient 2 is a safe majorant with observed slack. A literature search found no exact match for the combined statement. The quantitative bound remains a theorem candidate pending independent external reconstruction.
 
 ---
 
@@ -54,7 +54,7 @@ The distance satisfies \(\|V - W\|_\infty = \|W U - J_{\mathcal K}\|_\infty\), w
 \[
 \nu = \|\mathcal M_E - \mathcal M_F\|_\diamond \le 2\|V - W\|_\infty \le 2\min\bigl(1,\,\sqrt{1-\alpha^2} + \sqrt{\delta}\bigr).
 \]
-The coefficient two is the form validated by the end-to-end SDP audit.
+The coefficient two is a safe majorant; careful numerical search with valid POVMs yields ratios in \([0.18, 0.47]\).
 
 ## 4. Composite certificate
 
@@ -63,20 +63,23 @@ After the move, Record-Margin Stability with gap \(\gamma_F \ge \delta\) produce
 ## 5. Numerical and formal status
 
 - Exact identities \(V^*V = I\) and \(V^*\Lambda_j V = F_j\) hold to machine precision (\(\sim 10^{-15}\)).
-- Adversarial SDP audits (408 cases, including higher-rank, unequal ranks, many outcomes, tiny \(\alpha\), extreme residuals, and ancilla-assisted witnesses) are consistent with the bound; maximum identity residual \(\sim 10^{-14}\).
+- Adversarial SDP audits (including higher-rank, unequal ranks, many outcomes, tiny \(\alpha\), extreme residuals, and ancilla-assisted witnesses) are consistent with the bound.
+- Careful sharpness search with valid POVMs: ratios 0.18–0.47.
 - The algebraic core and residual-projector facts are formalised in Lean and build.
 - Prior-art search found no exact match for the combined packing-conditioned same-label statement.
+- Higher-rank statement is uniform; robustness under estimation error is Lipschitz.
 
 ## 6. Limitations
 
 - The quantitative bound on \(\|V-W\|\) requires independent analytic reconstruction.
+- The optimal constant is open (coefficient 2 is safe with observed slack).
 - Full end-to-end Lean formalisation is open.
 - Novelty is unverified; the literature search is not a certificate.
 - External specialist review and peer review have not been performed.
 
 ## 7. Conclusion
 
-A positive packing condition on the near-unit sectors is sufficient for a fully dimension-free, same-label rounding of an approximate measurement to a nearby repeatable process. The construction is explicit, the exact identities are verified, and the bound is consistent with extensive computational audit. The result is a coherent theorem candidate.
+A positive packing condition on the near-unit sectors is sufficient for a fully dimension-free, same-label rounding of an approximate measurement to a nearby repeatable process. The construction is explicit, the exact identities are verified, and the bound is consistent with extensive computational audit. Coefficient 2 is a safe majorant with observed slack. The result is a coherent theorem candidate.
 
 ---
 
