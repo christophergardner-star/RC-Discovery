@@ -84,6 +84,9 @@ ARGS=(experiments/run_phd_validation.py --profile "$PROFILE" --output "$OUTPUT")
 [[ "$REQUIRE_LEAN" -eq 1 ]] && ARGS+=(--require-lean)
 [[ "$FAIL_FAST" -eq 1 ]] && ARGS+=(--fail-fast)
 
+echo "Auditing human authorship and AI-provider non-claim boundary"
+"$PYTHON" experiments/test_ai_rights_notice.py
+
 echo "Running VIBE MATH PhD audit profile '$PROFILE'"
 "$PYTHON" "${ARGS[@]}"
 
