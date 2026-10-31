@@ -1,8 +1,16 @@
-# RC-Discovery
+# VIBE MATH — RC-Discovery
 
-Private research repository for the **Resolvance Calculus (RC)** programme.
+**VIBE MATH** is the working name for this AI-assisted mathematical discovery programme: Christopher Gardner drives the questions, judgement, counterexample hunting and research direction while AI is used interactively to derive, attack, test, formalise and rewrite the mathematics.
+
+This repository contains the **Resolvance Calculus (RC)** programme and its packing-conditioned quantum-measurement results.
 
 The repository is deliberately conservative. Claims are labelled as known, derived, internally proved, open, refuted, or novelty-unverified.
+
+## What VIBE MATH means
+
+VIBE MATH is not a claim that informal prompting replaces proof. It names the workflow used here: rapid human–AI mathematical exploration followed by adversarial testing, numerical stress tests, proof reconstruction, prior-art checks and formal verification where practical.
+
+The rule is simple: **vibe to generate; audit to believe.**
 
 ## Current strongest result
 
