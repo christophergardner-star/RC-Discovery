@@ -7,16 +7,17 @@ It is designed for clean-clone reproduction and external-review handoff.
 Profiles
 --------
 quick:
-    Fast algebraic, hypothesis, provenance, and counterexample checks. The
-    theorem-contract test omits SDP optimization.
+    Fast governance, algebraic, hypothesis, provenance, and counterexample
+    checks. The theorem-contract test omits SDP optimization.
 
 full:
-    Adds adversarial many-outcome tests, primal/dual SDPs, accessibility
-    certificates, residual-rate tests, and the remaining canonical experiments.
+    Adds all canonical ``test_*.py`` scripts, adversarial many-outcome tests,
+    primal/dual SDPs, accessibility certificates, residual-rate tests, and the
+    remaining finite-dimensional experiments.
 
 A successful run is evidence that the repository's executable claims are
 internally consistent on the tested finite cases. It is not a proof, peer
-review, or novelty certificate.
+review, external verification, or novelty certificate.
 """
 
 from __future__ import annotations
@@ -39,6 +40,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUT = ROOT / "research" / "local_validation" / "phd_audit"
 
 QUICK_TESTS: list[tuple[str, list[str]]] = [
+    ("test_ai_rights_notice.py", []),
     ("test_repository_claim_discipline.py", []),
     ("test_theorem_v1_contract.py", ["--skip-sdp"]),
     ("test_record_margin.py", []),
@@ -49,12 +51,14 @@ QUICK_TESTS: list[tuple[str, list[str]]] = [
 ]
 
 FULL_TESTS: list[tuple[str, list[str]]] = [
+    ("test_ai_rights_notice.py", []),
     ("test_repository_claim_discipline.py", []),
     ("test_theorem_v1_contract.py", ["--sdp-cases", "4"]),
     ("test_record_margin.py", []),
     ("test_synthesis_packing.py", []),
     ("test_spectral_threshold_rate.py", []),
     ("test_same_label_hybrid_dilation.py", []),
+    ("test_dimension_free_naimark.py", []),
     # This writes adversarial.json, which the constant-two test consumes.
     ("test_adversarial_same_label.py", []),
     ("test_constant_two_bound.py", []),
@@ -97,7 +101,7 @@ def git_metadata() -> dict[str, Any]:
 
 
 def package_versions() -> dict[str, str | None]:
-    names = ["numpy", "scipy", "cvxpy", "clarabel", "scs"]
+    names = ["numpy", "scipy", "cvxpy", "clarabel", "scs", "torch"]
     versions: dict[str, str | None] = {}
     for name in names:
         try:
@@ -105,6 +109,34 @@ def package_versions() -> dict[str, str | None]:
         except importlib.metadata.PackageNotFoundError:
             versions[name] = None
     return versions
+
+
+def canonical_lean_sources() -> list[Path]:
+    """Return repository-owned Lean sources, never downloaded `.lake` code.
+
+    Earlier evidence generation recursively hashed every Mathlib dependency
+    below ``lean/.lake``. That obscured the actual formalisation boundary and
+    produced oversized evidence files. Only source controlled by this
+    repository belongs in ``lean_source_hashes``.
+    """
+
+    lean_root = ROOT / "lean"
+    candidates: list[Path] = []
+    root_module = lean_root / "RCProof.lean"
+    if root_module.is_file():
+        candidates.append(root_module)
+
+    source_dir = lean_root / "RCProof"
+    if source_dir.is_dir():
+        candidates.extend(sorted(source_dir.rglob("*.lean")))
+
+    return sorted(
+        {
+            path.resolve()
+            for path in candidates
+            if ".lake" not in path.parts and path.is_file()
+        }
+    )
 
 
 def run_logged(
@@ -175,7 +207,7 @@ def write_markdown(summary: dict[str, Any], path: Path) -> None:
             f"**Overall:** `{'PASS' if summary.get('passed') else 'FAIL'}`",
             "",
             "A passing run is computational evidence only; it does not establish "
-            "the theorem, novelty, or peer review.",
+            "the theorem, novelty, external verification, or peer review.",
         ]
     )
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -229,7 +261,8 @@ def main() -> None:
 
     tests = QUICK_TESTS if args.profile == "quick" else FULL_TESTS
     missing = [
-        name for name, _ in tests
+        name
+        for name, _ in tests
         if not (ROOT / "experiments" / name).is_file()
     ]
     if missing:
@@ -245,7 +278,7 @@ def main() -> None:
     )
 
     summary: dict[str, Any] = {
-        "schema": 1,
+        "schema": 2,
         "started_utc": datetime.now(timezone.utc).isoformat(),
         "profile": args.profile,
         "python": {
@@ -310,7 +343,7 @@ def main() -> None:
                 encoding="utf-8",
             )
         else:
-            lean_files = sorted((ROOT / "lean").rglob("*.lean"))
+            lean_files = canonical_lean_sources()
             summary["lean_source_hashes"] = {
                 str(path.relative_to(ROOT)): sha256(path)
                 for path in lean_files
