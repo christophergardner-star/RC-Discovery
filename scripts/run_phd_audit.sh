@@ -35,10 +35,10 @@ Usage: scripts/run_phd_audit.sh [options]
 
 Options:
   --profile quick|full   Validation depth (default: full)
-  --skip-install        Reuse an existing .venv-audit environment
-  --skip-lean           Do not run lake build
-  --require-lean        Fail when lake is not installed
-  --fail-fast           Stop at the first failed test
+  --skip-install         Reuse an existing .venv-audit environment
+  --skip-lean            Do not run lake build
+  --require-lean         Fail when lake is not installed
+  --fail-fast            Stop at the first failed test
 EOF
       exit 0
       ;;
@@ -84,10 +84,8 @@ ARGS=(experiments/run_phd_validation.py --profile "$PROFILE" --output "$OUTPUT")
 [[ "$REQUIRE_LEAN" -eq 1 ]] && ARGS+=(--require-lean)
 [[ "$FAIL_FAST" -eq 1 ]] && ARGS+=(--fail-fast)
 
-echo "Auditing human authorship and AI-provider non-claim boundary"
-"$PYTHON" experiments/test_ai_rights_notice.py
-
-echo "Running VIBE MATH PhD audit profile '$PROFILE'"
+echo "Running VIBE MATH audit profile '$PROFILE'"
+echo "The profile includes the human-authorship and AI-provider non-claim audit."
 "$PYTHON" "${ARGS[@]}"
 
 echo
