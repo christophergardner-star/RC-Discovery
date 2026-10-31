@@ -273,3 +273,107 @@ The highest-value remaining target returns to the collective channel movement:
 > for the specific residual completion (F_j=Q_j+R E_jR).
 
 Numerics suggest this is possible. A proof would close the same-label dimension-free chain without introducing an extra outcome.
+
+
+## A4. Same-label outcome-independent bound: internally closed
+
+The previous same-label conjecture for
+
+[
+F_j=Q_j+R E_jR
+]
+
+admits a direct hybrid-dilation proof.
+
+Let (W) be the canonical Naimark isometry of the original POVM, (J) the labelled isometry of the original near-unit sectors, and (T=UH) the synthesis polar decomposition.
+
+Because the residual projector (R) is orthogonal to every original spectral sector (P_j),
+
+[
+J^*WR=0
+]
+
+exactly.
+
+Hence
+
+[
+V=JU^*+WR
+]
+
+is an isometry and implements the **same-label** completed POVM exactly:
+
+[
+V^*Lambda_jV
+=
+Q_j+R E_jR
+=
+F_j.
+]
+
+Moreover
+
+[
+|V-W|_infty
+=
+|J-WU|_infty
+=
+arepsilon.
+]
+
+Therefore
+
+[
+oxed{
+
+u
+=
+|mathcal M_E-mathcal M_F|_diamond
+le
+2arepsilon
+}
+]
+
+with
+
+[
+arepsilon^2
+le
+2eta+2r_delta M,
+]
+
+and consequently, for (0<delta<1/2),
+
+[
+oxed{
+
+u
+le
+4left(
+sqrt{1-alpha^2}+sqrtdelta
+ight).
+}
+]
+
+Together with the already proved
+
+[
+gamma_Fgedelta,
+]
+
+the same-label chain is internally closed.
+
+See:
+
+- theory/same_label_dimension_free_theorem.md
+- experiments/test_same_label_hybrid_dilation.py
+
+### Remaining work is now audit/novelty, not an internal missing bound
+
+The next mathematical priorities are:
+
+1. independent reconstruction of the hybrid-dilation proof;
+2. literature veto against existing Naimark/POVM perturbation theorems;
+3. sharpen the constant (4);
+4. formalise the operator/channel proof in Lean;
+5. determine whether the (sqrtdelta) dependence is jointly optimal with the packing term.
