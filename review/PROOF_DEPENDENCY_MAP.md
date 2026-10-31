@@ -27,6 +27,13 @@ B_{\rm move}
 - pure-input diamond-norm characterisation;
 - normalised projection inequality;
 - repeatability criterion for discrete POVMs.
+- Strang/de Bruijn's Jordan-product bound, specialized in the
+  [coefficient-two proof](../theory/BOUND_CANDIDATE_2026-10-31.md).
+
+The [theorem-level comparison](../literature/COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
+also derives an alternative weighted completion from the polar construction
+in de la Salle's proof. That alternative does not replace the prescribed
+unweighted map in the dependency chain below.
 
 ### Layer 2: Packing geometry
 

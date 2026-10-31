@@ -5,6 +5,14 @@ Status: **first deep veto passed provisionally — no exact prior theorem locate
 
 ## Target claim being vetoed
 
+**Historical coefficient-four audit.** For the current coefficient-two
+statement and direct accessibility certificate, use the
+[theorem-level comparison](COMBINED_STATEMENT_COMPARISON_2026-10-31.md).
+It identifies the overlap lemma as classical and derives the broad
+existence result through a weighted-polar adaptation. The provisional
+search verdict in this historical report must not be used as the current
+assessment of what the theorem adds.
+
 The theorem candidate under review is the combined statement:
 
 - a finite POVM has, for every nonzero effect (E_j), a nonzero near-unit spectral sector (P_j) for eigenvalues at least (1-delta);

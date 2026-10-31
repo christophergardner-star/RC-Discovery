@@ -14,6 +14,18 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 
 No public file should represent the work as externally proved, peer reviewed, fully machine checked, prior-art free, patentable, or a proven breakthrough.
 
+## Latest theorem-level literature comparison
+
+The [combined-statement audit](literature/COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
+identifies the coefficient-two overlap lemma as a special case of
+Strang/de Bruijn and reconstructs a weighted polar completion with an
+unconditional joint measurement bound from established machinery. The broad
+existence claim therefore has a short reduction; the prescribed unweighted
+map and explicit record correction remain the narrower comparison targets.
+Novelty remains unverified. The additional comparison checks passed 104
+weighted constructions and six primal/dual SDPs, alongside exact rational
+examples; these are separate from the earlier full-suite results below.
+
 ## Core record-stability results
 
 | Item | Status | Notes |

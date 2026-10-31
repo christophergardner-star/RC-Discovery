@@ -126,6 +126,15 @@ have record margin \(\kappa>0\) and idempotence defect
 \eta=\|\Phi^2-\Phi\|_\diamond.
 \]
 
+For this corollary, discard exact zero effects and assume at least two
+remaining labels. The record margin means
+\[
+\kappa=\min_j\frac12
+\inf_{\omega\in\operatorname{conv}\{\sigma_i:i\ne j\}}
+\|\sigma_j-\omega\|_1>0,
+\]
+where the competing records are taken over those remaining labels.
+
 Define the label inaccessibility by
 \(e=\max_{j:E_j\ne0}(1-\lambda_{\max}(E_j))\).
 The near-unit-sector hypothesis gives \(0\le e\le\delta<1/2\).

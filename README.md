@@ -10,6 +10,14 @@ RC-Discovery separates conjecture, analytic proof, numerical evidence, machine-c
 
 AI systems are used as research tools for derivation support, coding, testing, adversarial auditing, editing, literature triage and formalisation assistance. OpenAI and other AI providers are not designated as authors, inventors, owners, sponsors, endorsers or claimants. Automated Git metadata is operational provenance, not research attribution. See [`AI_RIGHTS_AND_ATTRIBUTION.md`](AI_RIGHTS_AND_ATTRIBUTION.md).
 
+The latest [theorem-level literature comparison](literature/COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
+identifies the coefficient-two matrix lemma as classical prior art and derives
+a weighted alternative from established polar machinery. The remaining
+comparison target is the quantitative guarantee for the prescribed unweighted
+completion and supplied records; broad existence alone is not a defensible
+novelty claim.
+
+
 ## Current theorem candidate
 
 Let \(\{E_j\}_{j=1}^m\) be a finite POVM on a finite-dimensional Hilbert space. Fix \(0<\delta<1/2\). For every nonzero outcome, let \(P_j\neq0\) be the full spectral projection of \(E_j\) onto eigenvalues at least \(1-\delta\).

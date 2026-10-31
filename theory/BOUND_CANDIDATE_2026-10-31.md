@@ -38,6 +38,24 @@ where \(\sqrt{1-\alpha^2}+\sqrt\delta<1\).
 
 ## Positive-matrix lemma
 
+**Prior-art identification (31 October 2026):** this operator inequality is a
+special case of the classical Jordan-product bounds of Strang (1962), as
+rederived by de Bruijn, *Remarks on Hermitian Matrices* (1980), Theorem 3.2 and
+Sections 4--5, pp. 206--207
+([published paper](https://pure.tue.nl/ws/portalfiles/portal/2165089/597564.pdf)).
+Put
+\[
+a=\frac{M-\alpha}{M+\alpha},\qquad
+b=\frac{1-d}{1+d},\qquad
+c=\frac{(M+\alpha)(1+d)}4.
+\]
+Then \(a+b\le1\) is equivalent to \((M-\alpha)(1-d)\le4\alpha d\),
+and the corresponding classical lower bound is
+\(c(1-a)(1-b)=\alpha d\). The short proof below is retained for
+self-containment; this lemma is not an independent novelty candidate. See the
+[combined-statement comparison](../literature/COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
+for the remaining application-specific content.
+
 Suppose \(\alpha I\le H\le MI\) and \(dI\le D\le I\), with
 \(\alpha,d>0\). Put \(X=H-\alpha I\), \(Y=D-dI\), and
 \(h=M-\alpha\). Thus \(0\le X\le hI\), \(0\le Y\le rI\).

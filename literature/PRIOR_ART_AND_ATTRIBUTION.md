@@ -15,6 +15,17 @@ The repository therefore uses the following rule:
 
 ## Established ingredients not claimed by RC-Discovery
 
+The [theorem-level comparison](COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
+now supplies explicit reductions, rather than only a search for matching
+wording. In particular, the positive-matrix lemma behind coefficient two is
+classical, and the broader existence statement has a short weighted-polar
+derivation using the construction in de la Salle's proof.
+
+The Jordan-product attribution is to Strang (1962), as rederived by
+[de Bruijn (1980), Theorem 3.2 and Sections 4--5](https://pure.tue.nl/ws/portalfiles/portal/2165089/597564.pdf).
+The exact substitution is recorded in the coefficient-two proof. This
+inequality is not an independent novelty candidate.
+
 | Ingredient used in RC-Discovery | Established source / area | RC claim boundary |
 |---|---|---|
 | Polar decomposition and nearest isometry/unitary properties | Fan & Hoffman, *Some Metric Inequalities in the Space of Matrices*, Proc. AMS 6 (1955), 111–116, DOI `10.1090/S0002-9939-1955-0067841-7`; Higham, *Computing the Polar Decomposition—with Applications*, SIAM J. Sci. Stat. Comput. 7 (1986), 1160–1174, DOI `10.1137/0907079`; Löwdin orthogonalisation, DOI `10.1063/1.1747632` | The polar factor, Löwdin orthogonalisation, closest-frame facts, and singular-value residual formulas are **not** claimed as new. |
@@ -53,6 +64,12 @@ Even this combined statement is currently labelled:
 No document should call it “the first”, “new”, “novel”, “a breakthrough”, or “previously unknown” without external specialist confirmation.
 
 ## Required wording
+
+The current comparison narrows the candidate further: broad existence of
+same-label dimension-free rounding has an explicit weighted-polar reduction
+to established machinery. The remaining target is the guarantee for the
+prescribed unweighted map and the quantitative record correction, not
+priority for the whole sequence of standard ingredients.
 
 Acceptable wording:
 

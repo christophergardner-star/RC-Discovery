@@ -215,3 +215,37 @@ Maximum observed primal-dual gap among the random cases was
 slack to numerical eta estimates before applying the certificate. This does
 not constitute an interval-certified upper bound. The exact binary formulas
 and the analytic proof do not depend on the optimizer.
+
+## 6. Attribution and the additional quantitative statement
+
+The accessibility estimate (1) is an elementary norm-conditioning argument:
+the chosen label-accessing inputs give a column-stochastic matrix `A` with
+`||A-I||_(1->1) <= 2e`, and the reverse triangle inequality gives the lower
+bound. Its sharp binary example does not make it a new general stability
+method. The concentration step using `kappa` follows directly from distance
+to the competing convex hull. The corresponding classical conditioning
+parameter appears in Bittorf, Recht, Re and Tropp,
+[Definition 2.1, *Factoring nonnegative matrices with linear programs* (2012)](https://proceedings.neurips.cc/paper/2012/file/08c5433a60135c32e34f46a71175850c-Paper.pdf).
+For diagonal records, the trace-norm margin is exactly half that classical
+`l1` margin. Normalized projection estimate (3) uses the standard gentle
+measurement bound; see Khatri, Lami and Wilde,
+[Lemma 6.15, equations (6.2.110)--(6.2.112), August 2025 text](https://www.markwilde.com/PQCT-khatri-wilde.pdf).
+
+The exact endpoint is a classical encoding/decoding structure already
+covered by Kitaev,
+[arXiv:2405.02434v2, Theorem 1.2 and equations (1.3)--(1.4)](https://arxiv.org/html/2405.02434v2).
+Indeed, `Delta(f)=sum_j f_j F_j` and
+`Upsilon(X)=(Tr(tau_j X))_j` are UCP maps with
+`Upsilon Delta=I` and `Pi*=Delta Upsilon`. The arbitrary residual POVM
+contribution is allowed by that established structure. Kitaev's Theorem
+12.3 instead supplies approximate factors and approximate inverse identities;
+it does not itself supply the particular exact correction constructed here.
+
+The additional quantitative statement is therefore correction of the
+prescribed effects and records to those exact factors, preserving the
+labels and controlling the change through the stated geometric parameters.
+After the measurement-rounding estimate, this certificate follows by the
+elementary and standard steps above. It is not a new classification of
+idempotent channels or a general improvement of Kitaev's theorem. See the
+[combined-statement comparison](../literature/COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
+for the precise comparison and its limits.

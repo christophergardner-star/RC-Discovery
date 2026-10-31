@@ -10,9 +10,23 @@ A literature search cannot certify absence of prior art. The canonical no-overcl
 
 ## Focused laptop prior-art and certificate audit
 
+**Current theorem-level assessment:** the
+[combined-statement comparison](COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
+identifies the coefficient-two positive-matrix lemma as Strang/de Bruijn
+prior art. Adapting the weighted polar construction in de la Salle's proof
+also gives a nearby same-label repeatable measurement with a stronger joint
+movement envelope. Broad existence is therefore a short consequence of
+established machinery. The remaining comparison targets are the quantitative
+bound for the prescribed unweighted completion and the explicit correction
+of supplied records. Neither is certified novel.
+
 See [the focused search and implication audit](SAME_LABEL_PRIOR_ART_VETO_2026-10-31.md) and [local validation results](../research/LOCAL_VALIDATION_2026-10-31.md). No direct prior statement or complete implication was located in the sources examined; novelty remains unverified. The report distinguishes inspected theorem statements from inaccessible originals and records search limitations.
 
-**Certificate limitation:** substituting either current scalar movement envelope into the threshold-based exact-idempotent certificate always gives a bound greater than the trivial maximum of 2. This does not refute the measurement-rounding theorem or the certificate using actual/instance-dependent movement. Section 4 of the focused report gives the proof and the condition for a nontrivial certificate.
+**Historical certificate limitation:** the older movement-then-defect
+composition is vacuous after substitution of its scalar movement envelopes.
+The direct accessibility certificate below supersedes that route and has
+nontrivial examples. Section 4 of the focused historical report retains the
+proof of the older limitation.
 
 ## Established ingredients
 
@@ -123,21 +137,22 @@ and
 \[
 \|\mathcal M_E-\mathcal M_F\|_\diamond
 \le
-4\left(
+2\min\left\{1,
 \sqrt{1-\alpha^2}+\sqrt\delta
-\right).
+\right\}.
 \]
 
-Combined with Record-Margin Stability,
+Combined with direct record accessibility, with
+\(e=\max_{j:E_j\ne0}(1-\lambda_{\max}(E_j))\),
 
 \[
 \|\Phi_E-\Pi\|_\diamond
-\le
-\nu+
+\le\min\left\{2,\,
+\nu+2\sqrt{1-\alpha^2}+
 \sqrt{
-\frac{2(\eta+3\nu)}
-{\kappa\delta}
-}.
+\frac{2\eta}
+{\kappa\delta(1-2e)}
+}\right\}.
 \]
 
 The labelled map must be typed as
@@ -167,7 +182,7 @@ Status:
 
 ## Refreshed Cruxy source status
 
-The exact source snapshot at commit `78be7962931f9f95e6e6aecd93f4dde00c3fe14d` is preserved under:
+The exact source snapshot at commit `297ec2fcf6114598418863c5fcf13b7090364652` is preserved under:
 
 - `imports/RC-Packing-Feasible-Note/`
 
@@ -177,7 +192,7 @@ The snapshot includes historical documents with stronger novelty language and in
 
 No novelty claim is attached to any individual standard ingredient.
 
-The only potentially distinct object is the complete, precisely typed combination:
+The combined chain under assessment is:
 
 \[
 \text{synthesis-conditioned near-unit sectors}
@@ -190,6 +205,13 @@ The only potentially distinct object is the complete, precisely typed combinatio
 \to
 \text{exact-idempotent record certificate}.
 \]
+
+The theorem-level comparison substantially narrows any potential contribution
+within this chain. Its broad existence version follows by an explicit
+weighted-polar adaptation, and the noncommuting overlap inequality is known.
+The prescribed unweighted quantitative estimate and record specialization
+remain the exact comparison targets. This is a statement of scope, not a
+claim that those specializations are new.
 
 Current label:
 

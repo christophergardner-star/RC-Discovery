@@ -1,6 +1,14 @@
 # Prior-art veto: same-label POVM rounding
 
 Search and assessment date: 31 October 2026.
+
+**Historical audit:** this report assesses the earlier coefficient-four and
+coarse-composition route. The
+[current theorem-level comparison](COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
+supersedes its novelty positioning: the matrix lemma is classical, and a
+weighted-polar adaptation supplies the broader existential movement result.
+The direct accessibility certificate has also repaired the older vacuity
+described below.
 Local theorem reviewed: commit afab873, especially
 [the same-label theorem](../theory/same_label_dimension_free_theorem.md),
 [the spectral-gap theorem](../theory/povm_spectral_gap_stability.md), and
