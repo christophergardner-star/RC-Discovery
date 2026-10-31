@@ -36,6 +36,28 @@ The fact that the polar factor is a closest matrix with orthonormal columns in u
 
 No novelty claim belongs to the polar step itself.
 
+### Stinespring continuity
+
+Kretschmann, Schlingemann and Werner, *The Information-Disturbance Tradeoff and the Continuity of Stinespring's Representation* (IEEE Trans. Inf. Theory 54, 2008) and *A Continuity Theorem for Stinespring's Dilation* (J. Funct. Anal. 255, 2008).
+
+These works establish dimension-independent continuity between completely bounded / diamond channel distance and distances between Stinespring representations.
+
+Therefore no novelty claim belongs to the generic implication
+
+[
+|W-V|_infty 	ext{small}
+Rightarrow
+|operatorname{Ad}_W-operatorname{Ad}_V|_diamond 	ext{small}.
+]
+
+The potentially distinct part of the RC argument is the explicit synthesis-conditioned construction of a same-label (V) implementing
+
+[
+F_j=Q_j+R E_jR
+]
+
+together with the resulting packing/spectral parameter bound.
+
 ### QMSM metastability
 
 Li, Lin and Ragone, *Quantum Markov State Models for Metastable Dynamics*, arXiv:2609.40214 (2026).
@@ -156,3 +178,22 @@ Current status:
 - using horizon rounding + anchor conflict as a retained/joint-performance diagnostic: **potentially distinct application; novelty unverified**.
 
 A literature veto is required across EWC/Laplace consolidation, parameter-conflict diagnostics, projection-based continual learning, and idempotent neural-network training before stronger wording is allowed.
+
+
+## Same-label hybrid-isometry audit — 31 October 2026
+
+An independent reconstruction of the same-label dimension-free theorem has now **passed**, with one hypothesis made explicit: every nonzero outcome effect must have a nonzero near-unit spectral sector at the chosen threshold.
+
+The proof reconstructs:
+
+- (J^*WU=DH),
+- (J^*WR=0),
+- exact isometry (V=JU^*+WR),
+- exact implementation (V^*Lambda_jV=Q_j+RE_jR),
+- (|V-W|=|WU-J|),
+- outcome-independent (
+ule2arepsilon),
+- (gamma_Fgedelta),
+- the composite exact-idempotent certificate.
+
+This strengthens correctness confidence but does not establish novelty.
