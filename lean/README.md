@@ -1,14 +1,15 @@
 # Lean 4 formalization
 
 The frozen construction and its coefficient-two diamond-norm estimate are
-now machine checked. As of 1 November 2026, the project contains 256 explicitly
+now machine checked. As of 1 November 2026, the project contains 334 explicitly
 written lemmas/theorems. The assembled statement is
 [`frozen_theorem`](RCProof/FrozenTheorem.lean): canonical sectors, equal ranks,
 principal-angle bound, completed POVM and sector action, residual gap,
 repeatable CP/TP instrument with the correct outcome probabilities, and the
 unhalved diamond bound over all complex inputs and all finite ancillas.
-The later canonical joint upper bound and its uniform upper remainder are
-also checked. This does not formalize every later result in the paper.
+The exact perfect-packing operator bound, attaining POVM, actual worst-case
+supremum, perfect-packing second-order limit and direct accessibility estimate
+are also checked. This does not formalize every later result in the paper.
 
 The toolchain remains Lean 4.35.0 with Mathlib pinned to
 `56a005855ea17e0b0958f73ec801ae140b0a1679`. No external quantum-information
@@ -132,25 +133,37 @@ proof uses a signed Kraus decomposition and its combined Gram bound directly
 on complex inputs. The positive remainder is factored using a rectangular
 contraction polar decomposition, including singular sums.
 
-`EnvelopeAnalysis` proves the scalar maximum `2b/(2-b)`, its maximizing scalar,
-and its expansion with a bounded cubic remainder. It does not construct an
-attaining POVM or establish the exact perfect-packing operator bound.
-`joint_envelope_limit_of_uniform_bounds` proves a limit for arbitrary sequences
-under explicit upper and lower assumptions. The lower family and identification
-with the actual worst-case POVM supremum are not yet formalized, so the full
-sharp joint asymptotic theorem is not claimed as Lean checked.
+`PerfectMeasurement` proves the exact perfect-packing operator upper bound.
+`PerfectExampleSectors` and `PerfectAttainment` construct a normalized attaining
+POVM, recognize its full closed-threshold sectors, identify the actual canonical
+completion and certify its diamond distance. `WorstCase` defines the actual
+exact-parameter supremum and proves `packingWorstCase 1 delta = B(delta)` for
+`0 < delta < 1/2`, where `B(x)=2 sqrt(x)/(2-sqrt(x))`. `PerfectAsymptotic`
+proves the expansion and second-order limit for this actual supremum.
 
-Exact perfect-packing operator sharpness, both attaining/lower POVM families,
-the joint supremum bridge, record correction, computer-assisted comparisons
-and accessibility certificates remain additional targets. This development
-does not establish novelty or external review.
+`RecordAccessibility`, `RecordNorm` and `RecordSpectral` prove the two-sided
+direct accessibility estimate, including the spectral density-input witness
+and an attained maximum of record residuals. `MeasurementCertificate` proves
+generic measurement diamond dual-certificate soundness. `PositiveFilter`
+proves the signed Kraus lemma used in the new joint second-order proof.
+
+`joint_envelope_limit_of_uniform_bounds` proves a limit for arbitrary sequences
+under explicit upper and lower assumptions. The actual general joint lower
+family and its membership in the worst-case class remain unformalized, as does
+the assembled improved noncommuting upper bound. The full joint sharp asymptotic
+theorem is therefore not claimed as Lean checked.
+
+The final record correction and the saved comparison-certificate instantiations
+with their spectral/polar perturbation transfers also remain unfinished. See
+the [current report](../research/LEAN_PERFECT_SHARPNESS_2026-11-01.md) for the
+precise boundary. This development does not establish novelty or external review.
 
 ## Axiom gate and reproduction
 
 `lake build` also builds [RCProofAudit](RCProofAudit.lean). It traverses **all**
 declarations in the `RCProof` namespace and rejects any transitive axiom except
 `propext`, `Classical.choice` and `Quot.sound`. The run manifest distinguishes
-the 256 written lemmas/theorems from generated equations, structure projections
+the 334 written lemmas/theorems from generated equations, structure projections
 and tactic helpers. Definitions of maps and norms are not counted as proofs.
 
 From `lean` on Windows:

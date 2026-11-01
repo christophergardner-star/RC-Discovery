@@ -1,8 +1,10 @@
 # Sharp prescribed-completion bound at perfect packing
 
 1 November 2026. Internally derived with exact finite SDP certificates and
-numerical checks. Not externally reviewed or fully formalized in Lean;
-publication novelty is unverified.
+numerical checks. The exact operator upper bound, attaining POVM, actual
+worst-case supremum and perfect-packing second-order limit are now
+[Lean checked](../research/LEAN_PERFECT_SHARPNESS_2026-11-01.md).
+External review and publication novelty remain unresolved.
 
 ## Statement
 

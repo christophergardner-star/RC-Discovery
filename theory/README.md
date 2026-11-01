@@ -20,6 +20,13 @@ allowed threshold. It is now Theorem 7 in the paper. The
 [imperfect-packing lower bound and vetoes](imperfect_packing_lower_bound.md)
 support Propositions 8--9. The general `alpha<1` sharp finite-error bound remains open.
 
+The new [joint second-order supplement](joint_second_order.md) derives
+`W = sqrt(s) + s/2 + O(s^(3/2))` internally and gives a stronger lower family
+at every exact parameter pair. It is not yet fully Lean checked. The
+[formalization report](../research/LEAN_PERFECT_SHARPNESS_2026-11-01.md) records
+the now-checked exact perfect-packing operator theorem, attaining family,
+actual supremum and direct accessibility estimate.
+
 The subsequent [joint small-error theorem](joint_small_error_asymptotics.md)
 determines the sharp leading envelope `sqrt(1-alpha^2+delta)` as both errors
 vanish, with a uniform remainder bound and matching lower construction.

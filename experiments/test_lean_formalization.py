@@ -1,4 +1,4 @@
-"""Build and audit the frozen theorem and later joint upper bound, not the whole paper.
+"""Build and audit the frozen theorem and checked sharpness extensions, not the whole paper.
 
 Uses the pinned Lean/Mathlib project, records source hashes and checks transitive
 axioms in Lean itself. Optional negative controls ensure that both an extra axiom
@@ -71,6 +71,19 @@ REQUIRED = (
     "RCProof.perfectEnvelope_expansion",
     "RCProof.perfectEnvelope_remainder",
     "RCProof.joint_envelope_limit_of_uniform_bounds",
+    "RCProof.perfect_packing_all_inputs",
+    "RCProof.perfect_packing_diamond_upper",
+    "RCProof.thresholdProjector_eq_of_isolated_projection",
+    "RCProof.perfectExample_full_sectors",
+    "RCProof.perfectExample_completion",
+    "RCProof.perfectExample_attains",
+    "RCProof.packingWorstCase_joint_upper",
+    "RCProof.packingWorstCase_perfect_exact",
+    "RCProof.perfect_worstCase_second_order_limit",
+    "RCProof.positive_filter_signed_pair",
+    "RCProof.measurement_dual_certificate",
+    "RCProof.record_accessibility_two_sided",
+    "RCProof.record_accessibility_spectral",
 )
 
 
@@ -135,7 +148,7 @@ def main() -> None:
                           for path in (LEAN / "RCProof").glob("*.lean"))
     manifest = {
         "result": "PASS", "utc": datetime.now(timezone.utc).isoformat(),
-        "scope": "Frozen theorem, later canonical joint diamond upper bound and uniform upper remainder are machine-checked on all complex inputs and finite ancillas. Perfect-envelope scalar optimization and conditional limit transfer are checked. Exact perfect-packing operator sharpness, attaining POVM families, the joint worst-case lower bound and its instantiated asymptotic limit, and accessibility certificates are not",
+        "scope": "Frozen theorem, canonical joint upper bound, exact perfect-packing operator bound, attaining POVM with full threshold sectors, actual perfect-packing worst-case supremum and second-order limit, two-sided accessibility bound for an explicit accessible maximizing record, measurement dual-certificate soundness, and positive-filter signed Kraus lemma are machine-checked. General joint lower-family construction and assembled second-order theorem, final record correction, and saved comparison certificate instantiations are not fully formalized.",
         "source_theorems": source_theorems,
         "kernel_theorem_declarations_including_generated": int(match.group(1)),
         "all_namespace_declarations_audited": int(match.group(2)),
@@ -145,7 +158,7 @@ def main() -> None:
     }
     (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"PASS: {source_theorems} source theorems; {match.group(2)} declarations audited. "
-          "Frozen theorem and later joint upper bound checked; exact operator sharpness and matching lower families remain outside the formalized scope.")
+          "Exact perfect-packing sharpness and direct accessibility checked; full joint sharpness, final record correction and saved comparison instantiations remain unfinished.")
 
 
 if __name__ == "__main__":

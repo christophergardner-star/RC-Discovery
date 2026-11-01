@@ -10,18 +10,23 @@ The work is internally reconstructed, computationally audited, partially
 formalised, novelty unverified. No external review is represented as completed.
 
 After this paper was frozen, the [Lean operator development](../lean/README.md)
-expanded from 13 to 256 written lemmas/theorems. The assembled
+expanded from 13 to 334 written lemmas/theorems. The assembled
 [`frozen_theorem`](../lean/RCProof/FrozenTheorem.lean) now includes the canonical
 frame and completion, principal-angle and equal-rank results, repeatable
 instrument, and the unconditional coefficient-two diamond bound for all complex
 inputs and all finite ancillas. Its sharp trace-distance proof uses a shifted
 telescoping identity, bypassing pure-state reduction. The
-[latest formalization report](../research/LEAN_SHARP_ASYMPTOTIC_PROGRESS_2026-11-01.md)
-also records the checked later joint upper bound and uniform upper remainder.
-The scalar perfect-envelope optimization and a conditional joint-limit lemma
-are checked. The actual attaining POVMs, exact perfect-packing operator bound,
-and joint lower construction/supremum limit remain unformalized. The paper's
-count remains a historical snapshot.
+[latest formalization report](../research/LEAN_PERFECT_SHARPNESS_2026-11-01.md)
+also records the checked exact perfect-packing operator bound, attaining POVM,
+actual worst-case supremum, its second-order limit and direct accessibility
+estimate. The general joint lower construction and assembled sharp joint
+asymptotic theorem, final record correction and saved comparison instantiations
+remain unfinished in Lean. The paper's count remains a historical snapshot.
+
+The new [joint second-order supplement](../theory/joint_second_order.md)
+derives `W = sqrt(s) + s/2 + O(s^(3/2))` internally and narrows the small-error
+finite-error enclosure to width `4 delta s`. It has exact rational checks and
+partial Lean support, but requires external reconstruction and full formalization.
 
 **Theorem 10 is now integrated into Section 8:** it establishes the sharp
 leading envelope `sqrt(1-alpha^2+delta)` with a uniform remainder and includes
@@ -66,6 +71,6 @@ full release mode also reruns the joint theorem's numerical operator and SDP
 checks in a pinned environment. These are supporting checks, not proof review.
 The [combined release report](../research/COMBINED_REVIEW_RELEASE_2026-11-01.md)
 records the fresh checkout, environment, results and retained logs.
-The exact finite-error envelope, sharp subleading term, crossing uniqueness and publication novelty
+The exact general finite-error envelope, crossing uniqueness and publication novelty
 remain open. The methodology disclosure identifies the AI-assisted workflow
 as VIBE MATH; it is not a mathematical claim or an endorsement.

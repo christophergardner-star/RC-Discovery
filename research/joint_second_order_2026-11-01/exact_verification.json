@@ -1,0 +1,55 @@
+{
+  "result": "PASS",
+  "cases": [
+    {
+      "alpha": "993997/1000003",
+      "delta": "241242526003249/9880300360090000",
+      "epsilon": "361/10000",
+      "value": "38/181",
+      "dimension": 9,
+      "outcomes": 8,
+      "psd_checks": 42
+    },
+    {
+      "alpha": "99939997/100000003",
+      "delta": "13290384970200013689/1598080480057601440000",
+      "epsilon": "1521/160000",
+      "value": "78/761",
+      "dimension": 9,
+      "outcomes": 8,
+      "psd_checks": 42
+    },
+    {
+      "alpha": "9999399997/10000000003",
+      "delta": "905101500610560000088209/624925001875022500056250000",
+      "epsilon": "9801/6250000",
+      "value": "198/4901",
+      "dimension": 9,
+      "outcomes": 8,
+      "psd_checks": 42
+    }
+  ],
+  "controls": [
+    {
+      "name": "effect",
+      "result": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "name": "state",
+      "result": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "name": "alpha",
+      "result": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "name": "threshold",
+      "result": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "name": "value",
+      "result": "REJECTED_AS_EXPECTED"
+    }
+  ],
+  "scope": "Finite rational lower certificates; not a universal Lean proof"
+}

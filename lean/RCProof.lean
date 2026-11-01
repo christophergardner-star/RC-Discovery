@@ -19,3 +19,6 @@ import RCProof.TraceNorm
 import RCProof.AncillaContractivity
 import RCProof.FrozenTheorem
 import RCProof.JointAsymptotic
+import RCProof.PerfectAsymptotic
+import RCProof.PositiveFilter
+import RCProof.RecordSpectral

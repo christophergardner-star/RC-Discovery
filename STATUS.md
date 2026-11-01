@@ -12,7 +12,13 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 }
 \]
 
-No public file should represent the work as externally proved, peer reviewed, prior-art free, patentable, or a proven breakthrough. The frozen construction, coefficient-two bound and later joint upper bound are machine checked; the entire project and matching sharpness constructions are not.
+No public file should represent the work as externally proved, peer reviewed, prior-art free, patentable, or a proven breakthrough. The frozen construction, coefficient-two bound, exact perfect-packing operator bound and attaining family are machine checked; the entire project and general joint sharpness construction are not.
+
+The [latest formalization report](research/LEAN_PERFECT_SHARPNESS_2026-11-01.md)
+also closes the actual perfect-packing supremum, its second-order limit and
+the direct spectral accessibility estimate. The new [joint second-order proof](theory/joint_second_order.md)
+derives `W = sqrt(s) + s/2 + O(s^(3/2))` internally, with a stronger exact-parameter
+lower construction and partial Lean support. Its full formalization remains unfinished.
 
 ## Current review release
 
@@ -22,8 +28,9 @@ includes Theorem 10 and forty numbered equations. The
 records the proof audit and successful fifteen-command reproduction from
 a separate checkout, new Python environment and initially empty TeX cache.
 The reviewer packet and unsent invitation are current. External correctness
-review, novelty assessment and Lean formalisation of the later paper results remain outstanding;
-the exact finite-error optimum and subleading term remain research questions.
+review, novelty assessment and Lean formalisation of the remaining later paper results remain outstanding.
+The exact general finite-error optimum remains open. The subsequent second-order
+supplement determines the subleading coefficient internally; it is not in the frozen PDF.
 
 ## Reference advantage and imperfect packing
 
@@ -32,8 +39,9 @@ closes the leading-order gap for the worst-case prescribed completion:
 `W(alpha,delta)/sqrt(1-alpha^2+delta) -> 1` jointly as `(alpha,delta)->(1,0)`.
 The proof includes arbitrary references and provides an explicit uniform
 remainder. Matching lower bounds allow dimension and outcome count to grow.
-The exact finite-error envelope, subleading term, novelty and external review
-remain open. The result is now integrated as Theorem 10 in the fourteen-page
+The exact general finite-error envelope, novelty and external review remain
+open; the subsequent supplement determines the subleading coefficient. The
+leading-order result is integrated as Theorem 10 in the fourteen-page
 paper, with its upper proof and joint-limit argument. The
 [combined internal audit](research/COMBINED_PAPER_AUDIT_2026-11-01.md) covers
 this final manuscript; earlier audits remain historical records.
@@ -78,7 +86,8 @@ The [verification report](research/PERFECT_PACKING_SHARPNESS_2026-11-01.md)
 separates the universal written proof from finite exact certificates and
 numerical attacks. This settles the sharp envelope internally only for
 `alpha=1`, not the general packing case or the best freely chosen target.
-Novelty, external review, and full Lean formalization remain open.
+The exact perfect-packing operator bound, attaining family and actual supremum
+are now Lean checked. Novelty and external review remain open.
 
 ## Exact comparison of the two completions
 
@@ -201,7 +210,7 @@ The latest comprehensive review is recorded in:
 | Record-accessibility suite | **Passed implemented cases** | 26 primal/dual SDPs. |
 | Residual-rate suite | **Passed implemented cases** | 20 primal/dual SDPs. |
 | Canonical full profile | **Passed** | Numerical, algebraic, provenance and counterexample tests. |
-| Pinned Lean build | **Passed within formalised scope** | Includes the frozen theorem, later joint diamond upper bound and uniform upper remainder; excludes exact operator sharpness and matching lower families. |
+| Pinned Lean build | **Passed within formalised scope** | Includes the frozen theorem, joint upper bound, exact perfect-packing operator sharpness and attaining family, actual perfect-packing supremum and direct accessibility; excludes full general joint sharpness, final record correction and saved comparison instantiations. |
 | Input-validation review | **Defect found and repaired** | Raw Hermiticity/PSD/normalisation now checked before cleanup; one-outcome and exact-zero labels handled correctly. |
 | Optional PyTorch TCL neural smoke | **Environment-separated** | Blocked on audited Windows runtime; dedicated Linux CI job added for tagged full audits. |
 | Numerical interpretation | **Evidence, not proof** | Finite checks do not establish the universal theorem or novelty. |
@@ -239,17 +248,21 @@ Canonical theory map:
 | Assembled frozen theorem | **Machine checked as `RCProof.frozen_theorem` from canonical construction and original hypotheses** |
 | Later joint diamond upper bound | **Machine checked for the actual canonical completion, all complex inputs and all finite ancillas; no width condition** |
 | Uniform asymptotic upper remainder | **Machine checked: `nu <= sqrt(s)+5s` for `s=1-alpha^2+delta <= 1/4`** |
-| Perfect-envelope scalar optimization and expansion | **Machine checked; not yet an operator sharpness theorem** |
-| Joint-limit transfer | **Machine checked conditional on a two-sided sandwich; the actual lower family and supremum bridge remain unformalised** |
-| Accessibility certificate end to end | **Not formalised** |
+| Exact perfect-packing operator sharpness | **Machine checked with an attaining POVM and its full threshold sectors** |
+| Actual perfect-packing supremum and second-order limit | **Machine checked** |
+| General joint-limit transfer | **Conditional lemma checked; variable-size lower family and assembled improved joint upper bound remain unformalised** |
+| Direct accessibility certificate | **Machine checked with spectral density input and attained maximum record residual** |
+| Positive-filter signed Kraus lemma | **Machine checked; complete joint second-order assembly remains unfinished** |
+| Measurement dual-certificate soundness | **Machine checked; saved comparison examples and perturbation transfers remain uninstantiated** |
+| Final record correction | **Not fully formalised** |
 
 The validation runner now hashes only repository-owned Lean sources, not downloaded `.lake` dependencies.
-The latest 1 November extension contains 256 written lemmas/theorems; its
+The latest 1 November extension contains 334 written lemmas/theorems; its
 default build audits all project declarations, including generated helpers. See
-[the sharpness/asymptotic progress report](research/LEAN_SHARP_ASYMPTOTIC_PROGRESS_2026-11-01.md)
+[the exact perfect-packing progress report](research/LEAN_PERFECT_SHARPNESS_2026-11-01.md)
 and [the current proof boundary](lean/README.md). The review-paper count of 13
 belongs to the earlier frozen release, whose artifacts remain unchanged. The
-previous 69-, 152- and 194-theorem reports and their evidence are retained as historical snapshots.
+previous 69-, 152-, 194- and 256-theorem reports and their evidence are retained as historical snapshots.
 
 ## Cruxy source synchronisation
 
@@ -324,7 +337,7 @@ This is a repository-governance statement, not a legal opinion.
 
 1. Independent human reconstruction of the typed same-label theorem.
 2. Specialist audit of the coefficient-two bridge and accessibility certificate.
-3. Lean formalisation of exact operator sharpness, matching lower families and certificate results; the frozen chain and later joint upper bound are checked.
+3. Lean formalisation of general joint sharpness, final record correction and saved comparison instantiations; exact perfect-packing sharpness and direct accessibility are checked.
 4. Definitive prior-art and novelty assessment.
 5. Independent reproduction outside the author-controlled repository.
 6. Optimal-constant and quantified robustness work.

@@ -6,9 +6,15 @@
 
 The [frozen construction and coefficient-two diamond bound](research/LEAN_FROZEN_THEOREM_2026-11-01.md)
 are now Lean-checked, including principal angles and arbitrary ancilla-assisted
-complex inputs. The [later joint upper bound and uniform upper remainder](research/LEAN_SHARP_ASYMPTOTIC_PROGRESS_2026-11-01.md)
-are also checked. Exact operator sharpness and the matching lower families
-remain outside the formalized scope.
+complex inputs. The [exact perfect-packing operator bound, attaining POVM,
+worst-case supremum and direct accessibility estimate](research/LEAN_PERFECT_SHARPNESS_2026-11-01.md)
+are also checked. The full general joint sharpness theorem, final record correction
+and saved comparison-certificate instantiations remain unfinished in Lean.
+
+The new [joint second-order proof](theory/joint_second_order.md) derives
+`W = sqrt(s) + s/2 + O(s^(3/2))`, `s=1-alpha^2+delta`, with a stronger lower
+family at every exact parameter pair. This is an internally derived analytic
+result with partial Lean verification. The general finite-error optimum remains open.
 
 > **Vibe to generate. Audit to believe.**
 
@@ -297,26 +303,29 @@ Machine-checked with pinned Lean 4 + Mathlib and zero `sorry` within the stated 
   [`frozen_theorem`](lean/RCProof/FrozenTheorem.lean);
 - the later canonical joint diamond upper bound, without a width condition,
   and its uniform upper remainder `sqrt(s)+5s`, `s=1-alpha^2+delta`;
-- scalar perfect-envelope optimization and expansion, and a joint-limit
-  transfer lemma conditional on both sides of the required sandwich.
+- exact perfect-packing operator sharpness, full threshold sectors of an
+  attaining POVM, the actual worst-case supremum and its second-order limit;
+- the two-sided direct accessibility estimate with spectral test-state construction;
+- soundness of measurement diamond dual certificates and the positive-filter
+  signed Kraus lemma used in the new joint second-order argument.
 
-The development now has 256 written lemmas/theorems. The default build audits
+The development now has 334 written lemmas/theorems. The default build audits
 every project declaration for transitive axioms; only the three standard Lean
 logical axioms are allowed. The frozen review release's count of 13 is an
 earlier snapshot.
 
 Not yet formalised end to end:
 
-- the exact perfect-packing operator envelope and its attaining POVM family;
-- the growing-dimension joint lower family and the resulting limit for the
-  actual worst-case supremum;
-- the record-correction and computer-assisted comparison results;
-- the direct accessibility certificate.
+- the general joint lower family and its membership in the actual worst-case
+  class, the improved noncommuting upper bound and the resulting joint limit;
+- the final record-correction construction and certificate;
+- the saved computer-assisted comparison certificates and their perturbation
+  error transfers (generic diamond dual-certificate soundness is checked).
 
 The principal-angle and all-input diamond gaps are closed. The trace proof
 works directly on arbitrary complex matrices, so it does not need a pure-state
 reduction. See [`lean/README.md`](lean/README.md) and the
-[latest formalization report](research/LEAN_SHARP_ASYMPTOTIC_PROGRESS_2026-11-01.md).
+[latest formalization report](research/LEAN_PERFECT_SHARPNESS_2026-11-01.md).
 
 ## Cruxy source provenance
 

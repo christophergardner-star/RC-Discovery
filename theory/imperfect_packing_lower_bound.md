@@ -5,6 +5,11 @@ external review and literature novelty remain open. The frozen theorem is
 unchanged. None of the proposed stronger upper bounds below is asserted as
 a theorem.
 
+**Subsequent extension:** [joint_second_order.md](joint_second_order.md) gives
+a stronger lower family at every exact parameter pair, with fixed dimension
+along each fixed packing-to-threshold ratio. The coupled-simplex construction
+and the two vetoes below remain valid historical results.
+
 ## 1. A family detecting both errors
 
 For every even \(m\ge4\) and \(0<\alpha\le1\), there is a POVM on

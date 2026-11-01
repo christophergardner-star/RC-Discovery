@@ -1,0 +1,1865 @@
+⚠ [3136/3172] Replayed RCProof.Core
+warning: RCProof\Core.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof/Core.lean:18:44: Variable name `hc0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hc0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3137/3172] Replayed RCProof.Hybrid
+warning: RCProof\Hybrid.lean: imports `Mathlib.LinearAlgebra.Matrix.ConjTranspose` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof\Hybrid.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof/Hybrid.lean:12:0: automatically included section variable(s) unused in theorem `RCProof.spectral_cross_zero`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Hybrid.lean:17:0: automatically included section variable(s) unused in theorem `RCProof.hybrid_isometry`:
+  [DecidableEq y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Hybrid.lean:41:0: automatically included section variable(s) unused in theorem `RCProof.hybrid_cross_zero`:
+  [DecidableEq y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Hybrid.lean:51:0: automatically included section variable(s) unused in theorem `RCProof.hybrid_compression`:
+  [DecidableEq d]
+  [DecidableEq k]
+  [DecidableEq y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] [DecidableEq k] [DecidableEq y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3325/3410] Replayed RCProof.Gap
+warning: RCProof\Gap.lean: imports `Mathlib.Analysis.Matrix.PosDef` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof\Gap.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof/Gap.lean:14:0: automatically included section variable(s) unused in theorem `RCProof.range_projection_idempotent`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Gap.lean:50:0: automatically included section variable(s) unused in theorem `RCProof.residual_effect_positive`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3326/3410] Replayed RCProof.Spectral
+warning: RCProof/Spectral.lean:17:0: automatically included section variable(s) unused in theorem `RCProof.realDiagonal_positive`:
+  [Fintype d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Spectral.lean:59:66: This simp argument is unused:
+  mul_ite
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [realDiagonal, Matrix.diagonal_apply, Complex.real_smul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3327/3410] Replayed RCProof.Completion
+warning: RCProof/Completion.lean:38:0: automatically included section variable(s) unused in theorem `RCProof.completedEffect_sum`:
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3328/3410] Replayed RCProof.Naimark
+warning: RCProof/Naimark.lean:17:0: automatically included section variable(s) unused in theorem `RCProof.stack_gram`:
+  [DecidableEq d]
+  [DecidableEq o]
+  [Fintype k]
+  [DecidableEq k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] [DecidableEq o] [Fintype k] [DecidableEq k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Naimark.lean:23:0: automatically included section variable(s) unused in theorem `RCProof.labelProjection_positive`:
+  [Fintype d]
+  [Fintype o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype d] [Fintype o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Naimark.lean:35:0: automatically included section variable(s) unused in theorem `RCProof.labelProjection_sum`:
+  [Fintype d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Naimark.lean:39:0: automatically included section variable(s) unused in theorem `RCProof.stack_label_compression`:
+  [Fintype k]
+  [DecidableEq k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype k] [DecidableEq k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Naimark.lean:45:0: automatically included section variable(s) unused in theorem `RCProof.stack_cross`:
+  [DecidableEq d]
+  [DecidableEq o]
+  [Fintype k]
+  [Fintype l]
+  [DecidableEq k]
+  [DecidableEq l]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] [DecidableEq o] [Fintype k] [Fintype l] [DecidableEq k] [DecidableEq l] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Naimark.lean:51:0: automatically included section variable(s) unused in theorem `RCProof.stack_label_cross`:
+  [Fintype k]
+  [Fintype l]
+  [DecidableEq k]
+  [DecidableEq l]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype k] [Fintype l] [DecidableEq k] [DecidableEq l] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3329/3410] Replayed RCProof.Jordan
+warning: RCProof/Jordan.lean:76:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/Jordan.lean:76:37: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/Jordan.lean:78:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/Jordan.lean:78:37: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/Jordan.lean:76:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RCProof/Jordan.lean:76:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RCProof/Jordan.lean:78:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RCProof/Jordan.lean:78:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RCProof/Jordan.lean:128:21: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/Jordan.lean:128:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3330/3410] Replayed RCProof.Polar
+warning: RCProof/Polar.lean:13:0: automatically included section variable(s) unused in theorem `RCProof.polarRoot_square`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Polar.lean:16:0: automatically included section variable(s) unused in theorem `RCProof.polarRoot_hermitian`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3331/3410] Replayed RCProof.Assembly
+warning: RCProof/Assembly.lean:26:0: automatically included section variable(s) unused in theorem `RCProof.SpectralFrame.coordinate_idempotent`:
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Assembly.lean:44:0: automatically included section variable(s) unused in theorem `RCProof.SpectralFrame.projector_residual_zero`:
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Assembly.lean:56:0: automatically included section variable(s) unused in theorem `RCProof.SpectralFrame.block_cross_zero`:
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3332/3410] Replayed RCProof.CanonicalFrame
+warning: RCProof/CanonicalFrame.lean:50:8: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [canonicalBlock, sectorCoordinate, Matrix.mul_apply, Matrix.conjTranspose_apply, hx, hy, hxy]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/CanonicalFrame.lean:54:8: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [canonicalBlock, sectorCoordinate, Matrix.mul_apply, Matrix.conjTranspose_apply, hx]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/CanonicalFrame.lean:56:8: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [canonicalBlock, sectorCoordinate, Matrix.mul_apply, Matrix.conjTranspose_apply, hx, hxy]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/CanonicalFrame.lean:63:0: automatically included section variable(s) unused in theorem `RCProof.sectorIndex_sum`:
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/CanonicalFrame.lean:85:6: This simp argument is unused:
+  Matrix.mul_diagonal
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [thresholdProjector, inEigenbasis, realDiagonal, Unitary.conjStarAlgAut_apply, Matrix.mul_apply,
+    Matrix.diagonal_apply, Matrix.conjTranspose_apply, apply_ite, mul_ite, ite_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/CanonicalFrame.lean:85:68: This simp argument is unused:
+  Matrix.conjTranspose_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [thresholdProjector, inEigenbasis, realDiagonal, Unitary.conjStarAlgAut_apply, Matrix.mul_diagonal,
+    Matrix.mul_apply, Matrix.diagonal_apply, apply_ite, mul_ite, ite_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/CanonicalFrame.lean:86:6: This simp argument is unused:
+  mul_ite
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [thresholdProjector, inEigenbasis, realDiagonal, Unitary.conjStarAlgAut_apply, Matrix.mul_diagonal,
+    Matrix.mul_apply, Matrix.diagonal_apply, Matrix.conjTranspose_apply, apply_ite, ite_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/CanonicalFrame.lean:136:2: Try this:
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3334/3410] Replayed RCProof.PackingParameter
+warning: RCProof/PackingParameter.lean:17:0: automatically included section variable(s) unused in theorem `RCProof.packingEigenvalue_le`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/PackingParameter.lean:21:0: automatically included section variable(s) unused in theorem `RCProof.packingEigenvalue_nonneg`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/PackingParameter.lean:31:0: automatically included section variable(s) unused in theorem `RCProof.packingAlpha_pos`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/PackingParameter.lean:64:0: automatically included section variable(s) unused in theorem `RCProof.canonicalSynthesis_gram_diag`:
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3385/3410] Replayed RCProof.Instrument
+warning: RCProof\Instrument.lean: imports `Mathlib.Analysis.Matrix.Order` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof/Instrument.lean:27:28: This simp argument is unused:
+  Matrix.mul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.smul_mul, Finset.smul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/Instrument.lean:27:45: This simp argument is unused:
+  Matrix.smul_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.mul_smul, Finset.smul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/Instrument.lean:35:31: This simp argument is unused:
+  Matrix.kronecker
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [amplify, krausMap, Matrix.sum_apply, Matrix.mul_apply, Matrix.conjTranspose_apply,
+    Matrix.kroneckerMap_apply, Matrix.one_apply, Fintype.sum_prod_type, apply_ite, mul_ite, ite_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/Instrument.lean:36:15: This simp argument is unused:
+  mul_ite
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [amplify, krausMap, Matrix.sum_apply, Matrix.mul_apply, Matrix.conjTranspose_apply,
+    Matrix.kroneckerMap_apply, Matrix.kronecker, Matrix.one_apply, Fintype.sum_prod_type, apply_ite, ite_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/Instrument.lean:36:33: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/Instrument.lean:36:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RCProof/Instrument.lean:52:28: This simp argument is unused:
+  Matrix.mul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.trace_smul, smul_smul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/Instrument.lean:57:0: automatically included section variable(s) unused in theorem `RCProof.prepareKraus_output`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Instrument.lean:61:20: This simp argument is unused:
+  Finset.mul_sum
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.mul_apply, Matrix.conjTranspose_apply, prepareKraus, star_mul, Finset.sum_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/Instrument.lean:99:20: This simp argument is unused:
+  Matrix.mul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [prepareMap, Matrix.trace_smul, smul_smul, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/Instrument.lean:99:37: This simp argument is unused:
+  Matrix.trace_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [prepareMap, Matrix.mul_smul, smul_smul, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3387/3410] Replayed RCProof.CanonicalInstrument
+warning: RCProof/CanonicalInstrument.lean:13:0: automatically included section variable(s) unused in theorem `RCProof.normalizedPositive_positive`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/CanonicalInstrument.lean:17:0: automatically included section variable(s) unused in theorem `RCProof.normalizedPositive_trace`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/CanonicalInstrument.lean:51:16: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RCProof/CanonicalInstrument.lean:53:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RCProof/CanonicalInstrument.lean:118:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [completionInstrument, prepareMap, Matrix.trace_smul, sectorRecord, ht]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RCProof/CanonicalInstrument.lean:130:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RCProof/CanonicalInstrument.lean:130:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RCProof/CanonicalInstrument.lean:151:0: automatically included section variable(s) unused in theorem `RCProof.amplify_sum_maps`:
+  [DecidableEq d]
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3388/3410] Replayed RCProof.Ancilla
+warning: RCProof/Ancilla.lean:14:0: automatically included section variable(s) unused in theorem `RCProof.hybrid_overlap_identity`:
+  [DecidableEq k]
+  [DecidableEq y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq k] [DecidableEq y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Ancilla.lean:33:54: This simp argument is unused:
+  Matrix.one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [realPart, Matrix.conjTranspose_add, Matrix.conjTranspose_sub, Matrix.conjTranspose_mul,
+    Matrix.conjTranspose_conjTranspose, Matrix.conjTranspose_one, hH, hD, Matrix.mul_sub, Matrix.sub_mul,
+    Matrix.mul_add, Matrix.add_mul, Matrix.mul_smul, Matrix.smul_mul, Matrix.mul_one, Matrix.mul_assoc, smul_add,
+    smul_sub, smul_smul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/Ancilla.lean:34:42: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [realPart, Matrix.conjTranspose_add, Matrix.conjTranspose_sub, Matrix.conjTranspose_mul,
+    Matrix.conjTranspose_conjTranspose, Matrix.conjTranspose_one, hH, hD, Matrix.mul_sub, Matrix.sub_mul,
+    Matrix.mul_add, Matrix.add_mul, Matrix.mul_smul, Matrix.smul_mul, Matrix.mul_one, Matrix.one_mul, Matrix.mul_assoc,
+    smul_add, smul_sub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/Ancilla.lean:37:0: automatically included section variable(s) unused in theorem `RCProof.tensor_isometry`:
+  [Fintype d]
+  [DecidableEq y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype d] [DecidableEq y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Ancilla.lean:42:0: automatically included section variable(s) unused in theorem `RCProof.tensor_overlap_floor`:
+  [DecidableEq y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Ancilla.lean:84:10: `mul_le_one₀` has been deprecated: No replacement, use constituent lemmas from proof.
+⚠ [3390/3410] Replayed RCProof.Distance
+warning: RCProof\Distance.lean: imports `Mathlib.Analysis.SpecialFunctions.ContinuousFunctionalCalculus.Rpow.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof\Distance.lean: imports `Mathlib.Analysis.CStarAlgebra.Matrix` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof\Distance.lean: imports `Mathlib.Data.ENNReal.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof/Distance.lean:4:0: 'Mathlib.Data.ENNReal.BigOperators' has been deprecated: please replace this import by
+
+import Mathlib.Basic.ENNReal.BigOperators
+warning: RCProof/Distance.lean:37:0: automatically included section variable(s) unused in theorem `RCProof.amplifyRect_zero`:
+  [Fintype d]
+  [Fintype b]
+  [DecidableEq d]
+  [DecidableEq b]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype d] [Fintype b] [DecidableEq d] [DecidableEq b] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/Distance.lean:75:10: This simp argument is unused:
+  Matrix.mul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.trace_smul, Matrix.diagonal_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/Distance.lean:75:69: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/Distance.lean:75:73: Unused tactic linter: `split_ifs` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/Distance.lean:75:83: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/Distance.lean:75:87: Unused tactic linter: `simp` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/Distance.lean:75:73: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: RCProof/Distance.lean:75:87: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3391/3410] Replayed RCProof.TraceNorm
+warning: RCProof/TraceNorm.lean:14:4: This simp argument is unused:
+  Unitary.coe_star_mul_self
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [inEigenbasis, Unitary.conjStarAlgAut_apply, Matrix.trace_mul_cycle, realDiagonal, Matrix.trace_diagonal]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3392/3410] Replayed RCProof.AncillaContractivity
+warning: RCProof/AncillaContractivity.lean:24:0: automatically included section variable(s) unused in theorem `RCProof.amplify_trace_preserving`:
+  [DecidableEq d]
+  [DecidableEq r]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] [DecidableEq r] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3678/3717] Replayed RCProof.PrincipalAngle
+warning: RCProof\PrincipalAngle.lean: imports `Mathlib.Analysis.CStarAlgebra.GelfandDuality` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof\PrincipalAngle.lean: imports `Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Order` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof/PrincipalAngle.lean:64:19: This simp argument is unused:
+  Matrix.conjTranspose_conjTranspose
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.conjTranspose_mul, Matrix.conjTranspose_sub, Matrix.conjTranspose_one, hP.eq, hQ.eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3679/3717] Replayed RCProof.TraceDuality
+warning: RCProof/TraceDuality.lean:11:0: automatically included section variable(s) unused in theorem `RCProof.norm_le_of_gram`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/TraceDuality.lean:18:0: automatically included section variable(s) unused in theorem `RCProof.gram_bound_of_norm`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3680/3717] Replayed RCProof.TraceInequalities
+warning: RCProof/TraceInequalities.lean:43:6: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [inEigenbasis, Unitary.conjStarAlgAut_apply, Matrix.star_eq_conjTranspose]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3681/3717] Replayed RCProof.SharpDistance
+warning: RCProof/SharpDistance.lean:27:6: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [realPart, Matrix.conjTranspose_sub, Matrix.conjTranspose_smul, star_trivial,
+    Matrix.conjTranspose_mul, Matrix.conjTranspose_conjTranspose, Matrix.sub_mul, Matrix.mul_sub, Matrix.smul_mul,
+    Matrix.mul_smul, hW, hV]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/SharpDistance.lean:35:6: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [realPart, Matrix.conjTranspose_sub, Matrix.conjTranspose_smul, star_trivial,
+    Matrix.conjTranspose_mul, Matrix.conjTranspose_conjTranspose, Matrix.sub_mul, Matrix.mul_sub, Matrix.smul_mul,
+    Matrix.mul_smul, hW, hV]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/SharpDistance.lean:38:0: automatically included section variable(s) unused in theorem `RCProof.shifted_telescoping`:
+  [Fintype y]
+  [DecidableEq d]
+  [DecidableEq y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype y] [DecidableEq d] [DecidableEq y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3682/3717] Replayed RCProof.KrausContraction
+warning: RCProof/KrausContraction.lean:20:46: This simp argument is unused:
+  ← neg_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [sub_eq_add_neg, Matrix.kronecker_add, Matrix.kronecker_smul]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/KrausContraction.lean:20:58: This simp argument is unused:
+  Matrix.kronecker_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [sub_eq_add_neg, Matrix.kronecker_add, ← neg_smul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/KrausContraction.lean:24:0: automatically included section variable(s) unused in theorem `RCProof.tensor_mul_stack`:
+  [Fintype d]
+  [DecidableEq d]
+  [DecidableEq b]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype d] [DecidableEq d] [DecidableEq b] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/KrausContraction.lean:27:33: This simp argument is unused:
+  Matrix.kronecker
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.mul_apply, stack, Matrix.kroneckerMap_apply, Matrix.one_apply, Fintype.sum_prod_type, ite_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3683/3717] Replayed RCProof.MeasurementDistance
+warning: RCProof/MeasurementDistance.lean:15:0: automatically included section variable(s) unused in theorem `RCProof.amplifyRect_kraus`:
+  [Fintype b]
+  [DecidableEq d]
+  [DecidableEq b]
+  [DecidableEq q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype b] [DecidableEq d] [DecidableEq b] [DecidableEq q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/MeasurementDistance.lean:20:31: This simp argument is unused:
+  Matrix.kronecker
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [amplifyRect, rectKrausMap, Matrix.sum_apply, Matrix.mul_apply, Matrix.conjTranspose_apply,
+    Matrix.kroneckerMap_apply, Matrix.one_apply, Fintype.sum_prod_type, apply_ite, mul_ite, ite_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/MeasurementDistance.lean:21:15: This simp argument is unused:
+  mul_ite
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [amplifyRect, rectKrausMap, Matrix.sum_apply, Matrix.mul_apply, Matrix.conjTranspose_apply,
+    Matrix.kroneckerMap_apply, Matrix.kronecker, Matrix.one_apply, Fintype.sum_prod_type, apply_ite, ite_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/MeasurementDistance.lean:21:33: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/MeasurementDistance.lean:21:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RCProof/MeasurementDistance.lean:23:0: automatically included section variable(s) unused in theorem `RCProof.tensor_kraus_normalized`:
+  [Fintype d]
+  [DecidableEq b]
+  [DecidableEq q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype d] [DecidableEq b] [DecidableEq q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/MeasurementDistance.lean:41:43: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.sum_apply, Matrix.single]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/MeasurementDistance.lean:43:43: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.sum_apply, Matrix.single, hxy, hh]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/MeasurementDistance.lean:53:43: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.sum_apply, Matrix.single, Fintype.sum_prod_type, ← Finset.sum_ite_irrel]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/MeasurementDistance.lean:54:6: This simp argument is unused:
+  ← Finset.sum_ite_irrel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.sum_apply, Matrix.single, Matrix.diagonal_apply, Fintype.sum_prod_type]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/MeasurementDistance.lean:58:43: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.sum_apply, Matrix.single, Fintype.sum_prod_type, hij, hh]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/MeasurementDistance.lean:58:66: This simp argument is unused:
+  Fintype.sum_prod_type
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.sum_apply, Matrix.single, Matrix.diagonal_apply, hij, hh]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/MeasurementDistance.lean:60:0: automatically included section variable(s) unused in theorem `RCProof.dilation_readout_trace`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/MeasurementDistance.lean:66:4: This simp argument is unused:
+  ← Finset.sum_ite_irrel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [labelProjection, Matrix.trace, Matrix.diag, Matrix.diagonal_mul, Fintype.sum_prod_type]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/MeasurementDistance.lean:127:0: automatically included section variable(s) unused in theorem `RCProof.kraus_composition_normalized`:
+  [DecidableEq b]
+  [DecidableEq q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq b] [DecidableEq q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3684/3717] Replayed RCProof.CanonicalAngles
+warning: RCProof\CanonicalAngles.lean: imports `Mathlib.LinearAlgebra.Matrix.Rank` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof/CanonicalAngles.lean:9:0: automatically included section variable(s) unused in theorem `RCProof.partial_frame_angle`:
+  [DecidableEq k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/CanonicalAngles.lean:28:40: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.conjTranspose_sub, Matrix.conjTranspose_smul, star_trivial, hG.eq, hC.eq, Matrix.mul_sub,
+    Matrix.sub_mul, Matrix.mul_smul, Matrix.smul_mul, hCG, hGC, hCC]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/CanonicalAngles.lean:81:48: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RCProof/CanonicalAngles.lean:135:64: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [3685/3717] Replayed RCProof.DiamondScalar
+warning: RCProof\DiamondScalar.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3686/3717] Replayed RCProof.FrozenDiamond
+warning: RCProof/FrozenDiamond.lean:41:10: `mul_le_one₀` has been deprecated: No replacement, use constituent lemmas from proof.
+⚠ [3688/3717] Replayed RCProof.SignedKraus
+warning: RCProof/SignedKraus.lean:28:60: This simp argument is unused:
+  star_trivial
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [realDiagonal, Matrix.diagonal_conjTranspose, Matrix.diagonal_mul_diagonal]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/SignedKraus.lean:35:12: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.one_apply, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/SignedKraus.lean:35:35: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.diagonal_apply, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/SignedKraus.lean:47:0: automatically included section variable(s) unused in theorem `RCProof.signed_tensor_mul_stack`:
+  [Fintype d]
+  [DecidableEq d]
+  [DecidableEq b]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype d] [DecidableEq d] [DecidableEq b] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3689/3717] Replayed RCProof.SelectedCorrection
+warning: RCProof/SelectedCorrection.lean:23:23: This simp argument is unused:
+  sub_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.kroneckerMap_apply, Matrix.sub_apply, Matrix.smul_apply, Matrix.one_apply, Complex.real_smul,
+    Prod.ext_iff, ite_mul, mul_ite]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/SelectedCorrection.lean:23:46: This simp argument is unused:
+  ite_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.kroneckerMap_apply, Matrix.sub_apply, Matrix.smul_apply, Matrix.one_apply, Complex.real_smul,
+    sub_mul, Prod.ext_iff, mul_ite]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/SelectedCorrection.lean:61:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/SelectedCorrection.lean:64:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/SelectedCorrection.lean:61:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RCProof/SelectedCorrection.lean:64:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3690/3717] Replayed RCProof.PositiveFamily
+warning: RCProof/PositiveFamily.lean:26:0: automatically included section variable(s) unused in theorem `RCProof.effectMap_add`:
+  [Fintype o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/PositiveFamily.lean:32:0: automatically included section variable(s) unused in theorem `RCProof.effectMap_sub`:
+  [Fintype o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/PositiveFamily.lean:61:0: automatically included section variable(s) unused in theorem `RCProof.readout_composition_gram`:
+  [Fintype d]
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype d] [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/PositiveFamily.lean:69:0: automatically included section variable(s) unused in theorem `RCProof.tensor_kraus_gram_bound`:
+  [DecidableEq b]
+  [DecidableEq q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq b] [DecidableEq q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/PositiveFamily.lean:79:41: This simp argument is unused:
+  sub_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.kroneckerMap_apply, Matrix.sub_apply, Matrix.smul_apply, Matrix.sum_apply, Matrix.one_apply,
+    Complex.real_smul, Finset.sum_mul, Prod.ext_iff, ite_mul, mul_ite]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/PositiveFamily.lean:79:50: This simp argument is unused:
+  Finset.sum_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.kroneckerMap_apply, Matrix.sub_apply, Matrix.smul_apply, Matrix.sum_apply, Matrix.one_apply,
+    Complex.real_smul, sub_mul, Prod.ext_iff, ite_mul, mul_ite]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/PositiveFamily.lean:79:80: This simp argument is unused:
+  ite_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.kroneckerMap_apply, Matrix.sub_apply, Matrix.smul_apply, Matrix.sum_apply, Matrix.one_apply,
+    Complex.real_smul, sub_mul, Finset.sum_mul, Prod.ext_iff, mul_ite]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3691/3717] Replayed RCProof.CanonicalSplit
+warning: RCProof/CanonicalSplit.lean:14:0: automatically included section variable(s) unused in theorem `RCProof.selectedEffect_positive`:
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/CanonicalSplit.lean:19:0: automatically included section variable(s) unused in theorem `RCProof.remainderEffect_positive`:
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/CanonicalSplit.lean:34:0: automatically included section variable(s) unused in theorem `RCProof.selectedEffect_root_factor`:
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/CanonicalSplit.lean:63:64: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [3692/3717] Replayed RCProof.SharpResidual
+warning: RCProof/SharpResidual.lean:36:72: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.conjTranspose_add, Matrix.conjTranspose_smul, star_trivial, Matrix.add_mul, Matrix.mul_add,
+    Matrix.smul_mul, Matrix.mul_smul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/SharpResidual.lean:31:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/SharpResidual.lean:31:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RCProof/SharpResidual.lean:96:43: This simp argument is unused:
+  sub_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.kroneckerMap_apply, Matrix.sub_apply, Matrix.smul_apply, Matrix.one_apply, Complex.real_smul,
+    mul_sub, mul_assoc, Prod.ext_iff, ite_mul, mul_ite]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/SharpResidual.lean:96:61: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.kroneckerMap_apply, Matrix.sub_apply, Matrix.smul_apply, Matrix.one_apply, Complex.real_smul,
+    sub_mul, mul_sub, Prod.ext_iff, ite_mul, mul_ite]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/SharpResidual.lean:96:86: This simp argument is unused:
+  ite_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.kroneckerMap_apply, Matrix.sub_apply, Matrix.smul_apply, Matrix.one_apply, Complex.real_smul,
+    sub_mul, mul_sub, mul_assoc, Prod.ext_iff, mul_ite]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3693/3717] Replayed RCProof.RemainderMap
+warning: RCProof/RemainderMap.lean:11:0: automatically included section variable(s) unused in theorem `RCProof.amplifyRect_comp`:
+  [Fintype d]
+  [Fintype k]
+  [Fintype o]
+  [Fintype r]
+  [DecidableEq d]
+  [DecidableEq k]
+  [DecidableEq o]
+  [DecidableEq r]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype
+  d] [Fintype k] [Fintype o] [Fintype r] [DecidableEq d] [DecidableEq k] [DecidableEq o] [DecidableEq r] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/RemainderMap.lean:14:0: automatically included section variable(s) unused in theorem `RCProof.amplifyRect_sub_input`:
+  [Fintype d]
+  [Fintype o]
+  [Fintype r]
+  [DecidableEq d]
+  [DecidableEq o]
+  [DecidableEq r]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype d] [Fintype o] [Fintype r] [DecidableEq d] [DecidableEq o] [DecidableEq r] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/RemainderMap.lean:20:0: automatically included section variable(s) unused in theorem `RCProof.effectMap_compressed`:
+  [Fintype o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3696/3717] Replayed RCProof.JointUpper
+warning: RCProof/JointUpper.lean:65:21: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/JointUpper.lean:65:43: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/JointUpper.lean:65:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RCProof/JointUpper.lean:65:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3697/3717] Replayed RCProof.EnvelopeAnalysis
+warning: RCProof\EnvelopeAnalysis.lean: imports `Mathlib.Analysis.SpecialFunctions.Sqrt` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof\EnvelopeAnalysis.lean: imports `Mathlib.Topology.Instances.ENNReal.Lemmas` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RCProof\EnvelopeAnalysis.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3699/3717] Replayed RCProof.PerfectResidual
+warning: RCProof/PerfectResidual.lean:11:0: automatically included section variable(s) unused in theorem `RCProof.kraus_composition_gram`:
+  [DecidableEq d]
+  [DecidableEq b]
+  [DecidableEq q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] [DecidableEq b] [DecidableEq q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/PerfectResidual.lean:15:0: automatically included section variable(s) unused in theorem `RCProof.kraus_composition_output`:
+  [Fintype b]
+  [DecidableEq d]
+  [DecidableEq b]
+  [DecidableEq q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype b] [DecidableEq d] [DecidableEq b] [DecidableEq q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/PerfectResidual.lean:79:72: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.conjTranspose_add, Matrix.conjTranspose_smul, star_trivial, Matrix.add_mul, Matrix.mul_add,
+    Matrix.smul_mul, Matrix.mul_smul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/PerfectResidual.lean:63:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectResidual.lean:63:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RCProof/PerfectResidual.lean:120:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectResidual.lean:120:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectResidual.lean:120:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3700/3717] Replayed RCProof.PerfectMeasurement
+warning: RCProof/PerfectMeasurement.lean:45:43: This simp argument is unused:
+  sub_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.kroneckerMap_apply, Matrix.sub_apply, Matrix.smul_apply, Matrix.one_apply, Complex.real_smul,
+    mul_sub, Prod.ext_iff, ite_mul, mul_ite]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/PerfectMeasurement.lean:45:75: This simp argument is unused:
+  ite_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.kroneckerMap_apply, Matrix.sub_apply, Matrix.smul_apply, Matrix.one_apply, Complex.real_smul,
+    sub_mul, mul_sub, Prod.ext_iff, mul_ite]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3701/3717] Replayed RCProof.ThresholdRecognition
+warning: RCProof/ThresholdRecognition.lean:61:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RCProof/ThresholdRecognition.lean:71:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RCProof/ThresholdRecognition.lean:87:28: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [realDiagonal, Matrix.one_apply, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/ThresholdRecognition.lean:87:51: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [realDiagonal, Matrix.diagonal_apply, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/ThresholdRecognition.lean:92:28: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [realDiagonal, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3702/3717] Replayed RCProof.PerfectExample
+warning: RCProof/PerfectExample.lean:46:4: Unused tactic linter: `push_cast` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectExample.lean:78:101: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectExample.lean:78:105: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectExample.lean:78:105: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3703/3717] Replayed RCProof.PerfectGeometry
+warning: RCProof/PerfectGeometry.lean:10:0: automatically included section variable(s) unused in theorem `RCProof.isometry_mulVec_injective`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/PerfectGeometry.lean:16:0: automatically included section variable(s) unused in theorem `RCProof.packingAlpha_isometry`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/PerfectGeometry.lean:41:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RCProof/PerfectGeometry.lean:53:59: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+⚠ [3704/3717] Replayed RCProof.PerfectExampleSectors
+warning: RCProof/PerfectExampleSectors.lean:14:69: This simp argument is unused:
+  Matrix.smul_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [examplePlus, exampleMinus, exampleAxis, realDiagonal, Matrix.mul_diagonal, Matrix.smul_apply,
+    vecMulVec, Pi.star_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/PerfectExampleSectors.lean:22:62: Variable name `hb2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hb2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RCProof/PerfectExampleSectors.lean:34:29: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectExampleSectors.lean:34:33: Unused tactic linter: `push_cast` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectExampleSectors.lean:34:43: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectExampleSectors.lean:34:47: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectExampleSectors.lean:34:33: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: RCProof/PerfectExampleSectors.lean:34:47: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: RCProof/PerfectExampleSectors.lean:84:71: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectExampleSectors.lean:86:71: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectExampleSectors.lean:84:71: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RCProof/PerfectExampleSectors.lean:86:71: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3705/3717] Replayed RCProof.DiamondWitness
+warning: RCProof/DiamondWitness.lean:10:0: automatically included section variable(s) unused in theorem `RCProof.amplifyRect_tensor_one`:
+  [Fintype d]
+  [Fintype b]
+  [Fintype r]
+  [DecidableEq d]
+  [DecidableEq b]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype d] [Fintype b] [Fintype r] [DecidableEq d] [DecidableEq b] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/DiamondWitness.lean:44:58: This simp argument is unused:
+  star_trivial
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [realDiagonal, Matrix.diagonal_conjTranspose, Matrix.diagonal_mul_diagonal]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/DiamondWitness.lean:51:10: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.one_apply, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/DiamondWitness.lean:51:33: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.diagonal_apply, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/DiamondWitness.lean:43:2: Unused tactic linter: `change (realDiagonal s)ᴴ * realDiagonal s = 1` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3706/3717] Replayed RCProof.PerfectAttainment
+warning: RCProof/PerfectAttainment.lean:12:2: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [exampleAxis, realDiagonal] at hh
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RCProof/PerfectAttainment.lean:33:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RCProof/PerfectAttainment.lean:48:2: Try this:
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RCProof/PerfectAttainment.lean:74:2: Unused tactic linter: `push_cast` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectAttainment.lean:103:2: Unused tactic linter: `push_cast` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectAttainment.lean:116:2: Try this:
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3707/3717] Replayed RCProof.WorstCase
+warning: RCProof/WorstCase.lean:43:2: Try this:
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RCProof/WorstCase.lean:56:2: Try this:
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RCProof/WorstCase.lean:66:2: Try this:
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RCProof/WorstCase.lean:77:4: Try this:
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3708/3717] Replayed RCProof.PerfectAsymptotic
+warning: RCProof/PerfectAsymptotic.lean:20:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PerfectAsymptotic.lean:20:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3710/3717] Replayed RCProof.PositiveFilter
+warning: RCProof/PositiveFilter.lean:19:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PositiveFilter.lean:19:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RCProof/PositiveFilter.lean:87:76: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.add_mul, Matrix.sub_mul, Matrix.mul_add, Matrix.mul_sub, Matrix.smul_mul, Matrix.mul_smul,
+    Matrix.one_mul, Matrix.mul_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RCProof/PositiveFilter.lean:44:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PositiveFilter.lean:44:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RCProof/PositiveFilter.lean:44:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3711/3717] Replayed RCProof.RecordAccessibility
+warning: RCProof/RecordAccessibility.lean:12:0: automatically included section variable(s) unused in theorem `RCProof.recordChannel_apply`:
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/RecordAccessibility.lean:21:0: automatically included section variable(s) unused in theorem `RCProof.traceNorm_finset_sum`:
+  [Fintype o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3712/3717] Replayed RCProof.RecordNorm
+warning: RCProof/RecordNorm.lean:25:0: automatically included section variable(s) unused in theorem `RCProof.positive_trace_real`:
+  [DecidableEq d]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq d] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/RecordNorm.lean:37:0: automatically included section variable(s) unused in theorem `RCProof.recordChannel_eq_kraus`:
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3713/3717] Replayed RCProof.RecordSpectral
+warning: RCProof/RecordSpectral.lean:24:0: automatically included section variable(s) unused in theorem `RCProof.effect_eigenvalue_le_largest`:
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RCProof/RecordSpectral.lean:31:0: automatically included section variable(s) unused in theorem `RCProof.record_accessible_density`:
+  [DecidableEq o]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq o] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [3714/3717] Built RCProof (15s)
+ℹ [3716/3717] Built RCProofAudit (15s)
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_bound_ancilla._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.PackedMeasurement.exact_alpha: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_hybrid_dilation: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.PackedMeasurement.mk.sizeOf_spec: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_quadratic_square_identity._simp_1_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_nonneg: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.contraction_difference_trace_bound_ancilla: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.labelProjection_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hermitian_record_all_inputs: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_bound._simp_1_3: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExample_full_sectors: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sharp_residual_trace_bound_ancilla._simp_1_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.signed_tensor_contraction._simp_1_3: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.polarRoot._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.examplePlusVector.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.jordan_lower_with_scale: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.isometry: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorProjection.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.selected_product_close: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positiveRoot_square: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorIndexFintype._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.diamondSize_zero: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.rectKraus_amplify_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.labelProjection_idempotent: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_norm_le: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.polar_residual_le: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.projector_residual_zero: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.thresholdProjector_commutes: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packedDistance.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sharp_residual_trace_bound_ancilla: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_balanced._simp_1_2: [propext, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorRoot_square_lower._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_worstCase_second_ratio._simp_1_3: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_pairing: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingWorstCase_uniform_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.polarRoot_square: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.labelProjection.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_trace_product: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_scalar_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.readoutKraus_normalized: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.block_cross_zero: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExample_injective: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExampleState.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_square_identity._simp_1_2: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.record_accessible_density: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.mk.sizeOf_spec: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_real_smul: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_range_gram._simp_1_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplify_kraus: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.lifted_overlap_floor: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_joint_uniform_diamond_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.signed_tensor_contraction: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.selectedEffect._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExample_attains: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residualBalance.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_ratio_limit: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.readoutKraus.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorRecord.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_ancilla_overlap_floor: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_projection_properties._abel_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.coordinates._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.realDiagonal_sign_contraction: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExample_test_value: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_three_kraus_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.selected_radius_uniform_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorRoot_square_lower: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completionInstrument_cp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.inEigenbasis_mul._simp_1_2: []
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExample_full_sectors._proof_1_1: [propext, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.labelProjection_sum: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.range_projection_idempotent: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_filter_scalar._simp_1_3: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.example_aux_axis_zero: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalCompletion._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_effect_difference_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_measurement_diamond_sharp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExample_synthesis_isometry: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplifyRect_zero: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_filter_signed_pair: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_remainder: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.example_aux_sum._simp_1_7: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_kraus_contraction: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.signed_tensor_contraction._simp_1_4: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_filter_scalar._simp_1_5: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingEigenvalue_nonneg: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedEffect.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.diamondSize.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_hybrid_dilation_of_injective: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_ratio._simp_1_4: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hybrid_isometry_from_factorization: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.polarIsometry_isometry: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.effectMap._proof_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExample_completion: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_worstCase_second_ratio._simp_1_7: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.krausMap.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_balanced._simp_1_1: []
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.polarRoot.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.mk.inj: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_quadratic_square_identity._simp_1_5: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplifyRect_comp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.polarRoot_hermitian: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.projection_distance_of_compressions: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.signed_tensor_contraction._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.effect_eigenvalue_le_largest: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_ratio: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.hybrid_dilation_from_polar: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_worstCase_second_ratio._simp_1_6: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_neg: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplifyRect_sub_input: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorRoot_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_quadratic_square_identity: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residualBalance_identity: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_bound_ancilla._simp_1_2: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.signed_tensor_contraction._simp_1_2: []
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorCoordinate_mul: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residualBalance._proof_2: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.tensor_kraus_gram_bound._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.inEigenbasis_positive_iff: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_principal_angle._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectPackedExample._proof_5: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.partial_frame_angle: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedEffect_on_sector: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.kraus_dual_contraction: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepareKraus_gram: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completionInstrument_probability: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_measurement_diamond_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.thresholdProjector_eq_of_isolated_projection._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_ratio._simp_1_7: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.projector_const_one: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.krausMap_completelyPositive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.threshold_residual_gap: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_worstCase_second_ratio._simp_1_5: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingAlpha.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorRoot.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_zero: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.exampleAxis_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_bound._simp_1_2: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.PackedMeasurement.synthesis_injective: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completionChannel_cp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.norm_le_of_gram: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_projection_properties: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_repeatable_instrument: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_filter_scalar._simp_1_2: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.recordChannel_sub: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.weighted_record_reverse_bound._abel_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.one_tensor_contraction: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hermitian_record_all_inputs._simp_1_1: [propext, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalBlock_gram: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.cross_zero: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.effectMap._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hybrid_isometry: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.naimark_isometry: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.inEigenbasis_add: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalCompletion_effect: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalFrame._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_add: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.rectKrausMap._proof_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_family_factorization: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_packing_all_inputs._abel_1_3: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.exampleAxis.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_filter_scalar: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingWorstCase_joint_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_polar_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.measurement_amplify_contracts: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_sectorProjection_sum._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.thresholdProjector_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_spectral_gap_compression: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.recordChannel_eq_kraus: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hybrid_cross_zero: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completion_active_sector: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorProjection.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.jointDefect_range: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.examplePlus.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.residual_gap: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positiveRoot_eq_cfc: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingAlpha.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.matrix_entry_le_opNorm._simp_1_1: [Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepareKraus_sum._simp_1_3: [propext, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.naimark.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.exists_contraction_polar: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.tensor_norm_bound._simp_1_2: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.PackedMeasurement.mk.inj: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.effectMap_compressions: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_range_gram: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.projection_distance_of_compressions._abel_1_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.thresholdProjector_idempotent: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplifyRect_kraus: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hermitianAbs_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingWorstCase_le_two: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hermitianAbs_square: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.polar_factorization: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_column_zero_of_diag_zero: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.measurement_dual_certificate: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.tensor_overlap_floor._simp_1_3: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.FinitePOVM.positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.readoutKraus_output._simp_1_2: [propext, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_joint_diamond_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_kraus_pair_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedEffect_sum._simp_1_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_worstCase_second_ratio: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalBlock_root_action: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_selected_measurement_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorProjection_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalBlock_full: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_sector_rank: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.thresholdProjector_eq_of_isolated_projection: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_trace_real: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.remainder_measurement_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.thresholdProjector.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.effectMap_sub: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplify.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.largestEffectEigenvalue._proof_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_naimark_overlap: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.eigenvalues_le_of_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positiveRoot_mul_eigenbasis: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalFrame_coordinates: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completionChannel_ancilla_contracts: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positiveRoot_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_trace_pairing: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.thresholdProjector_root_commutes: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.one_tensor_contraction._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedEffect_sum._abel_1_4: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_expansion._simp_1_5: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_ratio._simp_1_5: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.realPart.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.example_aux_sum._simp_1_12: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.examplePlus_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.projection_distance_of_compressions._abel_1_3: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.recordInaccessibility._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.rectKrausMap.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.two_kraus_bound_ancilla: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.threshold_spectral_lower: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_packing_all_inputs._abel_1_4: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedEffect.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hermitianAbs_dominates: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalSynthesis_eq_sum_blocks: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_square_identity._simp_1_7: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedPOVM._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_expansion._simp_1_7: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_eq_zero_of_nonpositive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.projection_complement_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepareMap_comp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.isometry_norm_le_one: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_joint_all_inputs._abel_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.near_orthonormal_overlap: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.realDiagonal_mul: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_le_trace_of_dominates: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedPOVM._proof_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.joint_scalar_uniform_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExampleTest.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepareKraus_sum: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completionInstrument_trace_preserving: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.recordChannel_defect: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completionInstrument.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.stack_label_cross: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.realPart._proof_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepareMap_amplify_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.example_aux_sum._simp_1_10: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.selectedEffect_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.kraus_composition_output: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.record_accessibility_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.tensor_norm_bound._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.normalizedPositive_trace: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_bound._simp_1_6: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_gram_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorRoot._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.width_of_nontrivial_radius: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.signed_kraus_dual_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_square_identity: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalBlock_supported: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExampleTest_contraction: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_finset_sum: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.anticommutator_lower: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplifyRect_kraus_composition: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplifyRect.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedEffect_sum: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.label_compression: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.stack.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepareMap_eq_kraus: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorCoordinate_root_commutes: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_expansion._simp_1_6: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.shifted_telescoping: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_square_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hybrid_compression: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_packing_all_inputs._simp_1_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.record_accessibility_two_sided: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.inEigenbasis._proof_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectPackedExample._proof_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.inEigenbasis_one: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.inEigenbasis_const: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_balanced._abel_1_3: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hermitianAbs.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.dilation_readout_trace: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_attaining_contraction: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedEffect_projection: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.record_accessibility_spectral: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_synthesis_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_selected_defect_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.threshold_spectral_envelope: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.example_axes_sum: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.isometry_norm_le_one._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.joint_envelope_limit_of_uniform_bounds: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorRoot.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_packing_le_one: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_worstCase_expansion: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.realDiagonal.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.spectral_cross_zero: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_contracts_hermitian: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.stack_label_compression: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.inEigenbasis_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_quadratic_square_identity._simp_1_3: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.realDiagonal.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.FinitePOVM.mk.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.exampleMinusVector.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.measurementMap._proof_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalBlock.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm._proof_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplify_sum_maps: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_worstCase_second_order_limit: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_expansion: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_packing_all_inputs._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_trace_bound_balanced: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.krausMap_amplify_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectPackedExample._proof_4: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingAlpha_pos: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExampleState_trace: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExample_nonempty: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingAlpha_sq: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.diamondSize_le_of_all_inputs: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.thresholdProjector.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_worstCase_second_ratio._simp_1_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_square_identity._simp_1_6: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hermitian_record_all_inputs._simp_1_2: []
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.one_tensor_contraction._simp_1_2: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalBlock_factor: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_square_identity._simp_1_3: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_square_identity._simp_1_4: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalBlock_sum: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hermitianAbs_trace: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.recordChannel_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.matrix_entry_le_opNorm: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_synthesis_upper._simp_1_1: [propext, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_sectorProjection_sum: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.readout_composition_gram: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_filter_scalar._simp_1_6: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.FinitePOVM.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sharp_isometry_trace_distance_ancilla: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.selected_defect_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExampleState._proof_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.measurement_diamond_le_two: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.selectedEffect_root_factor: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positiveRoot_gram: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.tensor_mul_stack: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.measurement_compression_difference_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.FinitePOVM.normalized: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_principal_angle: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplified_measurement_difference: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingWorstCase_perfect_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.gram_bound_of_norm: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.supported: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.coordinate_idempotent: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.tensor_kraus_gram_bound._simp_1_2: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingWorstCase_perfect_exact: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_filter_scalar._simp_1_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.stack_gram: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.hybrid_dilation._abel_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.spectral_representation: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packedDistance_le_worstCase: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.exampleMinus_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_polar_overlap: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.naimark_compression: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalSynthesis_gram_diag: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_ratio._simp_1_6: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_filter_scalar._simp_1_4: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_naimark_overlap._simp_1_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.example_aux_sum._simp_1_6: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.effectMap_add: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorRoot_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.rank1_core_package: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.selectedEffect_factor: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExample_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_hybrid_overlap_floor: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.dilation_readout_trace._simp_1_1: [propext, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalSynthesis._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.measurementMap._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm._proof_4: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.jointDefect.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.normalized: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorRecord.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.example_aux_sum._simp_1_11: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hermitian_record_all_inputs._simp_1_3: [propext, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplify_effectMap_compressed: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residualBalance_inverse: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingEigenvalue.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.frozen_theorem: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.krausMap._proof_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplifyRect_tensor_one: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_joint_all_inputs: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.isometry_mulVec_injective: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.signed_tensor_mul_stack: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_packing_all_inputs._abel_1_5: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.inEigenbasis_mul: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.exampleAxis_ne_zero: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExample.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExample_normalized: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_quadratic_square_identity._simp_1_6: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.polarIsometry.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_quadratic_square_identity._simp_1_7: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_expansion._simp_1_2: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.FinitePOVM.mk.injEq: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope._proof_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completionChannel.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.tensor_isometry: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.kraus_composition_gram: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.tensor_kraus_normalized: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hybrid_overlap_identity: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepareMap.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sharp_radius_le_sum: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_remainder_measurement_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingAlpha_isometry: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.jointUpper.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplifyMap._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.contraction_difference_trace_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepareKraus_sum._simp_1_2: [propext, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positiveRoot.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.jordan_lower_of_width: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.normalizedPositive.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.projection_distance_of_compressions._abel_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepareKraus_output: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm._proof_3: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedEffect_other_sector: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hermitian_norm_sub_one: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.realDiagonal_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_bound._simp_1_5: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.inEigenbasis._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.measurement_diamond_of_overlap: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_selected_operator_close: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residualBalance._proof_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExampleEffect._proof_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.mk.injEq: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_bound._simp_1_7: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.labelProjection.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.exampleAxis_mul: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.inEigenbasis_smul: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positiveRoot._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.jointUpper._proof_2: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.FinitePOVM.mk.sizeOf_spec: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_filter_scalar._simp_1_7: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.readoutKraus_output: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_bound_ancilla: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.orthogonal_sectors_synthesis_isometry: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.rectKrausMap._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplify_trace_preserving: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.amplifyMap._proof_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.selectedEffect_sum._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.example_aux_sum._simp_1_8: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.measurementMap_eq_dilation_readout: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_worstCase_second_ratio._simp_1_2: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_packing_diamond_upper: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingEigenvalue_le: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.measurement_dual_certificate_all_inputs: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalSynthesis.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_range_gram._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_square_identity._simp_1_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedEffect_record: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepareMap._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExample._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.polarRoot_det_unit: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.tensor_kraus_gram_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_packing_all_inputs: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.projection_distance_of_compressions._abel_1_4: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.orthogonal_sectors_synthesis_isometry._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalBlock.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.effectMap_measurement: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.spectral_density_input: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_selected_contraction: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.positive_effectMap_kraus: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorRoot_lower: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SectorIndex._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.recordChannel_apply: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.tensor_norm_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.measurementMap_trace_preserving: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.example_aux_sum._simp_1_9: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_hermitian: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectPackedExample._proof_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.largestEffectEigenvalue._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorIndex_sum: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.weighted_record_reverse_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_expansion._simp_1_4: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExampleEffect.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_projector_factor: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_radius_uniform_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.remainderEffect_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.effectMap.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectPackedExample._proof_3: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.FinitePOVM.effect_le_one: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_jordan_floor: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonicalCompletion.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepareMap_completelyPositive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sharp_isometry_trace_distance: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residualBalance_pos: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.recordChannel.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.tensor_kraus_normalized._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.effectMap_compressed: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.krausMap._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completionChannel_amplify_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.normalizedPositive_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.record_accessibility_lower._simp_1_1: [propext, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.full: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.selectedEffect.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_ratio._simp_1_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.selectedCorrectionRadius.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.inEigenbasis.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorCoordinate.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.example_aux_sum: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_signed_kraus_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_scalar_attained: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepare_positive_gram: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.FinitePOVM.mk.inj: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExample.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_synthesis_upper._simp_1_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packing_gram_lower: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completionChannel_idempotent: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_packing_sectors: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.diamondSize.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.example_aux_complement_positive._abel_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_residual_gap: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.PackedMeasurement.active_sector: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_weighted_synthesis_contraction: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_bound._simp_1_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.PackedMeasurement.sectors_nonempty: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_expansion._simp_1_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.inEigenbasis_positive_iff._simp_1_3: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_expansion._simp_1_3: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectExampleState_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.jointUpper._proof_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.example_aux_complement_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.selectedEffect_sum._simp_1_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.tensor_overlap_floor._simp_1_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.trace_inEigenbasis: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.readoutKraus.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedEffect_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedEffect_sum._simp_1_3: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.record_accessibility_lower: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.shifted_isometry_bounds: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_effect_positive: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_quadratic_square_identity._simp_1_2: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_two_kraus_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.selectedEffect_sum: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepareKraus.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.example_aux_complement_positive._abel_1_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.SpectralFrame.hybrid_dilation: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.tensor_overlap_floor: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.PackedMeasurement.mk.injEq: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packing_polar_lower: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.kraus_composition_normalized: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_remainder_data._abel_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorIndex_nonempty: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completionInstrument.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_square_identity._simp_1_5: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.exampleMinus.eq_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_worstCase_second_ratio._simp_1_4: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_annihilates_isometry: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.examplePlus._proof_1: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_remainder_data: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.prepareMap._proof_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.canonical_sectorProjection_sum._simp_1_2: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_bound._simp_1_4: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completedEffect_unit_sector: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.completionInstrument_repeatable: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.realDiagonal_sign_contraction._simp_1_2: []
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfect_residual_balanced: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.packingEigenvalue._proof_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.residual_quadratic_square_identity._simp_1_4: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.stack_cross: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.frozen_measurement_diamond_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.inEigenbasis_sub: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorCoordinate.congr_simp: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sectorCoordinate_sum: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.projection_complement_positive._abel_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_ratio._simp_1_2: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.selected_product_close._abel_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.hybrid_isometry_from_factorization._abel_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.realDiagonal_sign_contraction._simp_1_1: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.diamondSize_ge_state_test: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.perfectEnvelope_ratio._simp_1_3: [propext]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.sharp_residual_trace_bound: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOMS RCProof.traceNorm_mul_sandwich: [propext, Classical.choice, Quot.sound]
+info: RCProofAudit.lean:10:0: AXIOM AUDIT PASSED: 594 theorems; 700 total declarations checked.
+Build completed successfully (3717 jobs).

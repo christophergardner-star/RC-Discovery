@@ -4,6 +4,12 @@
 reviewed or completely formalized; publication novelty unverified. The frozen
 theorem remains valid. This note improves its small-error analysis.
 
+**Subsequent extension, 1 November 2026:** the [second-order note](joint_second_order.md)
+strengthens the lower construction to every exact parameter pair and derives
+`W = sqrt(s) + s/2 + O(s^(3/2))` internally. Statements below describing the
+subleading term as open record the earlier result's boundary. The new joint
+theorem is not yet fully Lean checked; the earlier proof is retained here.
+
 ## Result
 
 Use the full hypotheses and prescribed **unweighted** completion of the
