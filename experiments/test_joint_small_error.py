@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 import sys
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import numpy as np
 from test_theorem_v1_contract import build_rounding, mixed_povm, operator_norm, psd_sqrt
 from search_prescribed_completion import DiamondSolver, choose_threshold

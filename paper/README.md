@@ -1,7 +1,7 @@
 # Short paper for external review
 
 **Stability of a prescribed repeatable completion of a quantum measurement**  
-Christopher Gardner, revised 1 November 2026. Twelve pages including references.
+Christopher Gardner, revised 1 November 2026. Fourteen pages including references.
 
 - [Typeset PDF](prescribed_repeatable_completion.pdf)
 - [Readable Markdown with resolved references](prescribed_repeatable_completion.md)
@@ -10,7 +10,8 @@ Christopher Gardner, revised 1 November 2026. Twelve pages including references.
 - [Focused external-review brief](../review/SHORT_PAPER_REVIEW_BRIEF.md)
 - [Concise reviewer packet](../review/REVIEWER_PACKET.md)
 - [Isolated certificate and PDF reproduction](../review/REPRODUCE.md)
-- [Completed reproduction report](../research/REVIEWER_REPRODUCTION_2026-11-01.md)
+- [Combined-paper audit](../research/COMBINED_PAPER_AUDIT_2026-11-01.md)
+- [Combined reproduction report](../research/COMBINED_REVIEW_RELEASE_2026-11-01.md)
 
 The paper contains the frozen coefficient-two theorem, a complete analytic
 proof, the record-correction corollary, the weighted prior-art comparison,
@@ -18,7 +19,9 @@ and explicit counterexamples and limitations. Proposition 6 adds the certified
 four-dimensional comparison and localized equality point; its computer-assisted
 proof includes the linked certificate supplement. Section 7 adds the sharp
 perfect-packing theorem, an exact reference-advantage certificate, and a
-coupled simplex lower bound with two vetoed upper extensions. VIBE MATH appears in the
+coupled simplex lower bound with two vetoed upper extensions. Section 8 integrates
+Theorem 10, the sharp joint leading envelope, with its upper proof and uniform
+limit argument. VIBE MATH appears in the
 methodology disclosure, not as a mathematical claim.
 
 The current status is an external-review draft: internally checked, not peer
@@ -38,7 +41,9 @@ includes exact primal/dual certificates. Its analytic theorem is now included
 in the PDF as Theorem 7. The [reference-advantage note](../theory/reference_advantage.md)
 and [imperfect-packing construction](../theory/imperfect_packing_lower_bound.md)
 are linked proof supplements for Propositions 8--9 and the two upper-bound
-vetoes. The general sharp joint upper bound and publication novelty remain open.
+vetoes. Theorem 10 determines the joint leading envelope
+`sqrt(1-alpha^2+delta)` as `(alpha,delta)->(1,0)`. The exact finite-error
+envelope, subleading term and publication novelty remain open.
 
 ## Source and build
 
@@ -82,7 +87,10 @@ records the original eight-page revision. The
 records the earlier ten-page paper and distinguishes document checks,
 numerical checks, exact certificate checks, and mathematical review.
 The [latest revision report](../research/REFERENCE_AND_PACKING_PROGRESS_2026-11-01.md)
-records the current twelve-page paper, 33 equations, and twelve references.
+records the earlier twelve-page paper, 33 equations, and twelve references.
+The [combined release report](../research/COMBINED_REVIEW_RELEASE_2026-11-01.md)
+records the current fourteen-page paper, 40 equations, twelve references and
+the fresh reproduction including Theorem 10's numerical operator checks.
 
 ## Relationship to the longer material
 

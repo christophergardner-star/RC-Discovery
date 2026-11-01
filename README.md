@@ -27,8 +27,8 @@ internal sharpness result for that subclass; literature novelty and external
 review remain open. It is now Theorem 7 of the paper. Subsequent
 [exact reference-advantage and imperfect-packing results](research/REFERENCE_AND_PACKING_PROGRESS_2026-11-01.md)
 prove a reference advantage of at least 0.0047, give an analytic joint lower
-bound, and rule out two proposed upper extensions. The general sharp joint
-upper bound remains open.
+bound, and rule out two proposed upper extensions. The exact general joint
+finite-error envelope remains open.
 
 ## Current theorem candidate
 
@@ -41,7 +41,7 @@ leading coefficient of `sqrt(delta)` is `sqrt(2)`. This is a subsequent
 internally proved addition; external review and novelty remain unverified.
 The finite-error optimum remains open.
 
-The [finished-paper audit](research/FINAL_PROOF_AUDIT_2026-11-01.md),
+The [combined-paper audit](research/COMBINED_PAPER_AUDIT_2026-11-01.md),
 [focused novelty veto](literature/FINAL_FOCUSED_VETO_2026-11-01.md) and
 [concise reviewer packet](review/REVIEWER_PACKET.md) record the latest
 review preparation. [Reproduction instructions](review/REPRODUCE.md)
@@ -51,12 +51,15 @@ For a complete, focused presentation, start with the
 [short paper PDF](paper/prescribed_repeatable_completion.pdf),
 [readable manuscript](paper/prescribed_repeatable_completion.md), and
 [external-review brief](review/SHORT_PAPER_REVIEW_BRIEF.md).
-The twelve-page paper gives the full analytic main argument, corrected attribution,
+The fourteen-page paper gives the full analytic main argument, corrected attribution,
 and explicit limitations. Proposition 6 adds the certified comparison, with a
 linked computer-assisted proof supplement. Theorem 7 and Propositions 8--9
 add sharp subclass control, reference advantage, and an imperfect-packing
 lower bound, with linked analytic and certificate supplements. It remains an external-review draft
-with novelty unverified.
+with novelty unverified. Section 8 integrates the joint-asymptotic theorem
+and its proof. The [combined audit](research/COMBINED_PAPER_AUDIT_2026-11-01.md)
+and [release evidence](research/COMBINED_REVIEW_RELEASE_2026-11-01.md) document
+the final internal review and reproduction.
 
 Let \(\{E_j\}_{j=1}^m\) be a finite POVM on a finite-dimensional Hilbert space. Fix \(0<\delta<1/2\). For every nonzero outcome, let \(P_j\neq0\) be the full spectral projection of \(E_j\) onto eigenvalues at least \(1-\delta\).
 

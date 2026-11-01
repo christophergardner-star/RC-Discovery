@@ -1862,7 +1862,7 @@
     "scs": "3.3.1"
   },
   "source_text_sha256": {
-    "experiments/test_joint_small_error.py": "17b742b54b3c7df38397e1fe4b42927bf7bd5899dbf929e96a2ac8bb5b59214a",
+    "experiments/test_joint_small_error.py": "228b1fbbd9354e240c98989439ea7d62f93efa030e75e0b1056f044bcbf88078",
     "theory/joint_small_error_asymptotics.md": "e091987682d8d979a68b3eb1c07eb6372c4f0fdceea16bcc1ddee815902743cc",
     "experiments/test_theorem_v1_contract.py": "c4175a2d1ce7fe435e2598f544c7c1b3ab40d3571cb0ffe4d87db32b8d0906ed",
     "experiments/search_imperfect_packing.py": "51f64b429e450e931e65c47a1878dd8aefbe5438f24e4bb3d04159a4420b6d0d",

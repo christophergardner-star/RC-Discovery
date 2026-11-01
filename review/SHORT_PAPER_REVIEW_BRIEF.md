@@ -5,6 +5,13 @@ review packet, not a record of external review or a message sent to a reviewer.
 
 ## Material to review
 
+The current combined paper has fourteen pages, forty numbered equations and
+Theorem 10 in Section 8. Its proof of sharp joint small-error asymptotics is
+integrated with the earlier theorems and certificate supplements. The
+[combined audit](../research/COMBINED_PAPER_AUDIT_2026-11-01.md) and
+[release report](../research/COMBINED_REVIEW_RELEASE_2026-11-01.md) supersede the
+earlier twelve-page release for current review preparation.
+
 Start with the short paper:
 
 - [PDF](../paper/prescribed_repeatable_completion.pdf)
@@ -70,6 +77,14 @@ inequalities and elementary conditioning complete the bounds. An implication
 proof is supplied for review, rather than left as a task for the referee.
 
 ## Questions for a correctness referee
+
+For Theorem 10, check that the selected effects sum to `UHD^2HU*<=I`,
+that no commutation of H and D is assumed, and that the selected-map error
+is bounded by `2h=O(1-alpha^2+delta)` before reference information is discarded.
+Check the support-restricted normalization and the full-sector argument for
+`m=2 ceil(1/(2 delta))`. The claimed limit is a worst-case supremum over
+varying dimension and labels, not a fixed-dimension result or an exact
+finite-error formula. Its proof is analytic; numerical checks are supporting.
 
 A subsequent [exact comparison note](../theory/exact_completion_comparison.md)
 and [rational certificates](../research/EXACT_COMPARISON_2026-11-01.md) give

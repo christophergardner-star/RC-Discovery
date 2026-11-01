@@ -45,6 +45,7 @@ def main():
     author = re.search(r'\*\*Author:\*\*\s*(.+)',source).group(1).strip()
     tags = [int(n) for n in re.findall(r'\\tag\{(\d+)\}',source)]
     assert tags == list(range(1,len(tags)+1))
+    assert len(tags) == 40, 'Combined review release must include Theorem 10 equations.'
     for opening,closing in [(r'\[',r'\]'),(r'\(',r'\)')]:
         assert source.count(opening) == source.count(closing)
     for key in manifest['citations_used']:
@@ -59,7 +60,8 @@ def main():
     assert all(len(text) > 80 for text in extracted)
     combined = '\n\n'.join(extracted)
     for marker in ['2.33690021','2.33690023','Proposition 6','Theorem 7',
-                   'Proposition 8','Proposition 9','0.1161','0.1208','1.0405','1.0156','VIBE MATH','Eldar']:
+                   'Proposition 8','Proposition 9','Theorem 10','joint leading envelope',
+                   '0.1161','0.1208','1.0405','1.0156','VIBE MATH','Eldar']:
         assert re.sub(r'\s+','',marker) in re.sub(r'\s+','',combined), marker
     # Check the numerical assertions newly brought into the paper against
     # the retained exact certificate outputs, never their floating proposals.
@@ -86,6 +88,15 @@ def main():
     for report in [reference,veto,sharp]:
         for name,expected in report['source_text_sha256'].items():
             assert text_hash(ROOT/name)==expected,name
+    joint=json.loads((ROOT/'research/joint_small_error_2026-11-01/verification.json').read_text(encoding='utf-8'))
+    assert joint['result']=='PASS'
+    assert len(joint['cases'])==96 and sum(x['input_checks'] for x in joint['cases'])==1440
+    assert len(joint['sdps'])==5 and sum('observed_witness' in x for x in joint['cases'])==20
+    for name,expected in joint['source_text_sha256'].items():
+        assert text_hash(ROOT/name)==expected,name
+    for row in joint['sdps']:
+        artifact=ROOT/'research/joint_small_error_2026-11-01'/row['artifact']
+        assert hashlib.sha256(artifact.read_bytes()).hexdigest()==row['artifact_sha256']
     PREVIEW.mkdir(parents=True,exist_ok=True)
     (PREVIEW/'extracted.txt').write_text(combined,encoding='utf-8')
     document = pdfium.PdfDocument(str(pdf))
@@ -113,6 +124,7 @@ def main():
                   proposition_6_numbers_match_exact_reports=True,
                   proposition_8_and_joint_veto_numbers_match_exact_reports=True,
                   sharpness_and_new_certificate_source_hashes_match=True,
+                  theorem_10_numerical_evidence_counts_and_hashes_match=True,
                   checker_text_sha256=text_hash(Path(__file__).resolve()),
                   scope='Document integrity and consistency with retained exact results; not a proof or external review.',
                   compiler_environment_note='Fontconfig configuration/cache messages are reported; compilation and rendering succeed.')

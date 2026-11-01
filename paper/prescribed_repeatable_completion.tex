@@ -128,14 +128,16 @@ instrument and satisfies \[\|\mathcal M_E-\mathcal M_F\|_\diamond
 polar geometry, a classical Jordan-product inequality, and pure-state
 trace distance after an explicit labelled-dilation calculation. For
 orthogonal input sectors, we determine the exact worst-case envelope
-\(2\sqrt\delta/(2-\sqrt\delta)\) and exhibit an attaining family. Exact
-rational certificates show both a strict reference advantage within this
-subclass and the failure of a natural joint extension outside it. A
-coupled simplex family gives lower bounds for imperfect packing. A
-corollary corrects separated output records to an exactly idempotent
-channel. Both sector constructions are established least-squares
-measurements; no new general inequality or literature priority is
-claimed. The sharp joint bound for general packing remains open.
+\(2\sqrt\delta/(2-\sqrt\delta)\) and exhibit an attaining family. For
+general packing, a residual decomposition and a coupled simplex lower
+construction determine the sharp joint leading envelope
+\(\sqrt{1-\alpha^2+\delta}\) as \((\alpha,\delta)\to(1,0)\), uniformly
+over dimension and outcome count. Exact rational certificates show both
+a strict reference advantage and the failure of a natural finite-error
+joint extension. A corollary corrects separated output records to an
+exactly idempotent channel. Both sector constructions are established
+least-squares measurements; no new general operator lemma or literature
+priority is claimed. The exact joint finite-error envelope remains open.
 
 \section{1. Question and scope}\label{question-and-scope}
 
@@ -759,8 +761,8 @@ makes the polar sectors coordinate projections. Input \((u+e_r)/\sqrt2\)
 has output distance exactly \(L_m(\alpha)\). The limits follow from
 (32). \(\square\)
 
-The joint sharp upper bound remains open. Two tempting extensions of
-(27) are already false:
+The exact joint finite-error envelope remains open. Two tempting
+extensions of (27) are already false:
 \[\nu\not\le 2(1-\alpha)+B(\delta)\quad\hbox{in general},\qquad
 \nu\not\le\sqrt{1-\alpha^2+B(\delta)^2}\quad\hbox{in general}.
 \tag{33}\] For the first, (32) with \(m=64\), \(\alpha=9/10\) has
@@ -771,7 +773,117 @@ is \(1/3\). For the second, a rational seven-dimensional variant has
 links its exact effects, rational input and sign witness, and verifier.
 These are counterexamples to proposed extensions, not to Theorem 1.
 
-\section{8. Reproducibility, methodology, and review
+\section{8. Sharp joint small-error
+asymptotics}\label{sharp-joint-small-error-asymptotics}
+
+The residual argument of Theorem 7 extends to nonorthogonal sectors if
+the selected-effect correction is estimated separately. This closes the
+leading joint gap without asserting either of the false finite-error
+extensions (33).
+
+\textbf{Theorem 10 (joint leading envelope).} Under the hypotheses of
+Theorem 1, write \[\begin{gathered}
+a^2=1-\alpha^2,\quad s=a^2+\delta,\quad d=\sqrt{1-\delta},\\
+\varepsilon=1-\alpha^2(1-\delta),\qquad
+h=\max\{1-\alpha,d^{-1}-1\}+1-d.
+\end{gathered}
+\tag{34}\] Then the prescribed unweighted completion satisfies, without
+condition (7),
+\[\nu\le\min\left\{2,\frac{2\sqrt\varepsilon}{\sqrt{4-\varepsilon}}+2h\right\}.
+\tag{35}\] Let \(\mathcal W(\alpha,\delta)\) be the supremum of \(\nu\)
+over all finite POVMs satisfying Theorem 1 with synthesis minimum
+exactly \(\alpha\) and the specified threshold \(\delta\). Dimension and
+outcome count may vary. For \(0<\delta\le1/4\) this class is nonempty
+for every \(0<\alpha\le1\), and
+\[\boxed{\frac{\mathcal W(\alpha,\delta)}{\sqrt{1-\alpha^2+\delta}}
+\longrightarrow1\quad\text{as }(\alpha,\delta)\longrightarrow(1,0),\quad\delta>0.}
+\tag{36}\] The limit is joint, with no fixed error ratio required. An
+explicit consequence is
+\[(1-2\delta)\sqrt{s}\le\mathcal W(\alpha,\delta)
+\le\sqrt{s}+5s\qquad(s\le1/4).
+\tag{37}\] In particular, when \(1-\alpha^2=r\delta\) for fixed
+\(r\ge0\), \(\mathcal W/\sqrt\delta\to\sqrt{1+r}\). The coefficient five
+in (37) is not asserted to be optimal.
+
+\emph{Proof.} Keep the sector operators \(T=UH,D,C_j\) from Section 3.
+Spectral commutation and \([D,C_j]=0\) give
+\[A_j=P_jE_jP_j=UHDC_jDHU^*,\qquad B_j=E_j-A_j\ge0.\] As \(A_j\le E_j\),
+their sum is \(UHD^2HU^*\le I\). Congruence of \(D^2\ge d^2I\), together
+with \(H\ge\alpha I\), therefore yields
+\[0\le\Delta_{\mathcal K}:=I-HD^2H\le\varepsilon I.\] No commutation of
+\(H\) and \(D\) is assumed. Put \(\Delta=U\Delta_{\mathcal K}U^*\), so
+\(\sum_jB_j=L:=R+\Delta\) and \(\sqrt L=R+\sqrt\Delta\). Normalize
+\(N_j=L^{-1/2}B_jL^{-1/2}\) on the support of \(L\). Each \(B_j\) kills
+its kernel, since \(0\le B_j\le L\); allocating that kernel projection
+to any label extends the \(N_j\) to a POVM. Let \(\mathcal N\) be its
+CPTP measurement map. Because \(A_jR=0\), \(RB_jR=RE_jR\), and the exact
+decomposition is \[\mathcal M_E-\mathcal M_F
+=\mathcal N\bigl(\sqrt L\,\cdot\,\sqrt L-R\,\cdot\,R\bigr)
+ +(\mathcal M_A-\mathcal M_Q).
+\tag{38}\] The maps \(\mathcal M_A,\mathcal M_Q\) are CP but need not
+preserve trace.
+
+Take a unit input \(\psi\) with an arbitrary reference, and set
+\(p=\langle\psi,(S\otimes I)\psi\rangle\), \(q=1-p\), and
+\(t=\langle\psi,(\Delta\otimes I)\psi\rangle\le\varepsilon p\). For
+\(x=(\sqrt L\otimes I)\psi\), \(y=(R\otimes I)\psi\), the squared norms
+are \(t+q,q\) and the overlap is \(q\). Thus
+\(\|xx^*-yy^*\|_1=\sqrt{t^2+4tq}\), as in Theorem 7's established
+rank-two calculation (Regula et al. 2026, Appendix C). Contractivity of
+\(\mathcal N\otimes\mathrm{id}\) bounds the first term of (38).
+
+For the second term put \(z=(U^*\otimes I)\psi\) and
+\(w=(DH\otimes I)z\), so \(\|z\|^2=p\). The map \(DH\) is a contraction
+because \(HD^2H\le I\). The two selected outputs are obtained by the
+same coordinate measurement of \(ww^*\) and \(zz^*\). Moreover,
+\[\|DH-I\|\le\|D(H-I)\|+\|D-I\|
+\le\max\{1-\alpha,d^{-1}-1\}+1-d=h.\] The outer-product bound gives
+\(\|ww^*-zz^*\|_1\le(\|w\|+\|z\|)\|w-z\|\le2hp\). Consequently every
+reference-assisted input obeys
+\[\|[(\mathcal M_E-\mathcal M_F)\otimes\mathrm{id}](\psi\psi^*)\|_1
+\le2hp+\sqrt{\varepsilon^2p^2+4\varepsilon p(1-p)}.
+\tag{39}\] For \(0<\varepsilon<1\), the squared radical equals
+\[\frac{4\varepsilon}{4-\varepsilon}
+-\varepsilon(4-\varepsilon)\left(p-\frac2{4-\varepsilon}\right)^2.\]
+Together with \(p\le1\), this proves (35) by the pure-input
+characterization of diamond distance. The selected correction is of
+order \(s\), not \(\sqrt s\), and its estimate does not sum errors over
+labels.
+
+For the matching lower bound at an arbitrary \(0<\delta\le1/4\), choose
+\(m=2\lceil1/(2\delta)\rceil\). In Proposition 9's family take the
+requested \(\alpha\) and \(\delta'=1/m\le\delta\). Its selected
+eigenvalue \(1-\delta'\) is at least \(1-\delta\); every complementary
+eigenvalue is at most \(2/m\le2\delta<1-\delta\). Thus the full sectors,
+synthesis minimum and completion are unchanged at the requested
+threshold. The class defining \(\mathcal W\) is nonempty, and (32) gives
+\[\begin{aligned}
+\mathcal W^2&\ge L_m^2
+=\frac{m-2}{m-1+a^2}\left(a^2+\frac1{m-1}\right)\\
+&\ge\frac{1-2\delta}{1+2\delta}\,(a^2+\delta).
+\end{aligned}
+\tag{40}\] Indeed \((m-2)/(m-1+a^2)\ge1-2\delta\) and
+\(1/m\ge\delta/(1+2\delta)\). Meanwhile \(\varepsilon=s-a^2\delta\),
+\(\varepsilon/s\to1\), and \[1-\alpha=\frac{a^2}{1+\alpha},\quad
+d^{-1}-1=\frac{\delta}{d(1+d)},\quad
+1-d=\frac{\delta}{1+d}\] show uniformly that \(h=O(s)\). Taking square
+roots in (40) and dividing both bounds by \(\sqrt s\) proves (36). For
+(37), when \(s\le1/4\), use \(h\le2s\), \((1-s/4)^{-1/2}\le1+s\), and
+\(\sqrt{(1-2\delta)/(1+2\delta)}\ge1-2\delta\). \(\square\)
+
+Theorem 10 determines a leading worst-case envelope, not a finite-error
+formula for each POVM. Its lower examples use growing dimension and
+label count. The exact general envelope, sharp subleading term, and
+fixed-dimension optima remain open. Even at \(\alpha=1\), (27) exceeds
+\(\sqrt\delta\) for every positive \(\delta\); the remainder in (35)
+cannot simply be omitted. The argument uses established tools and the
+specified lower construction. Its completion-specific implication and
+publication priority require external assessment. The
+\href{https://github.com/christophergardner-star/RC-Discovery/blob/ccb4b5b22892a21de32c2a045102b85d640ea664/theory/joint_small_error_asymptotics.md}{extended
+derivation and operator checks} provide supplementary detail; the upper
+proof and limit argument are given here.
+
+\section{9. Reproducibility, methodology, and review
 status}\label{reproducibility-methodology-and-review-status}
 
 The
@@ -794,8 +906,13 @@ rejection controls. Its universal lower-bound family is established by
 the linked analytic construction, not extrapolation from numerical
 tests. A separate imperfect-packing search checked 56 structured cases,
 711 accepted adaptive cases, and seven SDPs; these are numerical
-evidence only. The Lean development checks 13 constituent declarations,
-not the full spectral and channel theorem.
+evidence only. Theorem 10's proof is analytic. Its separate numerical
+audit checks 96 operator cases, 1,440 pure inputs with reference
+dimensions 1, 2 and the system dimension, twenty structured witnesses,
+and five full diamond SDPs. These checks probe the decomposition and
+estimates; they do not prove the universal limit or replace its
+arbitrary-reference argument. The Lean development checks 13 constituent
+declarations, not the full spectral and channel theorem.
 
 This work was developed using \textbf{VIBE MATH}, an AI-assisted
 workflow of conjecture generation, derivation, adversarial checking,
@@ -806,13 +923,13 @@ verification.
 
 The requested external assessment is concrete: check the supplied
 reduction of Theorem 1 and Corollary 3 to established tools, reconstruct
-the sharp subclass theorem, lower-bound family and exact comparisons,
-and identify any earlier statement or application that subsumes this
-quantitative specialization. The reduction requires no new general
-lemma; publication priority and usefulness remain unverified.
-Correctness, priority, optimality, and usefulness are separate
-questions. This draft has not undergone independent specialist review
-and is not represented as submission-ready.
+the sharp subclass theorem, joint asymptotics, lower-bound family and
+exact comparisons, and identify any earlier statement or application
+that subsumes this quantitative specialization. The reduction requires
+no new general lemma; publication priority and usefulness remain
+unverified. Correctness, priority, optimality, and usefulness are
+separate questions. This draft has not undergone independent specialist
+review and is not represented as submission-ready.
 
 \section*{References}\label{references}
 \addcontentsline{toc}{section}{References}

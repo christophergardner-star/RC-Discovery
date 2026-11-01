@@ -22,8 +22,10 @@ closes the leading-order gap for the worst-case prescribed completion:
 The proof includes arbitrary references and provides an explicit uniform
 remainder. Matching lower bounds allow dimension and outcome count to grow.
 The exact finite-error envelope, subleading term, novelty and external review
-remain open. The twelve-page paper and earlier completed audit predate this
-addition; neither is represented as having already reviewed it.
+remain open. The result is now integrated as Theorem 10 in the fourteen-page
+paper, with its upper proof and joint-limit argument. The
+[combined internal audit](research/COMBINED_PAPER_AUDIT_2026-11-01.md) covers
+this final manuscript; earlier audits remain historical records.
 
 The [finished-paper internal audit](research/FINAL_PROOF_AUDIT_2026-11-01.md)
 found no fatal mathematical gap in the reviewed arguments, corrected one
@@ -49,7 +51,8 @@ tends to zero, and joint small-error lower scale `sqrt(1-alpha^2+delta)`.
 Two proposed upper extensions are false; one is ruled out analytically and
 the other by a rational seven-dimensional witness with distance at least
 1.0405 versus proposed bound at most 1.0156. The frozen theorem is unchanged.
-The sharp joint upper bound for `alpha<1` remains open.
+The exact finite-error joint envelope for `alpha<1` remains open; its sharp
+joint leading asymptotics are established internally by Theorem 10.
 
 ## Exact sharpness at perfect packing
 
@@ -100,10 +103,11 @@ polar geometry, the classical Jordan-product bound, standard trace-distance
 estimates, and elementary conditioning. The measurement-specific bridge is
 the residual-preserving labelled dilation. This is an explicit quantitative
 specialization; prior publication and usefulness remain unverified.
-The [revised twelve-page paper](paper/prescribed_repeatable_completion.pdf)
+The [revised fourteen-page paper](paper/prescribed_repeatable_completion.pdf)
 includes that assessment, the certified comparison as Proposition 6, and the
-new sharpness and reference results in Section 7. See the
-[latest revision and verification record](research/REFERENCE_AND_PACKING_PROGRESS_2026-11-01.md).
+sharpness and reference results in Section 7, and the joint leading theorem
+and proof in Section 8. See the
+[combined release record](research/COMBINED_REVIEW_RELEASE_2026-11-01.md).
 
 The [construction attribution update](literature/CROSSOVER_AND_CONSTRUCTION_ATTRIBUTION_2026-11-01.md)
 identifies both sector polar formulas explicitly with Eldar–Forney's unweighted
