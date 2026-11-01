@@ -1,0 +1,65 @@
+{
+  "result": "PASS",
+  "dimension": 10,
+  "outcomes": 8,
+  "alpha": {
+    "exact": "1",
+    "decimal_enclosure": {
+      "lower": "1.000000000000",
+      "upper": "1.000000000000"
+    }
+  },
+  "delta": {
+    "exact": "17/100",
+    "decimal_enclosure": {
+      "lower": "0.170000000000",
+      "upper": "0.170000000000"
+    }
+  },
+  "system_only_upper": {
+    "exact": "1161/10000",
+    "decimal_enclosure": {
+      "lower": "0.116100000000",
+      "upper": "0.116100000000"
+    }
+  },
+  "reference_assisted_lower": {
+    "exact": "151/1250",
+    "decimal_enclosure": {
+      "lower": "0.120800000000",
+      "upper": "0.120800000000"
+    }
+  },
+  "primal_objective": {
+    "exact": "604574592481257/5000049950000000",
+    "decimal_enclosure": {
+      "lower": "0.120913710568",
+      "upper": "0.120913710569"
+    }
+  },
+  "strict_advantage": {
+    "exact": "47/10000",
+    "decimal_enclosure": {
+      "lower": "0.004700000000",
+      "upper": "0.004700000000"
+    }
+  },
+  "signed_operator_checks": 256,
+  "sector_ranks": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "scope": "Exact strict reference advantage for one prescribed completion; not an exact diamond value or novelty finding.",
+  "source_text_sha256": {
+    "research/reference_advantage_2026-11-01/certificate.json": "36f509398754135a9f525e4f97b8f8eb9c38416d511eb4b209e3f4d3a26e72dd",
+    "experiments/verify_reference_advantage.py": "708ecdaad2f0460ce641883741c2d079be8b7b0a795ba365dad1a1166baec859",
+    "experiments/verify_exact_completion_comparison.py": "3231045e93a7e5205875dad631f318424a4e9e00482a36b6cd581a644d260602",
+    "theory/reference_advantage.md": "f3b0d6f1338d501539d6ba5796e8cd0ac7c15d2cbee43ef8f8c6156d49cd74fb"
+  }
+}

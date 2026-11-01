@@ -1,0 +1,31 @@
+{
+  "scope": "Floating-point proposal only; certificate must pass independent exact verification.",
+  "seed": 2026110107,
+  "system": 0.11599154483868948,
+  "solver": {
+    "solver": "CLARABEL",
+    "primal": 0.12091491817825895,
+    "dual": 0.12091486285980364,
+    "solver_options": {
+      "solver": "CLARABEL",
+      "tol_gap_abs": 1e-07,
+      "tol_gap_rel": 1e-07,
+      "tol_feas": 1e-07,
+      "max_iter": 400
+    },
+    "primal_status": "optimal",
+    "dual_status": "optimal_inaccurate",
+    "gap": 5.531845530259982e-08,
+    "feasibility_violation": 1.4170304892701921e-08,
+    "numerical_lower": 0.1209149305823534,
+    "numerical_upper": 0.12091499658445978,
+    "reference_witness": 0.1209149305823534,
+    "repair_cushion": 1e-09,
+    "fallback_history": []
+  },
+  "source_text_sha256": {
+    "experiments/build_reference_advantage.py": "2348c508b267cf91dc80ec411fd55c4a9d61e47b88f445b0bac261ee51b2bc60",
+    "experiments/search_perfect_packing_sharpness.py": "d2726c4aaf384307306c9aae62b01cebef891bf071608a0ed03848e5a7874490",
+    "experiments/search_prescribed_completion.py": "2c3b754d02a6cc18c061a3a76af63f28a980c513f828e767bb9efe59e1b91341"
+  }
+}

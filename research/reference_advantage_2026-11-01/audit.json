@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "expected_rejections": [
+    "wrong_format",
+    "wrong_dimension",
+    "missing_effect",
+    "normalization_error",
+    "wrong_threshold",
+    "false_system_bound",
+    "false_reference_bound",
+    "reversed_gap",
+    "zero_shift",
+    "bad_density",
+    "bad_primal",
+    "nonhermitian_density",
+    "optimized_python"
+  ],
+  "positive_definite_matrices": 289,
+  "independent_integer_leading_minors": 5764,
+  "source_text_sha256": {
+    "research/reference_advantage_2026-11-01/certificate.json": "36f509398754135a9f525e4f97b8f8eb9c38416d511eb4b209e3f4d3a26e72dd",
+    "experiments/check_reference_advantage.py": "5be1613b4f84b36aaf5c98a3d341d81816ea6dd1ba379636121188d63e87e021",
+    "experiments/verify_reference_advantage.py": "708ecdaad2f0460ce641883741c2d079be8b7b0a795ba365dad1a1166baec859"
+  }
+}

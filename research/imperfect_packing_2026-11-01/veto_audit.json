@@ -1,0 +1,23 @@
+{
+  "result": "PASS",
+  "expected_rejections": [
+    "wrong_format",
+    "wrong_synthesis",
+    "nonpositive_effect",
+    "false_root_enclosure",
+    "false_candidate_enclosure",
+    "false_witness_lower",
+    "zero_vector",
+    "invalid_sign",
+    "zero_signed_sum",
+    "optimized_python"
+  ],
+  "positive_definite_matrices": 6,
+  "independent_integer_leading_minors": 42,
+  "source_text_sha256": {
+    "research/imperfect_packing_2026-11-01/veto_certificate.json": "008b4c7e7574534c47ddfd548bf9b236bb95762799ef056b491027cdb47f6f6b",
+    "experiments/check_imperfect_packing.py": "4438badebc388ae3a8cbcff674e974ec6cafdc014838d3448b13152bed4275df",
+    "experiments/verify_imperfect_packing.py": "b4daec5ed51fa20aab61d9a39625a5f41f4baac3c951421235cf22ad28875f8e",
+    "experiments/check_reference_advantage.py": "5be1613b4f84b36aaf5c98a3d341d81816ea6dd1ba379636121188d63e87e021"
+  }
+}
