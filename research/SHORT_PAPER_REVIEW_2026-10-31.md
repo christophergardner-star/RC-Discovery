@@ -2,6 +2,11 @@
 
 Date: 31 October 2026.
 
+Historical record of the original eight-page revision. The linked manuscript
+has since been updated; see the
+[1 November reduction and revision record](SHORT_PAPER_REDUCTION_REVIEW_2026-11-01.md)
+for the current ten-page paper and its checks.
+
 The deliverable is the eight-page paper
 [Stability of a prescribed repeatable completion of a quantum measurement](../paper/prescribed_repeatable_completion.pdf),
 with [readable Markdown](../paper/prescribed_repeatable_completion.md),

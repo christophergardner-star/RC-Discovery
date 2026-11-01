@@ -41,6 +41,17 @@ external specialist review, or a novelty finding.
 
 ## Latest theorem-level literature comparison
 
+The [completed reduction audit](literature/PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)
+now supplies the full implication chain for the prescribed unweighted bound
+and record corollary. No additional general lemma is needed beyond established
+polar geometry, the classical Jordan-product bound, standard trace-distance
+estimates, and elementary conditioning. The measurement-specific bridge is
+the residual-preserving labelled dilation. This is an explicit quantitative
+specialization; prior publication and usefulness remain unverified.
+The [revised ten-page paper](paper/prescribed_repeatable_completion.pdf)
+includes that assessment and the certified comparison as Proposition 6.
+See the [revision and verification record](research/SHORT_PAPER_REDUCTION_REVIEW_2026-11-01.md).
+
 The [construction attribution update](literature/CROSSOVER_AND_CONSTRUCTION_ATTRIBUTION_2026-11-01.md)
 identifies both sector polar formulas explicitly with Eldar–Forney's unweighted
 and weighted least-squares measurements (2001). The constructions themselves

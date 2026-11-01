@@ -1,24 +1,27 @@
 {
   "result": "PASS",
-  "pdf_sha256": "5e2291833415913be77439be3b30e191c773fff800f47929f51b6522c3611963",
-  "pages": 8,
+  "pdf_sha256": "2847d5d2686a7037b7487df0ef05e28b1ce39e3e5ca0d953405f95b57af32682",
+  "pages": 10,
   "title": "Stability of a prescribed repeatable completion of a quantum measurement",
   "author": "Christopher Gardner",
   "page_extracted_character_counts": [
-    2769,
-    1886,
+    2775,
+    2313,
     2182,
     1994,
-    2460,
-    3236,
-    2552,
-    2791
+    2561,
+    3490,
+    2576,
+    2988,
+    3127,
+    505
   ],
-  "numbered_equations": 23,
+  "numbered_equations": 26,
   "resolved_reference_keys": [
     "busch1995",
     "debruijn1980",
     "delasalle2022",
+    "eldar2001",
     "higham1986",
     "kitaev2025",
     "kotowski2025",
@@ -27,18 +30,9 @@
   ],
   "latex_overflow_missing_character_or_undefined_reference_findings": [],
   "source_and_pdf_hashes_match_build_manifest": true,
-  "pdf_pages_rendered": 8,
-  "scope": "Document and artifact checks, not proof of the mathematical claims.",
-  "compiler_environment_note": "The compiler console reports Fontconfig configuration/cache messages. Compilation and PDFium rendering succeed; the TeX log contains no missing-character or overfull-box warning.",
-  "local_link_counts": {
-    "README.md": 18,
-    "theory/README.md": 21,
-    "paper/README.md": 10,
-    "paper/arxiv_ready.md": 0,
-    "paper/prescribed_repeatable_completion.md": 0,
-    "review/SHORT_PAPER_REVIEW_BRIEF.md": 4,
-    "review/EXTERNAL_REVIEW_PACKET.md": 5,
-    "review/README.md": 5,
-    "research/SHORT_PAPER_REVIEW_2026-10-31.md": 10
-  }
+  "pdf_pages_rendered": 10,
+  "proposition_6_numbers_match_exact_reports": true,
+  "checker_text_sha256": "a04423294dcf5fdc1979e336cc6fbfa974daeaa9eee2a42f9241d2401f06b593",
+  "scope": "Document integrity and consistency with retained exact results; not a proof or external review.",
+  "compiler_environment_note": "Fontconfig configuration/cache messages are reported; compilation and rendering succeed."
 }

@@ -1,14 +1,14 @@
 # Stability of a prescribed repeatable completion of a quantum measurement
 
 **Author:** Christopher Gardner  
-**Date:** 31 October 2026
+**Date:** 1 November 2026
 
 <!-- Generated from arxiv_ready.md; edit that source and rebuild. -->
 
-**External-review draft.** The argument below is intended to be
-reconstructed independently. Its ingredients are established; the extent
-to which the prescribed-map estimate and record corollary follow from
-earlier results remains a question for review.
+**External-review draft.** The argument below gives an explicit
+quantitative specialization of established constructions and
+inequalities. The supplied reduction, its usefulness, and publication
+priority remain subjects for independent review.
 
 ## Abstract
 
@@ -24,14 +24,17 @@ instrument and satisfies
 \|\mathcal M_E-\mathcal M_F\|_\diamond
 \le 2\min\{1,\sqrt{1-\alpha^2}+\sqrt\delta\}.
 ```
-The proof gives an explicit labelled dilation and a residual spectral
-gap. A corollary corrects separated output records to an exactly
-idempotent channel. We identify the classical Jordan-product inequality
-used in the proof and derive a weighted alternative from established
-polar machinery. Explicit examples distinguish the target from
-projective approximation, establish a square-root threshold obstruction,
-and limit continuity of the prescribed selection. We make no claim of
-optimal constants or literature priority.
+The proof reduces to polar geometry, a classical Jordan-product
+inequality, and pure-state trace distance after an explicit
+labelled-dilation calculation. A corollary corrects separated output
+records to an exactly idempotent channel. Both unweighted and weighted
+sector constructions are established least-squares measurements. Exact
+rational certificates show that neither residual completion always has
+the smaller full diamond distance. Further examples distinguish
+repeatable from projective approximation, establish a square-root
+threshold obstruction, and limit continuity of the selection. We make no
+claim of a new general inequality, optimal constants, or literature
+priority.
 
 ## 1. Question and scope
 
@@ -44,20 +47,24 @@ particular way to select a nearby measurement in this class while
 retaining the input space, labels, and compressed residual effects.
 
 The construction uses the polar factor of a synthesis operator, a
-standard orthogonalization device (Higham 1986). The issue addressed
-here is quantitative control of the resulting prescribed measurement in
-the full diamond norm. The hypothesis concerns near-unit sectors and
-their simultaneous linear independence; it is not a global
-almost-projectivity assumption.
+standard orthogonalization device (Higham 1986). Its sector vectors are
+exactly the unweighted least-squares measurement of Eldar–Forney; the
+weighted counterpart below is their weighted version (Eldar and Forney
+2001). The issue addressed here is quantitative control of a prescribed
+residual extension in the full diamond norm. The hypothesis concerns
+near-unit sectors and their simultaneous linear independence; it is not
+a global almost-projectivity assumption.
 
 The distinction from earlier work is limited. De la Salle’s
-orthogonalization proof already contains a closely related weighted
-polar construction (Salle 2022). Dilation continuity is standard
-(Kretschmann et al. 2008), and the noncommuting matrix inequality used
-below is a special case of the Strang–de Bruijn Jordan-product bounds
-(Bruijn 1980). Section 5 makes these relationships explicit. The paper
-presents a specialization with a complete argument, not a claim of a new
-general rounding principle.
+orthogonalization proof also contains a closely related weighted polar
+construction (Salle 2022). Dilation continuity is standard (Kretschmann
+et al. 2008), and the noncommuting matrix inequality used below is a
+special case of the Strang–de Bruijn Jordan-product bounds (Bruijn
+1980). No additional general operator lemma is needed: the
+measurement-specific work is the labelled dilation and residual
+compression, followed by parameter substitution. Section 5 makes the
+reduction explicit. This is a quantitative specialization with a
+complete argument.
 
 ## 2. Setting and main statement
 
@@ -388,6 +395,23 @@ very conservative.
 
 ## 5. Relationship to existing constructions
 
+Choose an eigenbasis within every full sector and write the concatenated
+unit vectors as the columns of $`T`$. In these coordinates
+$`D=\operatorname{diag}(\sqrt{\lambda_a})`$, with $`\lambda_a`$ the
+selected effect eigenvalues. Eldar–Forney’s unweighted and weighted
+least-squares formulas are exactly
+``` math
+U=T(T^*T)^{-1/2},\qquad
+\widehat U=TD(DT^*TD)^{-1/2}
+```
+(Eldar and Forney 2001, Theorem 2 and Section V). The weighted formula
+is also the square-root measurement for priors proportional to
+$`\lambda_a`$. Grouping columns by sector recovers $`Q_j`$ and
+$`\widehat Q_j`$, including higher-rank sectors. These formulas optimize
+vector least-squares objectives; they do not assert optimal distance
+from the original measurement channel. The extension $`RE_jR`$ and its
+channel comparison must still be checked.
+
 **Proposition 4 (weighted comparison).** Keep the hypotheses and
 notation of Theorem 1, but let $`TD=\widehat U|TD|`$. Then, without
 condition (7),
@@ -428,11 +452,14 @@ construction generally differs from (3); (21) does not prove Theorem 1’s
 estimates for that prescribed map.
 
 KSW’s continuity theorem supplies the generic dilation-to-channel
-comparison (Kretschmann et al. 2008, Proposition 3).
-Kotowski–Oszmaniec’s dimension-deficient Naimark construction proves
-projective simulability for a different complement-noise completion,
-without requiring unit eigenspaces or asserting the present diamond
-estimate (Kotowski and Oszmaniec 2025, Theorem 6).
+comparison (Kretschmann et al. 2008, Proposition 3). In tracking the
+sharper constant in (8), our proof uses pure-state trace distance
+directly: overlap at least $`c`$ gives $`2\sqrt{1-c^2}`$; applying only
+$`2\|W-V\|`$ would give $`2\sqrt{2(1-c)}`$. Both are established
+estimates. Kotowski–Oszmaniec’s dimension-deficient Naimark construction
+proves projective simulability for a different complement-noise
+completion, without requiring unit eigenspaces or asserting the present
+diamond estimate (Kotowski and Oszmaniec 2025, Theorem 6).
 
 The exact record endpoint also has established structure. On the algebra
 of active labels define $`\Delta(f)=\sum_jf_jF_j`$ and
@@ -444,10 +471,16 @@ not directly supply this particular exact correction of the original
 effects and records. The additional specification here is quantitative
 and applies to a substantially narrower class.
 
-These comparisons leave the prescribed-map estimate and record
-correction as the appropriate subjects for an external implication and
-priority review. They do not establish that either specialization is
-new.
+The reduction of the unweighted estimate is complete: (12)–(14) identify
+its dilation, the classical matrix bound supplies the overlap, and the
+pure-state formula and scalar case split prove (6). The sector estimate
+is principal-angle geometry. The record proof adds the reverse triangle
+inequality, convex-hull separation, and normalized gentle projection.
+Thus the bounds require no additional general lemma. The remaining
+questions are whether this explicit specialization is already documented
+and whether its quantitative control and limitations are useful. The
+certified comparison below distinguishes the two targets, but does not
+establish originality.
 
 ## 6. Counterexamples and limitations
 
@@ -537,7 +570,67 @@ for this same-space, same-label target class. It does not establish
 optimality of the constant two, the dependence on $`\alpha`$, or the
 joint bound.
 
-### 6.3. Other limits
+### 6.3. Neither completion uniformly dominates the other
+
+**Proposition 6 (computer-assisted comparison).** On $`\mathbb C^4`$,
+set
+``` math
+\begin{gathered}
+E_1(t)=\frac1{40}\begin{pmatrix}
+32&0&3&1\\0&2&2&2\\3&2&4&4\\1&2&4&8
+\end{pmatrix},\qquad
+E_2(t)=\frac1{40}\begin{pmatrix}
+4&2&-2&t\\2&34&-3&-1\\-2&-3&2&-2\\t&-1&-2&12
+\end{pmatrix},\\
+E_3(t)=I-E_1(t)-E_2(t),\qquad 2\le t\le4,\qquad\delta=1/4.
+\end{gathered}
+\tag{24}
+```
+This family satisfies Theorem 1 throughout the interval, with sector
+ranks $`(1,1,1)`$ and $`\alpha(t)>9/10`$. Let $`\nu_u(t)`$ and
+$`\nu_w(t)`$ be the full diamond distances from the original measurement
+to the unweighted and weighted completions, and put
+$`g(t)=\nu_w(t)-\nu_u(t)`$. Exact certificates give
+``` math
+g(2)>5\times10^{-4},\qquad g(4)<-9\times10^{-5}.
+\tag{25}
+```
+The distances are continuous, and at least one equality point satisfies
+``` math
+2.33690021<t_*<2.33690023,\qquad g(t_*)=0.
+\tag{26}
+```
+Uniqueness and absence of other equality points are not asserted.
+
+*Certificate argument.* The accompanying rational data verify positivity
+at $`t=2,4`$, hence throughout the affine family. Designated diagonal
+entries give lower bounds $`4/5,17/20,17/20`$ for the top eigenvalues;
+the sums of the remaining eigenvalues are at most $`7/20,9/20,7/10`$,
+respectively. These bounds isolate exactly one eigenvalue above $`3/4`$
+in each effect. The uniform spectral-residual and polar certificate
+proves $`\alpha(t)>9/10`$ on the entire interval, not merely on a finite
+grid.
+
+For each certified parameter and completion, the data specify rational
+effects $`G_j`$, a rigorous bound $`\epsilon\ge\sum_j\|F_j-G_j\|`$, and
+exact primal/dual feasible SDP witnesses with values $`L,U`$ for
+$`\mathcal M_E-\mathcal M_G`$. Thus $`L-\epsilon\le\nu\le U+\epsilon`$,
+including reference systems. These enclosures prove (25) and strict
+opposite signs at the two endpoints in (26). Uniform spectral isolation
+and synthesis injectivity imply continuity, so the intermediate value
+theorem proves (26). The [certificate
+supplement](https://github.com/christophergardner-star/RC-Discovery/blob/d706872d89503f5c6f9e59d8f91b518bec9991b1/research/COMPLETION_CROSSOVER_2026-11-01.md)
+links the data, the analytic error bounds and uniform argument, and the
+exact standard-library verifier. It is part of the computer-assisted
+proof of this proposition. $`\square`$
+
+The additive theorem bound stays below $`1+\sqrt{19}/5<2`$ along this
+path. A stronger weighted upper envelope therefore does not imply a
+smaller actual weighted distance. These comparisons do not prove either
+completion optimal among all repeatable targets, sharpness of the upper
+bounds, or literature priority of the examples.
+
+### 6.4. Other limits
 
 The strict accessibility condition in (18) is essential. For
 $`E_0=E_1=I/2`$ and orthogonal pure records, $`e=1/2`$, $`\Phi`$ is
@@ -572,8 +665,12 @@ contains the frozen statement, analytic source notes, numerical identity
 checks, reference-assisted primal/dual SDPs, negative controls, and
 recorded seeds and source hashes. Its theorem-level comparison was
 checked on 104 weighted constructions and six primal/dual SDPs,
-alongside exact rational examples. These computations support finite
-instances; the proofs above do not rely on solver output. The Lean
+alongside exact rational examples. The analytic proofs of Theorem 1,
+Corollary 3, and Propositions 4–5 do not rely on solver output.
+Proposition 6 is computer-assisted: rational certificates and the stated
+analytic error bounds establish the inequalities. Its combined audit
+passes 139 independent integer-determinant positivity checks and 12
+rejection controls. These checks do not prove uniqueness. The Lean
 development checks 13 constituent declarations, not the full spectral
 and channel theorem.
 
@@ -583,13 +680,15 @@ comparison, and computational support directed by Christopher Gardner.
 AI systems are research tools, not authors or endorsers. Agreement among
 internal AI-assisted checks is not external verification.
 
-The requested external assessment is concrete: reconstruct Theorem 1 and
-Corollary 3 from their stated hypotheses, check the scope of the
-counterexamples, and determine whether the prescribed-map estimate and
-record correction are already stated or follow as short corollaries of
-existing results. Correctness, priority, optimality, and usefulness are
-separate questions. This draft has not undergone independent specialist
-review and is not represented as submission-ready.
+The requested external assessment is concrete: check the supplied
+reduction of Theorem 1 and Corollary 3 to established tools, reconstruct
+the limitations and certified comparison, and identify any earlier
+statement or application that subsumes this quantitative specialization.
+The reduction requires no new general lemma; publication priority and
+usefulness remain unverified. Correctness, priority, optimality, and
+usefulness are separate questions. This draft has not undergone
+independent specialist review and is not represented as
+submission-ready.
 
 ## References
 
@@ -609,6 +708,14 @@ Busch, Paul, Marian Grabowski, and Pekka J. Lahti. 1995. “Repeatable
 Measurements in Quantum Theory: Their Role and Feasibility.”
 *Foundations of Physics* 25 (9): 1239–66.
 <https://doi.org/10.1007/BF02055331>.
+
+</div>
+
+<div id="ref-eldar2001" class="csl-entry">
+
+Eldar, Yonina C., and G. David Forney Jr. 2001. “On Quantum Detection
+and the Square-Root Measurement.” *IEEE Transactions on Information
+Theory* 47 (3): 858–72. <https://doi.org/10.1109/18.915636>.
 
 </div>
 

@@ -10,12 +10,13 @@ RC-Discovery separates conjecture, analytic proof, numerical evidence, machine-c
 
 AI systems are used as research tools for derivation support, coding, testing, adversarial auditing, editing, literature triage and formalisation assistance. OpenAI and other AI providers are not designated as authors, inventors, owners, sponsors, endorsers or claimants. Automated Git metadata is operational provenance, not research attribution. See [`AI_RIGHTS_AND_ATTRIBUTION.md`](AI_RIGHTS_AND_ATTRIBUTION.md).
 
-The latest [theorem-level literature comparison](literature/COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
-identifies the coefficient-two matrix lemma as classical prior art and derives
-a weighted alternative from established polar machinery. The remaining
-comparison target is the quantitative guarantee for the prescribed unweighted
-completion and supplied records; broad existence alone is not a defensible
-novelty claim.
+The [completed proof-level reduction](literature/PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)
+derives the prescribed unweighted bound and record correction from established
+tools after explicit labelled-dilation identities and elementary conditioning.
+No new general operator lemma is needed. Both sector polar constructions are
+established least-squares measurements. The quantitative specialization and
+certified comparison remain subjects for publication-priority and usefulness
+assessment; broad existence alone is not a defensible novelty claim.
 
 ## Current theorem candidate
 
@@ -23,9 +24,10 @@ For a complete, focused presentation, start with the
 [short paper PDF](paper/prescribed_repeatable_completion.pdf),
 [readable manuscript](paper/prescribed_repeatable_completion.md), and
 [external-review brief](review/SHORT_PAPER_REVIEW_BRIEF.md).
-The paper gives the full analytic argument, corrected attribution, and
-explicit limitations. It remains an external-review draft with novelty
-unverified.
+The ten-page paper gives the full analytic main argument, corrected attribution,
+and explicit limitations. Proposition 6 adds the certified comparison, with a
+linked computer-assisted proof supplement. It remains an external-review draft
+with novelty unverified.
 
 Let \(\{E_j\}_{j=1}^m\) be a finite POVM on a finite-dimensional Hilbert space. Fix \(0<\delta<1/2\). For every nonzero outcome, let \(P_j\neq0\) be the full spectral projection of \(E_j\) onto eigenvalues at least \(1-\delta\).
 
@@ -275,7 +277,7 @@ See:
 
 RC-Discovery claims no ownership of established ingredients including polar/Löwdin orthogonalisation, synthesis and fusion-frame theory, Naimark and Stinespring dilation, KSW continuity, repeatability criteria, POVM orthogonalisation/projectivisation, projective simulation, diamond-norm/SDP theory, almost-idempotent channel structure, or known regular-simplex obstructions.
 
-The only object under investigation as potentially distinct is the complete, correctly typed chain
+The quantitative specialization under investigation is the complete, correctly typed chain
 
 \[
 \boxed{
@@ -291,7 +293,11 @@ The only object under investigation as potentially distinct is the complete, cor
 }
 \]
 
-No exact prior theorem matching that full chain was located in the searches performed. That does not prove novelty. The status remains
+The supplied reduction shows how this chain follows from established tools
+and measurement-specific identities. No exact prior statement of the complete
+specialization was located in the inspected sources; that does not prove
+novelty. The certified comparison examples have unverified priority as well.
+The status of the formulation and examples remains
 
 \[
 \boxed{\text{potentially distinct; novelty unverified}.}

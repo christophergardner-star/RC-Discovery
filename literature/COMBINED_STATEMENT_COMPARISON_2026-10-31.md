@@ -6,6 +6,13 @@ the older coefficient-four/coarse-composition route, not its historical record.
 
 ## Assessment
 
+**Subsequent update (1 November):** the
+[prescribed-bound reduction audit](PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)
+now supplies the full implication chain for the unweighted bound and record
+corollary. Both sector polar formulas are also identified explicitly with
+Eldar–Forney. The earlier comparisons below remain useful; publication priority
+of the particular quantitative specialization remains unverified.
+
 The defensible contribution is a **quantitative specialization for a prescribed
 measurement correction and its supplied records**. The audit does not establish
 a new general orthogonalization, dilation, matrix-inequality, or idempotent

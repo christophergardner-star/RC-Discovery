@@ -1,7 +1,7 @@
 # Short paper for external review
 
 **Stability of a prescribed repeatable completion of a quantum measurement**  
-Christopher Gardner, 31 October 2026.
+Christopher Gardner, revised 1 November 2026. Ten pages including references.
 
 - [Typeset PDF](prescribed_repeatable_completion.pdf)
 - [Readable Markdown with resolved references](prescribed_repeatable_completion.md)
@@ -11,13 +11,17 @@ Christopher Gardner, 31 October 2026.
 
 The paper contains the frozen coefficient-two theorem, a complete analytic
 proof, the record-correction corollary, the weighted prior-art comparison,
-and explicit counterexamples and limitations. VIBE MATH appears in the
+and explicit counterexamples and limitations. Proposition 6 adds the certified
+four-dimensional comparison and localized equality point; its computer-assisted
+proof includes the linked certificate supplement. VIBE MATH appears in the
 methodology disclosure, not as a mathematical claim.
 
 The current status is an external-review draft: internally checked, not peer
 reviewed, novelty unverified, and not represented as submission-ready.
-The next assessment is independent reconstruction and an exact implication
-comparison with existing results. No external reviewer has been contacted
+The [completed reduction audit](../literature/PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)
+classifies the main bound and record corollary as explicit quantitative
+specializations of established tools. External assessment should check that
+reduction and evaluate earlier publication and usefulness. No external reviewer has been contacted
 by preparing this package.
 
 ## Source and build
@@ -32,6 +36,15 @@ With Python 3.10 or later, Pandoc, and Tectonic available, run from the
 repository root:
 
     python scripts/build_short_paper.py
+
+To check the build hashes, equation numbering, citations, certified comparison
+values, and PDF rendering, run:
+
+    python scripts/check_short_paper.py
+
+The document checker uses pypdf, pypdfium2, and Pillow; it also finds the
+existing ignored laptop copies. Its checks concern document integrity and
+consistency, not proof of the theorem.
 
 Explicit executable paths are accepted:
 
@@ -48,7 +61,10 @@ use; that cache and the downloaded tools are not repository artifacts.
 Build logs and source/artifact hashes are retained in
 [the build evidence](../research/short_paper_build/manifest.json).
 The [internal review record](../research/SHORT_PAPER_REVIEW_2026-10-31.md)
-distinguishes document checks, numerical checks, and mathematical review.
+records the original eight-page revision. The
+[1 November revision record](../research/SHORT_PAPER_REDUCTION_REVIEW_2026-11-01.md)
+records the current ten-page paper and distinguishes document checks,
+numerical checks, exact certificate checks, and mathematical review.
 
 ## Relationship to the longer material
 

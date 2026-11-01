@@ -10,6 +10,13 @@ A literature search cannot certify absence of prior art. The canonical no-overcl
 
 ## Focused laptop prior-art and certificate audit
 
+The [completed prescribed-bound reduction](PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)
+supplies the implication chain for the unweighted theorem and record corollary.
+The explicit dilation identities and elementary bookkeeping connect the
+statement to established tools; no new general operator lemma is required.
+The combined quantitative statement's publication priority remains unverified.
+Use this assessment when reading the earlier comparison below.
+
 The [1 November attribution update](CROSSOVER_AND_CONSTRUCTION_ATTRIBUTION_2026-11-01.md)
 identifies both sector polar formulas with Eldar–Forney's least-squares and
 weighted least-squares measurements. Novelty of these sector polar formulas

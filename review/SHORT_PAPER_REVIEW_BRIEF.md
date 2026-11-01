@@ -1,6 +1,6 @@
 # Review brief: prescribed repeatable measurement completion
 
-Prepared 31 October 2026 for independent mathematical review. This is a local
+Prepared 31 October; revised 1 November 2026 for independent mathematical review. This is a local
 review packet, not a record of external review or a message sent to a reviewer.
 
 ## Material to review
@@ -12,7 +12,9 @@ Start with the short paper:
 - [Readable Markdown](../paper/prescribed_repeatable_completion.md)
 
 Use the [statement-and-proof comparison](../literature/COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
-for the prior-art analysis. The older long research document and historical
+and [completed reduction audit](../literature/PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)
+for the prior-art analysis. The latter supplies the explicit implication chain
+for the unweighted bound and record corollary. The older long research document and historical
 imports are not needed to assess this paper.
 
 ## Precise proposed contribution
@@ -33,6 +35,11 @@ a new general orthogonalization, dilation, Jordan-product, or idempotent
 structure theorem. The weighted polar alternative from existing machinery
 must be considered when judging whether the prescribed construction adds
 useful content.
+
+The local reduction uses no new general lemma. The measurement-specific work
+is the residual-preserving labelled dilation and its identities; classical
+inequalities and elementary conditioning complete the bounds. An implication
+proof is supplied for review, rather than left as a task for the referee.
 
 ## Questions for a correctness referee
 
@@ -76,12 +83,15 @@ not originality of the orthogonalization constructions.
 
 ## Questions for a prior-art referee
 
-Please examine the argument, not merely whether the final formula appears
-verbatim elsewhere. In particular:
+The central question is: **Is this explicit quantitative specialization,
+including its limitations and certified comparison, already documented,
+and does it add useful content?** Please check the supplied reduction,
+not merely whether the final formula appears verbatim elsewhere. In particular:
 
-- Can the bound for the **unweighted** completion, including its packing-only
-  projector estimate, be obtained directly from a cited theorem? If so,
-  identify the theorem and parameter substitution or provide the reduction.
+- Does the supplied reduction of the **unweighted** completion bound,
+  including the principal-angle estimate and the conditional Jordan-product
+  substitution, omit a hypothesis or import a conclusion incorrectly? Is an
+  earlier combined statement or a shorter derivation available?
 - The weighted construction is an elementary adaptation of published polar
   machinery and already provides a strong existential measurement bound.
   Does retaining the prescribed unweighted construction have a useful
@@ -96,6 +106,7 @@ verbatim elsewhere. In particular:
   accurately? Identify any overlooked source or stronger available result.
 
 Relevant primary sources are
+[Eldar–Forney, Theorem 2 and Section V](https://www.weizmann.ac.il/math/yonina/sites/math.yonina/files/quantumDetection_0.pdf),
 [de la Salle, v2, Theorems 1.1--1.2 and Section 3](https://arxiv.org/pdf/2103.14126v2),
 [Kretschmann--Schlingemann--Werner](https://arxiv.org/html/0710.2495),
 [de Bruijn, Theorem 3.2](https://pure.tue.nl/ws/portalfiles/portal/2165089/597564.pdf),
@@ -116,3 +127,6 @@ Numerical tests and partial Lean checks are supporting evidence. They do not
 replace review of the complete analytic proof; the full channel theorem is
 not yet formalized. No literature-priority or optimal-constant claim is
 assumed in requesting this review.
+Proposition 6 is explicitly computer-assisted and requires its rational
+certificate supplement; the analytic main theorem does not depend on those
+computations. No external reviewer has been contacted.

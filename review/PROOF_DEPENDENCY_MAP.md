@@ -1,5 +1,11 @@
 # Proof Dependency Map
 
+The [completed reduction audit](../literature/PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)
+supplies the full implication chain and exact source substitutions. The layers
+below require no new general operator lemma; their additional work is the
+measurement-specific construction and elementary estimates. Both sector polar
+formulas are established unweighted/weighted least-squares measurements.
+
 ## Main output
 
 \[

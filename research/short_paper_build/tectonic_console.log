@@ -1,8 +1,9 @@
 note: Running TeX ...
 Fontconfig error: Cannot load default config file: No such file: (null)
 Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
 note: Rerunning TeX because "prescribed_repeatable_completion.aux" changed ...
 note: Running xdvipdfmx ...
-note: Writing `C:\Users\cgard\Favorites\RC Discovery\research\short_paper_build\prescribed_repeatable_completion.log` (33.3095703125 KiB)
-note: Writing `C:\Users\cgard\Favorites\RC Discovery\research\short_paper_build\prescribed_repeatable_completion.pdf` (93.150390625 KiB)
+note: Writing `C:\Users\cgard\Favorites\RC Discovery\research\short_paper_build\prescribed_repeatable_completion.log` (33.3193359375 KiB)
+note: Writing `C:\Users\cgard\Favorites\RC Discovery\research\short_paper_build\prescribed_repeatable_completion.pdf` (102.111328125 KiB)
 note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)

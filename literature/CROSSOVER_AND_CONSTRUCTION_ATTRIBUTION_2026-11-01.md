@@ -4,6 +4,12 @@ Date: 1 November 2026. This supplements the
 [combined-statement comparison](COMBINED_STATEMENT_COMPARISON_2026-10-31.md).
 It is an internal literature and implication audit, not external review.
 
+The subsequent [proof-level reduction](PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)
+completes the implication chain for the prescribed unweighted bound and record
+corollary. It identifies the additional measurement-specific identities and
+shows that no new general operator inequality is needed. Publication priority
+is still unverified.
+
 ## What can be closed
 
 **Neither polar construction is new.** Eldar and Forney, *On Quantum Detection

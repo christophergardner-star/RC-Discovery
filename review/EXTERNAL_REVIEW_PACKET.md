@@ -16,10 +16,15 @@ Polite encouragement is less useful than a precise failure.
 2. [Focused review brief](SHORT_PAPER_REVIEW_BRIEF.md)
 3. [Frozen statement](../theory/THEOREM_V1_FREEZE.md)
 4. [Theorem-level prior-art comparison](../literature/COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
-5. Numerical and Lean evidence only after the analytic proof
+5. [Completed reduction of the prescribed bound](../literature/PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)
+6. Numerical and Lean evidence only after the analytic proof
 
-The short paper is self-contained. The longer research document is optional
-background, not a prerequisite for reviewing the argument.
+The short paper's main theorem has a self-contained analytic proof. Its
+computer-assisted Proposition 6 additionally requires the linked certificate
+supplement. The longer research document is optional background.
+The supplied reduction classifies the main estimate as an explicit
+quantitative specialization of established tools; prior publication and
+usefulness remain questions for review.
 
 ## Core verification questions
 

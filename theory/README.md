@@ -4,10 +4,13 @@ This directory contains both the current theorem chain and earlier development n
 
 ## Canonical entry points
 
-For a self-contained external-review presentation, read the
+For the analytic main proof and external-review presentation, read the
 [short paper](../paper/prescribed_repeatable_completion.pdf) and its
 [review brief](../review/SHORT_PAPER_REVIEW_BRIEF.md). The files below retain
-the frozen statement and supporting derivations.
+the frozen statement and supporting derivations. The paper's computer-assisted
+comparison proposition additionally uses its linked certificate supplement.
+The [completed reduction audit](../literature/PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)
+identifies the established results and measurement-specific steps in the proof.
 
 Read these files first and in this order:
 

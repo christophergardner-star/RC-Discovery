@@ -6,6 +6,7 @@ This directory packages the canonical theorem candidate for external attack.
 
 1. [Short paper PDF](../paper/prescribed_repeatable_completion.pdf) or [readable manuscript](../paper/prescribed_repeatable_completion.md)
 2. [Focused review brief](SHORT_PAPER_REVIEW_BRIEF.md)
+   and [completed reduction audit](../literature/PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)
 3. [Frozen theorem](../theory/THEOREM_V1_FREEZE.md) and [full review packet](EXTERNAL_REVIEW_PACKET.md)
 4. `PROOF_DEPENDENCY_MAP.md`
 5. `TEST_CLAIM_MATRIX.md`
