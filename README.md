@@ -32,6 +32,15 @@ upper bound remains open.
 
 ## Current theorem candidate
 
+The [joint small-error result](theory/joint_small_error_asymptotics.md)
+now closes the leading-order gap: the worst-case prescribed distance is
+asymptotic to `sqrt(1-alpha^2+delta)` as `(alpha,delta)` tends to `(1,0)`.
+The upper bound includes arbitrary reference systems and matches the
+existing coupled-simplex lower family. For `1-alpha^2=delta`, the sharp
+leading coefficient of `sqrt(delta)` is `sqrt(2)`. This is a subsequent
+internally proved addition; external review and novelty remain unverified.
+The finite-error optimum remains open.
+
 The [finished-paper audit](research/FINAL_PROOF_AUDIT_2026-11-01.md),
 [focused novelty veto](literature/FINAL_FOCUSED_VETO_2026-11-01.md) and
 [concise reviewer packet](review/REVIEWER_PACKET.md) record the latest

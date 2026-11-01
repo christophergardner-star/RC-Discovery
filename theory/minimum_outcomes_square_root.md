@@ -115,5 +115,8 @@ For the upper bound, the Jordan width condition holds eventually because
 `alpha_m` tends to one and `delta_m` tends to zero; then use
 `2 sqrt(1-alpha_m^2(1-delta_m))`.
 For r=0, the sharp perfect-packing theorem improves both limits to one.
-For r>0, closing the factor-two gap, even for a single r, is a concrete
-project-open problem. Existence of a limit and its value are not asserted.
+This was the remaining project-open problem when this note was written.
+The subsequent [joint small-error proof](joint_small_error_asymptotics.md)
+closes the gap for every fixed r: the limit exists and equals sqrt(1+r).
+It also proves the unrestricted joint limit as alpha tends to one and delta
+tends to zero. The exact finite-error envelope remains open.

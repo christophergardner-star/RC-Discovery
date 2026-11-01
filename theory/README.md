@@ -18,7 +18,14 @@ proves the exact prescribed-completion envelope
 allowed threshold. It is now Theorem 7 in the paper. The
 [reference-advantage certificate](reference_advantage.md) and
 [imperfect-packing lower bound and vetoes](imperfect_packing_lower_bound.md)
-support Propositions 8--9. The general `alpha<1` sharp bound remains open.
+support Propositions 8--9. The general `alpha<1` sharp finite-error bound remains open.
+
+The subsequent [joint small-error theorem](joint_small_error_asymptotics.md)
+determines the sharp leading envelope `sqrt(1-alpha^2+delta)` as both errors
+vanish, with a uniform remainder bound and matching lower construction.
+This closes the leading-order gap, including `1-alpha^2=delta`. The exact
+finite-error envelope remains open. This addition is not yet incorporated
+into the twelve-page paper or its earlier proof audit.
 
 The [minimum-outcome corollary](minimum_outcomes_square_root.md) gives the
 exact binary envelope `2 delta` and shows that three outcomes are necessary

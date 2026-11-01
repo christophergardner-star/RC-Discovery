@@ -9,6 +9,12 @@ Read the [paper](../paper/prescribed_repeatable_completion.pdf), then the
 The work is internally reconstructed, computationally audited, partially
 formalised, novelty unverified. No external review is represented as completed.
 
+**Subsequent addition:** the [joint small-error proof](../theory/joint_small_error_asymptotics.md)
+claims the sharp leading envelope `sqrt(1-alpha^2+delta)` with a uniform
+remainder. It closes the asymptotic gap, while leaving the exact finite-error
+optimum open. This separate note postdates the twelve-page PDF and its
+completed audit; it is an additional correctness and attribution review target.
+
 For a finite POVM with nonzero full near-unit sectors and injective synthesis
 map `T=U|T|`, the object is the specified same-label completion
 `F_j=UC_jU*+RE_jR`, where `R=I-UU*`. Norms are unhalved diamond norms.

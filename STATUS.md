@@ -16,6 +16,15 @@ No public file should represent the work as externally proved, peer reviewed, fu
 
 ## Reference advantage and imperfect packing
 
+The subsequent [joint small-error theorem](theory/joint_small_error_asymptotics.md)
+closes the leading-order gap for the worst-case prescribed completion:
+`W(alpha,delta)/sqrt(1-alpha^2+delta) -> 1` jointly as `(alpha,delta)->(1,0)`.
+The proof includes arbitrary references and provides an explicit uniform
+remainder. Matching lower bounds allow dimension and outcome count to grow.
+The exact finite-error envelope, subleading term, novelty and external review
+remain open. The twelve-page paper and earlier completed audit predate this
+addition; neither is represented as having already reviewed it.
+
 The [finished-paper internal audit](research/FINAL_PROOF_AUDIT_2026-11-01.md)
 found no fatal mathematical gap in the reviewed arguments, corrected one
 supplement equation's TeX, and fixed two audit scripts' isolated-mode imports.
