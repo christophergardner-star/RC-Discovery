@@ -1,0 +1,3 @@
+# Preserve bytes of retained scientific artifacts so hashes survive checkout.
+research/paired_search_*/search_trace.csv -text whitespace=cr-at-eol
+research/paired_search_*/*.npz -text

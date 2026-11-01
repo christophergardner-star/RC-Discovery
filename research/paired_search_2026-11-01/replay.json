@@ -1,0 +1,431 @@
+{
+  "scope": "Independent implementation, same floating-point inputs.",
+  "results": [
+    {
+      "id": 182,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 0.744065643234516,
+        "dual": 0.7440656428894905,
+        "gap": 3.450254526526919e-10,
+        "feasibility_violation": 3.6940712646557957e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 0.7441912022745635,
+        "dual": 0.7441912020200353,
+        "gap": 2.545281763133289e-10,
+        "feasibility_violation": 3.808235132782074e-09
+      }
+    },
+    {
+      "id": 324,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 1.1567544487991195,
+        "dual": 1.1567544501472695,
+        "gap": 1.3481500360512655e-09,
+        "feasibility_violation": 1.4597237196295164e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 1.1849444571344097,
+        "dual": 1.1849444602573014,
+        "gap": 3.1228917229952913e-09,
+        "feasibility_violation": 3.991667298183393e-09
+      }
+    },
+    {
+      "id": 483,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 0.45428712586809444,
+        "dual": 0.4542871252819786,
+        "gap": 5.861158225428653e-10,
+        "feasibility_violation": 1.8396149578572262e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 0.4544470579544342,
+        "dual": 0.4544470561208607,
+        "gap": 1.8335734597307862e-09,
+        "feasibility_violation": 1.8135646590374804e-09
+      }
+    },
+    {
+      "id": 207,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 1.0217811157973016,
+        "dual": 1.0217811155469596,
+        "gap": 2.503419693766773e-10,
+        "feasibility_violation": 1.0631710978802619e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 1.0223363394559932,
+        "dual": 1.0223363402324224,
+        "gap": 7.76429143201085e-10,
+        "feasibility_violation": 1.5170005867254517e-09
+      }
+    },
+    {
+      "id": 684,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 0.7704950237347102,
+        "dual": 0.7704950239946203,
+        "gap": 2.599100934475018e-10,
+        "feasibility_violation": 4.1132998887801214e-10
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 0.7705850764175833,
+        "dual": 0.7705850768527538,
+        "gap": 4.3517045522634135e-10,
+        "feasibility_violation": 4.127154352532515e-10
+      }
+    },
+    {
+      "id": 839,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 1.021292467416517,
+        "dual": 1.0212924621595831,
+        "gap": 5.256933777175732e-09,
+        "feasibility_violation": 9.101334244268288e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 1.038632232597407,
+        "dual": 1.0386322295699655,
+        "gap": 3.027441408676168e-09,
+        "feasibility_violation": 1.5812508332570787e-08
+      }
+    },
+    {
+      "id": 1003,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 0.5531175120379301,
+        "dual": 0.5531175082783268,
+        "gap": 3.759603295350189e-09,
+        "feasibility_violation": 1.9873714601448434e-08
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 0.5531448846680037,
+        "dual": 0.5531448796833847,
+        "gap": 4.984619050851791e-09,
+        "feasibility_violation": 2.111466826224512e-08
+      }
+    },
+    {
+      "id": 771,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 1.0685518762360138,
+        "dual": 1.0685518763760105,
+        "gap": 1.3999668091457806e-10,
+        "feasibility_violation": 3.4943845598545884e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 1.067563409666404,
+        "dual": 1.0675634059813048,
+        "gap": 3.6850991147474588e-09,
+        "feasibility_violation": 2.704153817494692e-09
+      }
+    },
+    {
+      "id": 1191,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 0.8230013115220696,
+        "dual": 0.8230013113599134,
+        "gap": 1.6215617737458388e-10,
+        "feasibility_violation": 1.621437607945418e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 0.823569339987904,
+        "dual": 0.8235693418181649,
+        "gap": 1.830260831781061e-09,
+        "feasibility_violation": 1.6729961301304706e-09
+      }
+    },
+    {
+      "id": 1332,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 1.0378211708487017,
+        "dual": 1.0378211709972271,
+        "gap": 1.4852541418974852e-10,
+        "feasibility_violation": 1.0406573706218629e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 1.0499172010244133,
+        "dual": 1.0499171992448901,
+        "gap": 1.7795231954664814e-09,
+        "feasibility_violation": 5.7444539476250106e-09
+      }
+    },
+    {
+      "id": 1486,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 0.5091931029991393,
+        "dual": 0.5091931055638219,
+        "gap": 2.5646825774217064e-09,
+        "feasibility_violation": 3.936600467112238e-12
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 0.509006028490476,
+        "dual": 0.5090060214932283,
+        "gap": 6.997247781193039e-09,
+        "feasibility_violation": 2.9156583990635668e-08
+      }
+    },
+    {
+      "id": 1213,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 0.9175873657258311,
+        "dual": 0.917587360243594,
+        "gap": 5.482237108722643e-09,
+        "feasibility_violation": 2.3256966591855947e-08
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 0.9179245999550174,
+        "dual": 0.9179246000084207,
+        "gap": 5.3403281796704505e-11,
+        "feasibility_violation": 1.9993042383728725e-08
+      }
+    },
+    {
+      "id": 1676,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 0.7499606759046136,
+        "dual": 0.7499606782804877,
+        "gap": 2.375874164073366e-09,
+        "feasibility_violation": 5.783263317303284e-10
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 0.7509400418749328,
+        "dual": 0.7509400440691958,
+        "gap": 2.1942629935267632e-09,
+        "feasibility_violation": 8.142997946382741e-10
+      }
+    },
+    {
+      "id": 1854,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 1.0257505997806755,
+        "dual": 1.0257505974491274,
+        "gap": 2.331548065725997e-09,
+        "feasibility_violation": 2.957416016502238e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 1.0360341682664747,
+        "dual": 1.0360341682763512,
+        "gap": 9.876544027065393e-12,
+        "feasibility_violation": 2.2619388246211952e-10
+      }
+    },
+    {
+      "id": 2003,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 0.5186928073764872,
+        "dual": 0.5186928073764848,
+        "gap": 2.3314683517128287e-15,
+        "feasibility_violation": 5.5975874840295796e-15
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 0.518402339339496,
+        "dual": 0.518402339339376,
+        "gap": 1.2001510896197942e-13,
+        "feasibility_violation": 4.061305425543115e-13
+      }
+    },
+    {
+      "id": 1843,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 1.0231036548673322,
+        "dual": 1.0231036567808864,
+        "gap": 1.9135542039805387e-09,
+        "feasibility_violation": 7.888704440415532e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 1.0343642617674567,
+        "dual": 1.0343642364359047,
+        "gap": 2.5331551967155974e-08,
+        "feasibility_violation": 9.436032118794134e-09
+      }
+    },
+    {
+      "id": 2201,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 0.9432311937535719,
+        "dual": 0.9432311941128396,
+        "gap": 3.592677266794908e-10,
+        "feasibility_violation": 4.084386910300485e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 0.9433654567083203,
+        "dual": 0.9433654572760932,
+        "gap": 5.677729397746134e-10,
+        "feasibility_violation": 4.099037688939892e-09
+      }
+    },
+    {
+      "id": 2332,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 1.0424177416270888,
+        "dual": 1.0424177452751917,
+        "gap": 3.6481029308532698e-09,
+        "feasibility_violation": 1.6437830502189582e-08
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 1.0481588664024093,
+        "dual": 1.0481588631851304,
+        "gap": 3.2172788877460334e-09,
+        "feasibility_violation": 1.0058046059236662e-09
+      }
+    },
+    {
+      "id": 2484,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 0.6937506468529389,
+        "dual": 0.6937506434268608,
+        "gap": 3.4260780878980768e-09,
+        "feasibility_violation": 2.3127169342159684e-08
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 0.6939088588140468,
+        "dual": 0.6939088561578569,
+        "gap": 2.6561899346688733e-09,
+        "feasibility_violation": 1.5278356732894113e-08
+      }
+    },
+    {
+      "id": 2287,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 1.0545195781473764,
+        "dual": 1.05451958000498,
+        "gap": 1.8576036264761342e-09,
+        "feasibility_violation": 4.9147699807898825e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 1.0546620232475954,
+        "dual": 1.0546620230789292,
+        "gap": 1.686661921240784e-10,
+        "feasibility_violation": 4.749923275335118e-10
+      }
+    },
+    {
+      "id": 2311,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 1.0407681507178301,
+        "dual": 1.0407681410430278,
+        "gap": 9.674802292636286e-09,
+        "feasibility_violation": 9.247479476579032e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 1.046388249740044,
+        "dual": 1.0463882480191646,
+        "gap": 1.7208794389489412e-09,
+        "feasibility_violation": 1.7300118464004874e-08
+      }
+    },
+    {
+      "id": 2693,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 0.8234472602043833,
+        "dual": 0.8234472602500209,
+        "gap": 4.563760480635892e-11,
+        "feasibility_violation": 5.434307511931791e-10
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 0.8240083115116137,
+        "dual": 0.8240083116790886,
+        "gap": 1.6747492281865561e-10,
+        "feasibility_violation": 5.829849586299138e-10
+      }
+    },
+    {
+      "id": 2837,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 1.0588651895536085,
+        "dual": 1.0588651798965467,
+        "gap": 9.657061816881196e-09,
+        "feasibility_violation": 6.963151554128327e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 1.0671146093922563,
+        "dual": 1.0671146097950532,
+        "gap": 4.027969069397841e-10,
+        "feasibility_violation": 4.9032094867298664e-09
+      }
+    },
+    {
+      "id": 2978,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 0.19181689499056628,
+        "dual": 0.1918168949148901,
+        "gap": 7.567618753867578e-11,
+        "feasibility_violation": 1.7033957905771064e-08
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 0.19181362883819394,
+        "dual": 0.19181362879065628,
+        "gap": 4.753766824627803e-11,
+        "feasibility_violation": 9.606928586232019e-09
+      }
+    },
+    {
+      "id": 2806,
+      "unweighted": {
+        "solver": "SCS",
+        "primal": 1.0566877366220122,
+        "dual": 1.056687743180272,
+        "gap": 6.5582597130742215e-09,
+        "feasibility_violation": 4.533256686729153e-09
+      },
+      "weighted": {
+        "solver": "SCS",
+        "primal": 1.0586694625322939,
+        "dual": 1.058669504020329,
+        "gap": 4.148803522951994e-08,
+        "feasibility_violation": 3.586904107066857e-10
+      }
+    }
+  ],
+  "result": "PASS"
+}

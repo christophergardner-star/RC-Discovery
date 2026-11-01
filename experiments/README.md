@@ -4,6 +4,18 @@ This directory contains the numerical, algebraic, SDP, governance and integratio
 
 ## Primary entry points
 
+For the adaptive paired comparison and theorem-bound attack, see
+[the 1 November report](../research/PAIRED_SEARCH_2026-11-01.md). Run a new
+search in a fresh output directory:
+
+```powershell
+.venv-audit/Scripts/python.exe experiments/search_prescribed_completion.py --output research/local_validation/phd_audit/paired_search_new
+```
+
+This heuristic search evaluates both completions on matching inputs and
+retains full-distance SDP finalists. It is separate from the fixed validation
+suite and does not certify a universal optimum or literature novelty.
+
 Full canonical audit:
 
 ```bash

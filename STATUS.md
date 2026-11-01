@@ -1,6 +1,6 @@
 # Research Status Ledger
 
-Updated: 31 October 2026
+Updated: 1 November 2026
 
 This ledger separates mathematical correctness, numerical evidence, formal verification, provenance, external review and novelty. They are not interchangeable.
 
@@ -15,6 +15,13 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 No public file should represent the work as externally proved, peer reviewed, fully machine checked, prior-art free, patentable, or a proven breakthrough.
 
 ## Latest theorem-level literature comparison
+
+The subsequent [adaptive paired search](research/PAIRED_SEARCH_2026-11-01.md)
+evaluated 3,004 valid measurements and 25 paired full-distance finalists.
+It found numerical examples favoring each completion, including both
+orderings where the theorem bound is below two, and no candidate violation
+of that bound. These are numerical comparison results, not exact
+non-dominance certificates, a proof of optimal constants, or novelty findings.
 
 The [combined-statement audit](literature/COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
 identifies the coefficient-two overlap lemma as a special case of

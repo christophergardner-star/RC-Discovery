@@ -1,0 +1,619 @@
+{
+  "result": "PASS",
+  "scope": "Floating-point artifact, constraint, and physical witness checks.",
+  "summary_text_sha256": "c2fcdd23cd2c15347a1965f932b296a743675a67015032ad7b4a9ebb29190cd6",
+  "verifier_source_sha256": "d723652b4aa71fcf76877263563bdf1b2d424401ff892eca97366ecea17dff38",
+  "source_hash_kind": "SHA256 of UTF-8 text with LF-normalized line endings",
+  "source_and_artifact_hashes_match": true,
+  "physical_reference_witnesses_checked": 60,
+  "system_vs_reference_order_reversals": [
+    483,
+    207,
+    1003,
+    1213,
+    2484,
+    2287
+  ],
+  "checks": [
+    {
+      "id": 182,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 0.7440656401098634,
+      "minimum_repaired_constraint_eigenvalue": 9.999998971779797e-10,
+      "minimum_conditional_state_eigenvalue": -1.6953796909163474e-17,
+      "numerical_lower": 0.7440656401098634,
+      "numerical_upper": 0.744065647475428
+    },
+    {
+      "id": 182,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 0.7441911990837327,
+      "minimum_repaired_constraint_eigenvalue": 9.999999075333e-10,
+      "minimum_conditional_state_eigenvalue": -9.038827145674545e-18,
+      "numerical_lower": 0.7441911990837327,
+      "numerical_upper": 0.7441912065383075
+    },
+    {
+      "id": 324,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 1.1567544474919573,
+      "minimum_repaired_constraint_eigenvalue": 9.999998349593119e-10,
+      "minimum_conditional_state_eigenvalue": -6.419275900593035e-17,
+      "numerical_lower": 1.1567544474919573,
+      "numerical_upper": 1.15675445414785
+    },
+    {
+      "id": 324,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 1.1849444593778424,
+      "minimum_repaired_constraint_eigenvalue": 9.99999886639586e-10,
+      "minimum_conditional_state_eigenvalue": -4.9233410652547556e-17,
+      "numerical_lower": 1.1849444593778424,
+      "numerical_upper": 1.1849444642387665
+    },
+    {
+      "id": 483,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 0.45428712568729546,
+      "minimum_repaired_constraint_eigenvalue": 9.999999027625932e-10,
+      "minimum_conditional_state_eigenvalue": -3.706855311534364e-17,
+      "numerical_lower": 0.45428712568729546,
+      "numerical_upper": 0.4542871331405839
+    },
+    {
+      "id": 483,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 0.454447057760004,
+      "minimum_repaired_constraint_eigenvalue": 9.999999913208036e-10,
+      "minimum_conditional_state_eigenvalue": -8.894199143174281e-17,
+      "numerical_lower": 0.454447057760004,
+      "numerical_upper": 0.4544470640883298
+    },
+    {
+      "id": 207,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 1.0217811151694751,
+      "minimum_repaired_constraint_eigenvalue": 9.999999649959565e-10,
+      "minimum_conditional_state_eigenvalue": -1.546090576183588e-16,
+      "numerical_lower": 1.0217811151694751,
+      "numerical_upper": 1.0217811214924442
+    },
+    {
+      "id": 207,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 1.0223363387700752,
+      "minimum_repaired_constraint_eigenvalue": 9.999999346160443e-10,
+      "minimum_conditional_state_eigenvalue": -7.683889291235124e-17,
+      "numerical_lower": 1.0223363387700752,
+      "numerical_upper": 1.0223363468784323
+    },
+    {
+      "id": 684,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 0.7704950217901724,
+      "minimum_repaired_constraint_eigenvalue": 9.999999771785363e-10,
+      "minimum_conditional_state_eigenvalue": -8.019281443782825e-17,
+      "numerical_lower": 0.7704950217901724,
+      "numerical_upper": 0.7704950279472401
+    },
+    {
+      "id": 684,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 0.7705850744707945,
+      "minimum_repaired_constraint_eigenvalue": 9.999999530994373e-10,
+      "minimum_conditional_state_eigenvalue": -1.0350953318995858e-16,
+      "numerical_lower": 0.7705850744707945,
+      "numerical_upper": 0.7705850807681337
+    },
+    {
+      "id": 839,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 1.021292462229797,
+      "minimum_repaired_constraint_eigenvalue": 9.99999879430335e-10,
+      "minimum_conditional_state_eigenvalue": -1.2604884153833994e-16,
+      "numerical_lower": 1.021292462229797,
+      "numerical_upper": 1.0212924679164754
+    },
+    {
+      "id": 839,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 1.0386322278771907,
+      "minimum_repaired_constraint_eigenvalue": 9.999996747347647e-10,
+      "minimum_conditional_state_eigenvalue": -1.973919518973709e-16,
+      "numerical_lower": 1.0386322278771907,
+      "numerical_upper": 1.038632233851194
+    },
+    {
+      "id": 1003,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 0.5531175114979618,
+      "minimum_repaired_constraint_eigenvalue": 9.999999199870252e-10,
+      "minimum_conditional_state_eigenvalue": -2.3133757396787384e-17,
+      "numerical_lower": 0.5531175114979618,
+      "numerical_upper": 0.5531175160465253
+    },
+    {
+      "id": 1003,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 0.5531448841228847,
+      "minimum_repaired_constraint_eigenvalue": 1.0000000162318564e-09,
+      "minimum_conditional_state_eigenvalue": -4.7909023558781086e-17,
+      "numerical_lower": 0.5531448841228847,
+      "numerical_upper": 0.553144888677539
+    },
+    {
+      "id": 771,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 1.068551871677692,
+      "minimum_repaired_constraint_eigenvalue": 9.99999914178495e-10,
+      "minimum_conditional_state_eigenvalue": -3.267867122114607e-17,
+      "numerical_lower": 1.068551871677692,
+      "numerical_upper": 1.068551880379074
+    },
+    {
+      "id": 771,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 1.06756340257032,
+      "minimum_repaired_constraint_eigenvalue": 9.999996768150776e-10,
+      "minimum_conditional_state_eigenvalue": -1.3940471143244208e-17,
+      "numerical_lower": 1.06756340257032,
+      "numerical_upper": 1.0675634099829188
+    },
+    {
+      "id": 1191,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 0.8230013063625259,
+      "minimum_repaired_constraint_eigenvalue": 9.999999641667458e-10,
+      "minimum_conditional_state_eigenvalue": -3.6642865382009203e-16,
+      "numerical_lower": 0.8230013063625259,
+      "numerical_upper": 0.8230013156603918
+    },
+    {
+      "id": 1191,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 0.8235693347164543,
+      "minimum_repaired_constraint_eigenvalue": 9.999999827062105e-10,
+      "minimum_conditional_state_eigenvalue": -7.165589567315735e-17,
+      "numerical_lower": 0.8235693347164543,
+      "numerical_upper": 0.8235693441186657
+    },
+    {
+      "id": 1332,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 1.037821166822979,
+      "minimum_repaired_constraint_eigenvalue": 9.999999770368167e-10,
+      "minimum_conditional_state_eigenvalue": -7.022485180181564e-17,
+      "numerical_lower": 1.037821166822979,
+      "numerical_upper": 1.037821174990792
+    },
+    {
+      "id": 1332,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 1.0499171883970186,
+      "minimum_repaired_constraint_eigenvalue": 9.999997411010203e-10,
+      "minimum_conditional_state_eigenvalue": -2.162177630562609e-17,
+      "numerical_lower": 1.0499171883970186,
+      "numerical_upper": 1.049917203237386
+    },
+    {
+      "id": 1486,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 0.5091931022034988,
+      "minimum_repaired_constraint_eigenvalue": 9.999999232914231e-10,
+      "minimum_conditional_state_eigenvalue": -7.166440447909201e-17,
+      "numerical_lower": 0.5091931022034988,
+      "numerical_upper": 0.5091931093233746
+    },
+    {
+      "id": 1486,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 0.5090060194000465,
+      "minimum_repaired_constraint_eigenvalue": 9.999999592359849e-10,
+      "minimum_conditional_state_eigenvalue": -6.80334187711135e-17,
+      "numerical_lower": 0.5090060194000465,
+      "numerical_upper": 0.5090060256122947
+    },
+    {
+      "id": 1213,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 0.917587365081262,
+      "minimum_repaired_constraint_eigenvalue": 9.999999623508426e-10,
+      "minimum_conditional_state_eigenvalue": -3.494693094447819e-17,
+      "numerical_lower": 0.917587365081262,
+      "numerical_upper": 0.9175873757392854
+    },
+    {
+      "id": 1213,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 0.9179245984506591,
+      "minimum_repaired_constraint_eigenvalue": 9.9999933484257e-10,
+      "minimum_conditional_state_eigenvalue": -3.0014947293477296e-17,
+      "numerical_lower": 0.9179245984506591,
+      "numerical_upper": 0.9179246042585855
+    },
+    {
+      "id": 1676,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 0.7499606745294877,
+      "minimum_repaired_constraint_eigenvalue": 9.999999823303764e-10,
+      "minimum_conditional_state_eigenvalue": -1.4075008579357938e-16,
+      "numerical_lower": 0.7499606745294877,
+      "numerical_upper": 0.749960682278527
+    },
+    {
+      "id": 1676,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 0.7509400400269604,
+      "minimum_repaired_constraint_eigenvalue": 9.999999899392455e-10,
+      "minimum_conditional_state_eigenvalue": -1.870976515999943e-16,
+      "numerical_lower": 0.7509400400269604,
+      "numerical_upper": 0.7509400480678476
+    },
+    {
+      "id": 1854,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 1.0257505923469237,
+      "minimum_repaired_constraint_eigenvalue": 9.999996372930789e-10,
+      "minimum_conditional_state_eigenvalue": -7.942673664916765e-17,
+      "numerical_lower": 1.0257505923469237,
+      "numerical_upper": 1.0257506038362645
+    },
+    {
+      "id": 1854,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 1.0360341658935244,
+      "minimum_repaired_constraint_eigenvalue": 9.999999655724276e-10,
+      "minimum_conditional_state_eigenvalue": -6.487595061833121e-17,
+      "numerical_lower": 1.0360341658935244,
+      "numerical_upper": 1.0360341722876674
+    },
+    {
+      "id": 2003,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 0.5186928062170931,
+      "minimum_repaired_constraint_eigenvalue": 9.99999948204434e-10,
+      "minimum_conditional_state_eigenvalue": -1.5631438227034697e-17,
+      "numerical_lower": 0.5186928062170931,
+      "numerical_upper": 0.5186928113764849
+    },
+    {
+      "id": 2003,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 0.518402338184065,
+      "minimum_repaired_constraint_eigenvalue": 9.999996093777025e-10,
+      "minimum_conditional_state_eigenvalue": -4.3187970317106696e-17,
+      "numerical_lower": 0.518402338184065,
+      "numerical_upper": 0.5184023433402
+    },
+    {
+      "id": 1843,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 1.0231036346843974,
+      "minimum_repaired_constraint_eigenvalue": 9.99999946268593e-10,
+      "minimum_conditional_state_eigenvalue": -6.404913578585437e-17,
+      "numerical_lower": 1.0231036346843974,
+      "numerical_upper": 1.023103660296524
+    },
+    {
+      "id": 1843,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 1.0343642332584122,
+      "minimum_repaired_constraint_eigenvalue": 9.999995539760983e-10,
+      "minimum_conditional_state_eigenvalue": -5.804885694551173e-17,
+      "numerical_lower": 1.0343642332584122,
+      "numerical_upper": 1.0343642404250095
+    },
+    {
+      "id": 2201,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 0.94323118169358,
+      "minimum_repaired_constraint_eigenvalue": 9.99999885796609e-10,
+      "minimum_conditional_state_eigenvalue": -7.105339839150806e-17,
+      "numerical_lower": 0.94323118169358,
+      "numerical_upper": 0.9432311982625445
+    },
+    {
+      "id": 2201,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 0.9433654446020242,
+      "minimum_repaired_constraint_eigenvalue": 9.999995607054953e-10,
+      "minimum_conditional_state_eigenvalue": -5.3834700657105205e-17,
+      "numerical_lower": 0.9433654446020242,
+      "numerical_upper": 0.94336546120653
+    },
+    {
+      "id": 2332,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 1.042417743348006,
+      "minimum_repaired_constraint_eigenvalue": 9.999995465834545e-10,
+      "minimum_conditional_state_eigenvalue": -3.644490450907288e-17,
+      "numerical_lower": 1.042417743348006,
+      "numerical_upper": 1.0424177502213463
+    },
+    {
+      "id": 2332,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 1.048158861243234,
+      "minimum_repaired_constraint_eigenvalue": 1.0000000027143868e-09,
+      "minimum_conditional_state_eigenvalue": -7.326866841004403e-18,
+      "numerical_lower": 1.048158861243234,
+      "numerical_upper": 1.048158868175943
+    },
+    {
+      "id": 2484,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 0.6937506414224613,
+      "minimum_repaired_constraint_eigenvalue": 9.999999238493465e-10,
+      "minimum_conditional_state_eigenvalue": -3.6383045453796284e-17,
+      "numerical_lower": 0.6937506414224613,
+      "numerical_upper": 0.6937506501192878
+    },
+    {
+      "id": 2484,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 0.6939088544397672,
+      "minimum_repaired_constraint_eigenvalue": 9.999998200815132e-10,
+      "minimum_conditional_state_eigenvalue": -7.616035437300915e-17,
+      "numerical_lower": 0.6939088544397672,
+      "numerical_upper": 0.6939088623043314
+    },
+    {
+      "id": 2287,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 1.0545195771129534,
+      "minimum_repaired_constraint_eigenvalue": 9.99999991787353e-10,
+      "minimum_conditional_state_eigenvalue": -8.691606754359907e-17,
+      "numerical_lower": 1.0545195771129534,
+      "numerical_upper": 1.0545195831782135
+    },
+    {
+      "id": 2287,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 1.054662022304078,
+      "minimum_repaired_constraint_eigenvalue": 9.999997295864594e-10,
+      "minimum_conditional_state_eigenvalue": -4.8489386063230284e-17,
+      "numerical_lower": 1.054662022304078,
+      "numerical_upper": 1.0546620295294056
+    },
+    {
+      "id": 2311,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 1.0407681406610814,
+      "minimum_repaired_constraint_eigenvalue": 1.0000000000927495e-09,
+      "minimum_conditional_state_eigenvalue": -4.6647359185219515e-17,
+      "numerical_lower": 1.0407681406610814,
+      "numerical_upper": 1.040768146943624
+    },
+    {
+      "id": 2311,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 1.046388245755407,
+      "minimum_repaired_constraint_eigenvalue": 9.999999844590194e-10,
+      "minimum_conditional_state_eigenvalue": -5.711827599499265e-17,
+      "numerical_lower": 1.046388245755407,
+      "numerical_upper": 1.0463882530145292
+    },
+    {
+      "id": 2693,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 0.8234472585971866,
+      "minimum_repaired_constraint_eigenvalue": 9.999999002772522e-10,
+      "minimum_conditional_state_eigenvalue": -4.1499462039604217e-17,
+      "numerical_lower": 0.8234472585971866,
+      "numerical_upper": 0.8234472652500336
+    },
+    {
+      "id": 2693,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 0.8240083105089465,
+      "minimum_repaired_constraint_eigenvalue": 9.99999922897311e-10,
+      "minimum_conditional_state_eigenvalue": -1.119271440666034e-16,
+      "numerical_lower": 0.8240083105089465,
+      "numerical_upper": 0.8240083166790896
+    },
+    {
+      "id": 2837,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 1.0588651771203828,
+      "minimum_repaired_constraint_eigenvalue": 9.999998663387397e-10,
+      "minimum_conditional_state_eigenvalue": -3.18833368871181e-17,
+      "numerical_lower": 1.0588651771203828,
+      "numerical_upper": 1.058865184036728
+    },
+    {
+      "id": 2837,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 1.0671146051002725,
+      "minimum_repaired_constraint_eigenvalue": 9.999999865992878e-10,
+      "minimum_conditional_state_eigenvalue": -4.3508840566601265e-17,
+      "numerical_lower": 1.0671146051002725,
+      "numerical_upper": 1.0671146193200716
+    },
+    {
+      "id": 2978,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 0.1918168941153351,
+      "minimum_repaired_constraint_eigenvalue": 9.999999776693915e-10,
+      "minimum_conditional_state_eigenvalue": -2.9329017321928356e-17,
+      "numerical_lower": 0.1918168941153351,
+      "numerical_upper": 0.1918168999881614
+    },
+    {
+      "id": 2978,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 0.1918136282999883,
+      "minimum_repaired_constraint_eigenvalue": 9.999999096720964e-10,
+      "minimum_conditional_state_eigenvalue": -4.246026170155945e-17,
+      "numerical_lower": 0.1918136282999883,
+      "numerical_upper": 0.19181363384542874
+    },
+    {
+      "id": 2806,
+      "construction": "unweighted",
+      "stage": "main",
+      "physical_reference_distance": 1.056687741355241,
+      "minimum_repaired_constraint_eigenvalue": 9.999997827303837e-10,
+      "minimum_conditional_state_eigenvalue": -4.573641527239139e-17,
+      "numerical_lower": 1.056687741355241,
+      "numerical_upper": 1.0566877481784904
+    },
+    {
+      "id": 2806,
+      "construction": "weighted",
+      "stage": "main",
+      "physical_reference_distance": 1.0586695024970163,
+      "minimum_repaired_constraint_eigenvalue": 9.999999433445175e-10,
+      "minimum_conditional_state_eigenvalue": -5.3844517690487355e-17,
+      "numerical_lower": 1.0586695024970163,
+      "numerical_upper": 1.0586695092435232
+    },
+    {
+      "id": 324,
+      "construction": "unweighted",
+      "stage": "alternate_solver",
+      "physical_reference_distance": 1.1567544113599844,
+      "minimum_repaired_constraint_eigenvalue": 9.999999293343588e-10,
+      "minimum_conditional_state_eigenvalue": -1.5947522813271085e-17,
+      "numerical_lower": 1.1567544113599844,
+      "numerical_upper": 1.156754456936165
+    },
+    {
+      "id": 324,
+      "construction": "weighted",
+      "stage": "alternate_solver",
+      "physical_reference_distance": 1.1849443853618673,
+      "minimum_repaired_constraint_eigenvalue": 9.999999881415874e-10,
+      "minimum_conditional_state_eigenvalue": -1.1253072906457144e-16,
+      "numerical_lower": 1.1849443853618673,
+      "numerical_upper": 1.1849445001372128
+    },
+    {
+      "id": 771,
+      "construction": "unweighted",
+      "stage": "alternate_solver",
+      "physical_reference_distance": 1.0685518684850697,
+      "minimum_repaired_constraint_eigenvalue": 9.999998129509565e-10,
+      "minimum_conditional_state_eigenvalue": -7.310664199672701e-17,
+      "numerical_lower": 1.0685518684850697,
+      "numerical_upper": 1.0685518823931364
+    },
+    {
+      "id": 771,
+      "construction": "weighted",
+      "stage": "alternate_solver",
+      "physical_reference_distance": 1.0675630805093859,
+      "minimum_repaired_constraint_eigenvalue": 9.99999910970803e-10,
+      "minimum_conditional_state_eigenvalue": -2.1168158528957994e-17,
+      "numerical_lower": 1.0675630805093859,
+      "numerical_upper": 1.0675634245730476
+    },
+    {
+      "id": 1676,
+      "construction": "unweighted",
+      "stage": "alternate_solver",
+      "physical_reference_distance": 0.7499605919638019,
+      "minimum_repaired_constraint_eigenvalue": 9.999999515457072e-10,
+      "minimum_conditional_state_eigenvalue": -3.719571959907465e-17,
+      "numerical_lower": 0.7499605919638019,
+      "numerical_upper": 0.7499606842000582
+    },
+    {
+      "id": 1676,
+      "construction": "weighted",
+      "stage": "alternate_solver",
+      "physical_reference_distance": 0.7509398689132503,
+      "minimum_repaired_constraint_eigenvalue": 9.999997469066797e-10,
+      "minimum_conditional_state_eigenvalue": -5.014423031225067e-17,
+      "numerical_lower": 0.7509398689132503,
+      "numerical_upper": 0.7509400500064023
+    },
+    {
+      "id": 2003,
+      "construction": "unweighted",
+      "stage": "alternate_solver",
+      "physical_reference_distance": 0.5186928014428052,
+      "minimum_repaired_constraint_eigenvalue": 9.999999089220237e-10,
+      "minimum_conditional_state_eigenvalue": -1.5227271397963396e-17,
+      "numerical_lower": 0.5186928014428052,
+      "numerical_upper": 0.5186928145459452
+    },
+    {
+      "id": 2003,
+      "construction": "weighted",
+      "stage": "alternate_solver",
+      "physical_reference_distance": 0.5184023222817319,
+      "minimum_repaired_constraint_eigenvalue": 9.999999793808534e-10,
+      "minimum_conditional_state_eigenvalue": -6.969673212033986e-17,
+      "numerical_lower": 0.5184023222817319,
+      "numerical_upper": 0.5184023433731005
+    },
+    {
+      "id": 2201,
+      "construction": "unweighted",
+      "stage": "alternate_solver",
+      "physical_reference_distance": 0.9432311167299211,
+      "minimum_repaired_constraint_eigenvalue": 9.999999680317702e-10,
+      "minimum_conditional_state_eigenvalue": -8.804261709497616e-17,
+      "numerical_lower": 0.9432311167299211,
+      "numerical_upper": 0.9432312005797906
+    },
+    {
+      "id": 2201,
+      "construction": "weighted",
+      "stage": "alternate_solver",
+      "physical_reference_distance": 0.9433653798257177,
+      "minimum_repaired_constraint_eigenvalue": 9.999998757117395e-10,
+      "minimum_conditional_state_eigenvalue": -7.865432606854945e-17,
+      "numerical_lower": 0.9433653798257177,
+      "numerical_upper": 0.9433654634071733
+    }
+  ]
+}
