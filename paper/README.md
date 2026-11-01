@@ -56,6 +56,10 @@ For a compact comparison example, the
 [four-dimensional family note](../theory/completion_switch_family.md)
 displays a single varying coupling with certified opposite endpoint
 preferences and a proof that the hypotheses hold throughout the interval.
+The [subsequent crossover certificate](../research/COMPLETION_CROSSOVER_2026-11-01.md)
+localizes at least one equality point to an interval of width 2e-8. The
+[updated attribution note](../literature/CROSSOVER_AND_CONSTRUCTION_ATTRIBUTION_2026-11-01.md)
+also gives the direct Eldar–Forney identification of both sector constructions.
 
 The subsequent [exact comparison note](../theory/exact_completion_comparison.md)
 certifies examples favoring each completion in full diamond distance.

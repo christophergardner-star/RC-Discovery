@@ -1,0 +1,63 @@
+{
+  "scope": "Floating-point proposal diagnostics only; use verification.json for conclusions.",
+  "operator_precision_decimal_digits": 60,
+  "operator_rational_denominator": 10000000000000000000000000000000000000000,
+  "versions": {
+    "mpmath": "1.3.0",
+    "numpy": "2.5.4",
+    "cvxpy": "1.7.5",
+    "scs": "3.3.1"
+  },
+  "points": [
+    {
+      "parameter": "233690021/100000000",
+      "unweighted": {
+        "primal": 0.4040246394666252,
+        "dual": 0.4040246394666219,
+        "primal_status": "optimal",
+        "dual_status": "optimal",
+        "options": {
+          "solver": "SCS",
+          "eps": 1e-13,
+          "max_iters": 1000000
+        }
+      },
+      "weighted": {
+        "primal": 0.40402463947922196,
+        "dual": 0.40402463947921635,
+        "primal_status": "optimal",
+        "dual_status": "optimal",
+        "options": {
+          "solver": "SCS",
+          "eps": 1e-13,
+          "max_iters": 1000000
+        }
+      }
+    },
+    {
+      "parameter": "233690023/100000000",
+      "unweighted": {
+        "primal": 0.4040246401372746,
+        "dual": 0.404024640137268,
+        "primal_status": "optimal",
+        "dual_status": "optimal",
+        "options": {
+          "solver": "SCS",
+          "eps": 1e-13,
+          "max_iters": 1000000
+        }
+      },
+      "weighted": {
+        "primal": 0.404024640123678,
+        "dual": 0.4040246401236594,
+        "primal_status": "optimal",
+        "dual_status": "optimal",
+        "options": {
+          "solver": "SCS",
+          "eps": 1e-13,
+          "max_iters": 1000000
+        }
+      }
+    }
+  ]
+}

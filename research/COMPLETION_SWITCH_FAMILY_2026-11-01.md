@@ -80,9 +80,10 @@ To regenerate proposed witnesses and the numerical illustration:
     .venv-audit/Scripts/python.exe experiments/build_completion_switch_family.py
 
 Only the rational certificates establish the endpoint comparisons. The
-numerical curve suggests an equality point between 2.25 and 2.5; that narrower
-location is an illustration, not a certified assertion. The rigorous existence
-interval remains (2,4).
+subsequent [crossover localization](COMPLETION_CROSSOVER_2026-11-01.md) now
+certifies an equality point in (2.33690021, 2.33690023). Its additional exact
+certificates supersede the numerical-only localization suggested by the curve.
+They do not prove uniqueness or exclude other roots in (2,4).
 
 The earlier six-dimensional certificates remain valid. This family provides
 a simpler presentation and an explicit path joining opposite preferences.

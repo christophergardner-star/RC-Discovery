@@ -16,6 +16,13 @@ No public file should represent the work as externally proved, peer reviewed, fu
 
 ## Exact comparison of the two completions
 
+The [crossover certificate](research/COMPLETION_CROSSOVER_2026-11-01.md)
+now proves that at least one equality point lies strictly between 2.33690021
+and 2.33690023, an exact rational bracket of width 2e-8. Both signs pass exact
+arithmetic; the combined audit passes 139 independent integer-determinant
+positivity checks and 12 rejection controls. Uniqueness and exclusion of
+other equality points remain open.
+
 The subsequent [four-dimensional family](research/COMPLETION_SWITCH_FAMILY_2026-11-01.md)
 varies one off-diagonal coupling while keeping every diagonal entry fixed.
 Exact endpoint certificates show opposite distance orderings; a uniform
@@ -33,6 +40,13 @@ This is a finite computer-assisted comparison, not a complete Lean proof,
 external specialist review, or a novelty finding.
 
 ## Latest theorem-level literature comparison
+
+The [construction attribution update](literature/CROSSOVER_AND_CONSTRUCTION_ATTRIBUTION_2026-11-01.md)
+identifies both sector polar formulas explicitly with Eldar–Forney's unweighted
+and weighted least-squares measurements (2001). The constructions themselves
+are established prior art. The specific channel bounds, record correction,
+and certified comparisons remain quantitative applications with unverified
+publication priority; the new localization does not settle novelty.
 
 The subsequent [adaptive paired search](research/PAIRED_SEARCH_2026-11-01.md)
 evaluated 3,004 valid measurements and 25 paired full-distance finalists.

@@ -44,6 +44,12 @@ This addition does not alter the frozen statement or settle its priority.
 The [four-dimensional one-parameter family](../theory/completion_switch_family.md)
 is the simpler presentation: its displayed matrices, uniform packing bound,
 and continuity argument are further concrete targets for reconstruction.
+The [additional crossover certificate](../research/COMPLETION_CROSSOVER_2026-11-01.md)
+localizes at least one equality point to (2.33690021, 2.33690023), without
+asserting uniqueness. The [latest attribution audit](../literature/CROSSOVER_AND_CONSTRUCTION_ATTRIBUTION_2026-11-01.md)
+identifies both sector polar formulas with Eldar–Forney's established
+least-squares measurements. Assess the quantitative application and comparison,
+not originality of the orthogonalization constructions.
 
 1. **Hypotheses and domains.** Are zero effects removed consistently, full
    spectral sectors used at the stated closed threshold, and injectivity

@@ -1,6 +1,6 @@
 # Novelty and Prior-Art Ledger
 
-Updated: 31 October 2026
+Updated: 1 November 2026
 
 This ledger records what is known, what RC-Discovery has internally derived, and what remains novelty-unverified.
 
@@ -9,6 +9,12 @@ A literature search cannot certify absence of prior art. The canonical no-overcl
 - `literature/PRIOR_ART_AND_ATTRIBUTION.md`
 
 ## Focused laptop prior-art and certificate audit
+
+The [1 November attribution update](CROSSOVER_AND_CONSTRUCTION_ATTRIBUTION_2026-11-01.md)
+identifies both sector polar formulas with Eldar–Forney's least-squares and
+weighted least-squares measurements. Novelty of these sector polar formulas
+is therefore excluded. The new exact crossover bracket localizes an equality point in a
+particular family; it does not settle priority of the channel bounds or examples.
 
 **Current theorem-level assessment:** the
 [combined-statement comparison](COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
