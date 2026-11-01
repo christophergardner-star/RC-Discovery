@@ -14,6 +14,17 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 
 No public file should represent the work as externally proved, peer reviewed, fully machine checked, prior-art free, patentable, or a proven breakthrough.
 
+## Exact comparison of the two completions
+
+The [exact comparison certificates](research/EXACT_COMPARISON_2026-11-01.md)
+give two rational six-dimensional, three-outcome measurements with opposite
+strict full-diamond-distance orderings between the unweighted and weighted
+completions. Both have informative frozen-theorem bounds. The analytic
+error-bound proof is backed by exact rational verification, an independent
+integer-determinant positivity audit, and corrupted-certificate controls.
+This is a finite computer-assisted comparison, not a complete Lean proof,
+external specialist review, or a novelty finding.
+
 ## Latest theorem-level literature comparison
 
 The subsequent [adaptive paired search](research/PAIRED_SEARCH_2026-11-01.md)

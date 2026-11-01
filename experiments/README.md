@@ -4,6 +4,17 @@ This directory contains the numerical, algebraic, SDP, governance and integratio
 
 ## Primary entry points
 
+The subsequent [exact comparison certificates](../research/EXACT_COMPARISON_2026-11-01.md)
+can be verified without scientific Python packages:
+
+```powershell
+python -I -S experiments/verify_exact_completion_comparison.py
+python experiments/check_exact_certificate_negative_controls.py
+```
+
+These apply the documented analytic error bounds to the retained rational examples;
+they do not establish literature novelty or formalize the full theorem in Lean.
+
 For the adaptive paired comparison and theorem-bound attack, see
 [the 1 November report](../research/PAIRED_SEARCH_2026-11-01.md). Run a new
 search in a fresh output directory:

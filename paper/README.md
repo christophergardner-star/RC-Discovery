@@ -52,6 +52,11 @@ distinguishes document checks, numerical checks, and mathematical review.
 
 ## Relationship to the longer material
 
+The subsequent [exact comparison note](../theory/exact_completion_comparison.md)
+certifies examples favoring each completion in full diamond distance.
+It is a separate computer-assisted addition for review; it does not change
+the frozen theorem or constitute an external novelty assessment.
+
 The [frozen theorem](../theory/THEOREM_V1_FREEZE.md) remains the statement
 reference. The [theorem-level comparison](../literature/COMBINED_STATEMENT_COMPARISON_2026-10-31.md)
 retains the detailed prior-art deductions. The longer research document and

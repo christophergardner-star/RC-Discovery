@@ -1,0 +1,51 @@
+{
+  "result": "PASS",
+  "expected_rejections": [
+    {
+      "name": "negative_effect",
+      "result": "REJECTED"
+    },
+    {
+      "name": "wrong_sector_rank",
+      "result": "REJECTED"
+    },
+    {
+      "name": "invalid_threshold",
+      "result": "REJECTED"
+    },
+    {
+      "name": "false_packing_lower_bound",
+      "result": "REJECTED"
+    },
+    {
+      "name": "nonunitary_spectral_model",
+      "result": "REJECTED"
+    },
+    {
+      "name": "broken_polar_factor",
+      "result": "REJECTED"
+    },
+    {
+      "name": "infeasible_primal",
+      "result": "REJECTED"
+    },
+    {
+      "name": "false_dual_bound",
+      "result": "REJECTED"
+    },
+    {
+      "name": "missing_effect",
+      "result": "REJECTED"
+    },
+    {
+      "name": "reversed_conclusion",
+      "result": "REJECTED"
+    },
+    {
+      "name": "optimized_python_disables_assertions",
+      "result": "REJECTED"
+    }
+  ],
+  "independent_integer_Bareiss_positive_matrices": 66,
+  "checker_text_sha256": "3231045e93a7e5205875dad631f318424a4e9e00482a36b6cd581a644d260602"
+}

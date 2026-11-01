@@ -36,6 +36,12 @@ useful content.
 
 ## Questions for a correctness referee
 
+A subsequent [exact comparison note](../theory/exact_completion_comparison.md)
+and [rational certificates](../research/EXACT_COMPARISON_2026-11-01.md) give
+opposite distance orderings for the two completions. Its spectral-to-polar
+error bounds and exact SDP certificates are additional review targets.
+This addition does not alter the frozen statement or settle its priority.
+
 1. **Hypotheses and domains.** Are zero effects removed consistently, full
    spectral sectors used at the stated closed threshold, and injectivity
    distinguished from a rectangular singular-value convention? Are

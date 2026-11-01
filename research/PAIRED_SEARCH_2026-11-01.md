@@ -2,6 +2,10 @@
 
 Date: 1 November 2026.
 
+Subsequent result: [exact rational comparison certificates](EXACT_COMPARISON_2026-11-01.md)
+now establish opposite orderings for two explicitly defined nearby rational
+measurements. The numerical search record below retains its original scope.
+
 The local search found numerical examples in both directions: the prescribed
 unweighted completion can be closer to the input measurement, and the weighted
 completion can be closer. Both orderings occur where the frozen theorem gives
