@@ -221,14 +221,26 @@ Canonical theory map:
 | Scalar/core lemmas | **Machine checked; zero `sorry`** |
 | Hybrid matrix identities | **Machine checked under explicit hypotheses** |
 | Residual projection/compression | **Machine checked under explicit hypotheses** |
+| Threshold spectral projector and positive root | **Constructed and machine checked** |
+| Labelled Naimark isometry and compressions | **Constructed and machine checked** |
+| Completed POVM and sector action | **Machine checked from explicit coordinate/isometry inputs** |
+| Polar isometry and factorization | **Constructed from a positive definite Gram matrix** |
+| Jordan-product width inequality | **Machine checked, including the degenerate width case** |
+| Assembled hybrid dilation | **Machine checked from an explicit spectral frame and synthesis relation** |
 | Axiom audit | **Passed current declarations** | No `sorryAx` or custom axioms in audited theorem declarations. |
 | Full spectral-sector construction | **Not formalised** |
 | Principal-angle theorem end to end | **Not formalised** |
-| Coefficient-two analytic bridge | **Not formalised** |
+| Full coefficient-two analytic bridge | **Not formalised; abstract Jordan inequality is checked** |
+| Repeatable instrument and complete positivity | **Not formalised** |
 | Diamond-norm transfer | **Not formalised** |
 | Accessibility certificate end to end | **Not formalised** |
 
 The validation runner now hashes only repository-owned Lean sources, not downloaded `.lake` dependencies.
+The 1 November extension contains 69 written lemmas/theorems; its default build
+audits all 143 project declarations, including generated helpers. See
+[the formalization report](research/LEAN_OPERATOR_FORMALIZATION_2026-11-01.md)
+and [the current proof boundary](lean/README.md). The review-paper count of 13
+belongs to the earlier frozen release, whose artifacts remain unchanged.
 
 ## Cruxy source synchronisation
 

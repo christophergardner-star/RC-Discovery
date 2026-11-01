@@ -9,6 +9,12 @@ Read the [paper](../paper/prescribed_repeatable_completion.pdf), then the
 The work is internally reconstructed, computationally audited, partially
 formalised, novelty unverified. No external review is represented as completed.
 
+After this paper was frozen, the [Lean operator development](../lean/README.md)
+expanded from 13 to 69 written lemmas/theorems, including constructed spectral,
+Naimark and polar objects and the Jordan inequality. The paper's formalization
+count records its earlier snapshot. The whole theorem, particularly the
+diamond-norm transfer, remains unformalized.
+
 **Theorem 10 is now integrated into Section 8:** it establishes the sharp
 leading envelope `sqrt(1-alpha^2+delta)` with a uniform remainder and includes
 the upper proof and joint-limit argument. The

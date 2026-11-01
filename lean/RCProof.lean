@@ -1,3 +1,9 @@
 import RCProof.Core
 import RCProof.Hybrid
 import RCProof.Gap
+import RCProof.Spectral
+import RCProof.Completion
+import RCProof.Naimark
+import RCProof.Jordan
+import RCProof.Assembly
+import RCProof.Polar

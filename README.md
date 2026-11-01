@@ -275,13 +275,24 @@ Machine-checked with pinned Lean 4 + Mathlib and zero `sorry` within the stated 
 
 - four scalar/core lemmas;
 - rectangular hybrid-isometry identities under explicit hypotheses;
-- residual projection and compression lemmas under explicit hypotheses.
+- residual projection and compression lemmas under explicit hypotheses;
+- constructed threshold spectral projectors, positive roots and labelled Naimark dilations;
+- completion positivity, normalization and exact sector action;
+- constructed polar isometry from a positive definite Gram matrix;
+- the width-conditioned Jordan inequality, including its degenerate case;
+- assembled hybrid dilation and residual gap from an explicitly supplied spectral frame.
+
+The development now has 69 written lemmas/theorems. The default build audits
+every project declaration for transitive axioms; only the three standard Lean
+logical axioms are allowed. The frozen review release's count of 13 is an
+earlier snapshot.
 
 Not yet formalised end to end:
 
 - construction of all spectral-sector objects from the POVM hypotheses;
 - the full polar/principal-angle argument;
-- the noncommuting coefficient-two bridge;
+- specialization of the checked Jordan inequality to the full coefficient-two bound;
+- construction and complete positivity of the repeatable instrument;
 - the channel diamond-norm transfer;
 - the direct accessibility certificate.
 

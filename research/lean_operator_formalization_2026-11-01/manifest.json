@@ -1,0 +1,52 @@
+{
+  "result": "PASS",
+  "utc": "2026-11-01T13:07:36.361780+00:00",
+  "scope": "Partial operator formalization; the complete spectral/diamond-norm theorem is NOT machine-checked",
+  "source_theorems": 69,
+  "kernel_theorem_declarations_including_generated": 105,
+  "all_namespace_declarations_audited": 143,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "required_theorems": [
+    "RCProof.threshold_spectral_envelope",
+    "RCProof.threshold_residual_gap",
+    "RCProof.naimark_isometry",
+    "RCProof.naimark_compression",
+    "RCProof.completedEffect_sum",
+    "RCProof.polarIsometry_isometry",
+    "RCProof.polar_factorization",
+    "RCProof.SpectralFrame.cross_zero",
+    "RCProof.SpectralFrame.hybrid_dilation_from_polar",
+    "RCProof.SpectralFrame.residual_gap",
+    "RCProof.jordan_lower_of_width"
+  ],
+  "negative_controls": [
+    {
+      "name": "extra_axiom",
+      "result": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "name": "unfinished_proof",
+      "result": "REJECTED_AS_EXPECTED"
+    }
+  ],
+  "source_sha256": {
+    "lean/RCProof.lean": "32a41afeff375e9333d79be406eed7a68d2058b9a10a6a490f4ddb045eabb5c8",
+    "lean/RCProofAudit.lean": "3a8f97b32ccd56e31e214dacd92538fe82c9574b2f271e1acfce94c5c8f7b1d4",
+    "lean/RCProof/Assembly.lean": "df4ae2ba7b88c88f88001cf93daccb306c67814511da79208473a636b1c1ee7f",
+    "lean/RCProof/Completion.lean": "a5624f322d30d92d2379555ede26e08e0f0e9f688b9c5bac73fee14aec9fff67",
+    "lean/RCProof/Core.lean": "9c6fcbb25f4da6425c4f2214615c936351be6a2cfe4c668458f3fcfff8cde467",
+    "lean/RCProof/Gap.lean": "ae74247d50a64e078dc249b1b11380a38dc97ee39184c58d72a5b448daf1f611",
+    "lean/RCProof/Hybrid.lean": "8c71ba0a23508e1306b9fd6048e7e476942866a2bfc615e85c747f69716f69d4",
+    "lean/RCProof/Jordan.lean": "c0e5ce18e3cdb0a5b2f1ee6ffa69e24ad33218d0c4c3305fb2d6d3a5504a821b",
+    "lean/RCProof/Naimark.lean": "37fc744482b6159849693d7c6acd46887aa5f67e96d12aa300dc0a4b5e6da218",
+    "lean/RCProof/Polar.lean": "f4440e2f281651ef260a086aa6e5e312ab7502d67d31fdf633301101a0d9707f",
+    "lean/RCProof/Spectral.lean": "4d3a16c79c6a12932eafe6d67aed5ede9b26dad2f119d79cc43596fbeb15fa7e",
+    "lean/lakefile.toml": "a7ec6d6aabfc71861408c19091fe3c08d01e410b8b81747748f63f36db08251f",
+    "lean/lake-manifest.json": "e0b783dd174db50658e3557870d2a8b37f20c8e114f0f2ab8d3af71f1880ddc6",
+    "lean/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+  }
+}
