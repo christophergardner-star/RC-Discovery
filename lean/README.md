@@ -1,13 +1,14 @@
 # Lean 4 formalization
 
 The frozen construction and its coefficient-two diamond-norm estimate are
-now machine checked. As of 1 November 2026, the project contains 194 explicitly
+now machine checked. As of 1 November 2026, the project contains 256 explicitly
 written lemmas/theorems. The assembled statement is
 [`frozen_theorem`](RCProof/FrozenTheorem.lean): canonical sectors, equal ranks,
 principal-angle bound, completed POVM and sector action, residual gap,
 repeatable CP/TP instrument with the correct outcome probabilities, and the
 unhalved diamond bound over all complex inputs and all finite ancillas.
-This does not formalize every later result in the paper.
+The later canonical joint upper bound and its uniform upper remainder are
+also checked. This does not formalize every later result in the paper.
 
 The toolchain remains Lean 4.35.0 with Mathlib pinned to
 `56a005855ea17e0b0958f73ec801ae140b0a1679`. No external quantum-information
@@ -46,6 +47,17 @@ library has been added as a dependency.
 | [FrozenDiamond](RCProof/FrozenDiamond.lean) | 4 | Actual completion, conditional sharp bound and unconditional frozen diamond estimate |
 | [FrozenTheorem](RCProof/FrozenTheorem.lean) | 2 | Canonical residual gap and assembled frozen theorem |
 | [AncillaContractivity](RCProof/AncillaContractivity.lean) | 3 | Trace preservation and Hermitian trace-norm contraction of the constructed channel with references |
+| [SignedKraus](RCProof/SignedKraus.lean) | 6 | Signed Kraus trace-norm bound from a combined Gram bound, for all complex inputs |
+| [SharpResidual](RCProof/SharpResidual.lean) | 6 | Residual bound `2 sqrt(epsilon)/sqrt(4-epsilon)`, including every finite ancilla |
+| [SelectedCorrection](RCProof/SelectedCorrection.lean) | 6 | Canonical selected-operator correction and contraction comparison |
+| [PositiveFamily](RCProof/PositiveFamily.lean) | 10 | Constructed singular-safe positive-family factorization and amplified contraction |
+| [CanonicalSplit](RCProof/CanonicalSplit.lean) | 10 | Positive selected/remainder effects, contraction and canonical defect bound |
+| [RemainderMap](RCProof/RemainderMap.lean) | 5 | Residual measurement estimate through an explicit trace-nonincreasing Kraus map |
+| [CanonicalRemainder](RCProof/CanonicalRemainder.lean) | 1 | Constructs the canonical remainder data from the POVM |
+| [SelectedMeasurement](RCProof/SelectedMeasurement.lean) | 2 | Selected-effect measurement correction with references |
+| [JointUpper](RCProof/JointUpper.lean) | 3 | Actual canonical all-input and diamond upper bounds without a width condition |
+| [EnvelopeAnalysis](RCProof/EnvelopeAnalysis.lean) | 9 | Scalar perfect-envelope optimization, expansion and conditional joint-limit transfer |
+| [JointAsymptotic](RCProof/JointAsymptotic.lean) | 4 | Uniform scalar estimates and actual canonical `sqrt(s)+5s` diamond upper bound |
 
 The threshold uses `c <= eigenvalue`, so eigenvalues at the threshold are
 included. `threshold_spectral_envelope` derives its conclusion from
@@ -106,17 +118,39 @@ The assembled theorem assumes a nonempty sector index to define its least
 eigenvalue. `sectorIndex_nonempty` derives this from the active-label hypothesis
 when the input space is nonzero. Individual zero labels/sectors are allowed.
 
-The paper's later sharp envelopes, joint asymptotics, record correction and
-computer-assisted comparisons are additional targets, not consequences of
-this Lean build. This development proves no new mathematical claim beyond
-the stated lemmas and does not establish novelty or external review.
+For the later joint theorem, put `epsilon=1-alpha^2 c`,
+`h=max(1-alpha,1/sqrt(c)-1)+1-sqrt(c)`. With `0<c<1`, nonempty canonical
+sectors and injective synthesis, `canonical_joint_diamond_upper` proves
+
+```text
+diamondSize(M_E - M_F) <= min(2, 2 sqrt(epsilon)/sqrt(4-epsilon) + 2h).
+```
+
+There is no width hypothesis. `canonical_joint_uniform_diamond_upper` then
+proves the bound `sqrt(s)+5s` when `s=1-alpha^2+(1-c)<=1/4`. The residual
+proof uses a signed Kraus decomposition and its combined Gram bound directly
+on complex inputs. The positive remainder is factored using a rectangular
+contraction polar decomposition, including singular sums.
+
+`EnvelopeAnalysis` proves the scalar maximum `2b/(2-b)`, its maximizing scalar,
+and its expansion with a bounded cubic remainder. It does not construct an
+attaining POVM or establish the exact perfect-packing operator bound.
+`joint_envelope_limit_of_uniform_bounds` proves a limit for arbitrary sequences
+under explicit upper and lower assumptions. The lower family and identification
+with the actual worst-case POVM supremum are not yet formalized, so the full
+sharp joint asymptotic theorem is not claimed as Lean checked.
+
+Exact perfect-packing operator sharpness, both attaining/lower POVM families,
+the joint supremum bridge, record correction, computer-assisted comparisons
+and accessibility certificates remain additional targets. This development
+does not establish novelty or external review.
 
 ## Axiom gate and reproduction
 
 `lake build` also builds [RCProofAudit](RCProofAudit.lean). It traverses **all**
 declarations in the `RCProof` namespace and rejects any transitive axiom except
 `propext`, `Classical.choice` and `Quot.sound`. The run manifest distinguishes
-the 194 written lemmas/theorems from generated equations, structure projections
+the 256 written lemmas/theorems from generated equations, structure projections
 and tactic helpers. Definitions of maps and norms are not counted as proofs.
 
 From `lean` on Windows:
@@ -140,7 +174,7 @@ on `PATH` or in the usual Elan installation. The local Mathlib cache setting
 avoids the unwritable default cache previously encountered on this laptop.
 Module-system and unused-variable warnings do not invalidate proofs.
 
-See the [frozen theorem report](../research/LEAN_FROZEN_THEOREM_2026-11-01.md)
-for the current run. The completion and operator reports retain the historical
-152- and 69-theorem snapshots. The frozen review paper's count of 13 describes
+See the [latest progress report](../research/LEAN_SHARP_ASYMPTOTIC_PROGRESS_2026-11-01.md)
+for the current run. The frozen theorem, completion and operator reports retain
+the historical 194-, 152- and 69-theorem snapshots. The frozen review paper's count of 13 describes
 its earlier release; this README tracks subsequent development.

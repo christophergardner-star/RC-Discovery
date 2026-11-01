@@ -1,4 +1,4 @@
-"""Build and audit the frozen theorem's Lean proofs, not every result in the paper.
+"""Build and audit the frozen theorem and later joint upper bound, not the whole paper.
 
 Uses the pinned Lean/Mathlib project, records source hashes and checks transitive
 axioms in Lean itself. Optional negative controls ensure that both an extra axiom
@@ -55,6 +55,22 @@ REQUIRED = (
     "RCProof.canonical_measurement_diamond_sharp",
     "RCProof.frozen_measurement_diamond_bound",
     "RCProof.frozen_theorem",
+    "RCProof.traceNorm_signed_kraus_bound",
+    "RCProof.sharp_residual_trace_bound_ancilla",
+    "RCProof.positive_family_factorization",
+    "RCProof.canonical_selected_operator_close",
+    "RCProof.canonical_selected_defect_upper",
+    "RCProof.canonical_remainder_data",
+    "RCProof.remainder_measurement_bound",
+    "RCProof.canonical_selected_measurement_bound",
+    "RCProof.canonical_joint_all_inputs",
+    "RCProof.canonical_joint_diamond_upper",
+    "RCProof.canonical_joint_uniform_diamond_upper",
+    "RCProof.perfectEnvelope_scalar_upper",
+    "RCProof.perfectEnvelope_scalar_attained",
+    "RCProof.perfectEnvelope_expansion",
+    "RCProof.perfectEnvelope_remainder",
+    "RCProof.joint_envelope_limit_of_uniform_bounds",
 )
 
 
@@ -119,7 +135,7 @@ def main() -> None:
                           for path in (LEAN / "RCProof").glob("*.lean"))
     manifest = {
         "result": "PASS", "utc": datetime.now(timezone.utc).isoformat(),
-        "scope": "Frozen construction, principal angles, repeatable instrument and full all-complex-input diamond bound are machine-checked; later sharp envelopes, asymptotics and accessibility certificates are not",
+        "scope": "Frozen theorem, later canonical joint diamond upper bound and uniform upper remainder are machine-checked on all complex inputs and finite ancillas. Perfect-envelope scalar optimization and conditional limit transfer are checked. Exact perfect-packing operator sharpness, attaining POVM families, the joint worst-case lower bound and its instantiated asymptotic limit, and accessibility certificates are not",
         "source_theorems": source_theorems,
         "kernel_theorem_declarations_including_generated": int(match.group(1)),
         "all_namespace_declarations_audited": int(match.group(2)),
@@ -129,7 +145,7 @@ def main() -> None:
     }
     (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"PASS: {source_theorems} source theorems; {match.group(2)} declarations audited. "
-          "Frozen theorem checked; later paper results remain outside the formalized scope.")
+          "Frozen theorem and later joint upper bound checked; exact operator sharpness and matching lower families remain outside the formalized scope.")
 
 
 if __name__ == "__main__":

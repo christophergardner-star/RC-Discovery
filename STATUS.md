@@ -12,7 +12,7 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 }
 \]
 
-No public file should represent the work as externally proved, peer reviewed, prior-art free, patentable, or a proven breakthrough. The frozen construction and coefficient-two bound are machine checked; the entire project and later paper results are not.
+No public file should represent the work as externally proved, peer reviewed, prior-art free, patentable, or a proven breakthrough. The frozen construction, coefficient-two bound and later joint upper bound are machine checked; the entire project and matching sharpness constructions are not.
 
 ## Current review release
 
@@ -201,7 +201,7 @@ The latest comprehensive review is recorded in:
 | Record-accessibility suite | **Passed implemented cases** | 26 primal/dual SDPs. |
 | Residual-rate suite | **Passed implemented cases** | 20 primal/dual SDPs. |
 | Canonical full profile | **Passed** | Numerical, algebraic, provenance and counterexample tests. |
-| Pinned Lean build | **Passed within formalised scope** | Includes the assembled frozen construction and full diamond bound; excludes later sharpness/asymptotic results. |
+| Pinned Lean build | **Passed within formalised scope** | Includes the frozen theorem, later joint diamond upper bound and uniform upper remainder; excludes exact operator sharpness and matching lower families. |
 | Input-validation review | **Defect found and repaired** | Raw Hermiticity/PSD/normalisation now checked before cleanup; one-outcome and exact-zero labels handled correctly. |
 | Optional PyTorch TCL neural smoke | **Environment-separated** | Blocked on audited Windows runtime; dedicated Linux CI job added for tagged full audits. |
 | Numerical interpretation | **Evidence, not proof** | Finite checks do not establish the universal theorem or novelty. |
@@ -237,15 +237,19 @@ Canonical theory map:
 | Hermitian trace-norm contractivity | **Machine checked, including the completion channel with references** |
 | Diamond-norm transfer | **Machine checked for all finite ancillas and all complex inputs; conditional sharp and unconditional frozen bounds proved** |
 | Assembled frozen theorem | **Machine checked as `RCProof.frozen_theorem` from canonical construction and original hypotheses** |
+| Later joint diamond upper bound | **Machine checked for the actual canonical completion, all complex inputs and all finite ancillas; no width condition** |
+| Uniform asymptotic upper remainder | **Machine checked: `nu <= sqrt(s)+5s` for `s=1-alpha^2+delta <= 1/4`** |
+| Perfect-envelope scalar optimization and expansion | **Machine checked; not yet an operator sharpness theorem** |
+| Joint-limit transfer | **Machine checked conditional on a two-sided sandwich; the actual lower family and supremum bridge remain unformalised** |
 | Accessibility certificate end to end | **Not formalised** |
 
 The validation runner now hashes only repository-owned Lean sources, not downloaded `.lake` dependencies.
-The final 1 November extension contains 194 written lemmas/theorems; its
+The latest 1 November extension contains 256 written lemmas/theorems; its
 default build audits all project declarations, including generated helpers. See
-[the frozen theorem report](research/LEAN_FROZEN_THEOREM_2026-11-01.md)
+[the sharpness/asymptotic progress report](research/LEAN_SHARP_ASYMPTOTIC_PROGRESS_2026-11-01.md)
 and [the current proof boundary](lean/README.md). The review-paper count of 13
 belongs to the earlier frozen release, whose artifacts remain unchanged. The
-previous 69- and 152-theorem reports and their evidence are retained as historical snapshots.
+previous 69-, 152- and 194-theorem reports and their evidence are retained as historical snapshots.
 
 ## Cruxy source synchronisation
 
@@ -320,7 +324,7 @@ This is a repository-governance statement, not a legal opinion.
 
 1. Independent human reconstruction of the typed same-label theorem.
 2. Specialist audit of the coefficient-two bridge and accessibility certificate.
-3. Lean formalisation of the later sharp envelopes, asymptotics and certificate results; the frozen operator/channel chain is checked.
+3. Lean formalisation of exact operator sharpness, matching lower families and certificate results; the frozen chain and later joint upper bound are checked.
 4. Definitive prior-art and novelty assessment.
 5. Independent reproduction outside the author-controlled repository.
 6. Optimal-constant and quantified robustness work.

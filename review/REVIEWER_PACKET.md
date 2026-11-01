@@ -10,15 +10,18 @@ The work is internally reconstructed, computationally audited, partially
 formalised, novelty unverified. No external review is represented as completed.
 
 After this paper was frozen, the [Lean operator development](../lean/README.md)
-expanded from 13 to 194 written lemmas/theorems. The assembled
+expanded from 13 to 256 written lemmas/theorems. The assembled
 [`frozen_theorem`](../lean/RCProof/FrozenTheorem.lean) now includes the canonical
 frame and completion, principal-angle and equal-rank results, repeatable
 instrument, and the unconditional coefficient-two diamond bound for all complex
 inputs and all finite ancillas. Its sharp trace-distance proof uses a shifted
 telescoping identity, bypassing pure-state reduction. The
-[formalization report](../research/LEAN_FROZEN_THEOREM_2026-11-01.md) records the
-axiom audit and scope. The paper's count remains a historical snapshot; its
-later exact envelopes and joint asymptotics are not yet Lean-formalized.
+[latest formalization report](../research/LEAN_SHARP_ASYMPTOTIC_PROGRESS_2026-11-01.md)
+also records the checked later joint upper bound and uniform upper remainder.
+The scalar perfect-envelope optimization and a conditional joint-limit lemma
+are checked. The actual attaining POVMs, exact perfect-packing operator bound,
+and joint lower construction/supremum limit remain unformalized. The paper's
+count remains a historical snapshot.
 
 **Theorem 10 is now integrated into Section 8:** it establishes the sharp
 leading envelope `sqrt(1-alpha^2+delta)` with a uniform remainder and includes

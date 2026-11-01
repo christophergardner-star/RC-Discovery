@@ -6,8 +6,9 @@
 
 The [frozen construction and coefficient-two diamond bound](research/LEAN_FROZEN_THEOREM_2026-11-01.md)
 are now Lean-checked, including principal angles and arbitrary ancilla-assisted
-complex inputs. The later sharp-envelope and asymptotic results remain outside
-the formalized scope.
+complex inputs. The [later joint upper bound and uniform upper remainder](research/LEAN_SHARP_ASYMPTOTIC_PROGRESS_2026-11-01.md)
+are also checked. Exact operator sharpness and the matching lower families
+remain outside the formalized scope.
 
 > **Vibe to generate. Audit to believe.**
 
@@ -293,23 +294,29 @@ Machine-checked with pinned Lean 4 + Mathlib and zero `sorry` within the stated 
 - sharp trace distance for all complex inputs, normalized Kraus contraction,
   and the full unhalved diamond-norm estimate;
 - the assembled frozen construction and coefficient-two bound in
-  [`frozen_theorem`](lean/RCProof/FrozenTheorem.lean).
+  [`frozen_theorem`](lean/RCProof/FrozenTheorem.lean);
+- the later canonical joint diamond upper bound, without a width condition,
+  and its uniform upper remainder `sqrt(s)+5s`, `s=1-alpha^2+delta`;
+- scalar perfect-envelope optimization and expansion, and a joint-limit
+  transfer lemma conditional on both sides of the required sandwich.
 
-The development now has 194 written lemmas/theorems. The default build audits
+The development now has 256 written lemmas/theorems. The default build audits
 every project declaration for transitive axioms; only the three standard Lean
 logical axioms are allowed. The frozen review release's count of 13 is an
 earlier snapshot.
 
 Not yet formalised end to end:
 
-- the later exact perfect-packing envelope and joint asymptotics;
+- the exact perfect-packing operator envelope and its attaining POVM family;
+- the growing-dimension joint lower family and the resulting limit for the
+  actual worst-case supremum;
 - the record-correction and computer-assisted comparison results;
 - the direct accessibility certificate.
 
 The principal-angle and all-input diamond gaps are closed. The trace proof
 works directly on arbitrary complex matrices, so it does not need a pure-state
 reduction. See [`lean/README.md`](lean/README.md) and the
-[frozen theorem report](research/LEAN_FROZEN_THEOREM_2026-11-01.md).
+[latest formalization report](research/LEAN_SHARP_ASYMPTOTIC_PROGRESS_2026-11-01.md).
 
 ## Cruxy source provenance
 
@@ -369,7 +376,7 @@ Canonical policy:
 
 1. Independent specialist reconstruction of the typed same-label theorem.
 2. External checking of the coefficient-two overlap argument.
-3. Formalisation of the later sharp-envelope and asymptotic results; the frozen operator/channel chain is checked.
+3. Formalisation of exact operator sharpness and the matching lower families; the frozen chain and later joint upper bound are checked.
 4. Definitive prior-art and novelty assessment.
 5. Optimal-constant and quantified perturbation analysis.
 6. Independent reproduction outside the author-controlled repository.

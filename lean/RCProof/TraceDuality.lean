@@ -24,8 +24,8 @@ lemma gram_bound_of_norm (A : Matrix d k ℂ) (b : ℝ) (hb : 0 ≤ b) (h : ‖A
   rw [Matrix.l2_opNorm_conjTranspose_mul_self]
   nlinarith [norm_nonneg A]
 
-theorem exists_contraction_polar (X : Matrix d d ℂ) :
-    ∃ W : Matrix d d ℂ, ‖W‖ ≤ 1 ∧
+theorem exists_contraction_polar (X : Matrix k d ℂ) :
+    ∃ W : Matrix k d ℂ, ‖W‖ ≤ 1 ∧
       X = W * positiveRoot (Xᴴ * X) (Matrix.posSemidef_conjTranspose_mul_self X) ∧
       Wᴴ * W * positiveRoot (Xᴴ * X) (Matrix.posSemidef_conjTranspose_mul_self X) =
         positiveRoot (Xᴴ * X) (Matrix.posSemidef_conjTranspose_mul_self X) := by
