@@ -1,0 +1,5 @@
+PASS exact endpoint t=2: unweighted closer; separation >= 0.000514784608
+PASS exact endpoint t=4: weighted closer; separation >= 0.000094582398
+PASS entire interval: alpha lower {'lower': '0.900373705510', 'upper': '0.900373705511'} ; theorem upper {'lower': '1.871779790000', 'upper': '1.871779790000'}
+
+STDERR

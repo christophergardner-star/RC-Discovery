@@ -3,7 +3,7 @@
     "pandoc": "pandoc 3.13",
     "tectonic": "Tectonic 0.17.0"
   },
-  "source_revision": "ccb4b5b22892a21de32c2a045102b85d640ea664",
+  "source_revision": "2747104488cbe9292bedf5aa8ab9b0b0fb0b7ddb",
   "source_hash_kind": "SHA256 of UTF-8 text with LF-normalized line endings",
   "source_hashes": {
     "paper/arxiv_ready.md": "0537d6e1601ba27dd15f6fe8b7a84ccf5002b0924016f2d52030191c42b5d702",
@@ -13,8 +13,8 @@
   },
   "tex_sha256": "2009d4032be05d7d8c31f884847c38e1141ba3c5408d5a9d96524f89aad763f1",
   "rendered_markdown_sha256": "88de88072cc7283c51acd446e417c7d62d2405700c3ac9df74025ec4db3b0b3f",
-  "pdf_sha256": "4f7cbfa90b36e29bb467f5c1f4e185ea144b7ccb6b78c4e76857c3872251b906",
-  "pdf_bytes": 135691,
+  "pdf_sha256": "431def7eb85a3ef9016dc8c162bb8c15ed58d935fe47e6e04a5f8dc72b768785",
+  "pdf_bytes": 135685,
   "citations_used": [
     "busch1995",
     "debruijn1980",

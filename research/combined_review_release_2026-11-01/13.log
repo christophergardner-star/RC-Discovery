@@ -1,0 +1,10 @@
+Operator checks passed: 96 cases; 1440 reference-assisted inputs.
+SDP checked: random_[1, 1, 1]_1_0.001_0
+SDP checked: random_[1, 1, 1]_1_0.03_0
+SDP checked: random_[1, 1, 1]_1_0.15_0
+SDP checked: simplex_4_1.0
+SDP checked: simplex_6_1.0
+
+STDERR
+(CVXPY) Nov 01 12:38:57 PM: Encountered unexpected exception importing solver OSQP:
+RuntimeError('No algebra backend available!')

@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "tested_source_revision": "2747104488cbe9292bedf5aa8ab9b0b0fb0b7ddb",
+  "proof_and_code_files_unchanged": 8,
+  "reproduced_json_reports_identical": 7,
+  "reproduced_joint_artifacts_byte_identical": 5,
+  "immutable_supplement_git_targets": 5,
+  "local_links_checked": 147,
+  "source_text_sha256": {
+    "paper/arxiv_ready.md": "0537d6e1601ba27dd15f6fe8b7a84ccf5002b0924016f2d52030191c42b5d702",
+    "paper/prescribed_repeatable_completion.bib": "7c7fd3bf80ea83246f3d150a622bd80b7404a139ad06e3c40bba0fa696ea5263",
+    "paper/short_paper_header.tex": "8ae77d0ac6254266b6931820b32124d2f0eacfe93b7c4ab0a9229b696412c444",
+    "scripts/build_short_paper.py": "54387d3d44a923881981514fbec729244821eb71cb613b5737b815e798d93b77",
+    "scripts/check_short_paper.py": "eb4cf517067bc0e3bf8eab5138aa3eaa1ce2adf2857293b01a4fff54e8973ce8",
+    "scripts/reproduce_review.py": "59a36e6e29a43026102a003bcdfb8f74ebe8fe62bdfff1f0913fbc584bb4e462",
+    "experiments/test_joint_small_error.py": "228b1fbbd9354e240c98989439ea7d62f93efa030e75e0b1056f044bcbf88078",
+    "theory/joint_small_error_asymptotics.md": "e091987682d8d979a68b3eb1c07eb6372c4f0fdceea16bcc1ddee815902743cc",
+    "README.md": "b66e8a3572435c9a3ba0034f8d32814b7b145edaaafdb0efd74da8fcdac458e8",
+    "STATUS.md": "7f3f6a6c83d04cc40efcffde3565aaa06c0b850ad27fe7938af55b35e8aa8320",
+    "paper/README.md": "c640aa6a3c117b845b08c0e54278420107842bfa687acfbb1f101377bb33bd55",
+    "theory/README.md": "1cf0212ab7367eb4c398820c59b44db82cfa2f9502a8553033459033c11e2217",
+    "review/REVIEWER_PACKET.md": "0bd7c668b25536cd8627617cec6bcf513927c1e44a06299ea3c6e77319ad5c40",
+    "review/REPRODUCE.md": "d6df885df2190d8be699044290be9724794594da48933e16b8d8722dce229dec",
+    "review/REVIEW_INVITATION_DRAFT.txt": "f9fff308b6bc1ea165d654caf9dc950c1c543b13eabd8301e080f427c6f7fac3",
+    "review/SHORT_PAPER_REVIEW_BRIEF.md": "549668ca6ea0a610842ac6155122bd903dd8fa9ae5bb1220e66ef62df87f4a03",
+    "research/COMBINED_PAPER_AUDIT_2026-11-01.md": "3bc7281ec6d22e7d02d2c4679d1624d9cff21afac67f6a71a40e69ff26ccb97f",
+    "research/COMBINED_REVIEW_RELEASE_2026-11-01.md": "9c032caaa25574e3e496831fd076faefe3df82ffab2c0a62f74871f2dde719ed"
+  }
+}

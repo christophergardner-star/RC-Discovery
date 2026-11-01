@@ -14,6 +14,17 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 
 No public file should represent the work as externally proved, peer reviewed, fully machine checked, prior-art free, patentable, or a proven breakthrough.
 
+## Current review release
+
+The agreed local review preparation is complete. The fourteen-page paper
+includes Theorem 10 and forty numbered equations. The
+[combined release report](research/COMBINED_REVIEW_RELEASE_2026-11-01.md)
+records the proof audit and successful fifteen-command reproduction from
+a separate checkout, new Python environment and initially empty TeX cache.
+The reviewer packet and unsent invitation are current. External correctness
+review, novelty assessment and complete Lean formalisation remain outstanding;
+the exact finite-error optimum and subleading term remain research questions.
+
 ## Reference advantage and imperfect packing
 
 The subsequent [joint small-error theorem](theory/joint_small_error_asymptotics.md)

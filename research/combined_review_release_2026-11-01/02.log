@@ -1,0 +1,3 @@
+PASS 11 expected rejections; 66 positive matrices independently checked by integer Bareiss determinants.
+
+STDERR

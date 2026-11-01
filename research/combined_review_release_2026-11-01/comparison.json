@@ -1,0 +1,30 @@
+{
+  "source_revision": "2747104488cbe9292bedf5aa8ab9b0b0fb0b7ddb",
+  "cached_build_pdf_sha256": "4f7cbfa90b36e29bb467f5c1f4e185ea144b7ccb6b78c4e76857c3872251b906",
+  "fresh_build_pdf_sha256": "431def7eb85a3ef9016dc8c162bb8c15ed58d935fe47e6e04a5f8dc72b768785",
+  "page_counts": [
+    14,
+    14
+  ],
+  "page_text_equal": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "normalized_generated_text_equal": {
+    "md": true,
+    "tex": true
+  },
+  "scope": "Same-host fresh environment and empty-cache reproduction; not external review or independent proof."
+}
