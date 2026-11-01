@@ -6,7 +6,7 @@ PowerShell; on other systems substitute the virtual environment's Python path.
 
 ```powershell
 python -m venv .venv-review
-.venv-review/Scripts/python.exe -m pip --isolated install -r scripts/requirements-review.txt
+.venv-review/Scripts/python.exe -m pip --isolated --disable-pip-version-check install -r scripts/requirements-review.txt
 $env:TECTONIC_CACHE_DIR = Join-Path (Get-Location) '.review-tex-cache'
 .venv-review/Scripts/python.exe scripts/reproduce_review.py --pandoc C:/path/to/pandoc.exe --tectonic C:/path/to/tectonic.exe
 ```

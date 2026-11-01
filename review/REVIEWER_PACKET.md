@@ -41,6 +41,8 @@ Please assess three questions:
 [Reproduction instructions](REPRODUCE.md) run twelve exact verification/audit
 commands and build/check the PDF without a numerical SDP solver. These checks
 are evidence for the computational claims, not a substitute for proof review.
+The [completed local reproduction report](../research/REVIEWER_REPRODUCTION_2026-11-01.md)
+records the isolated environment, fixes, results and retained logs.
 The general sharp joint envelope, crossing uniqueness and publication novelty
 remain open. The methodology disclosure identifies the AI-assisted workflow
 as VIBE MATH; it is not a mathematical claim or an endorsement.

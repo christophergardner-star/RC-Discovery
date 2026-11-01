@@ -80,6 +80,6 @@
     "research/imperfect_packing_2026-11-01/veto_certificate.json": "008b4c7e7574534c47ddfd548bf9b236bb95762799ef056b491027cdb47f6f6b",
     "experiments/verify_imperfect_packing.py": "b4daec5ed51fa20aab61d9a39625a5f41f4baac3c951421235cf22ad28875f8e",
     "experiments/verify_exact_completion_comparison.py": "3231045e93a7e5205875dad631f318424a4e9e00482a36b6cd581a644d260602",
-    "theory/imperfect_packing_lower_bound.md": "a5a1b9b1437148de1bc2e592226b593c18eadf854dff878cff2aa9cb8002f7e4"
+    "theory/imperfect_packing_lower_bound.md": "155126767ad91fe79c69a8bc7f5ecf0419d01813dcc12d374f5a3d9b7c8a698f"
   }
 }

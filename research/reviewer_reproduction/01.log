@@ -1,0 +1,4 @@
+PASS exact rational case 1676: unweighted closer; separation >= 0.000978162586
+PASS exact rational case 2003: weighted closer; separation >= 0.000289333328
+
+STDERR

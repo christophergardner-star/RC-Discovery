@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "canonical_files_checked": 12,
+  "local_forward_slash_markdown_links_checked": 42,
+  "control_character_check": "CRLF normalized; no bare CR or other non-tab/non-newline control characters",
+  "source_text_sha256": {
+    "research/FINAL_PROOF_AUDIT_2026-11-01.md": "62e3920e5999490bf66808559e56be270ef7cde3dba7e0e3cbdfc37d0339b7f3",
+    "research/REVIEWER_REPRODUCTION_2026-11-01.md": "531ca3895d33cc36793323138a94f78de4b7fb1f5cfb74aae897ecba56d867ba",
+    "literature/FINAL_FOCUSED_VETO_2026-11-01.md": "fc4380a27220e287bc31057cf15ca571c7d1f3531cea14014ac3408789d36775",
+    "review/REVIEWER_PACKET.md": "3c85818a0ae8c563d791143e38b540afebc753aaadc36cbcd64990a33f7438da",
+    "review/REPRODUCE.md": "b83b6722a24c774eba2cd77a6a56fefe0982edf06f4cf028594e6680d99a533c",
+    "review/REVIEW_INVITATION_DRAFT.txt": "e766e2c54fff5e7eb2bea2a22713c945bce66a3d50ebfdbc04f8a0cfc3d43891",
+    "paper/arxiv_ready.md": "c429a361e6fd842edad46afc0b2e6e2a6faa464c763ddc1277ff4cb841845498",
+    "theory/imperfect_packing_lower_bound.md": "155126767ad91fe79c69a8bc7f5ecf0419d01813dcc12d374f5a3d9b7c8a698f",
+    "theory/reference_advantage.md": "f3b0d6f1338d501539d6ba5796e8cd0ac7c15d2cbee43ef8f8c6156d49cd74fb",
+    "theory/perfect_packing_sharpness.md": "e8cf2dbd9a7234c7cd2d327e47c8344a55c94555e94fa9e549dbc2d28af834d0",
+    "theory/completion_switch_family.md": "be47c61f74c6651cf4b48ef9d6483f55ffcf51112704fec028fb47b52caa63c5",
+    "theory/exact_completion_comparison.md": "81dd051ac331d533fd36313dd1f9d985a9f33a205baa90514147563abe464b6f"
+  }
+}

@@ -792,7 +792,7 @@ as $`m\to\infty`$. If $`a_m^2=1-\alpha_m^2=O(1/m)`$, then
 $`L_m(\alpha_m)/\sqrt{a_m^2+1/m}\to1`$.
 
 *Construction argument.* The [analytic
-supplement](https://github.com/christophergardner-star/RC-Discovery/blob/56f50f49db301a0f69eaed8ab5a650591a6a9aae/theory/imperfect_packing_lower_bound.md)
+supplement](https://github.com/christophergardner-star/RC-Discovery/blob/4bb04ff6e2a5f9250a81a0093cfbb1016cbbe82d/theory/imperfect_packing_lower_bound.md)
 specifies the matrices and forms part of this proof. The synthesis is
 $`cI+(\alpha-c)uu^*`$, with $`u=m^{-1/2}(1,\ldots,1)`$ and
 $`c=\sqrt{(m-\alpha^2)/(m-1)}`$. Residual coupling vectors sum to zero

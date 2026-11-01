@@ -16,6 +16,17 @@ No public file should represent the work as externally proved, peer reviewed, fu
 
 ## Reference advantage and imperfect packing
 
+The [finished-paper internal audit](research/FINAL_PROOF_AUDIT_2026-11-01.md)
+found no fatal mathematical gap in the reviewed arguments, corrected one
+supplement equation's TeX, and fixed two audit scripts' isolated-mode imports.
+The [focused final prior-art comparison](literature/FINAL_FOCUSED_VETO_2026-11-01.md)
+identifies established ingredients and the narrower unresolved priority claims.
+The [reviewer packet](review/REVIEWER_PACKET.md) and unsent invitation are
+prepared; no external review or contact is represented as completed.
+The [isolated reproduction](research/REVIEWER_REPRODUCTION_2026-11-01.md)
+passes twelve exact certificate/audit commands and the PDF build and checker
+in a new environment and separate checkout, with an empty initial TeX cache.
+
 The [latest verification and paper report](research/REFERENCE_AND_PACKING_PROGRESS_2026-11-01.md)
 records an exact reference advantage: system-only distance at most 0.1161,
 full diamond distance at least 0.1208, with `alpha=1` and `delta=17/100`.

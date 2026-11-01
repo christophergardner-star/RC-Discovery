@@ -19,6 +19,6 @@
   "source_text_sha256": {
     "experiments/check_completion_crossover.py": "de08c4edde77c0d280d09aff69103a16c4835e90a5d376662a47aa25251a5f00",
     "experiments/verify_completion_crossover.py": "6963c150fc3996ea9f5c9354e5688534dabf39901f28cbf87f1da2ebb6164ea3",
-    "experiments/check_exact_certificate_negative_controls.py": "b0b21b7967c8cf29357812e1395e1b7c0db69675804144c75707ac1ecbe349a3"
+    "experiments/check_exact_certificate_negative_controls.py": "c659afb9c94fb0537f9e8bb4bfa09456621d457a495e7154e818e8805bc33528"
   }
 }

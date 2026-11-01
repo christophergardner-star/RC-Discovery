@@ -1,0 +1,3 @@
+PASS 10 expected rejections; 73 independent integer-determinant positivity checks.
+
+STDERR

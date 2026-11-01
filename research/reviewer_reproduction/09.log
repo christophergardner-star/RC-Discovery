@@ -1,0 +1,3 @@
+PASS system-only <= 1161/10000 < 151/1250 <= diamond; advantage >= 47/10000
+
+STDERR

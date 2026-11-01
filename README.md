@@ -32,6 +32,12 @@ upper bound remains open.
 
 ## Current theorem candidate
 
+The [finished-paper audit](research/FINAL_PROOF_AUDIT_2026-11-01.md),
+[focused novelty veto](literature/FINAL_FOCUSED_VETO_2026-11-01.md) and
+[concise reviewer packet](review/REVIEWER_PACKET.md) record the latest
+review preparation. [Reproduction instructions](review/REPRODUCE.md)
+cover the exact certificates and PDF build without a numerical solver.
+
 For a complete, focused presentation, start with the
 [short paper PDF](paper/prescribed_repeatable_completion.pdf),
 [readable manuscript](paper/prescribed_repeatable_completion.md), and

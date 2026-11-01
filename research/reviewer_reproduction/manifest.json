@@ -1,0 +1,183 @@
+{
+  "result": "PASS",
+  "source_revision": "dbbdd7406d69bad51fd7f17c0637baf294aa284b",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python_prefix": "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv",
+  "python_base_prefix": "C:\\Users\\cgard\\AppData\\Local\\Programs\\Python\\Python312",
+  "packages": {
+    "pypdf": "6.21.4",
+    "pypdfium2": "5.14.0",
+    "Pillow": "13.0.0"
+  },
+  "tectonic_cache": "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\tex-cache",
+  "tools": {
+    "pandoc": {
+      "path": "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\paper_tools\\pandoc-3.13\\pandoc.exe",
+      "sha256": "7ab6244548ba15494fab956230050516fe8f57c36ec2dfb50133719ad3b5a791",
+      "version": "pandoc 3.13"
+    },
+    "tectonic": {
+      "path": "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\paper_tools\\tectonic.exe",
+      "sha256": "99ffcfdbf1ebf8bdda9e791942e3d06aedb12463fddc33f07de6f5211c8bf08d",
+      "version": "Tectonic 0.17.0"
+    }
+  },
+  "runs": [
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "experiments/verify_exact_completion_comparison.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.765,
+      "log": "01.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "experiments/check_exact_certificate_negative_controls.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.297,
+      "log": "02.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "experiments/verify_completion_switch_family.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.25,
+      "log": "03.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "experiments/check_completion_switch_family.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.938,
+      "log": "04.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "experiments/verify_completion_crossover.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.39,
+      "log": "05.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "experiments/check_completion_crossover.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.719,
+      "log": "06.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "experiments/verify_perfect_packing_sharpness.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.25,
+      "log": "07.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "experiments/check_perfect_packing_sharpness.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.781,
+      "log": "08.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "experiments/verify_reference_advantage.py"
+      ],
+      "exit_code": 0,
+      "seconds": 3.75,
+      "log": "09.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "experiments/check_reference_advantage.py"
+      ],
+      "exit_code": 0,
+      "seconds": 5.688,
+      "log": "10.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "experiments/verify_imperfect_packing.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.125,
+      "log": "11.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "experiments/check_imperfect_packing.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.297,
+      "log": "12.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "scripts/build_short_paper.py",
+        "--pandoc",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\paper_tools\\pandoc-3.13\\pandoc.exe",
+        "--tectonic",
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\paper_tools\\tectonic.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 109.5,
+      "log": "13.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\local_validation\\phd_audit\\fresh_review_2026-11-01\\venv\\Scripts\\python.exe",
+        "scripts/check_short_paper.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.703,
+      "log": "14.log"
+    }
+  ],
+  "scope": "Exact certificates, rejection controls and document build; not external review or complete formal proof."
+}

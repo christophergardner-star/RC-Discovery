@@ -1,0 +1,9 @@
+PASS delta = 77841/160000 diamond = 558/521 ratio = 800/521
+PASS delta = 256/625 diamond = 16/17 ratio = 25/17
+PASS delta = 81/625 diamond = 18/41 ratio = 50/41
+PASS delta = 361/10000 diamond = 38/181 ratio = 200/181
+PASS delta = 39601/100000000 diamond = 398/19801 ratio = 20000/19801
+PASS delta = 3996001/1000000000000 diamond = 3998/1998001 ratio = 2000000/1998001
+PASS delta = 399960001/10000000000000000 diamond = 39998/199980001 ratio = 200000000/199980001
+
+STDERR

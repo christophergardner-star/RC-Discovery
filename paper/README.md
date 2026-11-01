@@ -10,6 +10,7 @@ Christopher Gardner, revised 1 November 2026. Twelve pages including references.
 - [Focused external-review brief](../review/SHORT_PAPER_REVIEW_BRIEF.md)
 - [Concise reviewer packet](../review/REVIEWER_PACKET.md)
 - [Isolated certificate and PDF reproduction](../review/REPRODUCE.md)
+- [Completed reproduction report](../research/REVIEWER_REPRODUCTION_2026-11-01.md)
 
 The paper contains the frozen coefficient-two theorem, a complete analytic
 proof, the record-correction corollary, the weighted prior-art comparison,
