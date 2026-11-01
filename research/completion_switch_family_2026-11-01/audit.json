@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "expected_rejections": [
+    "wrong_family_matrix",
+    "changed_interval",
+    "missing_endpoint",
+    "wrong_endpoint_input",
+    "reversed_ordering",
+    "invalid_uniform_vector",
+    "invalid_uniform_reference_value",
+    "false_uniform_packing_reference",
+    "broken_uniform_polar",
+    "optimized_python"
+  ],
+  "independent_integer_determinant_positivity_checks": 73,
+  "checker_text_sha256": "a7b8a09f62f608a3a9315c2f14a882dc34b78c2233a097f3b399e2b9d9d54d5a"
+}

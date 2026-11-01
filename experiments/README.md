@@ -4,6 +4,14 @@ This directory contains the numerical, algebraic, SDP, governance and integratio
 
 ## Primary entry points
 
+For the [explicit four-dimensional family](../research/COMPLETION_SWITCH_FAMILY_2026-11-01.md),
+verify both endpoint orderings and the whole-interval packing certificate:
+
+```powershell
+python -I -S experiments/verify_completion_switch_family.py
+python experiments/check_completion_switch_family.py
+```
+
 The subsequent [exact comparison certificates](../research/EXACT_COMPARISON_2026-11-01.md)
 can be verified without scientific Python packages:
 

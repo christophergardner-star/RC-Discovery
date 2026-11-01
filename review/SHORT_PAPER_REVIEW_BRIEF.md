@@ -41,6 +41,9 @@ and [rational certificates](../research/EXACT_COMPARISON_2026-11-01.md) give
 opposite distance orderings for the two completions. Its spectral-to-polar
 error bounds and exact SDP certificates are additional review targets.
 This addition does not alter the frozen statement or settle its priority.
+The [four-dimensional one-parameter family](../theory/completion_switch_family.md)
+is the simpler presentation: its displayed matrices, uniform packing bound,
+and continuity argument are further concrete targets for reconstruction.
 
 1. **Hypotheses and domains.** Are zero effects removed consistently, full
    spectral sectors used at the stated closed threshold, and injectivity

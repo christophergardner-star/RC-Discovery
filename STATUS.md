@@ -16,6 +16,13 @@ No public file should represent the work as externally proved, peer reviewed, fu
 
 ## Exact comparison of the two completions
 
+The subsequent [four-dimensional family](research/COMPLETION_SWITCH_FAMILY_2026-11-01.md)
+varies one off-diagonal coupling while keeping every diagonal entry fixed.
+Exact endpoint certificates show opposite distance orderings; a uniform
+certificate proves the theorem hypotheses and an informative bound for all
+parameters in [2,4]. Continuity guarantees at least one equality point.
+This simplifies the earlier examples without settling literature novelty.
+
 The [exact comparison certificates](research/EXACT_COMPARISON_2026-11-01.md)
 give two rational six-dimensional, three-outcome measurements with opposite
 strict full-diamond-distance orderings between the unweighted and weighted

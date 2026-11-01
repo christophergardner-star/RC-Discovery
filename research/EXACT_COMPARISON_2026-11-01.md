@@ -2,6 +2,10 @@
 
 1 November 2026.
 
+Subsequent simplification: the [four-dimensional one-parameter family](COMPLETION_SWITCH_FAMILY_2026-11-01.md)
+has small displayed matrix entries, opposite endpoint orderings, and a
+uniform certificate covering every parameter in its interval.
+
 The numerical comparison has been advanced to two exact rational examples.
 For one measurement the prescribed unweighted completion is strictly closer
 in full diamond distance. For the other the weighted completion is strictly
@@ -100,9 +104,8 @@ on every instance. This establishes a precise distinction between the
 prescribed maps; it does not show that either is globally optimal among
 repeatable measurements or preferable in a practical application.
 
-The examples have long rational coefficients. A small symbolic family
-explaining the mechanism would be more illuminating and remains to be
-developed. The analytic lemmas connecting certificate entries to the full
+These examples have long rational coefficients; the subsequent family linked
+above supplies a simpler explicit presentation. The analytic lemmas connecting certificate entries to the full
 channel statement still need independent mathematical review; only the
 finite arithmetic certificates have been mechanically checked here.
 The frozen theorem, its constant, and the paper's novelty status are

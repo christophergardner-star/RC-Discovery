@@ -52,6 +52,11 @@ distinguishes document checks, numerical checks, and mathematical review.
 
 ## Relationship to the longer material
 
+For a compact comparison example, the
+[four-dimensional family note](../theory/completion_switch_family.md)
+displays a single varying coupling with certified opposite endpoint
+preferences and a proof that the hypotheses hold throughout the interval.
+
 The subsequent [exact comparison note](../theory/exact_completion_comparison.md)
 certifies examples favoring each completion in full diamond distance.
 It is a separate computer-assisted addition for review; it does not change
