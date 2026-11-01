@@ -8,6 +8,18 @@ A literature search cannot certify absence of prior art. The canonical no-overcl
 
 - `literature/PRIOR_ART_AND_ATTRIBUTION.md`
 
+## Perfect-packing sharpness supplement
+
+The [new scope note](PERFECT_PACKING_SHARPNESS_ATTRIBUTION_2026-11-01.md)
+records a narrower exact comparison target: at `alpha=1`, the prescribed
+completion has sharp worst-case diamond distance
+`2*sqrt(delta)/(2-sqrt(delta))`. The internal proof and attaining family
+use standard operator and channel-norm tools. The exact envelope has not
+been identified in the inspected material, but the search is not exhaustive
+and publication novelty remains unverified. The earlier general-bound
+reduction does not by itself determine priority of this sharper subclass
+statement.
+
 ## Focused laptop prior-art and certificate audit
 
 The [completed prescribed-bound reduction](PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)

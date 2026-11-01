@@ -18,6 +18,14 @@ established least-squares measurements. The quantitative specialization and
 certified comparison remain subjects for publication-priority and usefulness
 assessment; broad existence alone is not a defensible novelty claim.
 
+The subsequent [perfect-packing sharpness supplement](theory/perfect_packing_sharpness.md)
+determines the exact worst-case bound when `alpha=1`:
+`2*sqrt(delta)/(2-sqrt(delta))`, with an explicit family attaining it.
+The [verification report](research/PERFECT_PACKING_SHARPNESS_2026-11-01.md)
+includes exact diamond-norm certificates and numerical attacks. This is an
+internal sharpness result for that subclass; literature novelty and external
+review remain open. The supplement is separate from the current paper PDF.
+
 ## Current theorem candidate
 
 For a complete, focused presentation, start with the

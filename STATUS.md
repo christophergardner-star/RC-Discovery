@@ -14,6 +14,21 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 
 No public file should represent the work as externally proved, peer reviewed, fully machine checked, prior-art free, patentable, or a proven breakthrough.
 
+## Exact sharpness at perfect packing
+
+The [perfect-packing proof](theory/perfect_packing_sharpness.md) gives the
+exact worst-case prescribed-completion diamond distance
+`2*sqrt(delta)/(2-sqrt(delta))` when `alpha=1`, for every `0<delta<1/2`.
+A six-dimensional, five-outcome family attains it without a reference
+system, while the upper bound covers arbitrary reference-assisted inputs.
+The leading coefficient as `delta` tends to zero is one; the best uniform
+coefficient of `sqrt(delta)` on the entire interval is `(8+2*sqrt(2))/7`.
+The [verification report](research/PERFECT_PACKING_SHARPNESS_2026-11-01.md)
+separates the universal written proof from finite exact certificates and
+numerical attacks. This settles the sharp envelope internally only for
+`alpha=1`, not the general packing case or the best freely chosen target.
+Novelty, external review, and full Lean formalization remain open.
+
 ## Exact comparison of the two completions
 
 The [crossover certificate](research/COMPLETION_CROSSOVER_2026-11-01.md)

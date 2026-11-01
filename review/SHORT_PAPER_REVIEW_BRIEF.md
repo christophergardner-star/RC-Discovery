@@ -17,6 +17,19 @@ for the prior-art analysis. The latter supplies the explicit implication chain
 for the unweighted bound and record corollary. The older long research document and historical
 imports are not needed to assess this paper.
 
+## Subsequent sharpness supplement
+
+The [perfect-packing proof](../theory/perfect_packing_sharpness.md) is an
+additional review target, separate from the current PDF. It claims the exact
+worst-case prescribed-completion envelope `2*sqrt(delta)/(2-sqrt(delta))`
+under `alpha=1`. Please reconstruct the positive-residual factorization,
+the arbitrary-reference trace-norm estimate, its scalar maximization, and
+the full-threshold-sector check for the attaining family. The
+[exact certificate report](../research/PERFECT_PACKING_SHARPNESS_2026-11-01.md)
+and [attribution scope note](../literature/PERFECT_PACKING_SHARPNESS_ATTRIBUTION_2026-11-01.md)
+provide further checks and identify the unresolved priority question.
+This result does not settle optimality for general `alpha<1`.
+
 ## Precise proposed contribution
 
 For a finite POVM, choose the full spectral sectors at or above `1-delta` and

@@ -1,0 +1,524 @@
+{
+  "result": "PASS",
+  "arithmetic": "Exact integer and Fraction arithmetic; no solver or tolerance.",
+  "scope": "Finite primal/dual SDP certificates; the universal bound uses the separate written proof. No novelty or external-review claim.",
+  "source_text_sha256": {
+    "research/perfect_packing_sharpness_2026-11-01/certificates.json": "ebf56527f3fff82691041e170ccc26407f7679618fef291e0027fee8c41a31ed",
+    "experiments/verify_perfect_packing_sharpness.py": "3bba3024944231366160e4cceadce55d379d4810851a38626d23d15e080a0bba",
+    "experiments/verify_exact_completion_comparison.py": "3231045e93a7e5205875dad631f318424a4e9e00482a36b6cd581a644d260602",
+    "theory/perfect_packing_sharpness.md": "e8cf2dbd9a7234c7cd2d327e47c8344a55c94555e94fa9e549dbc2d28af834d0"
+  },
+  "cases": [
+    {
+      "h": {
+        "exact": "11/20",
+        "decimal_enclosure": {
+          "lower": "0.550000000000",
+          "upper": "0.550000000000"
+        }
+      },
+      "delta": {
+        "exact": "77841/160000",
+        "decimal_enclosure": {
+          "lower": "0.486506250000",
+          "upper": "0.486506250000"
+        }
+      },
+      "sqrt_delta": {
+        "exact": "279/400",
+        "decimal_enclosure": {
+          "lower": "0.697500000000",
+          "upper": "0.697500000000"
+        }
+      },
+      "diamond_distance": {
+        "exact": "558/521",
+        "decimal_enclosure": {
+          "lower": "1.071017274472",
+          "upper": "1.071017274473"
+        }
+      },
+      "ratio_to_sqrt_delta": {
+        "exact": "800/521",
+        "decimal_enclosure": {
+          "lower": "1.535508637236",
+          "upper": "1.535508637237"
+        }
+      },
+      "system_only_witness": {
+        "exact": "558/521",
+        "decimal_enclosure": {
+          "lower": "1.071017274472",
+          "upper": "1.071017274473"
+        }
+      },
+      "primal": {
+        "exact": "558/521",
+        "decimal_enclosure": {
+          "lower": "1.071017274472",
+          "upper": "1.071017274473"
+        }
+      },
+      "dual": {
+        "exact": "558/521",
+        "decimal_enclosure": {
+          "lower": "1.071017274472",
+          "upper": "1.071017274473"
+        }
+      },
+      "alpha": {
+        "exact": "1",
+        "decimal_enclosure": {
+          "lower": "1.000000000000",
+          "upper": "1.000000000000"
+        }
+      },
+      "sector_ranks": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "result": "PASS"
+    },
+    {
+      "h": {
+        "exact": "3/5",
+        "decimal_enclosure": {
+          "lower": "0.600000000000",
+          "upper": "0.600000000000"
+        }
+      },
+      "delta": {
+        "exact": "256/625",
+        "decimal_enclosure": {
+          "lower": "0.409600000000",
+          "upper": "0.409600000000"
+        }
+      },
+      "sqrt_delta": {
+        "exact": "16/25",
+        "decimal_enclosure": {
+          "lower": "0.640000000000",
+          "upper": "0.640000000000"
+        }
+      },
+      "diamond_distance": {
+        "exact": "16/17",
+        "decimal_enclosure": {
+          "lower": "0.941176470588",
+          "upper": "0.941176470589"
+        }
+      },
+      "ratio_to_sqrt_delta": {
+        "exact": "25/17",
+        "decimal_enclosure": {
+          "lower": "1.470588235294",
+          "upper": "1.470588235295"
+        }
+      },
+      "system_only_witness": {
+        "exact": "16/17",
+        "decimal_enclosure": {
+          "lower": "0.941176470588",
+          "upper": "0.941176470589"
+        }
+      },
+      "primal": {
+        "exact": "16/17",
+        "decimal_enclosure": {
+          "lower": "0.941176470588",
+          "upper": "0.941176470589"
+        }
+      },
+      "dual": {
+        "exact": "16/17",
+        "decimal_enclosure": {
+          "lower": "0.941176470588",
+          "upper": "0.941176470589"
+        }
+      },
+      "alpha": {
+        "exact": "1",
+        "decimal_enclosure": {
+          "lower": "1.000000000000",
+          "upper": "1.000000000000"
+        }
+      },
+      "sector_ranks": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "result": "PASS"
+    },
+    {
+      "h": {
+        "exact": "4/5",
+        "decimal_enclosure": {
+          "lower": "0.800000000000",
+          "upper": "0.800000000000"
+        }
+      },
+      "delta": {
+        "exact": "81/625",
+        "decimal_enclosure": {
+          "lower": "0.129600000000",
+          "upper": "0.129600000000"
+        }
+      },
+      "sqrt_delta": {
+        "exact": "9/25",
+        "decimal_enclosure": {
+          "lower": "0.360000000000",
+          "upper": "0.360000000000"
+        }
+      },
+      "diamond_distance": {
+        "exact": "18/41",
+        "decimal_enclosure": {
+          "lower": "0.439024390243",
+          "upper": "0.439024390244"
+        }
+      },
+      "ratio_to_sqrt_delta": {
+        "exact": "50/41",
+        "decimal_enclosure": {
+          "lower": "1.219512195121",
+          "upper": "1.219512195122"
+        }
+      },
+      "system_only_witness": {
+        "exact": "18/41",
+        "decimal_enclosure": {
+          "lower": "0.439024390243",
+          "upper": "0.439024390244"
+        }
+      },
+      "primal": {
+        "exact": "18/41",
+        "decimal_enclosure": {
+          "lower": "0.439024390243",
+          "upper": "0.439024390244"
+        }
+      },
+      "dual": {
+        "exact": "18/41",
+        "decimal_enclosure": {
+          "lower": "0.439024390243",
+          "upper": "0.439024390244"
+        }
+      },
+      "alpha": {
+        "exact": "1",
+        "decimal_enclosure": {
+          "lower": "1.000000000000",
+          "upper": "1.000000000000"
+        }
+      },
+      "sector_ranks": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "result": "PASS"
+    },
+    {
+      "h": {
+        "exact": "9/10",
+        "decimal_enclosure": {
+          "lower": "0.900000000000",
+          "upper": "0.900000000000"
+        }
+      },
+      "delta": {
+        "exact": "361/10000",
+        "decimal_enclosure": {
+          "lower": "0.036100000000",
+          "upper": "0.036100000000"
+        }
+      },
+      "sqrt_delta": {
+        "exact": "19/100",
+        "decimal_enclosure": {
+          "lower": "0.190000000000",
+          "upper": "0.190000000000"
+        }
+      },
+      "diamond_distance": {
+        "exact": "38/181",
+        "decimal_enclosure": {
+          "lower": "0.209944751381",
+          "upper": "0.209944751382"
+        }
+      },
+      "ratio_to_sqrt_delta": {
+        "exact": "200/181",
+        "decimal_enclosure": {
+          "lower": "1.104972375690",
+          "upper": "1.104972375691"
+        }
+      },
+      "system_only_witness": {
+        "exact": "38/181",
+        "decimal_enclosure": {
+          "lower": "0.209944751381",
+          "upper": "0.209944751382"
+        }
+      },
+      "primal": {
+        "exact": "38/181",
+        "decimal_enclosure": {
+          "lower": "0.209944751381",
+          "upper": "0.209944751382"
+        }
+      },
+      "dual": {
+        "exact": "38/181",
+        "decimal_enclosure": {
+          "lower": "0.209944751381",
+          "upper": "0.209944751382"
+        }
+      },
+      "alpha": {
+        "exact": "1",
+        "decimal_enclosure": {
+          "lower": "1.000000000000",
+          "upper": "1.000000000000"
+        }
+      },
+      "sector_ranks": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "result": "PASS"
+    },
+    {
+      "h": {
+        "exact": "99/100",
+        "decimal_enclosure": {
+          "lower": "0.990000000000",
+          "upper": "0.990000000000"
+        }
+      },
+      "delta": {
+        "exact": "39601/100000000",
+        "decimal_enclosure": {
+          "lower": "0.000396010000",
+          "upper": "0.000396010000"
+        }
+      },
+      "sqrt_delta": {
+        "exact": "199/10000",
+        "decimal_enclosure": {
+          "lower": "0.019900000000",
+          "upper": "0.019900000000"
+        }
+      },
+      "diamond_distance": {
+        "exact": "398/19801",
+        "decimal_enclosure": {
+          "lower": "0.020099994949",
+          "upper": "0.020099994950"
+        }
+      },
+      "ratio_to_sqrt_delta": {
+        "exact": "20000/19801",
+        "decimal_enclosure": {
+          "lower": "1.010049997474",
+          "upper": "1.010049997475"
+        }
+      },
+      "system_only_witness": {
+        "exact": "398/19801",
+        "decimal_enclosure": {
+          "lower": "0.020099994949",
+          "upper": "0.020099994950"
+        }
+      },
+      "primal": {
+        "exact": "398/19801",
+        "decimal_enclosure": {
+          "lower": "0.020099994949",
+          "upper": "0.020099994950"
+        }
+      },
+      "dual": {
+        "exact": "398/19801",
+        "decimal_enclosure": {
+          "lower": "0.020099994949",
+          "upper": "0.020099994950"
+        }
+      },
+      "alpha": {
+        "exact": "1",
+        "decimal_enclosure": {
+          "lower": "1.000000000000",
+          "upper": "1.000000000000"
+        }
+      },
+      "sector_ranks": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "result": "PASS"
+    },
+    {
+      "h": {
+        "exact": "999/1000",
+        "decimal_enclosure": {
+          "lower": "0.999000000000",
+          "upper": "0.999000000000"
+        }
+      },
+      "delta": {
+        "exact": "3996001/1000000000000",
+        "decimal_enclosure": {
+          "lower": "0.000003996001",
+          "upper": "0.000003996001"
+        }
+      },
+      "sqrt_delta": {
+        "exact": "1999/1000000",
+        "decimal_enclosure": {
+          "lower": "0.001999000000",
+          "upper": "0.001999000000"
+        }
+      },
+      "diamond_distance": {
+        "exact": "3998/1998001",
+        "decimal_enclosure": {
+          "lower": "0.002000999999",
+          "upper": "0.002001000000"
+        }
+      },
+      "ratio_to_sqrt_delta": {
+        "exact": "2000000/1998001",
+        "decimal_enclosure": {
+          "lower": "1.001000499999",
+          "upper": "1.001000500000"
+        }
+      },
+      "system_only_witness": {
+        "exact": "3998/1998001",
+        "decimal_enclosure": {
+          "lower": "0.002000999999",
+          "upper": "0.002001000000"
+        }
+      },
+      "primal": {
+        "exact": "3998/1998001",
+        "decimal_enclosure": {
+          "lower": "0.002000999999",
+          "upper": "0.002001000000"
+        }
+      },
+      "dual": {
+        "exact": "3998/1998001",
+        "decimal_enclosure": {
+          "lower": "0.002000999999",
+          "upper": "0.002001000000"
+        }
+      },
+      "alpha": {
+        "exact": "1",
+        "decimal_enclosure": {
+          "lower": "1.000000000000",
+          "upper": "1.000000000000"
+        }
+      },
+      "sector_ranks": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "result": "PASS"
+    },
+    {
+      "h": {
+        "exact": "9999/10000",
+        "decimal_enclosure": {
+          "lower": "0.999900000000",
+          "upper": "0.999900000000"
+        }
+      },
+      "delta": {
+        "exact": "399960001/10000000000000000",
+        "decimal_enclosure": {
+          "lower": "0.000000039996",
+          "upper": "0.000000039997"
+        }
+      },
+      "sqrt_delta": {
+        "exact": "19999/100000000",
+        "decimal_enclosure": {
+          "lower": "0.000199990000",
+          "upper": "0.000199990000"
+        }
+      },
+      "diamond_distance": {
+        "exact": "39998/199980001",
+        "decimal_enclosure": {
+          "lower": "0.000200009999",
+          "upper": "0.000200010000"
+        }
+      },
+      "ratio_to_sqrt_delta": {
+        "exact": "200000000/199980001",
+        "decimal_enclosure": {
+          "lower": "1.000100004999",
+          "upper": "1.000100005000"
+        }
+      },
+      "system_only_witness": {
+        "exact": "39998/199980001",
+        "decimal_enclosure": {
+          "lower": "0.000200009999",
+          "upper": "0.000200010000"
+        }
+      },
+      "primal": {
+        "exact": "39998/199980001",
+        "decimal_enclosure": {
+          "lower": "0.000200009999",
+          "upper": "0.000200010000"
+        }
+      },
+      "dual": {
+        "exact": "39998/199980001",
+        "decimal_enclosure": {
+          "lower": "0.000200009999",
+          "upper": "0.000200010000"
+        }
+      },
+      "alpha": {
+        "exact": "1",
+        "decimal_enclosure": {
+          "lower": "1.000000000000",
+          "upper": "1.000000000000"
+        }
+      },
+      "sector_ranks": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "result": "PASS"
+    }
+  ]
+}

@@ -24,6 +24,15 @@ specializations of established tools. External assessment should check that
 reduction and evaluate earlier publication and usefulness. No external reviewer has been contacted
 by preparing this package.
 
+## Subsequent sharpness supplement
+
+The [perfect-packing note](../theory/perfect_packing_sharpness.md) proves an
+exact bound for the prescribed completion when `alpha=1`, together with a
+family attaining it. Its [verification report](../research/PERFECT_PACKING_SHARPNESS_2026-11-01.md)
+includes exact primal/dual certificates. This supplement is not yet included
+in the ten-page PDF. The paper's general bound remains valid; its general
+optimality and the new subclass result's publication novelty remain open.
+
 ## Source and build
 
 [arxiv_ready.md](arxiv_ready.md) is the editable manuscript. Its historical

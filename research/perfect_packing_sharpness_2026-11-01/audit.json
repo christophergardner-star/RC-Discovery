@@ -1,0 +1,28 @@
+{
+  "result": "PASS",
+  "expected_rejections": [
+    "wrong_format",
+    "empty_cases",
+    "wrong_parameter",
+    "wrong_delta_metadata",
+    "wrong_sqrt_metadata",
+    "wrong_effect",
+    "wrong_completion",
+    "wrong_density_trace",
+    "missing_primal_block",
+    "corrupt_primal",
+    "corrupt_dual",
+    "false_distance",
+    "zero_pivot_nonzero_row",
+    "negative_pivot",
+    "nonsymmetric",
+    "optimized_python"
+  ],
+  "psd_matrices": 259,
+  "independent_integer_principal_minors": 15197,
+  "source_text_sha256": {
+    "research/perfect_packing_sharpness_2026-11-01/certificates.json": "ebf56527f3fff82691041e170ccc26407f7679618fef291e0027fee8c41a31ed",
+    "experiments/check_perfect_packing_sharpness.py": "7cb34f15a87e277b4e310ebf8d9b30a20bb7f2326f8be173bd39965817753664",
+    "experiments/verify_perfect_packing_sharpness.py": "3bba3024944231366160e4cceadce55d379d4810851a38626d23d15e080a0bba"
+  }
+}
