@@ -30,6 +30,18 @@ REQUIRED = (
     "RCProof.SpectralFrame.hybrid_dilation_from_polar",
     "RCProof.SpectralFrame.residual_gap",
     "RCProof.jordan_lower_of_width",
+    "RCProof.canonical_hybrid_dilation_of_injective",
+    "RCProof.sectorIndex_nonempty",
+    "RCProof.canonical_polar_overlap",
+    "RCProof.canonical_packing_le_one",
+    "RCProof.canonical_polar_upper",
+    "RCProof.canonical_repeatable_instrument",
+    "RCProof.completionChannel_cp",
+    "RCProof.completionChannel_idempotent",
+    "RCProof.canonical_ancilla_overlap_floor",
+    "RCProof.traceNorm_contracts_hermitian",
+    "RCProof.completionChannel_ancilla_contracts",
+    "RCProof.diamondSize_le_of_all_inputs",
 )
 
 
@@ -52,7 +64,9 @@ def main() -> None:
         result = subprocess.run(command, cwd=LEAN, stdout=subprocess.PIPE,
                                 stderr=subprocess.STDOUT, text=True, encoding="utf-8",
                                 errors="replace", timeout=1800)
-        (out / f"{name}.log").write_text(result.stdout, encoding="utf-8")
+        # Normalize line endings and trailing horizontal whitespace for Git.
+        log_text = "\n".join(line.rstrip(" \t") for line in result.stdout.splitlines()) + "\n"
+        (out / f"{name}.log").write_text(log_text, encoding="utf-8")
         print(f"{name}: exit={result.returncode}, {time.monotonic() - started:.1f}s", flush=True)
         return result
 
@@ -88,7 +102,7 @@ def main() -> None:
     sources += [LEAN / name for name in ("lakefile.toml", "lake-manifest.json", "lean-toolchain")]
     hashes = {str(path.relative_to(ROOT)).replace("\\", "/"): hashlib.sha256(path.read_bytes()).hexdigest()
               for path in sources}
-    source_theorems = sum(len(re.findall(r"^(?:theorem|lemma)\s", path.read_text(encoding="utf-8"), re.M))
+    source_theorems = sum(len(re.findall(r"^(?:@\[.*?\] )?(?:theorem|lemma)\s", path.read_text(encoding="utf-8"), re.M))
                           for path in (LEAN / "RCProof").glob("*.lean"))
     manifest = {
         "result": "PASS", "utc": datetime.now(timezone.utc).isoformat(),

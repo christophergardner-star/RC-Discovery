@@ -1,10 +1,11 @@
 # Lean 4 formalization
 
 The full theorem is **not yet formalized**. As of 1 November 2026, the project
-contains 69 explicitly written lemmas/theorems, up from the 13 in the frozen
-review release. The additional proofs construct spectral projectors, positive
-square roots, labelled Naimark dilations and polar isometries, establish the
-completed POVM algebra, and prove the noncommuting Jordan-product inequality.
+contains 152 explicitly written lemmas/theorems, up from 69 in the first
+operator extension and 13 in the frozen review release. The canonical frame,
+polar/synthesis bounds and repeatable instrument are now constructed. The
+ancilla overlap floor and Hermitian trace-norm contractivity are checked;
+the final measurement diamond-distance estimate remains open.
 
 The toolchain remains Lean 4.35.0 with Mathlib pinned to
 `56a005855ea17e0b0958f73ec801ae140b0a1679`. No external quantum-information
@@ -23,6 +24,16 @@ library has been added as a dependency.
 | [Jordan](RCProof/Jordan.lean) | 7 | Spectral square bounds and the paper's width-conditioned Jordan inequality, including `M=alpha` |
 | [Polar](RCProof/Polar.lean) | 5 | Constructed polar isometry and factorization from a positive definite Gram matrix |
 | [Assembly](RCProof/Assembly.lean) | 9 | Spectral-frame cross terms, hybrid dilation and residual gap; polar version constructs `U` |
+| [CanonicalFrame](RCProof/CanonicalFrame.lean) | 10 | All selected eigenvectors with labels, frame identities, synthesis and dilation from injectivity |
+| [Packing](RCProof/Packing.lean) | 8 | Constructed `D`, its lower/upper bounds, `W*J=TD=UHD` |
+| [PackingParameter](RCProof/PackingParameter.lean) | 8 | Least-Gram-eigenvalue definition, `0<alpha<=1`, Gram and polar lower bounds |
+| [PackingBounds](RCProof/PackingBounds.lean) | 6 | POVM-derived synthesis/Gram upper bounds and `H<=1/sqrt(c)` |
+| [Instrument](RCProof/Instrument.lean) | 9 | Explicit Kraus representation and positive amplification for every finite reference |
+| [CanonicalInstrument](RCProof/CanonicalInstrument.lean) | 15 | Constructed prepared states, correct outcome traces, repeatability, channel CP/TP/idempotence |
+| [Ancilla](RCProof/Ancilla.lean) | 7 | Measurement-specific Jordan overlap and arbitrary-reference lift |
+| [Distance](RCProof/Distance.lean) | 9 | Standard trace norm, measurement map and full stabilized induced norm definition |
+| [TraceNorm](RCProof/TraceNorm.lean) | 8 | Spectral trace-norm formula and positive trace-preserving contraction on Hermitian inputs |
+| [AncillaContractivity](RCProof/AncillaContractivity.lean) | 3 | Trace preservation and Hermitian trace-norm contraction of the constructed channel with references |
 
 The threshold uses `c <= eigenvalue`, so eigenvalues at the threshold are
 included. `threshold_spectral_envelope` derives its conclusion from
@@ -34,30 +45,44 @@ included. `threshold_spectral_envelope` derives its conclusion from
 every label compression. It does **not** take those identities, Naimark
 compression identities or vanishing cross terms as hypotheses.
 
-Its geometric input is still explicit: a `SpectralFrame` supplies block
-embeddings with spectral support, full sector range and normalized block
-Gram matrices; the theorem also assumes `B_j=T C_j` and positive definiteness
-of `T* T`. There is not yet a constructor deriving this whole input from the
-paper's original sector/synthesis assumptions. Passing the axiom audit does
-not remove these ordinary mathematical hypotheses.
+The later `canonical_hybrid_dilation_of_injective` removes the supplied-frame
+and Gram-positivity inputs: the frame is built from all threshold eigenvectors,
+and the Gram condition follows from synthesis injectivity. The sector index
+type includes every eigenvector at the threshold, including degeneracies.
+With a nonempty physical space and the original nonzero-sector condition,
+`sectorIndex_nonempty` supplies the nonempty domain needed to take a minimum.
+
+`packingAlpha` is defined as the square root of the least Gram eigenvalue.
+`canonical_repeatable_instrument` constructs its records by normalizing the
+completed sector projections, proves CP of each operation, total trace
+preservation and the exact labelwise composition law. Zero outcomes do not
+require dividing by a nonzero trace. The summed channel is also proved CP
+and idempotent. The instrument is for the prescribed completion `F`, not the
+original measurement `E`.
+
+`canonical_ancilla_overlap_floor` derives the width-conditioned overlap
+inequality from these constructed objects for every finite reference type.
+`completionChannel_ancilla_contracts` proves contractivity of the repeatable
+channel on Hermitian inputs with references. This is **not** an estimate of
+the difference between the original and completed measurement channels.
 
 ## What remains before “full formalization” is justified
 
-1. Construct the canonical direct-sum spectral frame from the POVM and prove
-   the coordinate/synthesis relations. Connect synthesis injectivity to the
-   Gram condition and `alpha` to the smallest singular value, including all
-   nonzero-label and degenerate-sector cases in the paper.
-2. Prove the quantitative polar/principal-angle estimates, the block `D`
-   bounds and the overlap factorization `W*J=U H D` from those objects.
-   The abstract Jordan inequality is checked; its complete measurement
-   specialization and coefficient-two conclusion are not.
-3. Formalize density operators, the repeatable instrument and its complete
-   positivity/trace preservation, including construction of the prepared
-   states on every nonzero sector.
-4. Supply the trace-norm, arbitrary-ancilla, pure-input and CPTP-contraction
-   steps with the paper's **unhalved diamond-norm** convention. Prove the
-   final bound from the original theorem hypotheses without assuming an
-   equivalent norm estimate.
+1. Prove the principal-angle/operator-norm sector displacement bound. The
+   Gram/polar Loewner bounds are checked, but this additional norm conclusion
+   has not been derived.
+2. Prove the sharp pure-state trace-distance estimate and its application to
+   the common labelled readout of the two constructed dilations.
+3. Prove the input-reduction/extension argument connecting that estimate to
+   the full stabilized norm over **general complex matrices**, then the final
+   width-conditioned and unconditional coefficient-two bounds.
+
+`diamondSize` is an extended-nonnegative-real supremum over every finite
+ancilla and every complex matrix of trace norm at most one. It has no factor
+of one half and does not replace this set of inputs by pure states without
+proof. Its general supremum lemma is only an upper-bound rule; the requisite
+all-input estimate for `measurementMap E - measurementMap F` is not proved.
+Finiteness and the final numeric bound for that difference remain unproved.
 
 The paper's later sharp envelopes, joint asymptotics, record correction and
 computer-assisted comparisons are additional targets, not consequences of
@@ -68,10 +93,9 @@ the stated lemmas and does not establish novelty or external review.
 
 `lake build` also builds [RCProofAudit](RCProofAudit.lean). It traverses **all**
 declarations in the `RCProof` namespace and rejects any transitive axiom except
-`propext`, `Classical.choice` and `Quot.sound`. The present environment has
-105 theorem declarations and 143 total declarations including generated
-equations, structure projections and tactic helpers. These are **not** 105
-independently written theorems; the written count is 69.
+`propext`, `Classical.choice` and `Quot.sound`. The run manifest distinguishes
+the 152 written lemmas/theorems from generated equations, structure projections
+and tactic helpers. Definitions of maps and norms are not counted as proofs.
 
 From `lean` on Windows:
 
@@ -94,6 +118,7 @@ on `PATH` or in the usual Elan installation. The local Mathlib cache setting
 avoids the unwritable default cache previously encountered on this laptop.
 Module-system and unused-variable warnings do not invalidate proofs.
 
-See the [operator formalization report](../research/LEAN_OPERATOR_FORMALIZATION_2026-11-01.md)
-for the recorded run. The frozen review paper's count of 13 describes its
-earlier snapshot; this README tracks the subsequent development.
+See the [completion formalization report](../research/LEAN_COMPLETION_FORMALIZATION_2026-11-01.md)
+for the current run and the [earlier operator report](../research/LEAN_OPERATOR_FORMALIZATION_2026-11-01.md)
+for the 69-theorem snapshot. The frozen review paper's count of 13 describes
+its earlier release; this README tracks subsequent development.

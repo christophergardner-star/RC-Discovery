@@ -226,21 +226,25 @@ Canonical theory map:
 | Completed POVM and sector action | **Machine checked from explicit coordinate/isometry inputs** |
 | Polar isometry and factorization | **Constructed from a positive definite Gram matrix** |
 | Jordan-product width inequality | **Machine checked, including the degenerate width case** |
-| Assembled hybrid dilation | **Machine checked from an explicit spectral frame and synthesis relation** |
+| Assembled hybrid dilation | **Constructed from the POVM and injective canonical synthesis** |
 | Axiom audit | **Passed current declarations** | No `sorryAx` or custom axioms in audited theorem declarations. |
-| Full spectral-sector construction | **Not formalised** |
+| Canonical full spectral-sector frame | **Constructed and machine checked, including threshold degeneracies** |
+| Packing parameter and polar Loewner bounds | **Machine checked from the constructed synthesis matrix** |
+| Labelled overlap and arbitrary-reference lift | **Machine checked under the width condition** |
 | Principal-angle theorem end to end | **Not formalised** |
-| Full coefficient-two analytic bridge | **Not formalised; abstract Jordan inequality is checked** |
-| Repeatable instrument and complete positivity | **Not formalised** |
-| Diamond-norm transfer | **Not formalised** |
+| Full coefficient-two analytic bridge | **Not formalised; measurement-specific operator overlap is checked** |
+| Repeatable instrument and complete positivity | **Constructed; CP, total TP and exact repeatability checked** |
+| Hermitian trace-norm contractivity | **Machine checked, including the completion channel with references** |
+| Diamond-norm transfer | **Not formalised; full all-input norm defined, sharp distance/reduction still open** |
 | Accessibility certificate end to end | **Not formalised** |
 
 The validation runner now hashes only repository-owned Lean sources, not downloaded `.lake` dependencies.
-The 1 November extension contains 69 written lemmas/theorems; its default build
-audits all 143 project declarations, including generated helpers. See
-[the formalization report](research/LEAN_OPERATOR_FORMALIZATION_2026-11-01.md)
+The continued 1 November extension contains 152 written lemmas/theorems; its
+default build audits all project declarations, including generated helpers. See
+[the completion formalization report](research/LEAN_COMPLETION_FORMALIZATION_2026-11-01.md)
 and [the current proof boundary](lean/README.md). The review-paper count of 13
-belongs to the earlier frozen release, whose artifacts remain unchanged.
+belongs to the earlier frozen release, whose artifacts remain unchanged. The
+previous 69-theorem report and its evidence are retained as historical snapshots.
 
 ## Cruxy source synchronisation
 

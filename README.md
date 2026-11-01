@@ -280,19 +280,20 @@ Machine-checked with pinned Lean 4 + Mathlib and zero `sorry` within the stated 
 - completion positivity, normalization and exact sector action;
 - constructed polar isometry from a positive definite Gram matrix;
 - the width-conditioned Jordan inequality, including its degenerate case;
-- assembled hybrid dilation and residual gap from an explicitly supplied spectral frame.
+- canonical spectral frame and hybrid dilation constructed from injective synthesis;
+- packing-parameter bounds and the constructed overlap identity;
+- constructed repeatable CP/TP instrument and idempotent channel, including zero outcomes;
+- arbitrary-reference overlap inequalities and Hermitian trace-norm contractivity.
 
-The development now has 69 written lemmas/theorems. The default build audits
+The development now has 152 written lemmas/theorems. The default build audits
 every project declaration for transitive axioms; only the three standard Lean
 logical axioms are allowed. The frozen review release's count of 13 is an
 earlier snapshot.
 
 Not yet formalised end to end:
 
-- construction of all spectral-sector objects from the POVM hypotheses;
 - the full polar/principal-angle argument;
-- specialization of the checked Jordan inequality to the full coefficient-two bound;
-- construction and complete positivity of the repeatable instrument;
+- pure-state trace distance, the all-input reduction, and the final coefficient-two bound;
 - the channel diamond-norm transfer;
 - the direct accessibility certificate.
 
