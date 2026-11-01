@@ -20,6 +20,12 @@ allowed threshold. It is now Theorem 7 in the paper. The
 [imperfect-packing lower bound and vetoes](imperfect_packing_lower_bound.md)
 support Propositions 8--9. The general `alpha<1` sharp bound remains open.
 
+The [minimum-outcome corollary](minimum_outcomes_square_root.md) gives the
+exact binary envelope `2 delta` and shows that three outcomes are necessary
+and sufficient for square-root asymptotics. It is an elementary consequence
+of the existing results, not a claim to resolve a recognized literature-open
+problem. The same note defines a precise remaining joint-asymptotic problem.
+
 Read these files first and in this order:
 
 1. [`THEOREM_V1_FREEZE.md`](THEOREM_V1_FREEZE.md) — frozen hypotheses and conclusions.
