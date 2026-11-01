@@ -7,6 +7,7 @@ from pathlib import Path
 import subprocess
 import sys
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import verify_exact_completion_comparison as checker
 from verify_exact_completion_comparison import verify_case
 

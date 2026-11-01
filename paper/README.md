@@ -8,6 +8,8 @@ Christopher Gardner, revised 1 November 2026. Twelve pages including references.
 - [Standalone LaTeX](prescribed_repeatable_completion.tex)
 - [Bibliography](prescribed_repeatable_completion.bib)
 - [Focused external-review brief](../review/SHORT_PAPER_REVIEW_BRIEF.md)
+- [Concise reviewer packet](../review/REVIEWER_PACKET.md)
+- [Isolated certificate and PDF reproduction](../review/REPRODUCE.md)
 
 The paper contains the frozen coefficient-two theorem, a complete analytic
 proof, the record-correction corollary, the weighted prior-art comparison,

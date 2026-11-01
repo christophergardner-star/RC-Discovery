@@ -6,6 +6,7 @@ from pathlib import Path
 import subprocess
 import sys
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import verify_completion_switch_family as family
 import verify_exact_completion_comparison as c
 from check_exact_certificate_negative_controls import sylvester_bareiss
