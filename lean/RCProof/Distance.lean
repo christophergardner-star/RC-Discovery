@@ -3,8 +3,8 @@ import Mathlib.Analysis.SpecialFunctions.ContinuousFunctionalCalculus.Rpow.Basic
 import Mathlib.Analysis.CStarAlgebra.Matrix
 import Mathlib.Data.ENNReal.BigOperators
 
-/-! Trace norm and the full stabilized induced trace-norm target. These
-definitions do not assert the missing measurement-channel distance bound. -/
+/-! Trace norm and the full stabilized induced trace-norm target. The final
+measurement-channel bound is proved in FrozenDiamond using these definitions. -/
 namespace RCProof
 open Matrix
 open scoped ComplexOrder MatrixOrder Matrix.Norms.L2Operator
@@ -46,8 +46,8 @@ noncomputable def diamondSize (Φ : RectMatrixMap d b) : ENNReal :=
   ⨆ n : ℕ, ⨆ X : Matrix (d × Fin n) (d × Fin n) ℂ,
     ⨆ (_h : traceNorm X ≤ 1), ENNReal.ofReal (traceNorm (amplifyRect Φ X))
 
-/-- A general supremum rule, not a proof that the required all-input bound
-holds for the measurement maps. No pure-state reduction is assumed here. -/
+/-- General supremum rule used by MeasurementDistance after proving the
+all-complex-input estimate. No pure-state reduction is assumed here. -/
 lemma diamondSize_le_of_all_inputs (Φ : RectMatrixMap d b) (B : ℝ)
     (h : ∀ n (X : Matrix (d × Fin n) (d × Fin n) ℂ), traceNorm X ≤ 1 →
       traceNorm (amplifyRect Φ X) ≤ B) : diamondSize Φ ≤ ENNReal.ofReal B := by

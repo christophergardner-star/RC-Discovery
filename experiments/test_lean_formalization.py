@@ -1,4 +1,4 @@
-"""Build and audit the scoped Lean proofs; this does not certify the full theorem.
+"""Build and audit the frozen theorem's Lean proofs, not every result in the paper.
 
 Uses the pinned Lean/Mathlib project, records source hashes and checks transitive
 axioms in Lean itself. Optional negative controls ensure that both an extra axiom
@@ -42,6 +42,19 @@ REQUIRED = (
     "RCProof.traceNorm_contracts_hermitian",
     "RCProof.completionChannel_ancilla_contracts",
     "RCProof.diamondSize_le_of_all_inputs",
+    "RCProof.canonical_principal_angle",
+    "RCProof.canonical_sector_rank",
+    "RCProof.exists_contraction_polar",
+    "RCProof.traceNorm_pairing",
+    "RCProof.traceNorm_attaining_contraction",
+    "RCProof.traceNorm_mul_sandwich",
+    "RCProof.sharp_isometry_trace_distance_ancilla",
+    "RCProof.traceNorm_kraus_contraction",
+    "RCProof.measurement_diamond_of_overlap",
+    "RCProof.measurement_diamond_le_two",
+    "RCProof.canonical_measurement_diamond_sharp",
+    "RCProof.frozen_measurement_diamond_bound",
+    "RCProof.frozen_theorem",
 )
 
 
@@ -106,7 +119,7 @@ def main() -> None:
                           for path in (LEAN / "RCProof").glob("*.lean"))
     manifest = {
         "result": "PASS", "utc": datetime.now(timezone.utc).isoformat(),
-        "scope": "Partial operator formalization; the complete spectral/diamond-norm theorem is NOT machine-checked",
+        "scope": "Frozen construction, principal angles, repeatable instrument and full all-complex-input diamond bound are machine-checked; later sharp envelopes, asymptotics and accessibility certificates are not",
         "source_theorems": source_theorems,
         "kernel_theorem_declarations_including_generated": int(match.group(1)),
         "all_namespace_declarations_audited": int(match.group(2)),
@@ -115,7 +128,8 @@ def main() -> None:
         "source_sha256": hashes,
     }
     (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
-    print(f"PASS: {source_theorems} source theorems; {match.group(2)} declarations audited. Full theorem remains unformalized.")
+    print(f"PASS: {source_theorems} source theorems; {match.group(2)} declarations audited. "
+          "Frozen theorem checked; later paper results remain outside the formalized scope.")
 
 
 if __name__ == "__main__":

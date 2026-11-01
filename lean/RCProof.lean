@@ -17,3 +17,4 @@ import RCProof.Ancilla
 import RCProof.Distance
 import RCProof.TraceNorm
 import RCProof.AncillaContractivity
+import RCProof.FrozenTheorem

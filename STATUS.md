@@ -12,7 +12,7 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 }
 \]
 
-No public file should represent the work as externally proved, peer reviewed, fully machine checked, prior-art free, patentable, or a proven breakthrough.
+No public file should represent the work as externally proved, peer reviewed, prior-art free, patentable, or a proven breakthrough. The frozen construction and coefficient-two bound are machine checked; the entire project and later paper results are not.
 
 ## Current review release
 
@@ -22,7 +22,7 @@ includes Theorem 10 and forty numbered equations. The
 records the proof audit and successful fifteen-command reproduction from
 a separate checkout, new Python environment and initially empty TeX cache.
 The reviewer packet and unsent invitation are current. External correctness
-review, novelty assessment and complete Lean formalisation remain outstanding;
+review, novelty assessment and Lean formalisation of the later paper results remain outstanding;
 the exact finite-error optimum and subleading term remain research questions.
 
 ## Reference advantage and imperfect packing
@@ -201,7 +201,7 @@ The latest comprehensive review is recorded in:
 | Record-accessibility suite | **Passed implemented cases** | 26 primal/dual SDPs. |
 | Residual-rate suite | **Passed implemented cases** | 20 primal/dual SDPs. |
 | Canonical full profile | **Passed** | Numerical, algebraic, provenance and counterexample tests. |
-| Pinned Lean build | **Passed within formalised scope** | Does not prove the complete theorem. |
+| Pinned Lean build | **Passed within formalised scope** | Includes the assembled frozen construction and full diamond bound; excludes later sharpness/asymptotic results. |
 | Input-validation review | **Defect found and repaired** | Raw Hermiticity/PSD/normalisation now checked before cleanup; one-outcome and exact-zero labels handled correctly. |
 | Optional PyTorch TCL neural smoke | **Environment-separated** | Blocked on audited Windows runtime; dedicated Linux CI job added for tagged full audits. |
 | Numerical interpretation | **Evidence, not proof** | Finite checks do not establish the universal theorem or novelty. |
@@ -231,20 +231,21 @@ Canonical theory map:
 | Canonical full spectral-sector frame | **Constructed and machine checked, including threshold degeneracies** |
 | Packing parameter and polar Loewner bounds | **Machine checked from the constructed synthesis matrix** |
 | Labelled overlap and arbitrary-reference lift | **Machine checked under the width condition** |
-| Principal-angle theorem end to end | **Not formalised** |
-| Full coefficient-two analytic bridge | **Not formalised; measurement-specific operator overlap is checked** |
+| Principal-angle theorem end to end | **Machine checked for canonical sectors, including equal ranks** |
+| Full coefficient-two analytic bridge | **Machine checked directly on all complex inputs via shifted telescoping** |
 | Repeatable instrument and complete positivity | **Constructed; CP, total TP and exact repeatability checked** |
 | Hermitian trace-norm contractivity | **Machine checked, including the completion channel with references** |
-| Diamond-norm transfer | **Not formalised; full all-input norm defined, sharp distance/reduction still open** |
+| Diamond-norm transfer | **Machine checked for all finite ancillas and all complex inputs; conditional sharp and unconditional frozen bounds proved** |
+| Assembled frozen theorem | **Machine checked as `RCProof.frozen_theorem` from canonical construction and original hypotheses** |
 | Accessibility certificate end to end | **Not formalised** |
 
 The validation runner now hashes only repository-owned Lean sources, not downloaded `.lake` dependencies.
-The continued 1 November extension contains 152 written lemmas/theorems; its
+The final 1 November extension contains 194 written lemmas/theorems; its
 default build audits all project declarations, including generated helpers. See
-[the completion formalization report](research/LEAN_COMPLETION_FORMALIZATION_2026-11-01.md)
+[the frozen theorem report](research/LEAN_FROZEN_THEOREM_2026-11-01.md)
 and [the current proof boundary](lean/README.md). The review-paper count of 13
 belongs to the earlier frozen release, whose artifacts remain unchanged. The
-previous 69-theorem report and its evidence are retained as historical snapshots.
+previous 69- and 152-theorem reports and their evidence are retained as historical snapshots.
 
 ## Cruxy source synchronisation
 
@@ -319,7 +320,7 @@ This is a repository-governance statement, not a legal opinion.
 
 1. Independent human reconstruction of the typed same-label theorem.
 2. Specialist audit of the coefficient-two bridge and accessibility certificate.
-3. Complete Lean formalisation of the operator/channel chain.
+3. Lean formalisation of the later sharp envelopes, asymptotics and certificate results; the frozen operator/channel chain is checked.
 4. Definitive prior-art and novelty assessment.
 5. Independent reproduction outside the author-controlled repository.
 6. Optimal-constant and quantified robustness work.

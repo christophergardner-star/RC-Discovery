@@ -1,11 +1,13 @@
 # Lean 4 formalization
 
-The full theorem is **not yet formalized**. As of 1 November 2026, the project
-contains 152 explicitly written lemmas/theorems, up from 69 in the first
-operator extension and 13 in the frozen review release. The canonical frame,
-polar/synthesis bounds and repeatable instrument are now constructed. The
-ancilla overlap floor and Hermitian trace-norm contractivity are checked;
-the final measurement diamond-distance estimate remains open.
+The frozen construction and its coefficient-two diamond-norm estimate are
+now machine checked. As of 1 November 2026, the project contains 194 explicitly
+written lemmas/theorems. The assembled statement is
+[`frozen_theorem`](RCProof/FrozenTheorem.lean): canonical sectors, equal ranks,
+principal-angle bound, completed POVM and sector action, residual gap,
+repeatable CP/TP instrument with the correct outcome probabilities, and the
+unhalved diamond bound over all complex inputs and all finite ancillas.
+This does not formalize every later result in the paper.
 
 The toolchain remains Lean 4.35.0 with Mathlib pinned to
 `56a005855ea17e0b0958f73ec801ae140b0a1679`. No external quantum-information
@@ -33,6 +35,16 @@ library has been added as a dependency.
 | [Ancilla](RCProof/Ancilla.lean) | 7 | Measurement-specific Jordan overlap and arbitrary-reference lift |
 | [Distance](RCProof/Distance.lean) | 9 | Standard trace norm, measurement map and full stabilized induced norm definition |
 | [TraceNorm](RCProof/TraceNorm.lean) | 8 | Spectral trace-norm formula and positive trace-preserving contraction on Hermitian inputs |
+| [PrincipalAngle](RCProof/PrincipalAngle.lean) | 2 | Operator norm from positivity; projection distance from two-sided compressions |
+| [CanonicalAngles](RCProof/CanonicalAngles.lean) | 3 | Actual canonical sector displacement and equal ranks |
+| [TraceDuality](RCProof/TraceDuality.lean) | 3 | Gram/norm equivalence and singular-safe contraction polar factorization |
+| [TraceInequalities](RCProof/TraceInequalities.lean) | 7 | Trace-norm duality, attaining contraction, triangle and rectangular sandwich inequality |
+| [SharpDistance](RCProof/SharpDistance.lean) | 4 | Sharp arbitrary-complex-input isometry comparison, with arbitrary ancillas |
+| [KrausContraction](RCProof/KrausContraction.lean) | 4 | Normalized rectangular Kraus contraction on all complex inputs |
+| [MeasurementDistance](RCProof/MeasurementDistance.lean) | 11 | Explicit readout, amplification, full overlap-to-diamond transfer and universal bound two |
+| [DiamondScalar](RCProof/DiamondScalar.lean) | 2 | Removal of the width assumption in the nontrivial regime |
+| [FrozenDiamond](RCProof/FrozenDiamond.lean) | 4 | Actual completion, conditional sharp bound and unconditional frozen diamond estimate |
+| [FrozenTheorem](RCProof/FrozenTheorem.lean) | 2 | Canonical residual gap and assembled frozen theorem |
 | [AncillaContractivity](RCProof/AncillaContractivity.lean) | 3 | Trace preservation and Hermitian trace-norm contraction of the constructed channel with references |
 
 The threshold uses `c <= eigenvalue`, so eigenvalues at the threshold are
@@ -66,23 +78,33 @@ inequality from these constructed objects for every finite reference type.
 channel on Hermitian inputs with references. This is **not** an estimate of
 the difference between the original and completed measurement channels.
 
-## What remains before “full formalization” is justified
+## Closed gaps and remaining scope
 
-1. Prove the principal-angle/operator-norm sector displacement bound. The
-   Gram/polar Loewner bounds are checked, but this additional norm conclusion
-   has not been derived.
-2. Prove the sharp pure-state trace-distance estimate and its application to
-   the common labelled readout of the two constructed dilations.
-3. Prove the input-reduction/extension argument connecting that estimate to
-   the full stabilized norm over **general complex matrices**, then the final
-   width-conditioned and unconditional coefficient-two bounds.
+The principal-angle bound is derived from the canonical synthesis, not supplied
+as a premise. The trace-distance argument works directly for every complex
+matrix X, so no pure-state reduction is needed. From Re(W*V) >= eta I, the
+shifted differences W - eta V and eta W - V both have operator norm at most
+sqrt(1-eta^2). The identity
+
+```text
+WXW* - VXV* = (W - eta V)XW* + VX(eta W - V)*
+```
+
+and the proved rectangular trace-norm inequality give the sharp constant
+2 sqrt(1-eta^2). The common labelled readout is an explicit normalized Kraus
+family, whose contraction is proved on all complex inputs.
 
 `diamondSize` is an extended-nonnegative-real supremum over every finite
 ancilla and every complex matrix of trace norm at most one. It has no factor
 of one half and does not replace this set of inputs by pure states without
-proof. Its general supremum lemma is only an upper-bound rule; the requisite
-all-input estimate for `measurementMap E - measurementMap F` is not proved.
-Finiteness and the final numeric bound for that difference remain unproved.
+proof. The all-input estimate, its transfer to this supremum, the conditional
+2 sqrt(1-alpha^2 c) bound, and the unconditional
+2 min(1, sqrt(1-alpha^2) + sqrt(delta)) bound are now proved. In particular the
+extended-real supremum is bounded by a finite number.
+
+The assembled theorem assumes a nonempty sector index to define its least
+eigenvalue. `sectorIndex_nonempty` derives this from the active-label hypothesis
+when the input space is nonzero. Individual zero labels/sectors are allowed.
 
 The paper's later sharp envelopes, joint asymptotics, record correction and
 computer-assisted comparisons are additional targets, not consequences of
@@ -94,7 +116,7 @@ the stated lemmas and does not establish novelty or external review.
 `lake build` also builds [RCProofAudit](RCProofAudit.lean). It traverses **all**
 declarations in the `RCProof` namespace and rejects any transitive axiom except
 `propext`, `Classical.choice` and `Quot.sound`. The run manifest distinguishes
-the 152 written lemmas/theorems from generated equations, structure projections
+the 194 written lemmas/theorems from generated equations, structure projections
 and tactic helpers. Definitions of maps and norms are not counted as proofs.
 
 From `lean` on Windows:
@@ -118,7 +140,7 @@ on `PATH` or in the usual Elan installation. The local Mathlib cache setting
 avoids the unwritable default cache previously encountered on this laptop.
 Module-system and unused-variable warnings do not invalidate proofs.
 
-See the [completion formalization report](../research/LEAN_COMPLETION_FORMALIZATION_2026-11-01.md)
-for the current run and the [earlier operator report](../research/LEAN_OPERATOR_FORMALIZATION_2026-11-01.md)
-for the 69-theorem snapshot. The frozen review paper's count of 13 describes
+See the [frozen theorem report](../research/LEAN_FROZEN_THEOREM_2026-11-01.md)
+for the current run. The completion and operator reports retain the historical
+152- and 69-theorem snapshots. The frozen review paper's count of 13 describes
 its earlier release; this README tracks subsequent development.
