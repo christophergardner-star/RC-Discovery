@@ -22,7 +22,7 @@ diamond distance of this family, nor the optimum over all admissible POVMs.
 
 Put \(a=\sqrt{1-\alpha^2}\). For fixed \(0<\alpha<1\),
 \[
-\lim_{m\to\infty,\ m\ {m even}} L_m(\alpha)=a,
+\lim_{m\to\infty,\ m\text{ even}} L_m(\alpha)=a,
 \qquad \delta=1/m\longrightarrow0.
 \tag{2}
 \]

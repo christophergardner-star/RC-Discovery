@@ -1,0 +1,32 @@
+UNSENT DRAFT — no recipient selected or contacted
+
+Subject: Request for a correctness and prior-art check of a short POVM note
+
+Dear [Researcher],
+
+I would appreciate a critical assessment of my short note, "Stability of a
+prescribed repeatable completion of a quantum measurement."
+
+The paper studies a fixed polar, residual-preserving completion. Its general
+bound is presented as a quantitative specialization of established tools.
+The strongest additional claim is an exact worst-case diamond-distance
+formula in the orthogonal-sector regime, with an attaining family. It also
+contains exact certificates for reference advantage within this completion
+class and a coupled-simplex lower construction.
+
+Could you assess whether the argument is correct and whether these specific
+statements already follow from published results? A precise prior theorem
+or a counterexample would be very helpful. I am not claiming confirmed
+novelty or asking for an endorsement.
+
+The repository's review/REVIEWER_PACKET.md links the twelve-page paper,
+proof supplements, prior-art comparisons and reproduction instructions:
+https://github.com/christophergardner-star/RC-Discovery
+
+The work used an extensive AI-assisted workflow, disclosed in the paper as
+VIBE MATH. It has internal proof reconstruction and exact computational
+checks, but no independent external review and no complete formal proof.
+
+Thank you for considering it.
+
+Christopher Gardner
