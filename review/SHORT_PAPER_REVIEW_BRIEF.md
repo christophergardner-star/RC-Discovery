@@ -17,10 +17,10 @@ for the prior-art analysis. The latter supplies the explicit implication chain
 for the unweighted bound and record corollary. The older long research document and historical
 imports are not needed to assess this paper.
 
-## Subsequent sharpness supplement
+## Sharpness, reference systems, and imperfect packing
 
 The [perfect-packing proof](../theory/perfect_packing_sharpness.md) is an
-additional review target, separate from the current PDF. It claims the exact
+additional review target, now included as Theorem 7 in the PDF. It claims the exact
 worst-case prescribed-completion envelope `2*sqrt(delta)/(2-sqrt(delta))`
 under `alpha=1`. Please reconstruct the positive-residual factorization,
 the arbitrary-reference trace-norm estimate, its scalar maximization, and
@@ -29,6 +29,21 @@ the full-threshold-sector check for the attaining family. The
 and [attribution scope note](../literature/PERFECT_PACKING_SHARPNESS_ATTRIBUTION_2026-11-01.md)
 provide further checks and identify the unresolved priority question.
 This result does not settle optimality for general `alpha<1`.
+
+Proposition 8's [reference-advantage certificate](../theory/reference_advantage.md)
+proves system-only distance at most 0.1161 and full distance at least 0.1208.
+Check the exhaustive sign-operator upper bound, complex realification factors,
+primal feasibility, and full spectral sectors. The general discrimination
+phenomenon is established prior art; the comparison target is this constrained
+completion class.
+
+Proposition 9's [coupled simplex construction](../theory/imperfect_packing_lower_bound.md)
+has `delta=1/m` and a lower bound tending to `sqrt(1-alpha^2)`. Check the
+zero-sum couplings, their orthogonality to the selected eigenvectors, the
+Schur complement, full-sector trace gap, and distinguishing input. The same
+note proves two proposed joint upper extensions false. The rational veto
+has distance at least 1.0405 versus proposed bound at most 1.0156. Neither
+veto contradicts the frozen theorem or determines the sharp joint envelope.
 
 ## Precise proposed contribution
 

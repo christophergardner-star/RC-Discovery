@@ -12,11 +12,13 @@ comparison proposition additionally uses its linked certificate supplement.
 The [completed reduction audit](../literature/PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)
 identifies the established results and measurement-specific steps in the proof.
 
-The subsequent [perfect-packing sharpness supplement](perfect_packing_sharpness.md)
+The [perfect-packing sharpness theorem](perfect_packing_sharpness.md)
 proves the exact prescribed-completion envelope
 `2*sqrt(delta)/(2-sqrt(delta))` for `alpha=1`, with a matching family for every
-allowed threshold. It supplements the frozen theorem and is not incorporated
-in the current paper PDF. The general `alpha<1` sharp bound remains open.
+allowed threshold. It is now Theorem 7 in the paper. The
+[reference-advantage certificate](reference_advantage.md) and
+[imperfect-packing lower bound and vetoes](imperfect_packing_lower_bound.md)
+support Propositions 8--9. The general `alpha<1` sharp bound remains open.
 
 Read these files first and in this order:
 

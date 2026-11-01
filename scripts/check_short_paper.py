@@ -58,7 +58,8 @@ def main():
     extracted = [page.extract_text() or '' for page in reader.pages]
     assert all(len(text) > 80 for text in extracted)
     combined = '\n\n'.join(extracted)
-    for marker in ['2.33690021','2.33690023','Proposition 6','VIBE MATH','Eldar']:
+    for marker in ['2.33690021','2.33690023','Proposition 6','Theorem 7',
+                   'Proposition 8','Proposition 9','0.1161','0.1208','1.0405','1.0156','VIBE MATH','Eldar']:
         assert re.sub(r'\s+','',marker) in re.sub(r'\s+','',combined), marker
     # Check the numerical assertions newly brought into the paper against
     # the retained exact certificate outputs, never their floating proposals.
@@ -72,6 +73,19 @@ def main():
     # Tie those report values to the unchanged certificate and proof sources.
     for name,expected in crossover['source_text_sha256'].items():
         assert text_hash(ROOT/name) == expected, name
+    reference=json.loads((ROOT/'research/reference_advantage_2026-11-01/verification.json').read_text(encoding='utf-8'))
+    veto=json.loads((ROOT/'research/imperfect_packing_2026-11-01/veto_verification.json').read_text(encoding='utf-8'))
+    sharp=json.loads((ROOT/'research/perfect_packing_sharpness_2026-11-01/verification.json').read_text(encoding='utf-8'))
+    assert reference['result']==veto['result']==sharp['result']=='PASS'
+    assert Fraction(reference['system_only_upper']['exact'])==Fraction('0.1161')
+    assert Fraction(reference['reference_assisted_lower']['exact'])==Fraction('0.1208')
+    assert Fraction(reference['strict_advantage']['exact'])==Fraction('0.0047')
+    assert Fraction(veto['system_witness_lower']['exact'])==Fraction('1.0405')
+    assert Fraction(veto['euclidean_candidate_upper']['exact'])==Fraction('1.0156')
+    assert Fraction(veto['linear_veto']['analytic_lower_squared']['exact'])==Fraction(80414,398097)
+    for report in [reference,veto,sharp]:
+        for name,expected in report['source_text_sha256'].items():
+            assert text_hash(ROOT/name)==expected,name
     PREVIEW.mkdir(parents=True,exist_ok=True)
     (PREVIEW/'extracted.txt').write_text(combined,encoding='utf-8')
     document = pdfium.PdfDocument(str(pdf))
@@ -97,6 +111,8 @@ def main():
                   latex_overflow_missing_character_or_undefined_reference_findings=findings,
                   source_and_pdf_hashes_match_build_manifest=True,pdf_pages_rendered=len(extracted),
                   proposition_6_numbers_match_exact_reports=True,
+                  proposition_8_and_joint_veto_numbers_match_exact_reports=True,
+                  sharpness_and_new_certificate_source_hashes_match=True,
                   checker_text_sha256=text_hash(Path(__file__).resolve()),
                   scope='Document integrity and consistency with retained exact results; not a proof or external review.',
                   compiler_environment_note='Fontconfig configuration/cache messages are reported; compilation and rendering succeed.')

@@ -18,13 +18,17 @@ established least-squares measurements. The quantitative specialization and
 certified comparison remain subjects for publication-priority and usefulness
 assessment; broad existence alone is not a defensible novelty claim.
 
-The subsequent [perfect-packing sharpness supplement](theory/perfect_packing_sharpness.md)
+The [perfect-packing sharpness theorem](theory/perfect_packing_sharpness.md)
 determines the exact worst-case bound when `alpha=1`:
 `2*sqrt(delta)/(2-sqrt(delta))`, with an explicit family attaining it.
 The [verification report](research/PERFECT_PACKING_SHARPNESS_2026-11-01.md)
 includes exact diamond-norm certificates and numerical attacks. This is an
 internal sharpness result for that subclass; literature novelty and external
-review remain open. The supplement is separate from the current paper PDF.
+review remain open. It is now Theorem 7 of the paper. Subsequent
+[exact reference-advantage and imperfect-packing results](research/REFERENCE_AND_PACKING_PROGRESS_2026-11-01.md)
+prove a reference advantage of at least 0.0047, give an analytic joint lower
+bound, and rule out two proposed upper extensions. The general sharp joint
+upper bound remains open.
 
 ## Current theorem candidate
 
@@ -32,9 +36,11 @@ For a complete, focused presentation, start with the
 [short paper PDF](paper/prescribed_repeatable_completion.pdf),
 [readable manuscript](paper/prescribed_repeatable_completion.md), and
 [external-review brief](review/SHORT_PAPER_REVIEW_BRIEF.md).
-The ten-page paper gives the full analytic main argument, corrected attribution,
+The twelve-page paper gives the full analytic main argument, corrected attribution,
 and explicit limitations. Proposition 6 adds the certified comparison, with a
-linked computer-assisted proof supplement. It remains an external-review draft
+linked computer-assisted proof supplement. Theorem 7 and Propositions 8--9
+add sharp subclass control, reference advantage, and an imperfect-packing
+lower bound, with linked analytic and certificate supplements. It remains an external-review draft
 with novelty unverified.
 
 Let \(\{E_j\}_{j=1}^m\) be a finite POVM on a finite-dimensional Hilbert space. Fix \(0<\delta<1/2\). For every nonzero outcome, let \(P_j\neq0\) be the full spectral projection of \(E_j\) onto eigenvalues at least \(1-\delta\).

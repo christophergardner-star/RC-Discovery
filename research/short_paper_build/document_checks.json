@@ -1,11 +1,11 @@
 {
   "result": "PASS",
-  "pdf_sha256": "2847d5d2686a7037b7487df0ef05e28b1ce39e3e5ca0d953405f95b57af32682",
-  "pages": 10,
+  "pdf_sha256": "26fa3f03893624d7c4dc510eccfa524cef4f35410b65f6591e5b526a19b136ff",
+  "pages": 12,
   "title": "Stability of a prescribed repeatable completion of a quantum measurement",
   "author": "Christopher Gardner",
   "page_extracted_character_counts": [
-    2775,
+    2842,
     2313,
     2182,
     1994,
@@ -13,10 +13,12 @@
     3490,
     2576,
     2988,
-    3127,
-    505
+    2788,
+    3235,
+    3257,
+    1252
   ],
-  "numbered_equations": 26,
+  "numbered_equations": 33,
   "resolved_reference_keys": [
     "busch1995",
     "debruijn1980",
@@ -26,13 +28,18 @@
     "kitaev2025",
     "kotowski2025",
     "ksw2008",
+    "puchala2018",
+    "regula2026",
+    "watrous2012",
     "watrous2018"
   ],
   "latex_overflow_missing_character_or_undefined_reference_findings": [],
   "source_and_pdf_hashes_match_build_manifest": true,
-  "pdf_pages_rendered": 10,
+  "pdf_pages_rendered": 12,
   "proposition_6_numbers_match_exact_reports": true,
-  "checker_text_sha256": "a04423294dcf5fdc1979e336cc6fbfa974daeaa9eee2a42f9241d2401f06b593",
+  "proposition_8_and_joint_veto_numbers_match_exact_reports": true,
+  "sharpness_and_new_certificate_source_hashes_match": true,
+  "checker_text_sha256": "1aac7a3d04659bf7395d4f7162c61823f4de257c59209bb19eae1cba80f995a4",
   "scope": "Document integrity and consistency with retained exact results; not a proof or external review.",
   "compiler_environment_note": "Fontconfig configuration/cache messages are reported; compilation and rendering succeed."
 }

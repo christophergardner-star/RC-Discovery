@@ -3,18 +3,18 @@
     "pandoc": "pandoc 3.13",
     "tectonic": "Tectonic 0.17.0"
   },
-  "source_revision": "d706872d89503f5c6f9e59d8f91b518bec9991b1",
+  "source_revision": "56f50f49db301a0f69eaed8ab5a650591a6a9aae",
   "source_hash_kind": "SHA256 of UTF-8 text with LF-normalized line endings",
   "source_hashes": {
-    "paper/arxiv_ready.md": "8194f9ca0162a65525eb63ecddc04118a48308bbab2178c34b2f80b8d4719c1a",
-    "paper/prescribed_repeatable_completion.bib": "fb352bfd293620d1ab2e207dc93229bb49b96635d29e1beea5222febe2584f21",
+    "paper/arxiv_ready.md": "97ecf93b1ee7508959d0dea87e512f655714392657074ca022e64bef0335ce2d",
+    "paper/prescribed_repeatable_completion.bib": "7c7fd3bf80ea83246f3d150a622bd80b7404a139ad06e3c40bba0fa696ea5263",
     "paper/short_paper_header.tex": "8ae77d0ac6254266b6931820b32124d2f0eacfe93b7c4ab0a9229b696412c444",
     "scripts/build_short_paper.py": "54387d3d44a923881981514fbec729244821eb71cb613b5737b815e798d93b77"
   },
-  "tex_sha256": "1144c5692e5b6752d0f66f49c0a2459a38cf3c5718c007654b845e91646bf880",
-  "rendered_markdown_sha256": "f50d7e261bfdfd5e5b78b86103833e07fe584fb94d5341fed1c2d07dfb4b646a",
-  "pdf_sha256": "2847d5d2686a7037b7487df0ef05e28b1ce39e3e5ca0d953405f95b57af32682",
-  "pdf_bytes": 104562,
+  "tex_sha256": "91862553e7f476d0b05dd558110a53f280956a4d1c5cf888138f75aa8f52ad4c",
+  "rendered_markdown_sha256": "3f3f072a0a2228a00f441026adb63f03e0be16117a78767eba20b4e2694a3968",
+  "pdf_sha256": "26fa3f03893624d7c4dc510eccfa524cef4f35410b65f6591e5b526a19b136ff",
+  "pdf_bytes": 123064,
   "citations_used": [
     "busch1995",
     "debruijn1980",
@@ -24,6 +24,9 @@
     "kitaev2025",
     "kotowski2025",
     "ksw2008",
+    "puchala2018",
+    "regula2026",
+    "watrous2012",
     "watrous2018"
   ],
   "scope": "Document build and citation resolution; not a mathematical proof or external review."

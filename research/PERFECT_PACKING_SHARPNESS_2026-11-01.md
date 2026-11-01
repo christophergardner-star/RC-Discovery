@@ -1,5 +1,10 @@
 # Exact prescribed-completion envelope at perfect packing
 
+Subsequent update: the theorem is now incorporated into the paper. See the
+[later reference and packing report](REFERENCE_AND_PACKING_PROGRESS_2026-11-01.md)
+for the new certificates and twelve-page revision. The record below describes
+the original sharpness work.
+
 1 November 2026. Internally derived and computationally checked; not
 externally reviewed, fully formalized in Lean, or established as new in the
 literature.

@@ -26,15 +26,16 @@ instrument and satisfies
 ```
 The proof reduces to polar geometry, a classical Jordan-product
 inequality, and pure-state trace distance after an explicit
-labelled-dilation calculation. A corollary corrects separated output
-records to an exactly idempotent channel. Both unweighted and weighted
-sector constructions are established least-squares measurements. Exact
-rational certificates show that neither residual completion always has
-the smaller full diamond distance. Further examples distinguish
-repeatable from projective approximation, establish a square-root
-threshold obstruction, and limit continuity of the selection. We make no
-claim of a new general inequality, optimal constants, or literature
-priority.
+labelled-dilation calculation. For orthogonal input sectors, we
+determine the exact worst-case envelope $`2\sqrt\delta/(2-\sqrt\delta)`$
+and exhibit an attaining family. Exact rational certificates show both a
+strict reference advantage within this subclass and the failure of a
+natural joint extension outside it. A coupled simplex family gives lower
+bounds for imperfect packing. A corollary corrects separated output
+records to an exactly idempotent channel. Both sector constructions are
+established least-squares measurements; no new general inequality or
+literature priority is claimed. The sharp joint bound for general
+packing remains open.
 
 ## 1. Question and scope
 
@@ -657,7 +658,168 @@ $`\eta/\delta`$. No experimental estimation procedure for all these
 parameters, nor practical advantage of the unweighted over the weighted
 completion, is established here.
 
-## 7. Reproducibility, methodology, and review status
+## 7. Sharpness and reference systems
+
+### 7.1. Exact envelope for orthogonal sectors
+
+**Theorem 7 (perfect packing).** Under Theorem 1 with $`\alpha=1`$,
+``` math
+\nu:=\|\mathcal M_E-\mathcal M_F\|_\diamond
+\le B(\delta):=\frac{2\sqrt\delta}{2-\sqrt\delta}.
+\tag{27}
+```
+For every $`0<\delta<1/2`$, equality is attained by a five-outcome POVM
+on $`\mathbb C^6`$, using a system-only input. Thus (27) is the exact
+worst-case envelope in this subclass, over arbitrary finite dimensions
+and outcome counts.
+
+*Proof.* The diagonal blocks of $`T^*T`$ are identities, so its trace is
+$`\dim\mathcal K`$. Its least eigenvalue is one; hence $`T^*T=I`$. The
+$`P_j`$ are orthogonal and $`Q_j=P_j`$. Write $`S=\sum_jP_j`$,
+$`R=I-S`$, $`A_j=P_jE_jP_j`$, $`\Delta_j=P_j-A_j`$, and
+$`\Delta=\sum_j\Delta_j`$. Spectral commutation gives
+$`B_j:=E_j-A_j\ge0`$, with $`\sum_jB_j=L:=R+\Delta`$ and
+$`0\le\Delta\le\delta S`$. Normalize the $`B_j`$ on the support of
+$`L`$: $`N_j=L^{-1/2}B_jL^{-1/2}`$. Allocate the kernel projection to
+any label to obtain a POVM $`N`$. Since $`B_j\le L`$, the factorization
+$`B_j=\sqrt L N_j\sqrt L`$ is exact, including on the kernel. Therefore
+``` math
+\mathcal M_E-\mathcal M_F
+=\mathcal M_N\bigl(\sqrt L\,\cdot\,\sqrt L-R\,\cdot\,R\bigr)
+-\mathcal M_\Delta.
+\tag{28}
+```
+Here $`\mathcal M_\Delta`$ is completely positive, though generally not
+trace preserving.
+
+For any unit vector $`\psi`$, including a reference system, put
+$`p=\|(S\otimes I)\psi\|^2`$, $`q=1-p`$, and
+$`r=\langle\psi,(\Delta\otimes I)\psi\rangle\le\delta p`$. The vectors
+$`x=(\sqrt L\otimes I)\psi`$ and $`y=(R\otimes I)\psi`$ have squared
+norms $`q+r,q`$ and overlap $`q`$. Their rank-two difference has trace
+norm $`\sqrt{r^2+4rq}`$, by its trace $`r`$ and eigenvalue product
+$`-rq`$. This standard projected-state calculation also appears
+explicitly in (Regula et al. 2026, Appendix C). Contractivity and the
+trace $`r`$ of the positive defect output give
+``` math
+\|[(\mathcal M_E-\mathcal M_F)\otimes\mathrm{id}](\psi\psi^*)\|_1
+\le r+\sqrt{r^2+4rq}
+\le\delta p+\sqrt{\delta^2p^2+4\delta p(1-p)}.
+\tag{29}
+```
+Set $`b=\sqrt\delta`$, $`z=2-b`$, $`B=2b/z`$. Since $`B-b^2p>0`$, the
+identity
+``` math
+(B-b^2p)^2-\bigl(b^4p^2+4b^2p(1-p)\bigr)
+=4b^2(p-1/z)^2
+```
+proves (27), with equality in the scalar optimization at $`p=1/z`$.
+Reference-assisted pure inputs suffice for the diamond norm.
+
+For attainment, put $`h=\sqrt{1-b}`$, so $`z=1+h^2`$, and use basis
+$`e_0,e_1,e_2,e_3,e_4,e_r`$. Let $`P_j=e_je_j^*`$. On
+$`\operatorname{span}\{e_0,e_r\}`$, define
+``` math
+\begin{gathered}
+L_+=\frac1z\begin{pmatrix}b^2&bh\\bh&h^2\end{pmatrix},\qquad
+L_-=\frac1z\begin{pmatrix}b^2h^2&-bh\\-bh&1\end{pmatrix},\\
+E_0=(1-b^2)P_0,\qquad
+E_1=P_1+L_+/2,\quad E_2=P_2+L_+/2,\\
+E_3=P_3+L_-/2,\quad E_4=P_4+L_-/2.
+\end{gathered}
+\tag{30}
+```
+The positive rank-one operators $`L_\pm`$ sum to $`b^2P_0+R\le I`$. Thus
+the effects sum to $`I`$, and every low part has norm at most
+$`1/2<1-\delta`$. Their full threshold sectors are exactly the $`P_j`$,
+including the closed-threshold eigenvalue of $`E_0`$. For
+$`\psi=(e_0+he_r)/\sqrt z`$, the five probability differences are
+$`-b^2/z,b/(2z),b/(2z),-bh^2/(2z),-bh^2/(2z)`$. Their absolute sum is
+$`2b/z`$, proving attainment. $`\square`$
+
+Consequently $`B(\delta)=\sqrt\delta+\delta/2+O(\delta^{3/2})`$. The
+optimal asymptotic coefficient is one; the best uniform coefficient of
+$`\sqrt\delta`$ for $`0<\delta<1/2`$ is $`(8+2\sqrt2)/7`$, approached as
+$`\delta\uparrow1/2`$. This is sharpness for the prescribed completion,
+not for the best freely chosen repeatable target. If $`R=0`$, (29)
+instead gives $`\nu\le2\delta`$. The [extended proof and exact attaining
+certificates](https://github.com/christophergardner-star/RC-Discovery/blob/327986e318cbfeb8632f61dbd9bad2f0dc18b3c3/theory/perfect_packing_sharpness.md)
+provide additional checks independent of numerical solver tolerances.
+
+### 7.2. A reference can still improve discrimination
+
+Define
+$`\nu_{\rm sys}=\sup_\rho\sum_j|\operatorname{Tr}((E_j-F_j)\rho)|`$.
+Theorem 7’s attaining family does not imply $`\nu=\nu_{\rm sys}`$ for
+every measurement with $`\alpha=1`$. Reference-assisted measurement
+discrimination is an established subject (Puchała et al. 2018); the
+point here is its occurrence within this particular completion class.
+
+**Proposition 8 (computer-assisted reference advantage).** There is a
+rational eight-outcome POVM on $`\mathbb C^{10}`$, satisfying Theorem 1
+with $`\alpha=1`$ and $`\delta=17/100`$, for which
+``` math
+\nu_{\rm sys}\le0.1161<0.1208\le\nu.
+\tag{31}
+```
+
+*Certificate proof.* The [specified effects and certificate
+supplement](https://github.com/christophergardner-star/RC-Discovery/blob/56f50f49db301a0f69eaed8ab5a650591a6a9aae/theory/reference_advantage.md)
+form part of the statement and proof. With $`D_j=E_j-F_j`$,
+$`\nu_{\rm sys}=\max_{s\in\{-1,1\}^8}\lambda_{\max}(\sum_js_jD_j)`$.
+Exact positivity of all 256 matrices $`0.1161I-\sum_js_jD_j^T`$ gives
+the upper bound. Rational Hermitian SDP witnesses satisfy
+$`\operatorname{Tr}\rho=1`$, $`\rho\ge0`$, $`-\rho\le X_j\le\rho`$, and
+$`\sum_j\operatorname{Tr}(D_j^TX_j)\ge0.1208`$, proving the lower bound
+by standard diamond-norm duality (Watrous 2012). The verifier also
+checks every full spectral sector and the exact prescribed target. The
+advantage is at least $`0.0047`$; neither distance is asserted to be
+exactly equal to the displayed endpoint. $`\square`$
+
+### 7.3. Imperfect packing and failed extensions
+
+**Proposition 9 (coupled simplex lower bound).** For every even
+$`m\ge4`$ and $`0<\alpha\le1`$, an $`m`$-outcome POVM on
+$`\mathbb C^{m+1}`$ satisfies Theorem 1 with the stated $`\alpha`$,
+$`\delta=1/m`$, and
+``` math
+\nu\ge L_m(\alpha):=
+\sqrt{\frac{(m-2)[m-(m-1)\alpha^2]}{m(m-2)+m-(m-1)\alpha^2}}.
+\tag{32}
+```
+For fixed $`\alpha<1`$, this lower bound tends to $`\sqrt{1-\alpha^2}`$
+as $`m\to\infty`$. If $`a_m^2=1-\alpha_m^2=O(1/m)`$, then
+$`L_m(\alpha_m)/\sqrt{a_m^2+1/m}\to1`$.
+
+*Construction argument.* The [analytic
+supplement](https://github.com/christophergardner-star/RC-Discovery/blob/56f50f49db301a0f69eaed8ab5a650591a6a9aae/theory/imperfect_packing_lower_bound.md)
+specifies the matrices and forms part of this proof. The synthesis is
+$`cI+(\alpha-c)uu^*`$, with $`u=m^{-1/2}(1,\ldots,1)`$ and
+$`c=\sqrt{(m-\alpha^2)/(m-1)}`$. Residual coupling vectors sum to zero
+and are orthogonal to their respective selected eigenvectors. Their size
+is fixed by a Schur complement, proving positivity. Each selected
+eigenvalue is $`1-1/m`$; its positive complementary block has trace
+$`2/m<1-1/m`$, so the full sectors are isolated. The positive synthesis
+makes the polar sectors coordinate projections. Input $`(u+e_r)/\sqrt2`$
+has output distance exactly $`L_m(\alpha)`$. The limits follow from
+(32). $`\square`$
+
+The joint sharp upper bound remains open. Two tempting extensions of
+(27) are already false:
+``` math
+\nu\not\le 2(1-\alpha)+B(\delta)\quad\hbox{in general},\qquad
+\nu\not\le\sqrt{1-\alpha^2+B(\delta)^2}\quad\hbox{in general}.
+\tag{33}
+```
+For the first, (32) with $`m=64`$, $`\alpha=9/10`$ has squared lower
+bound $`80414/398097>1/9`$, while the proposed upper bound is $`1/3`$.
+For the second, a rational seven-dimensional variant has
+$`\alpha=13/27`$, $`\delta=1/6`$, system-only distance at least
+$`1.0405`$, and proposed bound at most $`1.0156`$. The same supplement
+links its exact effects, rational input and sign witness, and verifier.
+These are counterexamples to proposed extensions, not to Theorem 1.
+
+## 8. Reproducibility, methodology, and review status
 
 The [RC-Discovery
 repository](https://github.com/christophergardner-star/RC-Discovery)
@@ -670,9 +832,17 @@ Corollary 3, and Propositions 4–5 do not rely on solver output.
 Proposition 6 is computer-assisted: rational certificates and the stated
 analytic error bounds establish the inequalities. Its combined audit
 passes 139 independent integer-determinant positivity checks and 12
-rejection controls. These checks do not prove uniqueness. The Lean
-development checks 13 constituent declarations, not the full spectral
-and channel theorem.
+rejection controls. These checks do not prove uniqueness. Theorem 7 is
+analytic and has seven additional exact attaining certificates.
+Proposition 8’s audit checks 289 positive-definite matrices with 5,764
+integer leading minors and 13 rejection controls. The rational veto
+following Proposition 9 passes 42 integer leading-minor checks and ten
+rejection controls. Its universal lower-bound family is established by
+the linked analytic construction, not extrapolation from numerical
+tests. A separate imperfect-packing search checked 56 structured cases,
+711 accepted adaptive cases, and seven SDPs; these are numerical
+evidence only. The Lean development checks 13 constituent declarations,
+not the full spectral and channel theorem.
 
 This work was developed using **VIBE MATH**, an AI-assisted workflow of
 conjecture generation, derivation, adversarial checking, literature
@@ -682,13 +852,13 @@ internal AI-assisted checks is not external verification.
 
 The requested external assessment is concrete: check the supplied
 reduction of Theorem 1 and Corollary 3 to established tools, reconstruct
-the limitations and certified comparison, and identify any earlier
-statement or application that subsumes this quantitative specialization.
-The reduction requires no new general lemma; publication priority and
-usefulness remain unverified. Correctness, priority, optimality, and
-usefulness are separate questions. This draft has not undergone
-independent specialist review and is not represented as
-submission-ready.
+the sharp subclass theorem, lower-bound family and exact comparisons,
+and identify any earlier statement or application that subsumes this
+quantitative specialization. The reduction requires no new general
+lemma; publication priority and usefulness remain unverified.
+Correctness, priority, optimality, and usefulness are separate
+questions. This draft has not undergone independent specialist review
+and is not represented as submission-ready.
 
 ## References
 
@@ -752,11 +922,35 @@ Analysis* 255 (8): 1889–904.
 
 </div>
 
+<div id="ref-puchala2018" class="csl-entry">
+
+Puchała, Zbigniew, Łukasz Pawela, Aleksandra Krawiec, and Ryszard
+Kukulski. 2018. “Strategies for Optimal Single-Shot Discrimination of
+Quantum Measurements.” *Physical Review A* 98: 042103.
+<https://doi.org/10.1103/PhysRevA.98.042103>.
+
+</div>
+
+<div id="ref-regula2026" class="csl-entry">
+
+Regula, Bartosz, Ludovico Lami, and Nilanjana Datta. 2026. *Tight
+Relations and Equivalences between Smooth Relative Entropies*.
+arXiv:2501.12447v5. <https://arxiv.org/abs/2501.12447v5>.
+
+</div>
+
 <div id="ref-delasalle2022" class="csl-entry">
 
 Salle, Mikael de la. 2022. “Orthogonalization of Positive Operator
 Valued Measures.” *Comptes Rendus. Mathématique* 360: 549–60.
 <https://doi.org/10.5802/crmath.326>.
+
+</div>
+
+<div id="ref-watrous2012" class="csl-entry">
+
+Watrous, John. 2012. *Simpler Semidefinite Programs for Completely
+Bounded Norms*. arXiv:1207.5726v2. <https://arxiv.org/abs/1207.5726v2>.
 
 </div>
 

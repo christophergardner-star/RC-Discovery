@@ -1,7 +1,7 @@
 # Short paper for external review
 
 **Stability of a prescribed repeatable completion of a quantum measurement**  
-Christopher Gardner, revised 1 November 2026. Ten pages including references.
+Christopher Gardner, revised 1 November 2026. Twelve pages including references.
 
 - [Typeset PDF](prescribed_repeatable_completion.pdf)
 - [Readable Markdown with resolved references](prescribed_repeatable_completion.md)
@@ -13,7 +13,9 @@ The paper contains the frozen coefficient-two theorem, a complete analytic
 proof, the record-correction corollary, the weighted prior-art comparison,
 and explicit counterexamples and limitations. Proposition 6 adds the certified
 four-dimensional comparison and localized equality point; its computer-assisted
-proof includes the linked certificate supplement. VIBE MATH appears in the
+proof includes the linked certificate supplement. Section 7 adds the sharp
+perfect-packing theorem, an exact reference-advantage certificate, and a
+coupled simplex lower bound with two vetoed upper extensions. VIBE MATH appears in the
 methodology disclosure, not as a mathematical claim.
 
 The current status is an external-review draft: internally checked, not peer
@@ -24,14 +26,16 @@ specializations of established tools. External assessment should check that
 reduction and evaluate earlier publication and usefulness. No external reviewer has been contacted
 by preparing this package.
 
-## Subsequent sharpness supplement
+## Sharpness and reference results
 
 The [perfect-packing note](../theory/perfect_packing_sharpness.md) proves an
 exact bound for the prescribed completion when `alpha=1`, together with a
 family attaining it. Its [verification report](../research/PERFECT_PACKING_SHARPNESS_2026-11-01.md)
-includes exact primal/dual certificates. This supplement is not yet included
-in the ten-page PDF. The paper's general bound remains valid; its general
-optimality and the new subclass result's publication novelty remain open.
+includes exact primal/dual certificates. Its analytic theorem is now included
+in the PDF as Theorem 7. The [reference-advantage note](../theory/reference_advantage.md)
+and [imperfect-packing construction](../theory/imperfect_packing_lower_bound.md)
+are linked proof supplements for Propositions 8--9 and the two upper-bound
+vetoes. The general sharp joint upper bound and publication novelty remain open.
 
 ## Source and build
 
@@ -72,8 +76,10 @@ Build logs and source/artifact hashes are retained in
 The [internal review record](../research/SHORT_PAPER_REVIEW_2026-10-31.md)
 records the original eight-page revision. The
 [1 November revision record](../research/SHORT_PAPER_REDUCTION_REVIEW_2026-11-01.md)
-records the current ten-page paper and distinguishes document checks,
+records the earlier ten-page paper and distinguishes document checks,
 numerical checks, exact certificate checks, and mathematical review.
+The [latest revision report](../research/REFERENCE_AND_PACKING_PROGRESS_2026-11-01.md)
+records the current twelve-page paper, 33 equations, and twelve references.
 
 ## Relationship to the longer material
 

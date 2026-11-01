@@ -8,6 +8,15 @@ A literature search cannot certify absence of prior art. The canonical no-overcl
 
 - `literature/PRIOR_ART_AND_ATTRIBUTION.md`
 
+## Reference advantage and imperfect packing
+
+The [new attribution scope note](REFERENCE_AND_PACKING_ATTRIBUTION_2026-11-01.md)
+separates established reference-assisted discrimination and simplex/Schur
+complement tools from the exact prescribed-completion examples and lower
+bound. The results are internally derived and certified within their stated
+scope; publication priority is unverified. The current paper includes them
+in Section 7, without a claim to solve general joint optimality.
+
 ## Perfect-packing sharpness supplement
 
 The [new scope note](PERFECT_PACKING_SHARPNESS_ATTRIBUTION_2026-11-01.md)

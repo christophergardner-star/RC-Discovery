@@ -14,6 +14,23 @@ This ledger separates mathematical correctness, numerical evidence, formal verif
 
 No public file should represent the work as externally proved, peer reviewed, fully machine checked, prior-art free, patentable, or a proven breakthrough.
 
+## Reference advantage and imperfect packing
+
+The [latest verification and paper report](research/REFERENCE_AND_PACKING_PROGRESS_2026-11-01.md)
+records an exact reference advantage: system-only distance at most 0.1161,
+full diamond distance at least 0.1208, with `alpha=1` and `delta=17/100`.
+The audit passes 5,764 independent integer leading minors and 13 rejection
+controls. This is an example within the prescribed-completion class, not a
+novelty claim for reference-assisted measurement discrimination.
+
+The [coupled simplex construction](theory/imperfect_packing_lower_bound.md)
+has a system-only lower bound tending to `sqrt(1-alpha^2)` as `delta=1/m`
+tends to zero, and joint small-error lower scale `sqrt(1-alpha^2+delta)`.
+Two proposed upper extensions are false; one is ruled out analytically and
+the other by a rational seven-dimensional witness with distance at least
+1.0405 versus proposed bound at most 1.0156. The frozen theorem is unchanged.
+The sharp joint upper bound for `alpha<1` remains open.
+
 ## Exact sharpness at perfect packing
 
 The [perfect-packing proof](theory/perfect_packing_sharpness.md) gives the
@@ -63,9 +80,10 @@ polar geometry, the classical Jordan-product bound, standard trace-distance
 estimates, and elementary conditioning. The measurement-specific bridge is
 the residual-preserving labelled dilation. This is an explicit quantitative
 specialization; prior publication and usefulness remain unverified.
-The [revised ten-page paper](paper/prescribed_repeatable_completion.pdf)
-includes that assessment and the certified comparison as Proposition 6.
-See the [revision and verification record](research/SHORT_PAPER_REDUCTION_REVIEW_2026-11-01.md).
+The [revised twelve-page paper](paper/prescribed_repeatable_completion.pdf)
+includes that assessment, the certified comparison as Proposition 6, and the
+new sharpness and reference results in Section 7. See the
+[latest revision and verification record](research/REFERENCE_AND_PACKING_PROGRESS_2026-11-01.md).
 
 The [construction attribution update](literature/CROSSOVER_AND_CONSTRUCTION_ATTRIBUTION_2026-11-01.md)
 identifies both sector polar formulas explicitly with Eldar–Forney's unweighted
