@@ -11,10 +11,13 @@ worst-case supremum and direct accessibility estimate](research/LEAN_PERFECT_SHA
 are also checked. The full general joint sharpness theorem, final record correction
 and saved comparison-certificate instantiations remain unfinished in Lean.
 
-The new [joint second-order proof](theory/joint_second_order.md) derives
-`W = sqrt(s) + s/2 + O(s^(3/2))`, `s=1-alpha^2+delta`, with a stronger lower
-family at every exact parameter pair. This is an internally derived analytic
-result with partial Lean verification. The general finite-error optimum remains open.
+**9 November extension:** the [exact joint proof](theory/exact_joint_envelope.md)
+derives `W(alpha,delta) = 2 sqrt(epsilon)/(2-sqrt(epsilon))`,
+`epsilon=1-alpha^2(1-delta)`, throughout `0<alpha<=1`, `0<delta<1/2`.
+This closes the general finite-error gap internally for the prescribed completion,
+including arbitrary finite ancillas. The coupled operator lemma and canonical
+threshold split are Lean checked; full formal assembly, novelty and external
+review remain outstanding. See the [verification report](research/EXACT_JOINT_ENVELOPE_2026-11-09.md).
 
 > **Vibe to generate. Audit to believe.**
 
@@ -39,8 +42,8 @@ internal sharpness result for that subclass; literature novelty and external
 review remain open. It is now Theorem 7 of the paper. Subsequent
 [exact reference-advantage and imperfect-packing results](research/REFERENCE_AND_PACKING_PROGRESS_2026-11-01.md)
 prove a reference advantage of at least 0.0047, give an analytic joint lower
-bound, and rule out two proposed upper extensions. The exact general joint
-finite-error envelope remains open.
+bound, and rule out two proposed upper extensions. The 9 November supplement
+now supplies the exact general joint envelope within the prescribed class.
 
 ## Current theorem candidate
 
@@ -51,7 +54,8 @@ The upper bound includes arbitrary reference systems and matches the
 existing coupled-simplex lower family. For `1-alpha^2=delta`, the sharp
 leading coefficient of `sqrt(delta)` is `sqrt(2)`. This is a subsequent
 internally proved addition; external review and novelty remain unverified.
-The finite-error optimum remains open.
+The subsequent 9 November proof gives the exact finite-error optimum for the
+same prescribed completion; it is not yet incorporated into the frozen PDF.
 
 The [combined-paper audit](research/COMBINED_PAPER_AUDIT_2026-11-01.md),
 [focused novelty veto](literature/FINAL_FOCUSED_VETO_2026-11-01.md) and
@@ -309,7 +313,7 @@ Machine-checked with pinned Lean 4 + Mathlib and zero `sorry` within the stated 
 - soundness of measurement diamond dual certificates and the positive-filter
   signed Kraus lemma used in the new joint second-order argument.
 
-The development now has 334 written lemmas/theorems. The default build audits
+The development now has 342 written lemmas/theorems. The default build audits
 every project declaration for transitive axioms; only the three standard Lean
 logical axioms are allowed. The frozen review release's count of 13 is an
 earlier snapshot.
@@ -317,7 +321,7 @@ earlier snapshot.
 Not yet formalised end to end:
 
 - the general joint lower family and its membership in the actual worst-case
-  class, the improved noncommuting upper bound and the resulting joint limit;
+  class, and the complete assembly of the new exact joint upper bound;
 - the final record-correction construction and certificate;
 - the saved computer-assisted comparison certificates and their perturbation
   error transfers (generic diamond dual-certificate soundness is checked).
@@ -325,7 +329,7 @@ Not yet formalised end to end:
 The principal-angle and all-input diamond gaps are closed. The trace proof
 works directly on arbitrary complex matrices, so it does not need a pure-state
 reduction. See [`lean/README.md`](lean/README.md) and the
-[latest formalization report](research/LEAN_PERFECT_SHARPNESS_2026-11-01.md).
+[latest exact-envelope report](research/EXACT_JOINT_ENVELOPE_2026-11-09.md).
 
 ## Cruxy source provenance
 

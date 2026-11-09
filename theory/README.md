@@ -18,7 +18,10 @@ proves the exact prescribed-completion envelope
 allowed threshold. It is now Theorem 7 in the paper. The
 [reference-advantage certificate](reference_advantage.md) and
 [imperfect-packing lower bound and vetoes](imperfect_packing_lower_bound.md)
-support Propositions 8--9. The general `alpha<1` sharp finite-error bound remains open.
+support Propositions 8--9. The later [exact joint envelope](exact_joint_envelope.md)
+now determines the general finite-error bound internally for the prescribed
+completion, with arbitrary finite ancillas. Its new operator components are
+Lean checked; complete formalization and external review remain outstanding.
 
 The new [joint second-order supplement](joint_second_order.md) derives
 `W = sqrt(s) + s/2 + O(s^(3/2))` internally and gives a stronger lower family
@@ -30,8 +33,9 @@ actual supremum and direct accessibility estimate.
 The subsequent [joint small-error theorem](joint_small_error_asymptotics.md)
 determines the sharp leading envelope `sqrt(1-alpha^2+delta)` as both errors
 vanish, with a uniform remainder bound and matching lower construction.
-This closes the leading-order gap, including `1-alpha^2=delta`. The exact
-finite-error envelope remains open. It is now Theorem 10 in the fourteen-page
+This closes the leading-order gap, including `1-alpha^2=delta`. It is now
+superseded by the exact formula in the 9 November supplement. The earlier
+leading-order result is Theorem 10 in the fourteen-page
 paper and is covered by the combined internal proof audit.
 
 The [minimum-outcome corollary](minimum_outcomes_square_root.md) gives the

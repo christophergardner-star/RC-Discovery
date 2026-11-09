@@ -1,0 +1,2 @@
+C:\Users\cgard\Favorites\RC Discovery\research\local_validation\phd_audit\lean_negative_controls\unfinished_proof.lean:7:8: warning: declaration uses `sorry`
+C:\Users\cgard\Favorites\RC Discovery\research\local_validation\phd_audit\lean_negative_controls\unfinished_proof.lean:12:0: error: Forbidden axiom sorryAx in RCProof.auditNegativeControl

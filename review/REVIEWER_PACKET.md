@@ -10,7 +10,7 @@ The work is internally reconstructed, computationally audited, partially
 formalised, novelty unverified. No external review is represented as completed.
 
 After this paper was frozen, the [Lean operator development](../lean/README.md)
-expanded from 13 to 334 written lemmas/theorems. The assembled
+expanded from 13 to 342 written lemmas/theorems. The assembled
 [`frozen_theorem`](../lean/RCProof/FrozenTheorem.lean) now includes the canonical
 frame and completion, principal-angle and equal-rank results, repeatable
 instrument, and the unconditional coefficient-two diamond bound for all complex
@@ -23,6 +23,14 @@ estimate. The general joint lower construction and assembled sharp joint
 asymptotic theorem, final record correction and saved comparison instantiations
 remain unfinished in Lean. The paper's count remains a historical snapshot.
 
+**New review target, 9 November:** the [exact joint envelope](../theory/exact_joint_envelope.md)
+gives equality `W=B(1-alpha^2(1-delta))` throughout the admissible parameter
+range. It uses a common-threshold split and a coupled Gram certificate, avoiding
+the prior commutator loss. Those operator components are Lean checked, but the
+complete theorem is not yet fully formalized. Please reconstruct this supplement
+alongside the frozen paper; its novelty and external correctness assessment
+remain unresolved. [Verification record](../research/EXACT_JOINT_ENVELOPE_2026-11-09.md).
+
 The new [joint second-order supplement](../theory/joint_second_order.md)
 derives `W = sqrt(s) + s/2 + O(s^(3/2))` internally and narrows the small-error
 finite-error enclosure to width `4 delta s`. It has exact rational checks and
@@ -32,7 +40,8 @@ partial Lean support, but requires external reconstruction and full formalizatio
 leading envelope `sqrt(1-alpha^2+delta)` with a uniform remainder and includes
 the upper proof and joint-limit argument. The
 [extended note](../theory/joint_small_error_asymptotics.md) supplies supplementary
-detail. The exact finite-error optimum remains open.
+detail. The 9 November supplement now determines the exact finite-error optimum
+internally for the prescribed completion.
 
 For a finite POVM with nonzero full near-unit sectors and injective synthesis
 map `T=U|T|`, the object is the specified same-label completion
@@ -71,6 +80,6 @@ full release mode also reruns the joint theorem's numerical operator and SDP
 checks in a pinned environment. These are supporting checks, not proof review.
 The [combined release report](../research/COMBINED_REVIEW_RELEASE_2026-11-01.md)
 records the fresh checkout, environment, results and retained logs.
-The exact general finite-error envelope, crossing uniqueness and publication novelty
-remain open. The methodology disclosure identifies the AI-assisted workflow
+Crossing uniqueness and publication novelty remain open. The exact joint formula
+now has an internal proof awaiting external reconstruction. The methodology disclosure identifies the AI-assisted workflow
 as VIBE MATH; it is not a mathematical claim or an endorsement.

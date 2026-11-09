@@ -84,6 +84,11 @@ REQUIRED = (
     "RCProof.measurement_dual_certificate",
     "RCProof.record_accessibility_two_sided",
     "RCProof.record_accessibility_spectral",
+    "RCProof.coupled_filter_scalar_identity",
+    "RCProof.coupled_filter_signed_pair",
+    "RCProof.uniform_remainder_positive",
+    "RCProof.canonical_uniform_filter_bounds",
+    "RCProof.uniform_selected_factor",
 )
 
 
@@ -148,7 +153,7 @@ def main() -> None:
                           for path in (LEAN / "RCProof").glob("*.lean"))
     manifest = {
         "result": "PASS", "utc": datetime.now(timezone.utc).isoformat(),
-        "scope": "Frozen theorem, canonical joint upper bound, exact perfect-packing operator bound, attaining POVM with full threshold sectors, actual perfect-packing worst-case supremum and second-order limit, two-sided accessibility bound for an explicit accessible maximizing record, measurement dual-certificate soundness, and positive-filter signed Kraus lemma are machine-checked. General joint lower-family construction and assembled second-order theorem, final record correction, and saved comparison certificate instantiations are not fully formalized.",
+        "scope": "Frozen theorem, previous canonical joint upper bound, exact perfect-packing operator bound and attaining family, actual perfect-packing supremum and second-order limit, spectral accessibility, dual-certificate soundness, the full-range coupled filter Gram lemma and canonical uniform-threshold split are machine-checked. Complete new exact joint upper assembly and general attaining-family/supremum construction, final record correction, and saved comparison instantiations are not fully formalized.",
         "source_theorems": source_theorems,
         "kernel_theorem_declarations_including_generated": int(match.group(1)),
         "all_namespace_declarations_audited": int(match.group(2)),
@@ -158,7 +163,7 @@ def main() -> None:
     }
     (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"PASS: {source_theorems} source theorems; {match.group(2)} declarations audited. "
-          "Exact perfect-packing sharpness and direct accessibility checked; full joint sharpness, final record correction and saved comparison instantiations remain unfinished.")
+          "Perfect-packing sharpness, accessibility and exact-joint operator components checked; full exact-joint assembly, record correction and saved comparison instantiations remain unfinished.")
 
 
 if __name__ == "__main__":

@@ -22,3 +22,4 @@ import RCProof.JointAsymptotic
 import RCProof.PerfectAsymptotic
 import RCProof.PositiveFilter
 import RCProof.RecordSpectral
+import RCProof.UniformThreshold

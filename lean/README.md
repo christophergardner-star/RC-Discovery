@@ -1,7 +1,7 @@
 # Lean 4 formalization
 
 The frozen construction and its coefficient-two diamond-norm estimate are
-now machine checked. As of 1 November 2026, the project contains 334 explicitly
+now machine checked. As of 9 November 2026, the project contains 342 explicitly
 written lemmas/theorems. The assembled statement is
 [`frozen_theorem`](RCProof/FrozenTheorem.lean): canonical sectors, equal ranks,
 principal-angle bound, completed POVM and sector action, residual gap,
@@ -10,6 +10,12 @@ unhalved diamond bound over all complex inputs and all finite ancillas.
 The exact perfect-packing operator bound, attaining POVM, actual worst-case
 supremum, perfect-packing second-order limit and direct accessibility estimate
 are also checked. This does not formalize every later result in the paper.
+
+The 9 November [exact joint proof](../theory/exact_joint_envelope.md) additionally
+has checked components: `CoupledFilter` proves the full-range combined Gram
+inequality, and `UniformThreshold` proves the canonical common-threshold split
+and its filter bounds. The complete new channel upper bound and general
+attaining-family/supremum assembly are not yet fully formalized.
 
 The toolchain remains Lean 4.35.0 with Mathlib pinned to
 `56a005855ea17e0b0958f73ec801ae140b0a1679`. No external quantum-information
@@ -163,7 +169,7 @@ precise boundary. This development does not establish novelty or external review
 `lake build` also builds [RCProofAudit](RCProofAudit.lean). It traverses **all**
 declarations in the `RCProof` namespace and rejects any transitive axiom except
 `propext`, `Classical.choice` and `Quot.sound`. The run manifest distinguishes
-the 334 written lemmas/theorems from generated equations, structure projections
+the 342 written lemmas/theorems from generated equations, structure projections
 and tactic helpers. Definitions of maps and norms are not counted as proofs.
 
 From `lean` on Windows:

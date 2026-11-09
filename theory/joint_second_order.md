@@ -5,6 +5,12 @@ certificates and finite numerical attacks. The universal results in this note ar
 Lean or externally reviewed**. No publication-priority claim is made.
 
 This note strengthens the earlier [joint leading-order result](joint_small_error_asymptotics.md).
+
+**Superseded on 9 November:** [the exact joint proof](exact_joint_envelope.md)
+closes the finite-error gap below by changing to the common-threshold split.
+It proves `W=B(epsilon)` internally throughout the admissible parameter range,
+with partial Lean verification. The earlier proof and its historical boundary
+are retained here.
 All distances are unhalved, all upper bounds include arbitrary finite ancillas,
 and the target is the prescribed unweighted residual completion.
 
