@@ -1,0 +1,222 @@
+{
+  "result": "PASS",
+  "scope": "Exact, dimension-independent algebra audit of the general attaining family.\n\nPolynomial identities are checked over QQ modulo the defining parameter\nrelations. This is a symbolic algebra check, NOT a Lean proof of the family or\nits membership in PackedMeasurement. Positivity and sector recognition use the\nexplicit decompositions documented in theory/exact_joint_lower_audit.md.",
+  "sympy_version": "1.14.0",
+  "parameter_domain": "n integer >= 2; 0<a<=1; 1/2<c<1; (1-c)(n-1)>=c(1-a^2); g>0; b>0; h>=0",
+  "relations": [
+    "a**2 + g**2*(n - 1) - n",
+    "b + h**2 - 1",
+    "a**2*c + b**2 - 1"
+  ],
+  "domain_denominators_nonzero": [
+    "n",
+    "n-1",
+    "a",
+    "g",
+    "2-b"
+  ],
+  "identities": [
+    {
+      "name": "unit_column_norm",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "n"
+      ]
+    },
+    {
+      "name": "g_squared_above_one",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "n - 1"
+      ]
+    },
+    {
+      "name": "g_squared_above_a_squared",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "n - 1"
+      ]
+    },
+    {
+      "name": "nonnegative_residual_coefficient",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "n - 1"
+      ]
+    },
+    {
+      "name": "residual_coefficient_at_most_one",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "1"
+      ]
+    },
+    {
+      "name": "largest_defect_is_b_squared",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "1"
+      ]
+    },
+    {
+      "name": "two_residual_effects_sum",
+      "entries": 4,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "1",
+        "b - 2"
+      ]
+    },
+    {
+      "name": "POVM_normalization_core",
+      "entries": 4,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "1",
+        "b - 2"
+      ]
+    },
+    {
+      "name": "POVM_normalization_perpendicular",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "1"
+      ]
+    },
+    {
+      "name": "strict_sector_gap_plus_core",
+      "entries": 4,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "1",
+        "2*(b - 2)"
+      ]
+    },
+    {
+      "name": "strict_sector_gap_plus_perpendicular",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "1"
+      ]
+    },
+    {
+      "name": "strict_sector_gap_minus_core",
+      "entries": 4,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "1",
+        "2*(b - 2)"
+      ]
+    },
+    {
+      "name": "strict_sector_gap_minus_perpendicular",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "1"
+      ]
+    },
+    {
+      "name": "density_trace",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "b - 2"
+      ]
+    },
+    {
+      "name": "density_rank_one",
+      "entries": 4,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "(b - 2)**2"
+      ]
+    },
+    {
+      "name": "aggregate_old_difference",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "b - 2"
+      ]
+    },
+    {
+      "name": "each_old_difference",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "n*(b - 2)"
+      ]
+    },
+    {
+      "name": "each_plus_difference",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "(b - 2)**2"
+      ]
+    },
+    {
+      "name": "each_minus_difference",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "1"
+      ]
+    },
+    {
+      "name": "outcome_differences_sum_zero",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "(b - 2)**2"
+      ]
+    },
+    {
+      "name": "attaining_signed_test",
+      "entries": 1,
+      "result": "ZERO_REMAINDER",
+      "denominators": [
+        "(b - 2)**2"
+      ]
+    }
+  ],
+  "negative_controls": [
+    {
+      "name": "wrong_envelope_factor",
+      "result": "REJECTED",
+      "remainder": "a**2*c + 2*b - 1"
+    },
+    {
+      "name": "omit_residual_compression",
+      "result": "REJECTED",
+      "remainder": "-a**2*c - 2*b + 2"
+    },
+    {
+      "name": "wrong_frame_column_normalization",
+      "result": "REJECTED",
+      "remainder": "(g - 1)*(g + 1)"
+    },
+    {
+      "name": "wrong_clean_split",
+      "result": "REJECTED",
+      "remainder": "a**2*c + 2*b - 1"
+    }
+  ],
+  "source_sha256": "b0adf0bdb4134465ea8de7a260fa153d3011a9e973928651301b1649febf66fb",
+  "not_checked_by_this_program": [
+    "universal matrix positivity",
+    "full spectral-projector recognition",
+    "canonical basis invariance",
+    "Lean PackedMeasurement membership",
+    "novelty"
+  ]
+}

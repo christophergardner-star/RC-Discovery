@@ -23,3 +23,5 @@ import RCProof.PerfectAsymptotic
 import RCProof.PositiveFilter
 import RCProof.RecordSpectral
 import RCProof.UniformThreshold
+import RCProof.ExactJointUpper
+import RCProof.JointSecondLimit

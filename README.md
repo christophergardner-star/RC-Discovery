@@ -8,16 +8,20 @@ The [frozen construction and coefficient-two diamond bound](research/LEAN_FROZEN
 are now Lean-checked, including principal angles and arbitrary ancilla-assisted
 complex inputs. The [exact perfect-packing operator bound, attaining POVM,
 worst-case supremum and direct accessibility estimate](research/LEAN_PERFECT_SHARPNESS_2026-11-01.md)
-are also checked. The full general joint sharpness theorem, final record correction
-and saved comparison-certificate instantiations remain unfinished in Lean.
+are also checked. The general exact joint theorem is now checked as well;
+final record correction and saved comparison-certificate instantiations remain
+separate unfinished paper formalizations.
 
 **9 November extension:** the [exact joint proof](theory/exact_joint_envelope.md)
 derives `W(alpha,delta) = 2 sqrt(epsilon)/(2-sqrt(epsilon))`,
 `epsilon=1-alpha^2(1-delta)`, throughout `0<alpha<=1`, `0<delta<1/2`.
 This closes the general finite-error gap internally for the prescribed completion,
-including arbitrary finite ancillas. The coupled operator lemma and canonical
-threshold split are Lean checked; full formal assembly, novelty and external
-review remain outstanding. See the [verification report](research/EXACT_JOINT_ENVELOPE_2026-11-09.md).
+including arbitrary finite ancillas. The **exact supremum equality and general
+attaining family are now Lean checked**, using the original admissible class.
+Novelty and external review remain open. See the
+[full formalization report](research/LEAN_EXACT_JOINT_FULL_2026-11-09.md),
+[precise prior-art comparison](literature/EXACT_JOINT_COMPARISON_2026-11-09.md),
+and [reconstruction packet](review/EXACT_JOINT_RECONSTRUCTION.md).
 
 > **Vibe to generate. Audit to believe.**
 

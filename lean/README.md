@@ -1,7 +1,7 @@
 # Lean 4 formalization
 
 The frozen construction and its coefficient-two diamond-norm estimate are
-now machine checked. As of 9 November 2026, the project contains 342 explicitly
+now machine checked. As of 9 November 2026, the project contains 481 explicitly
 written lemmas/theorems. The assembled statement is
 [`frozen_theorem`](RCProof/FrozenTheorem.lean): canonical sectors, equal ranks,
 principal-angle bound, completed POVM and sector action, residual gap,
@@ -12,10 +12,16 @@ supremum, perfect-packing second-order limit and direct accessibility estimate
 are also checked. This does not formalize every later result in the paper.
 
 The 9 November [exact joint proof](../theory/exact_joint_envelope.md) additionally
-has checked components: `CoupledFilter` proves the full-range combined Gram
-inequality, and `UniformThreshold` proves the canonical common-threshold split
-and its filter bounds. The complete new channel upper bound and general
-attaining-family/supremum assembly are not yet fully formalized.
+has a complete canonical upper proof: `CoupledFilter` and `CoupledChannel`
+construct the combined signed Kraus certificate; `UniformThreshold` and
+`UniformRemainder` derive its data from the POVM; `CoupledBound` and
+`CoupledMeasurement` prove the all-complex-input estimate after arbitrary finite
+amplification. `ExactJointUpper` proves the actual canonical diamond bound and
+its worst-case supremum upper bound. The general attaining family and exact
+supremum equality are checked in `ExactJointAttainment`, including full
+threshold-sector recognition, exact packing and transport into the original
+finite-indexed admissible class. `ExactJointAsymptotic` and `JointSecondLimit`
+prove the joint leading and second-order limits for the actual supremum.
 
 The toolchain remains Lean 4.35.0 with Mathlib pinned to
 `56a005855ea17e0b0958f73ec801ae140b0a1679`. No external quantum-information
@@ -153,15 +159,32 @@ and an attained maximum of record residuals. `MeasurementCertificate` proves
 generic measurement diamond dual-certificate soundness. `PositiveFilter`
 proves the signed Kraus lemma used in the new joint second-order proof.
 
-`joint_envelope_limit_of_uniform_bounds` proves a limit for arbitrary sequences
-under explicit upper and lower assumptions. The actual general joint lower
-family and its membership in the worst-case class remain unformalized, as does
-the assembled improved noncommuting upper bound. The full joint sharp asymptotic
-theorem is therefore not claimed as Lean checked.
+The conditional helper `joint_envelope_limit_of_uniform_bounds` is now
+complemented by actual-supremum results. The general joint lower family and
+its membership in `PackedMeasurement` are proved; the original supremum
+definition is unchanged. `packingWorstCase_exact_joint` gives the exact value
+throughout `0<alpha<=1`, `0<delta<1/2`. The leading limit and joint subleading
+coefficient 1/2 hold along every admissible path with
+`1-alpha^2+delta` tending to zero.
+
+The lower dependency chain is:
+
+| Module | Written lemmas/theorems | Scope |
+| --- | ---: | --- |
+| `FrameRecognition` | 3 | Basis-independent canonical polar recognition and exact packing |
+| `JointFamilyGeometry`, `JointFamilyCore`, `TwoLevelFactor` | 30 | Variable dimension, core isometry, projections and positive frame factor |
+| `JointWitnessCore`, `JointFamilyFactor` | 17 | Exact two-dimensional witness and frame identities |
+| `JointFamilyPOVM`, `JointFamilySectors` | 20 | Actual positive normalized effects and full threshold sectors |
+| `JointFamilyCanonical`, `JointFamilyCompression` | 19 | Actual canonical completion, packing and core compression |
+| `JointFamilyWitness` | 11 | Density witness, test contraction and exact diamond distance |
+| `JointFamilyParameters` | 1 | Existence at every admissible parameter pair |
+| `MatrixRelabel`, `JointFamilyRelabel` | 13 | Transport to finite indices, preserving full sectors and packing |
+| `ExactJointAttainment` | 5 | Original admissible-class member, its distance and exact supremum equality |
+| `ExactJointAsymptotic`, `JointSecondLimit` | 7 | Exact expansion, actual joint leading and second-order limits |
 
 The final record correction and the saved comparison-certificate instantiations
 with their spectral/polar perturbation transfers also remain unfinished. See
-the [current report](../research/LEAN_PERFECT_SHARPNESS_2026-11-01.md) for the
+the [current report](../research/LEAN_EXACT_JOINT_FULL_2026-11-09.md) for the
 precise boundary. This development does not establish novelty or external review.
 
 ## Axiom gate and reproduction
@@ -169,7 +192,7 @@ precise boundary. This development does not establish novelty or external review
 `lake build` also builds [RCProofAudit](RCProofAudit.lean). It traverses **all**
 declarations in the `RCProof` namespace and rejects any transitive axiom except
 `propext`, `Classical.choice` and `Quot.sound`. The run manifest distinguishes
-the 342 written lemmas/theorems from generated equations, structure projections
+the 481 written lemmas/theorems from generated equations, structure projections
 and tactic helpers. Definitions of maps and norms are not counted as proofs.
 
 From `lean` on Windows:
@@ -193,7 +216,7 @@ on `PATH` or in the usual Elan installation. The local Mathlib cache setting
 avoids the unwritable default cache previously encountered on this laptop.
 Module-system and unused-variable warnings do not invalidate proofs.
 
-See the [latest progress report](../research/LEAN_SHARP_ASYMPTOTIC_PROGRESS_2026-11-01.md)
+See the [latest progress report](../research/LEAN_EXACT_JOINT_UPPER_2026-11-09.md)
 for the current run. The frozen theorem, completion and operator reports retain
 the historical 194-, 152- and 69-theorem snapshots. The frozen review paper's count of 13 describes
 its earlier release; this README tracks subsequent development.

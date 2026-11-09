@@ -1,10 +1,14 @@
 # Exact joint envelope for the prescribed repeatable completion
 
-9 November 2026. Internally derived proof. The central coupled operator
-inequality is checked in Lean; the complete canonical assembly and general
-attaining family are not yet fully formalized. External reconstruction and
+9 November 2026. Internally derived proof. The complete canonical upper bound,
+including arbitrary finite ancillas, the general attaining family, and the
+exact worst-case supremum equality are checked in Lean. External reconstruction and
 publication priority remain unresolved. This note supersedes the finite-error
 gap in [joint_second_order.md](joint_second_order.md).
+
+See the [current Lean report](../research/LEAN_EXACT_JOINT_UPPER_2026-11-09.md),
+[expanded lower-family audit](exact_joint_lower_audit.md), and
+[focused prior-art comparison](../literature/EXACT_JOINT_COMPARISON_2026-11-09.md).
 
 ## Statement
 
@@ -232,21 +236,28 @@ completions, a classification of all extremizers, or a fixed-dimension optimum.
 The proof uses the established spectral theorem, positive-family factorization,
 signed Kraus bound and the previously supplied attaining family. The new work
 is the common-threshold split and the coupled identity (9). Whether this
-specialization has appeared elsewhere requires a dedicated literature audit.
+specialization has appeared elsewhere remains unresolved after the
+[focused comparison](../literature/EXACT_JOINT_COMPARISON_2026-11-09.md).
 
 ## Verification boundary
 
 `CoupledFilter.lean` checks (9), its full-interval inequality and the signed
 operator pair with the combined Gram bound. `UniformThreshold.lean` checks
 the canonical common-threshold split, positive remainder, sum identity,
-filter bounds and selected-effect factorization. The prior development already
-checks the signed Kraus norm transfer, positive-family factorization and full
-perfect-packing theorem. The complete new canonical upper theorem and the
-general attaining-family/supremum assembly are **not yet fully Lean checked**.
+filter bounds and selected-effect factorization. `UniformRemainder`,
+`CoupledChannel`, `CoupledBound`, `CoupledMeasurement` and `ExactJointUpper`
+now assemble the complete canonical upper theorem, on all complex inputs
+and every finite ancilla, and its worst-case supremum upper bound. The prior
+development also checks the full perfect-packing theorem. `JointFamilyPOVM`
+through `JointFamilyWitness` construct the general attaining measurement and
+its actual canonical completion. `JointFamilyParameters` proves existence
+at every admissible pair; `JointFamilyRelabel` transports the construction
+to finite indices; `packingWorstCase_exact_joint` in `ExactJointAttainment.lean` proves
+the equality for the original `PackedMeasurement` supremum.
 
 The accompanying numerical attack, operator checks and primal/dual SDP checks
 are retained separately from older evidence. They test the formulas and
 constructions; the universal claim rests on the proof above.
 
-See the [dated verification record](../research/EXACT_JOINT_ENVELOPE_2026-11-09.md)
+See the [current verification record](../research/LEAN_EXACT_JOINT_FULL_2026-11-09.md)
 for commands, retained outputs and the exact formalization boundary.

@@ -89,6 +89,28 @@ REQUIRED = (
     "RCProof.uniform_remainder_positive",
     "RCProof.canonical_uniform_filter_bounds",
     "RCProof.uniform_selected_factor",
+    "RCProof.coupled_channel_certificate",
+    "RCProof.scaled_signed_certificate_bound",
+    "RCProof.coupled_channel_all_inputs",
+    "RCProof.canonical_uniform_remainder_data",
+    "RCProof.coupled_measurement_all_inputs",
+    "RCProof.canonical_exact_joint_all_inputs",
+    "RCProof.canonical_exact_joint_diamond_upper",
+    "RCProof.packingWorstCase_exact_joint_upper",
+    "RCProof.canonical_sectors_of_positive_transport",
+    "RCProof.exists_jointFamilyData",
+    "RCProof.JointFamilyData.full_sectors",
+    "RCProof.JointFamilyData.canonical_transport",
+    "RCProof.JointFamilyData.packing_exact",
+    "RCProof.JointFamilyData.diamond_attains",
+    "RCProof.JointFamilyData.relabel_full_sectors",
+    "RCProof.JointFamilyData.relabel_packing_exact",
+    "RCProof.JointFamilyData.relabel_diamond_attains",
+    "RCProof.JointFamilyData.packed_distance",
+    "RCProof.packingWorstCase_exact_joint",
+    "RCProof.joint_worstCase_expansion",
+    "RCProof.joint_worstCase_leading_limit",
+    "RCProof.joint_worstCase_second_order_limit",
 )
 
 
@@ -153,7 +175,7 @@ def main() -> None:
                           for path in (LEAN / "RCProof").glob("*.lean"))
     manifest = {
         "result": "PASS", "utc": datetime.now(timezone.utc).isoformat(),
-        "scope": "Frozen theorem, previous canonical joint upper bound, exact perfect-packing operator bound and attaining family, actual perfect-packing supremum and second-order limit, spectral accessibility, dual-certificate soundness, the full-range coupled filter Gram lemma and canonical uniform-threshold split are machine-checked. Complete new exact joint upper assembly and general attaining-family/supremum construction, final record correction, and saved comparison instantiations are not fully formalized.",
+        "scope": "Frozen theorem, exact canonical joint upper bound on every complex input and finite ancilla, general attaining POVM family at every admissible parameter pair, full threshold-sector recognition, exact packing, finite-indexed admissible-class membership, actual exact joint worst-case supremum equality, joint leading and second-order limits, perfect-packing results, spectral accessibility and dual-certificate soundness are machine-checked. Final record correction and saved comparison instantiations are separate unfinished paper formalizations. Novelty and external reconstruction are not certified by this audit.",
         "source_theorems": source_theorems,
         "kernel_theorem_declarations_including_generated": int(match.group(1)),
         "all_namespace_declarations_audited": int(match.group(2)),
@@ -163,7 +185,7 @@ def main() -> None:
     }
     (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"PASS: {source_theorems} source theorems; {match.group(2)} declarations audited. "
-          "Perfect-packing sharpness, accessibility and exact-joint operator components checked; full exact-joint assembly, record correction and saved comparison instantiations remain unfinished.")
+          "Exact joint supremum equality, attaining family, arbitrary finite ancillas and joint asymptotic limits checked; record correction and saved comparison instantiations remain separate unfinished formalizations.")
 
 
 if __name__ == "__main__":

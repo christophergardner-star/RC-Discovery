@@ -1,5 +1,11 @@
 # Reviewer packet
 
+**9 November update:** start with the [exact joint reconstruction packet](EXACT_JOINT_RECONSTRUCTION.md)
+for the later exact-envelope result. Its full canonical upper bound, general
+attaining family, exact supremum equality and joint asymptotic limits are now
+Lean checked.
+The paper release described below remains a historical snapshot.
+
 **Christopher Gardner — Stability of a prescribed repeatable completion of a
 quantum measurement.** Fourteen-page internal review draft, 1 November 2026.
 
@@ -10,7 +16,7 @@ The work is internally reconstructed, computationally audited, partially
 formalised, novelty unverified. No external review is represented as completed.
 
 After this paper was frozen, the [Lean operator development](../lean/README.md)
-expanded from 13 to 342 written lemmas/theorems. The assembled
+expanded from 13 to 481 written lemmas/theorems. The assembled
 [`frozen_theorem`](../lean/RCProof/FrozenTheorem.lean) now includes the canonical
 frame and completion, principal-angle and equal-rank results, repeatable
 instrument, and the unconditional coefficient-two diamond bound for all complex
@@ -19,22 +25,26 @@ telescoping identity, bypassing pure-state reduction. The
 [latest formalization report](../research/LEAN_PERFECT_SHARPNESS_2026-11-01.md)
 also records the checked exact perfect-packing operator bound, attaining POVM,
 actual worst-case supremum, its second-order limit and direct accessibility
-estimate. The general joint lower construction and assembled sharp joint
-asymptotic theorem, final record correction and saved comparison instantiations
-remain unfinished in Lean. The paper's count remains a historical snapshot.
+estimate. The [full joint report](../research/LEAN_EXACT_JOINT_FULL_2026-11-09.md)
+adds the general attaining family, actual exact joint supremum and both joint
+asymptotic coefficients. Final record correction and saved comparison
+instantiations remain separate unfinished formalizations. The paper's count
+remains a historical snapshot.
 
 **New review target, 9 November:** the [exact joint envelope](../theory/exact_joint_envelope.md)
 gives equality `W=B(1-alpha^2(1-delta))` throughout the admissible parameter
 range. It uses a common-threshold split and a coupled Gram certificate, avoiding
-the prior commutator loss. Those operator components are Lean checked, but the
-complete theorem is not yet fully formalized. Please reconstruct this supplement
+the prior commutator loss. The complete extremal equality is Lean checked.
+Please reconstruct this supplement
 alongside the frozen paper; its novelty and external correctness assessment
 remain unresolved. [Verification record](../research/EXACT_JOINT_ENVELOPE_2026-11-09.md).
 
 The new [joint second-order supplement](../theory/joint_second_order.md)
 derives `W = sqrt(s) + s/2 + O(s^(3/2))` internally and narrows the small-error
 finite-error enclosure to width `4 delta s`. It has exact rational checks and
-partial Lean support, but requires external reconstruction and full formalization.
+partial Lean support in its historical release. The later exact equality and
+`joint_worstCase_second_order_limit` now prove the subleading coefficient for
+the actual supremum. External reconstruction remains open.
 
 **Theorem 10 is now integrated into Section 8:** it establishes the sharp
 leading envelope `sqrt(1-alpha^2+delta)` with a uniform remainder and includes
