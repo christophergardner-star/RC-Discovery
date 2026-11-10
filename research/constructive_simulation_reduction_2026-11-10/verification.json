@@ -1,0 +1,66 @@
+{
+  "result": "PASS",
+  "utc": "2026-11-10T07:59:11.571161+00:00",
+  "scope": "Exact rational examples for refinement and the branch protocol. The global partition theorem uses an external signing algorithm as an unimplemented hypothesis. No general algorithm, full Lean proof, or new open-problem solution is certified by this script.",
+  "cases": [
+    {
+      "name": "three_bases_of_one_qubit",
+      "dimension": 2,
+      "original_outcomes": 6,
+      "rank_one_terms": 6,
+      "epsilon": "1/600",
+      "full_chunks": 1200,
+      "remainders": 0,
+      "remainder_trace_sum": "0",
+      "branches": 1200,
+      "success_probability": "1/578",
+      "positive_branch_checks": 1200,
+      "negative_controls_rejected": [
+        "undersized_branch_upper",
+        "wrong_mixing_normalization"
+      ],
+      "external_signing_algorithm_invoked": false
+    },
+    {
+      "name": "tiny_high_rank_effect",
+      "dimension": 3,
+      "original_outcomes": 2,
+      "rank_one_terms": 6,
+      "epsilon": "1/600",
+      "full_chunks": 1797,
+      "remainders": 6,
+      "remainder_trace_sum": "1/200",
+      "branches": 905,
+      "success_probability": "300/129907",
+      "positive_branch_checks": 905,
+      "negative_controls_rejected": [
+        "undersized_branch_upper",
+        "wrong_mixing_normalization"
+      ],
+      "external_signing_algorithm_invoked": false
+    },
+    {
+      "name": "unequal_diagonal_effects",
+      "dimension": 3,
+      "original_outcomes": 2,
+      "rank_one_terms": 6,
+      "epsilon": "1/600",
+      "full_chunks": 1798,
+      "remainders": 4,
+      "remainder_trace_sum": "1/300",
+      "branches": 903,
+      "success_probability": "600/259813",
+      "positive_branch_checks": 903,
+      "negative_controls_rejected": [
+        "undersized_branch_upper",
+        "wrong_mixing_normalization"
+      ],
+      "external_signing_algorithm_invoked": false
+    }
+  ],
+  "elapsed_seconds": 2.030999999959022,
+  "source_sha256": {
+    "experiments/verify_constructive_simulation_reduction.py": "2f3d49688c326513c52e6cf6b3bac8319580d5d107187b8ee0f2cf1f8eaffb20",
+    "theory/constructive_simulation_reduction.md": "ea8427f49ac889a462c7757cea407aa57a3597e4f9f51aa355dcb4d8d516038f"
+  }
+}
