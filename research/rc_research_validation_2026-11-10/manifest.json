@@ -1,0 +1,35 @@
+{
+  "result": "PASS",
+  "utc": "2026-11-10T13:57:33.217501+00:00",
+  "environment": "ee6bc0926c95694167789e18f4ac347ff254bf6b9fafa310a7d48e8822fb00ee",
+  "scope": "Initial adaptive proof-search system. Checked local tactic learning, held-out calibration, an established operator inequality, real Lean acceptance and rejection, provider interfaces with mocked inference, HTTP deadlines, and verified-data export.",
+  "unit_tests_passed": 14,
+  "real_lean_integration_tests_passed": 3,
+  "training_attempts": 3,
+  "heldout_attempts": 1,
+  "operator_replay_accepted": true,
+  "live_generative_model_tested": false,
+  "openai_api_key_configured": false,
+  "ollama_models_detected": [],
+  "model_weight_training": "No neural-weight training performed. Online learning updates strategy selection and retained proof experience.",
+  "hard_open_problem_solved": false,
+  "compiler_security": "Restricted proof text and resource limits. No additional OS security sandbox.",
+  "not_run_in_final_suite": [
+    "packing_defect_nonnegative",
+    "holdout_trace_norm_neg",
+    "record_stability_transfer"
+  ],
+  "source_sha256_lf": {
+    "rc_research/__init__.py": "229a82a12081a344a807626b78a7e9012dabdbac2b5546fc3e10f4f49f5ca642",
+    "rc_research/__main__.py": "1fe6f1440d8608554ed03947307922c25d34c5920b07ee169ff5b7d2bbdbed14",
+    "rc_research/domain.py": "7c14fa9fb5f1728000ab5ece0bc7a6a345d5d62c9c8e5b26bc442c6543933649",
+    "rc_research/engine.py": "8e13b109404ee2ea906b9e2fbdbac0df0ca5e67c73f22e4ab8ce76c596c3d797",
+    "rc_research/memory.py": "bb8136bd30c70b40a48f154ccee6826950bb5f8a82dfe57c4492bd767634a467",
+    "rc_research/problems.json": "3765f8a2c46d58896ce753e39277ea68e2be31042413eec41c4f333a8a747bab",
+    "rc_research/providers.py": "4de20df10cb08c94d59382d50dfbf3b84d15570071032dc728ad3ffa3edc3b21",
+    "rc_research/README.md": "d75f2d5d2494bf66fae4ca54af7306e224b9d8222ae50e0f577538701f83d93f",
+    "rc_research/verifier.py": "d614e91a6a9ee19c1ed3dae75b854ac3add9bd699897a6bc00bb47c177e550d3",
+    "tests/test_rc_research.py": "940c8dd7a0c33fa8c8939aa99ac02d51e039d661f88d341ce750d664f28a3651",
+    "tests/test_rc_research_lean.py": "bfccee35c38f522c237319f0a2928c230ad6371c61a49239a28fe0a4b12266c3"
+  }
+}

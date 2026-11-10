@@ -1,0 +1,24 @@
+test_failed_proofs_cannot_enter_verified_strategy_memory (test_rc_research.ResearchTests.test_failed_proofs_cannot_enter_verified_strategy_memory) ... ok
+test_holdout_results_do_not_become_strategies_or_feedback (test_rc_research.ResearchTests.test_holdout_results_do_not_become_strategies_or_feedback) ... ok
+test_http_transport_and_total_deadline (test_rc_research.ResearchTests.test_http_transport_and_total_deadline) ... ok
+test_learning_persists_and_is_environment_scoped (test_rc_research.ResearchTests.test_learning_persists_and_is_environment_scoped) ... ok
+test_live_status_can_read_while_writer_holds_run_lock (test_rc_research.ResearchTests.test_live_status_can_read_while_writer_holds_run_lock) ... ok
+test_model_revision_receives_failure_and_obeys_call_budget (test_rc_research.ResearchTests.test_model_revision_receives_failure_and_obeys_call_budget) ... {"attempt": 1, "problem": "fixed_goal", "status": "failed", "seconds": 0.1}
+{"attempt": 2, "problem": "fixed_goal", "status": "verified", "seconds": 0.1}
+ok
+test_negative_budget_rejected (test_rc_research.ResearchTests.test_negative_budget_rejected) ... ok
+test_ollama_structured_payload (test_rc_research.ResearchTests.test_ollama_structured_payload) ... ok
+test_openai_payload_and_incomplete_response (test_rc_research.ResearchTests.test_openai_payload_and_incomplete_response) ... ok
+test_owned_process_timeout_and_keyboard_interrupt (test_rc_research.ResearchTests.test_owned_process_timeout_and_keyboard_interrupt) ... ok
+test_prompt_preserves_goal_and_bounds_large_experiences (test_rc_research.ResearchTests.test_prompt_preserves_goal_and_bounds_large_experiences) ... ok
+test_rejects_command_injection_and_unfinished_proofs (test_rc_research.ResearchTests.test_rejects_command_injection_and_unfinished_proofs) ... ok
+test_response_schema_checked_locally (test_rc_research.ResearchTests.test_response_schema_checked_locally) ... ok
+test_state_lock_blocks_a_second_writer_and_releases (test_rc_research.ResearchTests.test_state_lock_blocks_a_second_writer_and_releases) ... ok
+test_correct_proof_is_accepted (test_rc_research_lean.LeanIntegrationTests.test_correct_proof_is_accepted) ... skipped 'Set RC_RESEARCH_LEAN_TESTS=1 for real Lean checks'
+test_false_claim_is_rejected_by_kernel (test_rc_research_lean.LeanIntegrationTests.test_false_claim_is_rejected_by_kernel) ... skipped 'Set RC_RESEARCH_LEAN_TESTS=1 for real Lean checks'
+test_transitive_extra_axiom_is_rejected (test_rc_research_lean.LeanIntegrationTests.test_transitive_extra_axiom_is_rejected) ... skipped 'Set RC_RESEARCH_LEAN_TESTS=1 for real Lean checks'
+
+----------------------------------------------------------------------
+Ran 17 tests in 5.084s
+
+OK (skipped=3)

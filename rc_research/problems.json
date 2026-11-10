@@ -1,0 +1,48 @@
+{
+  "problems": [
+    {
+      "id": "square_nonnegative",
+      "statement": "(x : ℝ) : 0 ≤ x ^ 2",
+      "split": "train",
+      "tags": ["real", "smoke"],
+      "provenance": "Known arithmetic calibration problem. Passing verifies the search loop, with no novelty claim."
+    },
+    {
+      "id": "packing_defect_nonnegative",
+      "statement": "(a c : ℝ) (ha : 0 ≤ a) (ha1 : a ≤ 1) (hc : 0 ≤ c) (hc1 : c ≤ 1) : 0 ≤ 1 - c * a ^ 2",
+      "split": "train",
+      "tags": ["real", "rc"],
+      "provenance": "RC defect arithmetic. Reconstructs a known supporting inequality."
+    },
+    {
+      "id": "trace_norm_triangle",
+      "statement": "(X Y : Matrix (Fin 2) (Fin 2) ℂ) : traceNorm (X + Y) ≤ traceNorm X + traceNorm Y",
+      "split": "train",
+      "tags": ["operator", "reconstruction"],
+      "context": ["lean/RCProof/TraceInequalities.lean"],
+      "provenance": "Reconstruction of RCProof.traceNorm_add, already established in the repository."
+    },
+    {
+      "id": "holdout_product_square",
+      "statement": "(x y : ℝ) : 0 ≤ (x * y) ^ 2",
+      "split": "holdout",
+      "tags": ["real", "smoke"],
+      "provenance": "Small held-out calibration problem. It is too small to establish general research capability."
+    },
+    {
+      "id": "holdout_trace_norm_neg",
+      "statement": "(X : Matrix (Fin 3) (Fin 3) ℂ) : traceNorm (-X) = traceNorm X",
+      "split": "holdout",
+      "tags": ["operator", "reconstruction"],
+      "provenance": "Held-out reconstruction of the established traceNorm_neg lemma."
+    },
+    {
+      "id": "record_stability_transfer",
+      "statement": "(d : Type*) [Fintype d] [DecidableEq d] (Φ Ψ : MatrixMap d) (ε : ℝ) (hε : 0 ≤ ε) (hidem : ∀ X, Ψ (Ψ X) = Ψ X) (hΦ : ∀ X, traceNorm (Φ X) ≤ traceNorm X) (hΨ : ∀ X, traceNorm (Ψ X) ≤ traceNorm X) (hclose : ∀ X, traceNorm (Φ X - Ψ X) ≤ ε * traceNorm X) (X : Matrix d d ℂ) : traceNorm (Φ (Φ X) - Φ X) ≤ 3 * ε * traceNorm X",
+      "split": "research",
+      "tags": ["operator", "record_correction"],
+      "context": ["lean/RCProof/RecordAccessibility.lean", "lean/RCProof/TraceInequalities.lean"],
+      "provenance": "Project proof obligation for stability near an idempotent contraction. This is a standard perturbation consequence with explicit hypotheses. It is not a recognised unsolved field-wide problem. The full ancilla-assisted paper instantiation requires additional steps."
+    }
+  ]
+}

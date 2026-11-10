@@ -1,0 +1,29 @@
+{
+  "run_id": "7fc182a1050040e38325f0032f305fd4",
+  "status": "completed",
+  "provider": "tactics",
+  "model": "",
+  "environment": "ee6bc0926c95694167789e18f4ac347ff254bf6b9fafa310a7d48e8822fb00ee",
+  "registry_hash": "3765f8a2c46d58896ce753e39277ea68e2be31042413eec41c4f333a8a747bab",
+  "attempts": 1,
+  "model_calls": 0,
+  "accepted_this_run": [
+    "holdout_product_square"
+  ],
+  "solved_in_current_environment": [
+    "holdout_product_square"
+  ],
+  "remaining": [],
+  "seconds": 27.19,
+  "budget": {
+    "max_attempts": 1,
+    "max_seconds": 150.0,
+    "proof_timeout": 120.0,
+    "max_model_calls": 4,
+    "max_output_tokens": 4096,
+    "split": "holdout",
+    "model": "",
+    "problem_id": "holdout_product_square"
+  },
+  "scope": "Acceptance means the fixed Lean statement compiled and passed its transitive axiom gate. Novelty and scientific significance require separate review."
+}

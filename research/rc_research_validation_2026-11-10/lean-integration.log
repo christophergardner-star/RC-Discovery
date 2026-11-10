@@ -1,0 +1,8 @@
+test_correct_proof_is_accepted (test_rc_research_lean.LeanIntegrationTests.test_correct_proof_is_accepted) ... ok
+test_false_claim_is_rejected_by_kernel (test_rc_research_lean.LeanIntegrationTests.test_false_claim_is_rejected_by_kernel) ... ok
+test_transitive_extra_axiom_is_rejected (test_rc_research_lean.LeanIntegrationTests.test_transitive_extra_axiom_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 98.484s
+
+OK

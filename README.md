@@ -27,6 +27,10 @@ and [reconstruction packet](review/EXACT_JOINT_RECONSTRUCTION.md).
 
 RC-Discovery separates conjecture, analytic proof, numerical evidence, machine-checked lemmas, external verification, provenance and novelty. These categories are not interchangeable.
 
+The [RC Research runner](rc_research/README.md) provides persistent, adaptive
+proof search with Lean acceptance gates, bounded runs, held-out calibration
+and optional OpenAI or local Ollama model connections.
+
 AI systems are used as research tools for derivation support, coding, testing, adversarial auditing, editing, literature triage and formalisation assistance. OpenAI and other AI providers are not designated as authors, inventors, owners, sponsors, endorsers or claimants. Automated Git metadata is operational provenance, not research attribution. See [`AI_RIGHTS_AND_ATTRIBUTION.md`](AI_RIGHTS_AND_ATTRIBUTION.md).
 
 The [completed proof-level reduction](literature/PRESCRIBED_BOUND_REDUCTION_2026-11-01.md)

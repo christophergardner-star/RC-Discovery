@@ -1,0 +1,35 @@
+{"attempt": 1, "problem": "trace_norm_triangle", "status": "failed", "seconds": 25.23}
+{"attempt": 2, "problem": "trace_norm_triangle", "status": "failed", "seconds": 27.11}
+{"attempt": 3, "problem": "trace_norm_triangle", "status": "failed", "seconds": 25.97}
+{"attempt": 4, "problem": "trace_norm_triangle", "status": "failed", "seconds": 26.08}
+{"attempt": 5, "problem": "trace_norm_triangle", "status": "failed", "seconds": 28.36}
+{"attempt": 6, "problem": "trace_norm_triangle", "status": "verified", "seconds": 46.3}
+{
+  "run_id": "b0ae4c7d44ab475e8934d4148639cba7",
+  "status": "completed",
+  "provider": "tactics",
+  "model": "",
+  "environment": "c92cf566ae7c92b3adab51c2fb103d3b540ffd3ac0932dc505295b61cb0178a8",
+  "registry_hash": "3765f8a2c46d58896ce753e39277ea68e2be31042413eec41c4f333a8a747bab",
+  "attempts": 6,
+  "model_calls": 0,
+  "accepted_this_run": [
+    "trace_norm_triangle"
+  ],
+  "solved_in_current_environment": [
+    "trace_norm_triangle"
+  ],
+  "remaining": [],
+  "seconds": 179.41,
+  "budget": {
+    "max_attempts": 6,
+    "max_seconds": 360.0,
+    "proof_timeout": 90.0,
+    "max_model_calls": 4,
+    "max_output_tokens": 4096,
+    "split": "train",
+    "model": "",
+    "problem_id": "trace_norm_triangle"
+  },
+  "scope": "Acceptance means the fixed Lean statement compiled and passed its transitive axiom gate. Novelty and scientific significance require separate review."
+}

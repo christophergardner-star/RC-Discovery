@@ -1,0 +1,8 @@
+{
+  "accepted": true,
+  "status": "verified",
+  "feedback": "Try this:\n  [apply] exact traceNorm_add X Y\nRC_RESEARCH_ACCEPTED_23c84e871abde8bcf7ead5fb9ec4c1d6cba30cae17bf9a5c73202c53f6cefff5\n",
+  "seconds": 43.01500000001397,
+  "source_hash": "5f9bc75c72fe929697abcc4dc9c8c6550f88c862ce341e3c1a34840a629f273c",
+  "source_path": "C:\\Users\\cgard\\Favorites\\RC Discovery\\research\\rc_research_validation_2026-11-10\\operator-replay\\Candidate.lean"
+}
